@@ -1,1309 +1,1066 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>نجوم الإبداع للمفروشات والكنبات</title>
 
 <meta name="description"
-content="نجوم الإبداع للمفروشات والكنبات - كنبات فاخرة، مجالس، طاولات خدمة، طاولات طعام، بوفيهات وتفصيل حسب الطلب">
+content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---gold:#c6a15b;
---gold-light:#ead59d;
---dark:#07111f;
---dark2:#0d1b2d;
---cream:#f6f1e7;
---white:#fff;
---text:#202020;
---muted:#777;
---border:#e7dfd1;
---shadow:0 18px 55px rgba(0,0,0,.14);
+    --navy:#071727;
+    --navy2:#0d243a;
+    --gold:#c9a45c;
+    --gold2:#efd58f;
+    --cream:#f7f3eb;
+    --white:#fff;
+    --text:#17212b;
+    --muted:#6d7680;
+    --border:#e9e4da;
+    --shadow:0 12px 35px rgba(0,0,0,.09);
 }
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Cairo',sans-serif;
-color:var(--text);
-background:#fff;
-line-height:1.8;
+    font-family:"Cairo",sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.8;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 img{
-width:100%;
-display:block;
+    display:block;
+    max-width:100%;
 }
 
 .container{
-width:min(1200px,92%);
-margin:auto;
+    width:min(1180px,92%);
+    margin:auto;
 }
 
-
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
-position:fixed;
-top:0;
-right:0;
-left:0;
-z-index:1000;
-background:rgba(4,11,20,.96);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(198,161,91,.25);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,23,39,.97);
+    border-bottom:1px solid rgba(201,164,92,.25);
+    backdrop-filter:blur(12px);
 }
 
 .navbar{
-min-height:78px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
+/* الشعار الهندسي */
 
-/* شعار أول تصميم */
-
-.logo{
-display:flex;
-align-items:center;
-gap:13px;
-color:#fff;
-font-weight:900;
-font-size:18px;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
-.logo-mark{
-width:45px;
-height:45px;
-border:2px solid var(--gold);
-display:flex;
-align-items:center;
-justify-content:center;
-transform:rotate(45deg);
-box-shadow:0 0 18px rgba(198,161,91,.12);
+.logo-box{
+    width:47px;
+    height:47px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:rotate(45deg);
+    border:2px solid var(--gold);
+    flex-shrink:0;
 }
 
-.logo-mark span{
-transform:rotate(-45deg);
-color:var(--gold-light);
-font-size:22px;
+.logo-box::before{
+    content:"";
+    position:absolute;
+    width:28px;
+    height:28px;
+    border:1px solid var(--gold2);
 }
 
+.logo-box::after{
+    content:"✦";
+    position:absolute;
+    transform:rotate(-45deg);
+    color:var(--gold2);
+    font-size:20px;
+}
+
+.logo-text{
+    color:#fff;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:16px;
+    line-height:1.4;
+}
+
+.logo-text small{
+    color:var(--gold2);
+    font-size:10px;
+}
 
 /* القائمة */
 
-nav{
-display:flex;
-gap:22px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
 }
 
-nav a{
-color:#fff;
-font-size:13px;
-font-weight:600;
-transition:.3s;
+.nav-links a{
+    color:#fff;
+    font-size:13px;
+    transition:.3s;
 }
 
-nav a:hover{
-color:var(--gold-light);
+.nav-links a:hover{
+    color:var(--gold2);
 }
 
+/* السوشيال */
 
-/* أيقونات التواصل */
+.socials{
+    display:flex;
+    gap:7px;
+}
 
 .social{
-display:flex;
-gap:7px;
+    width:35px;
+    height:35px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    transition:.3s;
+    font-size:12px;
 }
 
-.social a{
-width:36px;
-height:36px;
-
-border:1px solid rgba(255,255,255,.25);
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-color:#fff;
-
-transition:.3s;
-}
-
-.social a:hover{
-background:var(--gold);
-color:#111;
-transform:translateY(-3px);
+.social:hover{
+    color:var(--gold2);
+    border-color:var(--gold);
+    transform:translateY(-2px);
 }
 
 .social svg{
-width:17px;
-height:17px;
-fill:currentColor;
+    width:17px;
+    height:17px;
 }
 
-
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-min-height:100vh;
+    min-height:650px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:#071727;
+}
 
-display:flex;
-align-items:center;
+.hero-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-position:relative;
-
-background:
-linear-gradient(
-90deg,
-rgba(3,10,19,.92),
-rgba(3,10,19,.68),
-rgba(3,10,19,.40)
-),
-
-url("https://images.pexels.com/photos/34688219/pexels-photo-34688219.jpeg?auto=compress&cs=tinysrgb&w=2200")
-center/cover;
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(3,12,23,.95),
+        rgba(3,12,23,.65),
+        rgba(3,12,23,.25)
+    );
 }
 
 .hero-content{
-max-width:780px;
-padding-top:80px;
-color:#fff;
+    position:relative;
+    z-index:2;
+    color:#fff;
+    max-width:700px;
 }
 
-.hero-label{
-color:var(--gold-light);
-font-weight:800;
-letter-spacing:2px;
+.badge{
+    display:inline-block;
+    border:1px solid var(--gold);
+    color:var(--gold2);
+    padding:6px 17px;
+    border-radius:30px;
+    font-size:12px;
+    margin-bottom:18px;
 }
 
 .hero h1{
-font-size:clamp(42px,6vw,76px);
-line-height:1.22;
-margin:18px 0;
-font-weight:900;
+    font-size:clamp(38px,6vw,68px);
+    line-height:1.2;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-color:var(--gold-light);
+    color:var(--gold2);
 }
 
 .hero p{
-max-width:700px;
-color:#eee;
-font-size:18px;
+    color:#e0e4e8;
+    font-size:17px;
+    max-width:650px;
+    margin-bottom:28px;
 }
 
-.hero-buttons{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin-top:30px;
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:13px 27px;
-border-radius:50px;
-font-weight:800;
-transition:.3s;
+    padding:12px 24px;
+    border-radius:5px;
+    font-weight:800;
+    transition:.3s;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
 }
 
 .btn-gold{
-background:var(--gold);
-color:#111;
+    background:var(--gold);
+    color:#071727;
 }
 
 .btn-gold:hover{
-background:var(--gold-light);
-transform:translateY(-3px);
+    background:var(--gold2);
+    transform:translateY(-2px);
 }
 
 .btn-outline{
-border:1px solid rgba(255,255,255,.55);
-color:#fff;
+    border:1px solid rgba(255,255,255,.45);
+    color:#fff;
 }
 
 .btn-outline:hover{
-background:#fff;
-color:#111;
+    border-color:var(--gold);
+    color:var(--gold2);
 }
 
-
-/* ================= GENERAL ================= */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
-padding:95px 0;
+    padding:85px 0;
 }
 
 .section-head{
-text-align:center;
-max-width:800px;
-margin:0 auto 50px;
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.section-head small{
-color:var(--gold);
-font-weight:900;
+.section-head .mini{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:800;
 }
 
 .section-head h2{
-color:var(--dark);
-font-size:40px;
-margin:6px 0;
+    color:var(--navy);
+    font-size:35px;
+    margin:5px 0;
 }
 
 .section-head p{
-color:var(--muted);
-font-size:15px;
+    color:var(--muted);
+    font-size:14px;
 }
 
+/* =========================
+   QUICK MENU
+========================= */
 
-/* ================= SOFAS ================= */
-
-.sofa-section{
-background:#fff;
+.quick-menu{
+    background:#fff;
+    padding:20px 0;
+    border-bottom:1px solid var(--border);
 }
 
-.sofa-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:16px;
+.quick{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
 }
 
-.sofa-card{
-position:relative;
-height:420px;
-overflow:hidden;
-border-radius:25px;
-box-shadow:var(--shadow);
+.quick a{
+    padding:13px 8px;
+    text-align:center;
+    border:1px solid var(--border);
+    border-radius:9px;
+    font-size:13px;
+    font-weight:700;
+    background:#fff;
+    transition:.3s;
 }
 
-.sofa-card img{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.6s;
+.quick a:hover{
+    background:var(--navy);
+    color:#fff;
+    border-color:var(--navy);
 }
 
-.sofa-card:hover img{
-transform:scale(1.08);
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+    background:var(--cream);
 }
 
-.sofa-overlay{
-position:absolute;
-inset:0;
-
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-
-padding:23px;
-
-color:#fff;
-
-background:
-linear-gradient(
-transparent 20%,
-rgba(0,0,0,.90)
-);
+.search-box{
+    width:min(600px,100%);
+    margin:0 auto 35px;
+    position:relative;
 }
 
-.sofa-overlay span{
-color:var(--gold-light);
-font-size:12px;
-font-weight:800;
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+    border:1px solid var(--border);
+    border-radius:50px;
+    outline:none;
+    font-family:inherit;
+    font-size:14px;
+    background:#fff;
 }
 
-.sofa-overlay h3{
-font-size:22px;
+.search-box input:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(201,164,92,.1);
 }
 
-.sofa-overlay p{
-color:#ddd;
-font-size:12px;
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
 }
 
-
-/* ================= SERVICE TABLES ================= */
-
-.service-section{
-background:var(--cream);
+.product{
+    background:#fff;
+    border-radius:13px;
+    overflow:hidden;
+    box-shadow:0 7px 25px rgba(0,0,0,.07);
+    transition:.35s;
 }
 
-.service-main{
-display:grid;
-grid-template-columns:1.35fr .65fr;
-gap:25px;
+.product:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
 }
 
-.service-big{
-position:relative;
-min-height:530px;
-overflow:hidden;
-border-radius:30px;
-box-shadow:var(--shadow);
+.product-image{
+    height:245px;
+    overflow:hidden;
+    background:#ddd;
 }
 
-.service-big img{
-height:100%;
-object-fit:cover;
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
 }
 
-.service-info{
-position:absolute;
-right:0;
-bottom:0;
-left:0;
-
-padding:35px;
-
-color:#fff;
-
-background:
-linear-gradient(
-transparent,
-rgba(0,0,0,.92)
-);
+.product:hover img{
+    transform:scale(1.06);
 }
 
-.service-info strong{
-color:var(--gold-light);
+.product-info{
+    padding:16px 13px;
+    text-align:center;
 }
 
-.service-info h3{
-font-size:32px;
+.product-info h3{
+    color:var(--navy);
+    font-size:16px;
 }
 
-.service-side{
-display:flex;
-flex-direction:column;
-gap:25px;
+.product-info p{
+    color:var(--muted);
+    font-size:12px;
 }
 
-.service-small{
-position:relative;
-flex:1;
-overflow:hidden;
-border-radius:25px;
-box-shadow:var(--shadow);
+/* =========================
+   TABLES
+========================= */
+
+.tables{
+    background:#fff;
 }
 
-.service-small img{
-height:100%;
-object-fit:cover;
+.table-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:20px;
 }
 
-.service-small div{
-position:absolute;
-right:0;
-bottom:0;
-left:0;
-
-padding:20px;
-
-color:#fff;
-
-background:
-linear-gradient(
-transparent,
-rgba(0,0,0,.90)
-);
+.table-card{
+    position:relative;
+    min-height:400px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-.spec-box{
-margin-top:28px;
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-
-gap:12px;
+.table-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.spec{
-background:#fff;
-
-border:1px solid var(--border);
-
-border-radius:50px;
-
-padding:10px 20px;
-
-font-size:13px;
-font-weight:700;
+.table-caption{
+    position:absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    padding:22px;
+    color:#fff;
+    background:linear-gradient(
+        transparent,
+        rgba(4,15,27,.92)
+    );
 }
 
-
-/* ================= DINING ================= */
-
-.dining-section{
-background:#fff;
+.table-caption h3{
+    color:var(--gold2);
+    font-size:22px;
 }
 
-.dining-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+.table-caption p{
+    font-size:13px;
 }
 
-.dining-card{
-position:relative;
-height:450px;
-overflow:hidden;
-border-radius:28px;
-box-shadow:var(--shadow);
+/* =========================
+   DINING
+========================= */
+
+.dining{
+    background:var(--cream);
 }
 
-.dining-card img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.6s;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.dining-card:hover img{
-transform:scale(1.07);
+.card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-.dining-content{
-position:absolute;
-right:0;
-bottom:0;
-left:0;
-
-padding:27px;
-
-color:#fff;
-
-background:
-linear-gradient(
-transparent,
-rgba(0,0,0,.92)
-);
+.card-img{
+    height:270px;
+    overflow:hidden;
 }
 
-.dining-content h3{
-font-size:25px;
+.card-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
 }
 
-.dining-content p{
-color:#ddd;
-font-size:13px;
+.card:hover img{
+    transform:scale(1.05);
 }
 
+.card-body{
+    padding:20px;
+}
 
-/* ================= ABOUT ================= */
+.card-body h3{
+    color:var(--navy);
+    margin-bottom:5px;
+}
+
+.card-body p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* =========================
+   ABOUT
+========================= */
 
 .about{
-background:#faf8f2;
+    background:#fff;
 }
 
 .about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
-.about-photo{
-overflow:hidden;
-border-radius:30px;
-box-shadow:var(--shadow);
+.about-image{
+    height:500px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-.about-photo img{
-height:540px;
-object-fit:cover;
+.about-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.about-content small{
-color:var(--gold);
-font-weight:900;
+.about-text .mini{
+    color:var(--gold);
+    font-weight:800;
 }
 
-.about-content h2{
-color:var(--dark);
-font-size:42px;
-margin:8px 0 18px;
+.about-text h2{
+    color:var(--navy);
+    font-size:38px;
+    margin:8px 0 18px;
 }
 
-.about-content p{
-color:#666;
-margin-bottom:18px;
+.about-text p{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:20px;
 }
 
 .features{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
 .feature{
-background:#fff;
-border:1px solid var(--border);
-border-radius:20px;
-padding:19px;
+    padding:15px;
+    background:var(--cream);
+    border-right:3px solid var(--gold);
+    border-radius:8px;
 }
 
 .feature strong{
-display:block;
-color:var(--dark);
+    color:var(--navy);
+    display:block;
+    font-size:14px;
 }
 
 .feature span{
-color:#777;
-font-size:12px;
+    color:var(--muted);
+    font-size:11px;
 }
 
-
-/* ================= BRANCHES ================= */
+/* =========================
+   BRANCHES
+========================= */
 
 .branches{
-background:var(--dark);
-color:#fff;
+    background:var(--navy);
 }
 
 .branches .section-head h2{
-color:#fff;
+    color:#fff;
 }
 
 .branches .section-head p{
-color:#bbb;
+    color:#b8c0c8;
 }
 
 .branch-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
 }
 
-.branch-card{
-padding:27px;
-
-border-radius:24px;
-
-background:rgba(255,255,255,.055);
-
-border:1px solid rgba(198,161,91,.25);
-
-transition:.35s;
+.branch{
+    background:#0c2238;
+    border:1px solid rgba(201,164,92,.22);
+    border-radius:14px;
+    overflow:hidden;
+    color:#fff;
 }
 
-.branch-card:hover{
-transform:translateY(-7px);
-border-color:var(--gold);
+.branch-top{
+    height:135px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
 }
 
-.branch-icon{
-font-size:30px;
+.branch-top::before{
+    content:"✦";
+    position:absolute;
+    font-size:120px;
+    color:rgba(255,255,255,.06);
 }
 
-.branch-card h3{
-color:var(--gold-light);
+.branch-top strong{
+    position:relative;
+    z-index:2;
+    font-size:25px;
 }
 
-.branch-card p{
-color:#ccc;
-min-height:65px;
-font-size:13px;
+.riyadh{
+    background:linear-gradient(135deg,#16375c,#725435);
 }
 
-.branch-phone{
-color:#fff;
-font-weight:800;
-margin-bottom:14px;
+.dammam{
+    background:linear-gradient(135deg,#075565,#193a67);
 }
 
-.branch-actions{
-display:flex;
-gap:8px;
+.tabuk{
+    background:linear-gradient(135deg,#654529,#b89055);
 }
 
-.branch-actions a{
-flex:1;
-
-text-align:center;
-
-padding:8px;
-
-border-radius:30px;
-
-border:1px solid rgba(255,255,255,.2);
-
-font-size:11px;
+.ahsa{
+    background:linear-gradient(135deg,#20553d,#9b783b);
 }
 
-.branch-actions a:hover{
-background:var(--gold);
-color:#111;
+.branch-body{
+    padding:18px;
 }
 
-
-/* ================= SALES ================= */
-
-.sales{
-background:#f7f4ec;
+.branch-body h3{
+    color:var(--gold2);
+    font-size:17px;
 }
 
-.sales-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:22px;
+.branch-body p{
+    color:#c5ccd3;
+    font-size:12px;
 }
 
-.sales-card{
-overflow:hidden;
-
-background:#fff;
-
-border-radius:28px;
-
-box-shadow:var(--shadow);
-
-border:1px solid var(--border);
-
-transition:.4s;
+.map-btn{
+    display:inline-block;
+    margin-top:10px;
+    color:var(--gold2);
+    font-size:12px;
 }
 
-.sales-card:hover{
-transform:translateY(-9px);
-}
-
-.sales-banner{
-height:280px;
-
-position:relative;
-overflow:hidden;
-
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.sales-banner::before{
-content:"";
-
-position:absolute;
-
-width:220px;
-height:220px;
-
-border:1px solid rgba(255,255,255,.25);
-
-border-radius:50%;
-
-transform:rotate(20deg);
-}
-
-.sales-banner::after{
-content:"";
-
-position:absolute;
-
-width:150px;
-height:150px;
-
-border:1px solid rgba(255,255,255,.18);
-
-border-radius:50%;
-}
-
-.sales-star{
-position:relative;
-z-index:2;
-
-width:95px;
-height:95px;
-
-border:2px solid rgba(255,255,255,.65);
-
-transform:rotate(45deg);
-
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.sales-star span{
-transform:rotate(-45deg);
-color:#fff;
-font-size:42px;
-}
-
-.sales-location{
-position:absolute;
-
-right:20px;
-top:20px;
-
-z-index:3;
-
-padding:7px 15px;
-
-border-radius:30px;
-
-background:rgba(0,0,0,.25);
-
-border:1px solid rgba(255,255,255,.3);
-
-color:#fff;
-
-font-size:11px;
-font-weight:800;
-}
-
-.sales-city{
-position:absolute;
-
-left:20px;
-bottom:18px;
-
-z-index:3;
-
-color:#fff;
-
-font-size:24px;
-font-weight:900;
-}
-
-.riyadh-banner{
-background:
-radial-gradient(circle at 30% 20%,rgba(255,255,255,.18),transparent 35%),
-linear-gradient(135deg,#132d42,#80653b,#101a27);
-}
-
-.dammam-banner{
-background:
-radial-gradient(circle at 70% 25%,rgba(255,255,255,.2),transparent 35%),
-linear-gradient(135deg,#073d55,#157083,#071b29);
-}
-
-.tabuk-banner{
-background:
-radial-gradient(circle at 30% 30%,rgba(255,255,255,.2),transparent 35%),
-linear-gradient(135deg,#3d2b27,#9b7650,#1a1c22);
-}
-
-.ahsa-banner{
-background:
-radial-gradient(circle at 70% 20%,rgba(255,255,255,.2),transparent 35%),
-linear-gradient(135deg,#16452f,#8b7441,#10221b);
-}
-
-.sales-info{
-padding:20px;
-text-align:center;
-}
-
-.sales-branch{
-color:var(--gold);
-font-size:12px;
-font-weight:900;
-}
-
-.sales-info h3{
-color:var(--dark);
-margin:5px 0;
-}
-
-.sales-info p{
-color:#777;
-font-size:12px;
-}
-
-.sales-actions{
-display:flex;
-gap:8px;
-margin-top:15px;
-}
-
-.sales-actions a{
-flex:1;
-
-padding:9px;
-
-border-radius:30px;
-
-font-size:12px;
-font-weight:800;
-}
-
-.sales-whatsapp{
-background:#25d366;
-color:#fff;
-}
-
-.sales-call{
-background:var(--dark);
-color:#fff;
-}
-
-
-/* ================= CONTACT ================= */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-background:#fff;
+    background:var(--cream);
 }
 
 .contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
 .contact-card{
-background:#faf8f2;
-
-border:1px solid var(--border);
-
-border-radius:25px;
-
-padding:30px;
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:var(--shadow);
 }
 
 .contact-card h3{
-color:var(--dark);
-margin-bottom:18px;
+    color:var(--navy);
+    margin-bottom:15px;
 }
 
 .contact-row{
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-gap:15px;
-
-padding:13px 0;
-
-border-bottom:1px solid #e5dfd2;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding:13px 0;
+    border-bottom:1px solid var(--border);
 }
 
 .contact-row:last-child{
-border-bottom:0;
+    border-bottom:0;
 }
 
 .contact-row span{
-color:#777;
-font-size:13px;
+    color:var(--muted);
+    font-size:12px;
 }
 
 .contact-row a{
-color:var(--dark);
-font-weight:900;
+    color:var(--navy);
+    font-weight:800;
 }
 
-.hours{
-margin-top:20px;
-
-padding:20px;
-
-background:var(--dark);
-
-color:#fff;
-
-border-radius:20px;
-
-text-align:center;
-}
-
-.hours strong{
-color:var(--gold-light);
-}
-
-
-/* ================= CTA ================= */
+/* =========================
+   CTA
+========================= */
 
 .cta{
-text-align:center;
-
-color:#fff;
-
-background:
-linear-gradient(
-rgba(5,13,24,.88),
-rgba(5,13,24,.93)
-),
-
-url("https://images.pexels.com/photos/7214171/pexels-photo-7214171.jpeg?auto=compress&cs=tinysrgb&w=2200")
-center/cover;
+    min-height:380px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
 }
 
-.cta h2{
-font-size:43px;
+.cta img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.cta p{
-color:#ddd;
-margin:10px 0 25px;
+.cta::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(3,14,27,.83);
 }
 
+.cta-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    text-align:center;
+    color:#fff;
+}
 
-/* ================= FOOTER ================= */
+.cta-content h2{
+    color:var(--gold2);
+    font-size:42px;
+}
+
+.cta-content p{
+    margin:8px 0 25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-background:#040a12;
-color:#aaa;
-padding:55px 0 25px;
+    background:#030b14;
+    color:#9ea7b0;
+    padding:50px 0 25px;
 }
 
 .footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:45px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
 }
 
-.footer-logo{
-color:#fff;
-font-size:22px;
-font-weight:900;
-margin-bottom:12px;
+footer h3{
+    color:#fff;
+    margin-bottom:14px;
 }
 
-footer h4{
-color:var(--gold-light);
-margin-bottom:15px;
+footer p{
+    font-size:12px;
 }
 
 .footer-links{
-display:flex;
-flex-direction:column;
-gap:7px;
-font-size:13px;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.footer-links a{
+    font-size:12px;
 }
 
 .footer-links a:hover{
-color:#fff;
+    color:var(--gold2);
 }
 
 .footer-social{
-display:flex;
-gap:9px;
-margin-top:18px;
+    display:flex;
+    gap:7px;
+    margin-top:15px;
 }
 
-.footer-social a{
-width:40px;
-height:40px;
-
-border:1px solid rgba(255,255,255,.18);
-
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-transition:.3s;
+.copyright{
+    margin-top:35px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    font-size:11px;
 }
 
-.footer-social a:hover{
-background:var(--gold);
-color:#111;
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:59px;
+    height:59px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:5000;
+    box-shadow:0 7px 25px rgba(0,0,0,.25);
 }
 
-.footer-social svg{
-width:18px;
-height:18px;
-fill:currentColor;
+.whatsapp svg{
+    width:31px;
+    height:31px;
 }
 
-.footer-bottom{
-margin-top:35px;
+/* =========================
+   MOBILE
+========================= */
 
-padding-top:20px;
+@media(max-width:1050px){
 
-border-top:1px solid rgba(255,255,255,.1);
+    .nav-links{
+        display:none;
+    }
 
-text-align:center;
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
 
-font-size:12px;
+    .branch-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
+@media(max-width:750px){
 
-/* ================= FLOAT WHATSAPP ================= */
+    .navbar{
+        min-height:68px;
+    }
 
-.float-whatsapp{
-position:fixed;
+    .logo-text strong{
+        font-size:13px;
+    }
 
-left:22px;
-bottom:22px;
+    .logo-text small{
+        display:none;
+    }
 
-width:62px;
-height:62px;
+    .social{
+        width:31px;
+        height:31px;
+    }
 
-border-radius:50%;
+    .hero{
+        min-height:580px;
+    }
 
-background:#25d366;
+    .hero h1{
+        font-size:38px;
+    }
 
-color:#fff;
+    .hero p{
+        font-size:14px;
+    }
 
-display:flex;
-align-items:center;
-justify-content:center;
+    section{
+        padding:65px 0;
+    }
 
-z-index:2000;
+    .quick{
+        grid-template-columns:repeat(3,1fr);
+    }
 
-box-shadow:0 12px 35px rgba(0,0,0,.25);
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-animation:pulse 2s infinite;
+    .table-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .table-card{
+        min-height:320px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        height:350px;
+    }
+
+    .branch-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
 }
 
-.float-whatsapp svg{
-width:31px;
-height:31px;
-fill:#fff;
-}
+@media(max-width:450px){
 
-@keyframes pulse{
+    .brand{
+        gap:8px;
+    }
 
-0%,100%{
-box-shadow:0 0 0 0 rgba(37,211,102,.35);
-}
+    .logo-box{
+        width:39px;
+        height:39px;
+    }
 
-50%{
-box-shadow:0 0 0 14px rgba(37,211,102,0);
-}
+    .social{
+        width:28px;
+        height:28px;
+    }
 
-}
+    .quick{
+        grid-template-columns:1fr 1fr;
+    }
 
+    .product-grid{
+        grid-template-columns:1fr;
+    }
 
-/* ================= RESPONSIVE ================= */
+    .branch-grid{
+        grid-template-columns:1fr;
+    }
 
-@media(max-width:1100px){
+    .features{
+        grid-template-columns:1fr;
+    }
 
-nav{
-display:none;
-}
-
-.sofa-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-.branch-grid,
-.sales-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:800px){
-
-section{
-padding:70px 0;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:15px;
-}
-
-.social{
-display:none;
-}
-
-.sofa-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.service-main{
-grid-template-columns:1fr;
-}
-
-.service-big{
-min-height:400px;
-}
-
-.dining-grid{
-grid-template-columns:1fr;
-}
-
-.about-grid{
-grid-template-columns:1fr;
-}
-
-.about-photo img{
-height:370px;
-}
-
-.contact-grid{
-grid-template-columns:1fr;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:520px){
-
-.logo{
-font-size:15px;
-}
-
-.logo-mark{
-width:39px;
-height:39px;
-}
-
-.hero h1{
-font-size:37px;
-}
-
-.hero-buttons{
-flex-direction:column;
-}
-
-.btn{
-width:100%;
-}
-
-.sofa-grid,
-.branch-grid,
-.sales-grid{
-grid-template-columns:1fr;
-}
-
-.features{
-grid-template-columns:1fr;
-}
-
-.service-big{
-min-height:330px;
-}
-
-.section-head h2{
-font-size:31px;
-}
-
-.cta h2{
-font-size:32px;
-}
-
+    .hero h1{
+        font-size:34px;
+    }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
 <div class="container navbar">
 
-<a href="#home" class="logo">
+<a href="#home" class="brand">
 
-<div class="logo-mark">
-<span>★</span>
-</div>
+<div class="logo-box"></div>
 
-<div>
-نجوم الإبداع
-<br>
+<div class="logo-text">
+<strong>نجوم الإبداع</strong>
 <small>للمفروشات والكنبات</small>
 </div>
 
 </a>
 
-
-<nav>
-
+<nav class="nav-links">
 <a href="#home">الرئيسية</a>
 <a href="#sofas">الكنبات</a>
-<a href="#tables">طاولات الخدمة</a>
-<a href="#dining">طاولات الطعام</a>
+<a href="#tables">الطاولات</a>
+<a href="#dining">غرفة الطعام</a>
 <a href="#branches">الفروع</a>
 <a href="#contact">تواصل معنا</a>
-
 </nav>
 
+<div class="socials">
 
-<div class="social">
+<a class="social"
+href="#"
+aria-label="TikTok">
 
-<!-- TikTok -->
-
-<a href="#" id="tiktokTop" target="_blank" aria-label="TikTok">
-
-<svg viewBox="0 0 24 24">
-<path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.16h-3.13v13.7a2.9 2.9 0 11-2.9-2.9c.16 0 .32.01.47.04v-3.18a6.08 6.08 0 00-.47-.02A6.07 6.07 0 1015.85 16V9.91a7.94 7.94 0 003.74.93V7.71a4.84 4.84 0 01-0.0-.02z"/>
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M15.8 3c.4 2.5 1.8 4 4.2 4.2v3.1c-1.7-.1-3.1-.6-4.2-1.4v6.7c0 4-2.5 6.4-6.2 6.4-3.1 0-5.6-2.2-5.6-5.3 0-3.4 2.7-5.8 6.4-5.8.4 0 .8 0 1.2.1v3.2c-.4-.1-.7-.2-1.1-.2-1.6 0-2.8 1-2.8 2.5 0 1.3 1 2.3 2.2 2.3 1.5 0 2.4-1 2.4-2.9V3h3.5z"/>
 </svg>
 
 </a>
 
+<a class="social"
+href="https://www.snapchat.com/add/ma484m"
+target="_blank">
 
-<!-- Snapchat -->
-
-<a href="https://www.snapchat.com/add/ma484m"
-target="_blank"
-aria-label="Snapchat">
-
-<svg viewBox="0 0 24 24">
-<path d="M12 2.2c3.3 0 5.5 2.5 5.5 5.7 0 1.4-.2 2.7.8 3.8.5.6 1.2 1 2 1.3.4.1.6.4.5.8-.1.5-.7.7-1.4.9-.4.1-.8.2-1 .5-.2.3-.2.7-.3 1.1-.1.4-.3.6-.7.7-.6.1-1.3.1-1.8.5-.7.5-1.4 1.4-3.6 1.4s-2.9-.9-3.6-1.4c-.5-.4-1.2-.4-1.8-.5-.4-.1-.6-.3-.7-.7-.1-.4-.1-.8-.3-1.1-.2-.3-.6-.4-1-.5-.7-.2-1.3-.4-1.4-.9-.1-.4.1-.7.5-.8.8-.3 1.5-.7 2-1.3 1-1.1.8-2.4.8-3.8C6.5 4.7 8.7 2.2 12 2.2z"/>
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2.2c-3.1 0-5.4 2.3-5.4 5.5v1.8c0 .5-.2.8-.7 1.1l-1.3.7c-.4.2-.6.5-.5.9.1.4.4.7.8.8l1.4.3c.1 1 .5 1.9 1.1 2.6.4.5 1 .9 1.6 1.2-.6.8-1.5 1.3-2.6 1.5-.3 0-.5.3-.5.6s.2.5.5.6c1.3.2 2.4.5 3.1.9.8.4 1.4.8 2.5.8s1.7-.4 2.5-.8c.7-.4 1.8-.7 3.1-.9.3 0 .5-.3.5-.6s-.2-.5-.5-.6c-1.1-.2-2-.7-2.6-1.5.7-.3 1.2-.7 1.6-1.2.6-.7 1-1.6 1.1-2.6l1.4-.3c.4-.1.7-.4.8-.8.1-.4-.1-.7-.5-.9l-1.3-.7c-.5-.3-.7-.6-.7-1.1V7.7c0-3.2-2.3-5.5-5.4-5.5z"/>
 </svg>
 
 </a>
 
+<a class="social"
+href="https://www.instagram.com/jj_j505"
+target="_blank">
 
-<!-- Instagram -->
+<svg viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2">
 
-<a href="https://www.instagram.com/jj_j505"
-target="_blank"
-aria-label="Instagram">
+<rect x="3" y="3" width="18" height="18" rx="5"/>
+<circle cx="12" cy="12" r="4"/>
+<circle cx="17.5" cy="6.5" r="1"
+fill="currentColor" stroke="none"/>
 
-<svg viewBox="0 0 24 24">
-<path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm0 2A2.5 2.5 0 1014.5 12 2.5 2.5 0 0012 9.5zm5.5-3.1a1.1 1.1 0 11-1.1 1.1 1.1 1.1 0 011.1-1.1z"/>
 </svg>
 
 </a>
 
+<a class="social"
+href="https://wa.me/966551496121"
+target="_blank">
 
-<!-- WhatsApp -->
-
-<a href="https://wa.me/966551496121"
-target="_blank"
-aria-label="WhatsApp">
-
-<svg viewBox="0 0 24 24">
-<path d="M20.5 3.5A11.9 11.9 0 0012.05 0C5.45 0 .08 5.37.08 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.94 11.94 0 005.86 1.53h.01c6.6 0 11.96-5.37 11.96-11.97 0-3.2-1.24-6.2-3.52-8.44zM12.06 21.9h-.01a9.9 9.9 0 01-5.05-1.38l-.36-.21-3.67.96.98-3.58-.23-.37a9.93 9.93 0 01-1.52-5.35C2.2 6.5 6.63 2.08 12.06 2.08c2.63 0 5.1 1.03 6.96 2.9a9.78 9.78 0 012.88 6.96c0 5.44-4.42 9.96-9.84 9.96zm5.43-7.46c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.57-.49-.49-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35z"/>
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M20.5 3.5A11.9 11.9 0 0012.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 005.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4zM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 012.1 12c0-5.5 4.5-9.9 10-9.9 2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.9 4.4 2.9 7.1-.1 5.3-4.5 9.7-10 9.7zm5.5-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.6-.4-.6.4-.6 1.1-2 .1-.3.1-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.1.6 2.5.6.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.2-.3-.3-.6-.4z"/>
 </svg>
 
 </a>
@@ -1315,18 +1072,25 @@ aria-label="WhatsApp">
 </header>
 
 
-
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
-<div class="container">
+<img
+class="hero-image"
+src="https://images.pexels.com/photos/7534563/pexels-photo-7534563.jpeg"
+alt="نجوم الإبداع للمفروشات والكنبات"
+fetchpriority="high">
 
-<div class="hero-content">
+<div class="hero-overlay"></div>
 
-<div class="hero-label">
-✦ فخامة تليق بمنزلكم
-</div>
+<div class="container hero-content">
+
+<span class="badge">
+✦ فخامة تليق بكم
+</span>
 
 <h1>
 نجوم الإبداع
@@ -1335,23 +1099,26 @@ aria-label="WhatsApp">
 </h1>
 
 <p>
-نرحب بكم في نجوم الإبداع، حيث تجدون أرقى تصاميم الكنبات والمجالس
-الجاهزة والتفصيل، مع تشكيلة مميزة من طاولات الخدمة وطاولات الطعام والبوفيهات.
+نرحب بكم في نجوم الإبداع، حيث تجدون أرقى تصاميم
+الكنبات والمجالس الجاهزة والتفصيل، بأسعار تناسبكم.
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
-<a href="#sofas" class="btn btn-gold">
-استكشف تشكيلتنا
+<a class="btn btn-gold"
+href="https://wa.me/966551496121"
+target="_blank">
+
+💬 تواصل معنا
+
 </a>
 
-<a href="https://wa.me/966551496121"
-target="_blank"
-class="btn btn-outline">
-تواصل معنا عبر واتساب
-</a>
+<a class="btn btn-outline"
+href="#sofas">
 
-</div>
+استكشف المنتجات
+
+</a>
 
 </div>
 
@@ -1360,139 +1127,177 @@ class="btn btn-outline">
 </section>
 
 
+<!-- =====================================================
+     QUICK MENU
+===================================================== -->
 
-<!-- ================= SOFAS ================= -->
+<section class="quick-menu">
 
-<section class="sofa-section" id="sofas">
+<div class="container">
+
+<div class="quick">
+
+<a href="#sofas">🛋️ الكنبات</a>
+<a href="#tables">☕ طاولات الخدمة</a>
+<a href="#dining">🍽️ غرف الطعام</a>
+<a href="#branches">📍 الفروع</a>
+<a href="#contact">📞 التواصل</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SOFAS
+===================================================== -->
+
+<section class="products" id="sofas">
 
 <div class="container">
 
 <div class="section-head">
 
-<small>COLLECTION</small>
+<span class="mini">مجموعة الكنبات</span>
 
-<h2>تشكيلة الكنبات</h2>
+<h2>اختيارات تناسب ذوقكم</h2>
 
 <p>
-اختيارات متنوعة تناسب مختلف الأذواق من التصميم السعودي
-والكلاسيكي والمودرن إلى التركي والأمريكي.
+جاهز أو تفصيل — تصاميم متنوعة تجمع الراحة والفخامة
 </p>
 
 </div>
 
 
-<div class="sofa-grid">
+<div class="search-box">
+
+<input
+type="search"
+id="productSearch"
+placeholder="🔎 ابحث عن نوع الكنبة...">
+
+</div>
 
 
-<!-- سعودي -->
+<div class="product-grid" id="productGrid">
 
-<div class="sofa-card">
+
+<div class="product"
+data-name="صناعة سعودية">
+
+<div class="product-image">
 
 <img
-src="https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="كنبات صناعة سعودية">
+src="https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg"
+alt="كنبات صناعة سعودية"
+loading="lazy"
+decoding="async">
 
-<div class="sofa-overlay">
+</div>
 
-<span>SAUDI COLLECTION</span>
+<div class="product-info">
 
-<h3>صناعة سعودية</h3>
+<h3>🇸🇦 صناعة سعودية</h3>
 
-<p>
-تصاميم تناسب المجالس والبيوت السعودية
-</p>
+<p>تصاميم راقية ومريحة</p>
 
 </div>
 
 </div>
 
 
-<!-- كلاسيك -->
+<div class="product"
+data-name="كلاسيك">
 
-<div class="sofa-card">
+<div class="product-image">
 
 <img
-src="https://images.pexels.com/photos/17404701/pexels-photo-17404701.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="كنبات كلاسيك">
+src="https://images.pexels.com/photos/17404701/pexels-photo-17404701.jpeg"
+alt="كنبات كلاسيك"
+loading="lazy"
+decoding="async">
 
-<div class="sofa-overlay">
+</div>
 
-<span>CLASSIC</span>
+<div class="product-info">
 
 <h3>كلاسيك</h3>
 
-<p>
-فخامة التفاصيل وأناقة الطابع الكلاسيكي
-</p>
+<p>فخامة التفاصيل الكلاسيكية</p>
 
 </div>
 
 </div>
 
 
-<!-- مودرن -->
+<div class="product"
+data-name="مودرن">
 
-<div class="sofa-card">
+<div class="product-image">
 
 <img
-src="https://images.pexels.com/photos/36601409/pexels-photo-36601409.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="كنبات مودرن">
+src="https://images.pexels.com/photos/36601409/pexels-photo-36601409.jpeg"
+alt="كنبات مودرن"
+loading="lazy"
+decoding="async">
 
-<div class="sofa-overlay">
+</div>
 
-<span>MODERN</span>
+<div class="product-info">
 
 <h3>مودرن</h3>
 
-<p>
-خطوط عصرية وألوان راقية
-</p>
+<p>تصاميم عصرية أنيقة</p>
 
 </div>
 
 </div>
 
 
-<!-- تركي -->
+<div class="product"
+data-name="تركي">
 
-<div class="sofa-card">
+<div class="product-image">
 
 <img
-src="https://images.pexels.com/photos/6920439/pexels-photo-6920439.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="كنبات تركية">
+src="https://images.pexels.com/photos/6920439/pexels-photo-6920439.jpeg"
+alt="كنبات تركي"
+loading="lazy"
+decoding="async">
 
-<div class="sofa-overlay">
+</div>
 
-<span>TURKISH</span>
+<div class="product-info">
 
 <h3>تركي</h3>
 
-<p>
-تصاميم تركية بطابع فاخر
-</p>
+<p>أناقة وتصميم مميز</p>
 
 </div>
 
 </div>
 
 
-<!-- أمريكي -->
+<div class="product"
+data-name="أمريكي">
 
-<div class="sofa-card">
+<div class="product-image">
 
 <img
-src="https://images.pexels.com/photos/7214171/pexels-photo-7214171.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="كنبات أمريكية">
+src="https://images.pexels.com/photos/7214171/pexels-photo-7214171.jpeg"
+alt="كنبات أمريكي"
+loading="lazy"
+decoding="async">
 
-<div class="sofa-overlay">
+</div>
 
-<span>AMERICAN</span>
+<div class="product-info">
 
 <h3>أمريكي</h3>
 
-<p>
-راحة واسعة وتصاميم مميزة
-</p>
+<p>مساحات واسعة وراحة عالية</p>
 
 </div>
 
@@ -1506,47 +1311,44 @@ alt="كنبات أمريكية">
 </section>
 
 
+<!-- =====================================================
+     SERVICE TABLES
+===================================================== -->
 
-<!-- ================= SERVICE TABLES ================= -->
-
-<section class="service-section" id="tables">
+<section class="tables" id="tables">
 
 <div class="container">
 
 <div class="section-head">
 
-<small>SERVICE TABLES</small>
+<span class="mini">تكملة أناقة المجلس</span>
 
 <h2>طاولات الخدمة</h2>
 
 <p>
-طاولات أنيقة مصممة للاستخدام في وسط المجالس،
-مع خدمة جانبية تكمل شكل المجلس وتزيد من فخامته.
+طاولات عصرية لوسط المجلس والخدمة الجانبية
 </p>
 
 </div>
 
 
-<div class="service-main">
+<div class="table-grid">
 
 
-<div class="service-big">
+<div class="table-card">
 
 <img
-src="https://images.pexels.com/photos/15253318/pexels-photo-15253318.jpeg?auto=compress&cs=tinysrgb&w=1600"
-alt="طاولة خدمة فاخرة">
+src="https://images.pexels.com/photos/15253318/pexels-photo-15253318.jpeg"
+alt="طاولة خدمة مجلس"
+loading="lazy"
+decoding="async">
 
-<div class="service-info">
+<div class="table-caption">
 
-<strong>120 × 80 سم</strong>
-
-<h3>
-طاولة خدمة وسط المجلس
-</h3>
+<h3>طاولة خدمة رئيسية</h3>
 
 <p>
-تصميم حديث وفاخر للاستخدام في وسط المجلس
-مع إمكانية تنفيذ المقاسات والتفاصيل حسب الطلب.
+مقاس 120 × 80 سم — مناسبة لوسط المجلس
 </p>
 
 </div>
@@ -1554,53 +1356,26 @@ alt="طاولة خدمة فاخرة">
 </div>
 
 
-<div class="service-side">
-
-
-<div class="service-small">
+<div class="table-card">
 
 <img
-src="https://images.pexels.com/photos/7195554/pexels-photo-7195554.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="خدمة جانبية">
+src="https://images.pexels.com/photos/7195554/pexels-photo-7195554.jpeg"
+alt="خدمة جانبية"
+loading="lazy"
+decoding="async">
 
-<div>
-<h3>خدمة جانبية</h3>
-<p>تصميم مكمل للطاولة الرئيسية</p>
-</div>
+<div class="table-caption">
 
-</div>
+<h3>الخدمة الجانبية</h3>
 
-
-<div class="service-small">
-
-<img
-src="https://images.pexels.com/photos/17001794/pexels-photo-17001794.jpeg?auto=compress&cs=tinysrgb&w=1200"
-alt="طاولة مجلس مودرن">
-
-<div>
-<h3>تصميم مودرن</h3>
-<p>لمسة فاخرة للمجلس</p>
-</div>
-
-</div>
-
+<p>
+تفاصيل عملية تضيف لمسة فخامة للمجلس
+</p>
 
 </div>
 
 </div>
 
-
-<div class="spec-box">
-
-<div class="spec">📏 120 × 80 سم</div>
-
-<div class="spec">✨ تصميم مودرن</div>
-
-<div class="spec">🏠 وسط المجلس</div>
-
-<div class="spec">🪵 تشطيبات فاخرة</div>
-
-<div class="spec">✂️ تفصيل حسب الطلب</div>
 
 </div>
 
@@ -1609,44 +1384,48 @@ alt="طاولة مجلس مودرن">
 </section>
 
 
+<!-- =====================================================
+     DINING
+===================================================== -->
 
-<!-- ================= DINING ================= -->
-
-<section class="dining-section" id="dining">
+<section class="dining" id="dining">
 
 <div class="container">
 
 <div class="section-head">
 
-<small>DINING COLLECTION</small>
+<span class="mini">غرفة الطعام</span>
 
 <h2>طاولات الطعام والبوفيهات</h2>
 
 <p>
-تشكيلة متكاملة لغرف الطعام تجمع بين التصميم العصري
-والفخامة والتناسق.
+تنسيق متكامل لطاولة الطعام والكراسي والبوفيه
 </p>
 
 </div>
 
 
-<div class="dining-grid">
+<div class="cards">
 
 
-<!-- طاولات الطعام -->
+<div class="card">
 
-<div class="dining-card">
+<div class="card-img">
 
 <img
-src="https://images.pexels.com/photos/20035983/pexels-photo-20035983.jpeg?auto=compress&cs=tinysrgb&w=1400"
-alt="طاولات طعام فاخرة">
+src="https://images.pexels.com/photos/20035983/pexels-photo-20035983.jpeg"
+alt="طاولة طعام فاخرة"
+loading="lazy"
+decoding="async">
 
-<div class="dining-content">
+</div>
+
+<div class="card-body">
 
 <h3>طاولات الطعام</h3>
 
 <p>
-تصاميم أنيقة لغرف الطعام والمناسبات العائلية
+تصاميم فاخرة تناسب غرف الطعام الحديثة.
 </p>
 
 </div>
@@ -1654,20 +1433,24 @@ alt="طاولات طعام فاخرة">
 </div>
 
 
-<!-- كراسي الطعام -->
+<div class="card">
 
-<div class="dining-card">
+<div class="card-img">
 
 <img
-src="https://images.pexels.com/photos/22696776/pexels-photo-22696776.jpeg?auto=compress&cs=tinysrgb&w=1400"
-alt="طاولة وكراسي طعام">
+src="https://images.pexels.com/photos/22696776/pexels-photo-22696776.jpeg"
+alt="كراسي طعام"
+loading="lazy"
+decoding="async">
 
-<div class="dining-content">
+</div>
 
-<h3>طاولات وكراسي الطعام</h3>
+<div class="card-body">
+
+<h3>كراسي الطعام</h3>
 
 <p>
-تنسيق متكامل بين الطاولة والكراسي
+أناقة وراحة وتناسق مع طاولة الطعام.
 </p>
 
 </div>
@@ -1675,20 +1458,24 @@ alt="طاولة وكراسي طعام">
 </div>
 
 
-<!-- بوفيه غرف الطعام -->
+<div class="card">
 
-<div class="dining-card">
+<div class="card-img">
 
 <img
-src="https://images.pexels.com/photos/29000021/pexels-photo-29000021.jpeg?auto=compress&cs=tinysrgb&w=1400"
-alt="بوفيه غرف الطعام">
+src="https://images.pexels.com/photos/29000021/pexels-photo-29000021.jpeg"
+alt="بوفيه طعام مودرن"
+loading="lazy"
+decoding="async">
 
-<div class="dining-content">
+</div>
 
-<h3>بوفيهات غرف الطعام</h3>
+<div class="card-body">
+
+<h3>بوفيهات الطعام</h3>
 
 <p>
-بوفيهات حديثة مصممة لتكمل طاولة الطعام
+بوفيهات عصرية مصممة لتكمل غرفة الطعام.
 </p>
 
 </div>
@@ -1703,86 +1490,67 @@ alt="بوفيه غرف الطعام">
 </section>
 
 
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-<!-- ================= ABOUT ================= -->
-
-<section class="about">
+<section class="about" id="about">
 
 <div class="container about-grid">
 
 
-<div class="about-photo">
+<div class="about-image">
 
 <img
-src="https://images.pexels.com/photos/7534563/pexels-photo-7534563.jpeg?auto=compress&cs=tinysrgb&w=1600"
-alt="نجوم الإبداع للمفروشات">
+src="https://images.pexels.com/photos/7534563/pexels-photo-7534563.jpeg"
+alt="معرض نجوم الإبداع"
+loading="lazy"
+decoding="async">
 
 </div>
 
 
-<div class="about-content">
+<div class="about-text">
 
-<small>ABOUT US</small>
+<span class="mini">
+عن نجوم الإبداع
+</span>
 
 <h2>
-فخامة تبدأ من اختيارك
+فخامة تبدأ من التفاصيل
 </h2>
 
 <p>
-في نجوم الإبداع نحرص على تقديم تشكيلة مميزة من
-الكنبات والمجالس والطاولات، مع خيارات الجاهز
-والتفصيل حسب الطلب.
+نحرص في نجوم الإبداع على تقديم تشكيلة مميزة من
+الكنبات والمجالس والطاولات والمفروشات.
 </p>
 
 <p>
-هدفنا أن نقدم لكم جودة في التصميم، تنوعًا في الخيارات،
-وخدمة تليق بعملائنا في جميع مناطق المملكة.
+نوفر المنتجات الجاهزة والتفصيل، مع إمكانية الشحن
+لجميع مدن المملكة وخارجها.
 </p>
 
 
 <div class="features">
 
 <div class="feature">
-
-<strong>✦ تصاميم متنوعة</strong>
-
-<span>
-كلاسيك – مودرن – تركي – أمريكي
-</span>
-
+<strong>✦ تصاميم راقية</strong>
+<span>اختيارات متنوعة</span>
 </div>
 
-
 <div class="feature">
-
-<strong>✦ تفصيل حسب الطلب</strong>
-
-<span>
-مقاسات وألوان وخامات متعددة
-</span>
-
+<strong>✦ جاهز وتفصيل</strong>
+<span>حسب المقاس والطلب</span>
 </div>
 
-
 <div class="feature">
-
-<strong>✦ شحن داخل المملكة</strong>
-
-<span>
-نوفر الشحن لجميع مدن المملكة
-</span>
-
+<strong>✦ شحن</strong>
+<span>لجميع المدن</span>
 </div>
 
-
 <div class="feature">
-
-<strong>✦ خدمة عملاء</strong>
-
-<span>
-نسعد بخدمتكم والإجابة على استفساراتكم
-</span>
-
+<strong>✦ خدمة مميزة</strong>
+<span>نسعد بخدمتكم</span>
 </div>
 
 </div>
@@ -1794,8 +1562,9 @@ alt="نجوم الإبداع للمفروشات">
 </section>
 
 
-
-<!-- ================= BRANCHES ================= -->
+<!-- =====================================================
+     BRANCHES
+===================================================== -->
 
 <section class="branches" id="branches">
 
@@ -1803,12 +1572,12 @@ alt="نجوم الإبداع للمفروشات">
 
 <div class="section-head">
 
-<small>OUR BRANCHES</small>
+<span class="mini">فروعنا</span>
 
-<h2>فروع نجوم الإبداع</h2>
+<h2>نجوم الإبداع بالقرب منكم</h2>
 
 <p>
-نسعد بخدمتكم في فروعنا داخل المملكة
+نسعد باستقبالكم في فروعنا
 </p>
 
 </div>
@@ -1817,32 +1586,51 @@ alt="نجوم الإبداع للمفروشات">
 <div class="branch-grid">
 
 
-<!-- الرياض -->
+<div class="branch">
 
-<div class="branch-card">
-
-<div class="branch-icon">🏙️</div>
-
-<h3>الرياض</h3>
-
-<p>
-حي نمار
-</p>
-
-<div class="branch-phone">
-للتواصل: 0551496121
+<div class="branch-top riyadh">
+<strong>الرياض</strong>
 </div>
 
-<div class="branch-actions">
+<div class="branch-body">
 
-<a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
+<h3>فرع الرياض</h3>
+
+<p>📍 حي نمار</p>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
 target="_blank">
-الموقع
+
+فتح الموقع ←
+
 </a>
 
-<a href="https://wa.me/966551496121"
+</div>
+
+</div>
+
+
+<div class="branch">
+
+<div class="branch-top dammam">
+<strong>الدمام</strong>
+</div>
+
+<div class="branch-body">
+
+<h3>فرع الدمام</h3>
+
+<p>📍 شارع الملك عبد العزيز</p>
+
+<p>📞 0561232087</p>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
 target="_blank">
-واتساب
+
+فتح الموقع ←
+
 </a>
 
 </div>
@@ -1850,95 +1638,49 @@ target="_blank">
 </div>
 
 
-<!-- الدمام -->
+<div class="branch">
 
-<div class="branch-card">
-
-<div class="branch-icon">🌊</div>
-
-<h3>الدمام</h3>
-
-<p>
-شارع الملك عبد العزيز
-</p>
-
-<div class="branch-phone">
-0561232087
+<div class="branch-top tabuk">
+<strong>تبوك</strong>
 </div>
 
-<div class="branch-actions">
+<div class="branch-body">
 
-<a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
+<h3>فرع تبوك</h3>
+
+<p>📞 0573480091</p>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
 target="_blank">
-الموقع
+
+فتح الموقع ←
+
 </a>
 
-<a href="tel:0561232087">
-اتصال
-</a>
-
 </div>
 
 </div>
 
 
-<!-- تبوك -->
+<div class="branch">
 
-<div class="branch-card">
-
-<div class="branch-icon">🏔️</div>
-
-<h3>تبوك</h3>
-
-<p>
-فرع نجوم الإبداع للمفروشات
-</p>
-
-<div class="branch-phone">
-0573480091
+<div class="branch-top ahsa">
+<strong>الأحساء</strong>
 </div>
 
-<div class="branch-actions">
+<div class="branch-body">
 
-<a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
+<h3>فرع الأحساء</h3>
+
+<p>📞 0539742588</p>
+
+<a class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
 target="_blank">
-الموقع
-</a>
 
-<a href="tel:0573480091">
-اتصال
-</a>
+فتح الموقع ←
 
-</div>
-
-</div>
-
-
-<!-- الأحساء -->
-
-<div class="branch-card">
-
-<div class="branch-icon">🌴</div>
-
-<h3>الأحساء</h3>
-
-<p>
-مجالس النجوم للمفروشات
-</p>
-
-<div class="branch-phone">
-0539742588
-</div>
-
-<div class="branch-actions">
-
-<a href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
-target="_blank">
-الموقع
-</a>
-
-<a href="tel:0539742588">
-اتصال
 </a>
 
 </div>
@@ -1953,241 +1695,9 @@ target="_blank">
 </section>
 
 
-
-<!-- ================= SALES REPRESENTATIVES ================= -->
-
-<section class="sales" id="sales">
-
-<div class="container">
-
-<div class="section-head">
-
-<small>SALES TEAM</small>
-
-<h2>مناديب المبيعات</h2>
-
-<p>
-تواصل مباشرة مع مندوب المبيعات في الفرع المناسب لك.
-</p>
-
-</div>
-
-
-<div class="sales-grid">
-
-
-<div class="sales-card">
-
-<div class="sales-banner riyadh-banner">
-
-<div class="sales-location">
-فرع الرياض
-</div>
-
-<div class="sales-star">
-<span>★</span>
-</div>
-
-<div class="sales-city">
-الرياض
-</div>
-
-</div>
-
-<div class="sales-info">
-
-<div class="sales-branch">
-نجوم الإبداع
-</div>
-
-<h3>مندوب المبيعات</h3>
-
-<p>
-سيتم إضافة اسم ورقم المندوب
-</p>
-
-<div class="sales-actions">
-
-<a href="https://wa.me/966551496121"
-class="sales-whatsapp"
-target="_blank">
-واتساب
-</a>
-
-<a href="tel:0551496121"
-class="sales-call">
-اتصال
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="sales-card">
-
-<div class="sales-banner dammam-banner">
-
-<div class="sales-location">
-فرع الدمام
-</div>
-
-<div class="sales-star">
-<span>★</span>
-</div>
-
-<div class="sales-city">
-الدمام
-</div>
-
-</div>
-
-<div class="sales-info">
-
-<div class="sales-branch">
-نجوم الإبداع
-</div>
-
-<h3>مندوب المبيعات</h3>
-
-<p>
-0561232087
-</p>
-
-<div class="sales-actions">
-
-<a href="https://wa.me/966561232087"
-class="sales-whatsapp"
-target="_blank">
-واتساب
-</a>
-
-<a href="tel:0561232087"
-class="sales-call">
-اتصال
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="sales-card">
-
-<div class="sales-banner tabuk-banner">
-
-<div class="sales-location">
-فرع تبوك
-</div>
-
-<div class="sales-star">
-<span>★</span>
-</div>
-
-<div class="sales-city">
-تبوك
-</div>
-
-</div>
-
-<div class="sales-info">
-
-<div class="sales-branch">
-نجوم الإبداع
-</div>
-
-<h3>مندوب المبيعات</h3>
-
-<p>
-0573480091
-</p>
-
-<div class="sales-actions">
-
-<a href="https://wa.me/966573480091"
-class="sales-whatsapp"
-target="_blank">
-واتساب
-</a>
-
-<a href="tel:0573480091"
-class="sales-call">
-اتصال
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="sales-card">
-
-<div class="sales-banner ahsa-banner">
-
-<div class="sales-location">
-فرع الأحساء
-</div>
-
-<div class="sales-star">
-<span>★</span>
-</div>
-
-<div class="sales-city">
-الأحساء
-</div>
-
-</div>
-
-<div class="sales-info">
-
-<div class="sales-branch">
-نجوم الإبداع
-</div>
-
-<h3>مندوب المبيعات</h3>
-
-<p>
-0539742588
-</p>
-
-<div class="sales-actions">
-
-<a href="https://wa.me/966539742588"
-class="sales-whatsapp"
-target="_blank">
-واتساب
-</a>
-
-<a href="tel:0539742588"
-class="sales-call">
-اتصال
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section class="contact" id="contact">
 
@@ -2195,12 +1705,12 @@ class="sales-call">
 
 <div class="section-head">
 
-<small>CONTACT US</small>
+<span class="mini">تواصل معنا</span>
 
-<h2>تواصل معنا</h2>
+<h2>نحن في خدمتكم</h2>
 
 <p>
-نسعد بتواصلكم واستفساراتكم
+للطلبات والاستفسارات والشكاوى
 </p>
 
 </div>
@@ -2211,7 +1721,7 @@ class="sales-call">
 
 <div class="contact-card">
 
-<h3>أرقام التواصل</h3>
+<h3>📱 التواصل الرئيسي</h3>
 
 
 <div class="contact-row">
@@ -2220,7 +1730,9 @@ class="sales-call">
 
 <a href="https://wa.me/966551496121"
 target="_blank">
+
 0551496121
+
 </a>
 
 </div>
@@ -2231,7 +1743,9 @@ target="_blank">
 <span>الإدارة</span>
 
 <a href="tel:0530493382">
+
 0530493382
+
 </a>
 
 </div>
@@ -2239,10 +1753,31 @@ target="_blank">
 
 <div class="contact-row">
 
-<span>الشكاوى والملاحظات</span>
+<span>الشكاوى والمقترحات</span>
 
 <a href="tel:0538677457">
+
 0538677457
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>📞 أرقام الفروع</h3>
+
+
+<div class="contact-row">
+
+<span>الرياض</span>
+
+<a href="tel:0551496121">
+0551496121
 </a>
 
 </div>
@@ -2284,37 +1819,6 @@ target="_blank">
 </div>
 
 
-
-<div class="contact-card">
-
-<h3>أوقات العمل</h3>
-
-<p>
-نسعد باستقبالكم والتواصل معكم خلال أوقات العمل.
-</p>
-
-
-<div class="hours">
-
-<strong>السبت – الخميس</strong>
-
-<br>
-
-9:00 صباحًا – 12:00 منتصف الليل
-
-<br><br>
-
-<strong>الجمعة</strong>
-
-<br>
-
-2:00 ظهرًا – 12:00 منتصف الليل
-
-</div>
-
-</div>
-
-
 </div>
 
 </div>
@@ -2322,36 +1826,47 @@ target="_blank">
 </section>
 
 
-
-<!-- ================= CTA ================= -->
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="cta">
 
+<img
+src="https://images.pexels.com/photos/7214171/pexels-photo-7214171.jpeg"
+alt="كنبات نجوم الإبداع"
+loading="lazy"
+decoding="async">
+
+<div class="cta-content">
+
 <div class="container">
 
-<h2>
-جاهزون لخدمتكم
-</h2>
+<h2>خدمتكم شرف لنا</h2>
 
 <p>
-خدمتكم شرف لنا.. ننتظر زيارتكم! ✨
+ننتظر زيارتكم ✨
 </p>
 
-<a href="https://wa.me/966551496121"
-target="_blank"
-class="btn btn-gold">
+<a
+class="btn btn-gold"
+href="https://wa.me/966551496121"
+target="_blank">
 
-تواصل معنا الآن عبر واتساب
+💬 تواصل عبر واتساب
 
 </a>
 
 </div>
 
+</div>
+
 </section>
 
 
-
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -2362,76 +1877,40 @@ class="btn btn-gold">
 
 <div>
 
-<div class="footer-logo">
-🌟 نجوم الإبداع
-</div>
+<h3>
+✦ نجوم الإبداع للمفروشات والكنبات
+</h3>
 
 <p>
-للمفروشات والكنبات والمجالس
-والطاولات والتفصيل حسب الطلب.
+نرحب بكم في نجوم الإبداع، حيث تجدون أرقى تصاميم
+الكنبات والمجالس الجاهزة والتفصيل، بأسعار تناسبكم.
 </p>
 
 
 <div class="footer-social">
 
-
-<!-- TikTok -->
-
-<a href="#"
-id="tiktokBottom"
-target="_blank"
-aria-label="TikTok">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.16h-3.13v13.7a2.9 2.9 0 11-2.9-2.9c.16 0 .32.01.47.04v-3.18a6.08 6.08 0 00-.47-.02A6.07 6.07 0 1015.85 16V9.91a7.94 7.94 0 003.74.93V7.71a4.84 4.84 0 01-0.0-.02z"/>
-
-</svg>
-
+<a class="social"
+href="#">
+TikTok
 </a>
 
-
-<!-- Snapchat -->
-
-<a href="https://www.snapchat.com/add/ma484m"
+<a class="social"
+href="https://www.snapchat.com/add/ma484m"
 target="_blank">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M12 2.2c3.3 0 5.5 2.5 5.5 5.7 0 1.4-.2 2.7.8 3.8.5.6 1.2 1 2 1.3.4.1.6.4.5.8-.1.5-.7.7-1.4.9-.4.1-.8.2-1 .5-.2.3-.2.7-.3 1.1-.1.4-.3.6-.7.7-.6.1-1.3.1-1.8.5-.7.5-1.4 1.4-3.6 1.4s-2.9-.9-3.6-1.4c-.5-.4-1.2-.4-1.8-.5-.4-.1-.6-.3-.7-.7-.1-.4-.1-.8-.3-1.1-.2-.3-.6-.4-1-.5-.7-.2-1.3-.4-1.4-.9-.1-.4.1-.7.5-.8.8-.3 1.5-.7 2-1.3 1-1.1.8-2.4.8-3.8C6.5 4.7 8.7 2.2 12 2.2z"/>
-
-</svg>
-
+Snap
 </a>
 
-
-<!-- Instagram -->
-
-<a href="https://www.instagram.com/jj_j505"
+<a class="social"
+href="https://www.instagram.com/jj_j505"
 target="_blank">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16a4.5 4.5 0 010-9zm0 2A2.5 2.5 0 1014.5 12 2.5 2.5 0 0012 9.5zm5.5-3.1a1.1 1.1 0 11-1.1 1.1 1.1 0 011.1-1.1z"/>
-
-</svg>
-
+Instagram
 </a>
 
-
-<!-- WhatsApp -->
-
-<a href="https://wa.me/966551496121"
+<a class="social"
+href="https://wa.me/966551496121"
 target="_blank">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M20.5 3.5A11.9 11.9 0 0012.05 0C5.45 0 .08 5.37.08 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.94 11.94 0 005.86 1.53h.01c6.6 0 11.96-5.37 11.96-11.97 0-3.2-1.24-6.2-3.52-8.44zM12.06 21.9h-.01a9.9 9.9 0 01-5.05-1.38l-.36-.21-3.67.96.98-3.58-.23-.37a9.93 9.93 0 01-1.52-5.35C2.2 6.5 6.63 2.08 12.06 2.08c2.63 0 5.1 1.03 6.96 2.9a9.78 9.78 0 012.88 6.96c0 5.44-4.42 9.96-9.84 9.96zm5.43-7.46c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.57-.49-.49-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35z"/>
-
-</svg>
-
+WhatsApp
 </a>
-
 
 </div>
 
@@ -2440,14 +1919,14 @@ target="_blank">
 
 <div>
 
-<h4>روابط سريعة</h4>
+<h3>الوصول السريع</h3>
 
 <div class="footer-links">
 
 <a href="#home">الرئيسية</a>
 <a href="#sofas">الكنبات</a>
 <a href="#tables">طاولات الخدمة</a>
-<a href="#dining">طاولات الطعام</a>
+<a href="#dining">غرفة الطعام</a>
 <a href="#branches">الفروع</a>
 <a href="#contact">تواصل معنا</a>
 
@@ -2458,29 +1937,36 @@ target="_blank">
 
 <div>
 
-<h4>خدماتنا</h4>
+<h3>أوقات العمل</h3>
 
-<div class="footer-links">
+<p>
+السبت – الخميس
+</p>
 
-<a href="#sofas">كنبات ومجالس</a>
-<a href="#tables">طاولات خدمة</a>
-<a href="#dining">طاولات طعام</a>
-<a href="#dining">بوفيهات غرف الطعام</a>
-<a href="#sofas">تفصيل حسب الطلب</a>
+<p>
+9:00 صباحًا – 12:00 منتصف الليل
+</p>
+
+<br>
+
+<p>
+الجمعة
+</p>
+
+<p>
+2:00 مساءً – 12:00 منتصف الليل
+</p>
 
 </div>
 
-</div>
-
 
 </div>
 
 
-<div class="footer-bottom">
+<div class="copyright">
 
 © 2026 نجوم الإبداع للمفروشات والكنبات
-<br>
-جميع الحقوق محفوظة
+— جميع الحقوق محفوظة
 
 </div>
 
@@ -2489,35 +1975,238 @@ target="_blank">
 </footer>
 
 
-
-<!-- ================= FLOATING WHATSAPP ================= -->
+<!-- =====================================================
+     WHATSAPP FLOAT
+===================================================== -->
 
 <a
-class="float-whatsapp"
+class="whatsapp"
 href="https://wa.me/966551496121"
 target="_blank"
 aria-label="واتساب">
 
-<svg viewBox="0 0 24 24">
+<svg viewBox="0 0 24 24" fill="currentColor">
 
-<path d="M20.5 3.5A11.9 11.9 0 0012.05 0C5.45 0 .08 5.37.08 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.94 11.94 0 005.86 1.53h.01c6.6 0 11.96-5.37 11.96-11.97 0-3.2-1.24-6.2-3.52-8.44zM12.06 21.9h-.01a9.9 9.9 0 01-5.05-1.38l-.36-.21-3.67.96.98-3.58-.23-.37a9.93 9.93 0 01-1.52-5.35C2.2 6.5 6.63 2.08 12.06 2.08c2.63 0 5.1 1.03 6.96 2.9a9.78 9.78 0 012.88 6.96c0 5.44-4.42 9.96-9.84 9.96zm5.43-7.46c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.57-.49-.49-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35z"/>
+<path d="M20.5 3.5A11.9 11.9 0 0012.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 005.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4zM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 012.1 12c0-5.5 4.5-9.9 10-9.9 2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.9 4.4 2.9 7.1-.1 5.3-4.5 9.7-10 9.7zm5.5-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.6-.4-.6.4-.6 1.1-2 .1-.3.1-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.1.6 2.5.6.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.2-.3-.3-.6-.4z"/>
 
 </svg>
 
 </a>
 
 
+<!-- =====================================================
+     SEARCH SCRIPT
+===================================================== -->
+
 <script>
 
-/* ضع رابط تيك توك الرسمي هنا عند توفره */
+const searchInput =
+document.getElementById("productSearch");
 
-const TIKTOK_URL = "#";
+const products =
+document.querySelectorAll(".product");
 
-document.getElementById("tiktokTop").href = TIKTOK_URL;
-document.getElementById("tiktokBottom").href = TIKTOK_URL;
+searchInput.addEventListener("input",function(){
+
+    const value =
+    this.value.trim().toLowerCase();
+
+    products.forEach(function(product){
+
+        const name =
+        product.dataset.name.toLowerCase();
+
+        if(name.includes(value)){
+
+            product.style.display="block";
+
+        }else{
+
+            product.style.display="none";
+
+        }
+
+    });
+
+});
 
 </script>
 
+
+<!-- =====================================================
+     RANDOM IMAGE SYSTEM
+===================================================== -->
+
+<script>
+
+/*
+    لا يوجد API هنا.
+
+    كل فئة تحتوي على مجموعة صور.
+    عند تحديث الموقع يتم اختيار صورة مختلفة.
+*/
+
+const imagePools = {
+
+hero:[
+"https://images.pexels.com/photos/7534563/pexels-photo-7534563.jpeg",
+"https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+"https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+],
+
+saudi:[
+"https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg",
+"https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+"https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg"
+],
+
+classic:[
+"https://images.pexels.com/photos/17404701/pexels-photo-17404701.jpeg",
+"https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg",
+"https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg"
+],
+
+modern:[
+"https://images.pexels.com/photos/36601409/pexels-photo-36601409.jpeg",
+"https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg",
+"https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg"
+],
+
+turkish:[
+"https://images.pexels.com/photos/6920439/pexels-photo-6920439.jpeg",
+"https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+"https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg"
+],
+
+american:[
+"https://images.pexels.com/photos/7214171/pexels-photo-7214171.jpeg",
+"https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg",
+"https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg"
+],
+
+service:[
+"https://images.pexels.com/photos/15253318/pexels-photo-15253318.jpeg",
+"https://images.pexels.com/photos/7195554/pexels-photo-7195554.jpeg",
+"https://images.pexels.com/photos/17001794/pexels-photo-17001794.jpeg"
+],
+
+dining:[
+"https://images.pexels.com/photos/20035983/pexels-photo-20035983.jpeg",
+"https://images.pexels.com/photos/22696776/pexels-photo-22696776.jpeg",
+"https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg"
+],
+
+buffet:[
+"https://images.pexels.com/photos/29000021/pexels-photo-29000021.jpeg",
+"https://images.pexels.com/photos/1571747/pexels-photo-1571747.jpeg",
+"https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg"
+]
+
+};
+
+
+/* اختيار صورة عشوائية */
+
+function randomImage(pool){
+
+    return pool[
+        Math.floor(
+            Math.random()*pool.length
+        )
+    ];
+
+}
+
+
+/* تغيير الصور عند فتح الصفحة */
+
+function changeImages(){
+
+    const sofaImages =
+    document.querySelectorAll(
+        "#sofas .product img"
+    );
+
+    if(sofaImages.length >= 5){
+
+        sofaImages[0].src =
+        randomImage(imagePools.saudi);
+
+        sofaImages[1].src =
+        randomImage(imagePools.classic);
+
+        sofaImages[2].src =
+        randomImage(imagePools.modern);
+
+        sofaImages[3].src =
+        randomImage(imagePools.turkish);
+
+        sofaImages[4].src =
+        randomImage(imagePools.american);
+
+    }
+
+
+    const tableImages =
+    document.querySelectorAll(
+        "#tables .table-card img"
+    );
+
+    if(tableImages.length >= 2){
+
+        tableImages[0].src =
+        randomImage(imagePools.service);
+
+        tableImages[1].src =
+        randomImage(imagePools.service);
+
+    }
+
+
+    const diningImages =
+    document.querySelectorAll(
+        "#dining .card img"
+    );
+
+    if(diningImages.length >= 3){
+
+        diningImages[0].src =
+        randomImage(imagePools.dining);
+
+        diningImages[1].src =
+        randomImage(imagePools.dining);
+
+        diningImages[2].src =
+        randomImage(imagePools.buffet);
+
+    }
+
+
+    const hero =
+    document.querySelector(".hero-image");
+
+    if(hero){
+
+        hero.src =
+        randomImage(imagePools.hero);
+
+    }
+
+}
+
+
+/* تشغيل تغيير الصور */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        changeImages();
+
+    }
+);
+
+</script>
 
 </body>
 </html>
