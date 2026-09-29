@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نجوم الإبداع للمفروشات والكنبات</title>
+
+<meta name="description"
+content="نجوم الإبداع للمفروشات والكنبات - جاهز وتفصيل - الرياض والدمام - شحن لجميع مدن المملكة">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Tahoma,Arial,sans-serif;
+    background:
+    radial-gradient(circle at top,#302817 0,#11100e 35%,#070707 75%);
+    color:#fff;
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:520px;
+    margin:auto;
+    padding:25px 16px 35px;
+}
+
+.hero{
+    text-align:center;
+    padding:32px 20px 28px;
+    border:1px solid #b99450;
+    border-radius:30px;
+    background:linear-gradient(145deg,#211c14,#0e0e0e);
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+.logo{
+    width:100px;
+    height:100px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid #d2ad61;
+    background:
+    radial-gradient(circle,#4a3a20,#17130d);
+    font-size:48px;
+    color:#e7c77d;
+    box-shadow:0 0 35px rgba(210,173,97,.2);
+}
+
+h1{
+    color:#e5c276;
+    font-size:25px;
+    margin:18px 0 8px;
+    line-height:1.5;
+}
+
+.subtitle{
+    color:#ddd;
+    font-size:14px;
+    line-height:2;
+}
+
+.badges{
+    display:flex;
+    justify-content:center;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.badges span{
+    border:1px solid #715a32;
+    border-radius:20px;
+    padding:6px 12px;
+    color:#e4c47c;
+    font-size:12px;
+}
+
+.buttons{
+    margin-top:18px;
+    display:grid;
+    gap:11px;
+}
+
+.btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    min-height:55px;
+    padding:14px;
+    border-radius:17px;
+    border:1px solid #5e4b2c;
+    background:linear-gradient(135deg,#252018,#121212);
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    border-color:#dfbc70;
+}
+
+.btn.gold{
+    background:linear-gradient(135deg,#8d6a2f,#b38a45);
+    color:#fff;
+    border-color:#e1c27c;
+}
+
+.two{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.card{
+    margin-top:15px;
+    padding:19px;
+    border-radius:21px;
+    background:rgba(18,18,18,.9);
+    border:1px solid #30291e;
+}
+
+.card h2{
+    margin:0 0 12px;
+    font-size:17px;
+    color:#e5c276;
+}
+
+.card p{
+    margin:7px 0;
+    color:#ddd;
+    font-size:13px;
+    line-height:1.8;
+}
+
+.gold{
+    color:#e5c276;
+}
+
+.footer{
+    text-align:center;
+    margin-top:23px;
+    color:#aaa;
+    font-size:12px;
+    line-height:2;
+}
+
+.footer strong{
+    color:#e5c276;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="logo">✦</div>
+
+        <h1>
+            نجوم الإبداع للمفروشات والكنبات
+        </h1>
+
+        <div class="subtitle">
+            أرقى تصاميم الكنبات والمجالس<br>
+            الجاهزة والتفصيل • أسعار تناسبكم
+            <br>
+            🚚 شحن لجميع مدن المملكة وخارجها
+        </div>
+
+        <div class="badges">
+            <span>كنبات جاهزة</span>
+            <span>تفصيل</span>
+            <span>مجالس</span>
+            <span>شحن</span>
+        </div>
+
+    </section>
+
+
+    <div class="buttons">
+
+        <a class="btn gold"
+           href="tel:0531178805">
+           📞 اتصل بالمبيعات
+        </a>
+
+        <a class="btn"
+           href="tel:0538506829">
+           📞 المبيعات — 0538506829
+        </a>
+
+        <a class="btn"
+           href="tel:0531302436">
+           📞 المبيعات — 0531302436
+        </a>
+
+        <a class="btn"
+           href="tel:0541444288">
+           👔 التواصل مع الإدارة
+        </a>
+
+        <div class="two">
+
+            <a class="btn"
+               href="https://www.snapchat.com/add/ma484m"
+               target="_blank">
+               👻 سناب شات
+            </a>
+
+            <a class="btn"
+               href="https://www.instagram.com/jj_j505/"
+               target="_blank">
+               📸 Instagram
+            </a>
+
+        </div>
+
+        <a class="btn gold"
+           href="https://maps.app.goo.gl/GUm3n6694Cc6AWoC7"
+           target="_blank">
+           📍 افتح موقعنا على الخريطة
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📍 فروعنا</h2>
+
+        <p>
+            <span class="gold">الرياض</span><br>
+            حي نمار
+        </p>
+
+        <p>
+            <span class="gold">الدمام</span><br>
+            شارع الملك عبدالعزيز
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>⏰ أوقات العمل</h2>
+
+        <p>
+            السبت – الخميس<br>
+            من 9 صباحًا حتى 12 ليلًا
+        </p>
+
+        <p>
+            الجمعة<br>
+            من 2 ظهرًا حتى 12 ليلًا
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>✨ لماذا نجوم الإبداع؟</h2>
+
+        <p>
+            🛋️ تصاميم متنوعة وأنيقة
+        </p>
+
+        <p>
+            🪡 تفصيل حسب الطلب
+        </p>
+
+        <p>
+            🚚 شحن لجميع مدن المملكة وخارجها
+        </p>
+
+        <p>
+            ⭐ جودة وتصاميم تناسب مختلف الأذواق
+        </p>
+
+    </div>
+
+
+    <div class="footer">
+
+        خدمتكم شرف لنا.. ننتظر زيارتكم! ✨
+
+        <br>
+
+        <strong>
+            نجوم الإبداع للمفروشات والكنبات
+        </strong>
+
+    </div>
+
+</div>
+
+</body>
+</html>
