@@ -1,1131 +1,2354 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta
+    name="theme-color"
+    content="#071727">
+
+<meta
+    name="color-scheme"
+    content="light">
+
+<meta
+    name="referrer"
+    content="strict-origin-when-cross-origin">
+
+<meta
+    name="robots"
+    content="index, follow">
+
+<meta
+    name="description"
+    content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
+
+<meta
+    name="format-detection"
+    content="telephone=yes">
 
 <title>نجوم الإبداع للمفروشات والكنبات</title>
 
-<meta name="description"
-content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
+
+<!-- =========================
+SECURITY
+========================= -->
+
+<meta
+    http-equiv="Content-Security-Policy"
+    content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    form-action 'self';
+    frame-ancestors 'self';
+    img-src 'self' data: https:;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    script-src 'self' 'unsafe-inline';
+    connect-src 'self';
+    media-src 'self';
+    upgrade-insecure-requests;
+    ">
+
+
+<!-- =========================
+FONTS
+========================= -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-rel="stylesheet">
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
+<!-- =========================
+PRELOAD MAIN IMAGE
+========================= -->
+
+<link
+    rel="preload"
+    as="image"
+    href="images/hero.jpg"
+    fetchpriority="high">
+
 
 <style>
 
+/* =========================================================
+ROOT
+========================================================= */
+
 :root{
+
     --navy:#071727;
     --navy2:#0d243a;
+
     --gold:#c9a45c;
     --gold2:#efd58f;
+
     --cream:#f7f3eb;
+
     --white:#fff;
+
     --text:#17212b;
     --muted:#6d7680;
+
     --border:#e9e4da;
-    --shadow:0 12px 35px rgba(0,0,0,.09);
+
+    --shadow:
+        0 12px 35px rgba(0,0,0,.09);
+
+    --radius:15px;
+
+    --safe-bottom:
+        env(safe-area-inset-bottom,0px);
+
+    --safe-top:
+        env(safe-area-inset-top,0px);
 }
 
-*{
+
+/* =========================================================
+RESET
+========================================================= */
+
+*,
+*::before,
+*::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+
+    scroll-padding-top:80px;
+
 }
+
 
 body{
-    font-family:"Cairo",sans-serif;
+
+    font-family:"Cairo",Arial,sans-serif;
+
     background:#fff;
+
     color:var(--text);
+
     line-height:1.8;
+
+    min-width:320px;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
 }
+
+
+body,
+button,
+input{
+
+    font-family:"Cairo",Arial,sans-serif;
+
+}
+
 
 a{
+
     text-decoration:none;
+
     color:inherit;
+
+    -webkit-tap-highlight-color:transparent;
+
 }
+
+
+button,
+a{
+
+    touch-action:manipulation;
+
+}
+
 
 img{
+
     display:block;
+
     max-width:100%;
+
 }
+
+
+input{
+
+    -webkit-appearance:none;
+    appearance:none;
+
+}
+
+
+::selection{
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+}
+
+
+/* =========================================================
+CONTAINER
+========================================================= */
 
 .container{
+
     width:min(1180px,92%);
-    margin:auto;
+
+    margin-left:auto;
+    margin-right:auto;
+
 }
 
 
-/* =========================
+/* =========================================================
 HEADER
-========================= */
+========================================================= */
 
 header{
+
     position:sticky;
+
+    position:-webkit-sticky;
+
     top:0;
+
     z-index:1000;
+
+    padding-top:var(--safe-top);
+
     background:rgba(7,23,39,.97);
-    border-bottom:1px solid rgba(201,164,92,.25);
+
+    border-bottom:
+        1px solid rgba(201,164,92,.25);
+
+    -webkit-backdrop-filter:blur(12px);
     backdrop-filter:blur(12px);
+
 }
+
 
 .navbar{
+
     min-height:78px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:20px;
+
 }
+
 
 .brand{
+
     display:flex;
+
     align-items:center;
+
     gap:14px;
+
+    flex-shrink:0;
+
 }
+
 
 .logo-box{
+
     width:47px;
     height:47px;
+
     position:relative;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     transform:rotate(45deg);
+
     border:2px solid var(--gold);
+
     flex-shrink:0;
+
 }
+
 
 .logo-box::before{
+
     content:"";
+
     position:absolute;
+
     width:28px;
     height:28px;
+
     border:1px solid var(--gold2);
+
 }
+
 
 .logo-box::after{
+
     content:"✦";
+
     position:absolute;
+
     transform:rotate(-45deg);
+
     color:var(--gold2);
+
     font-size:20px;
+
 }
+
 
 .logo-text{
+
     color:#fff;
+
 }
+
 
 .logo-text strong{
+
     display:block;
+
     font-size:16px;
+
     line-height:1.4;
+
 }
+
 
 .logo-text small{
+
     color:var(--gold2);
+
     font-size:10px;
+
 }
+
 
 .nav-links{
+
     display:flex;
+
     align-items:center;
+
+    justify-content:center;
+
     gap:22px;
+
 }
+
 
 .nav-links a{
+
     color:#fff;
+
     font-size:13px;
-    transition:.3s;
+
+    transition:
+        color .3s ease;
+
 }
 
-.nav-links a:hover{
+
+.nav-links a:hover,
+.nav-links a:focus-visible{
+
     color:var(--gold2);
+
 }
+
 
 .socials{
+
     display:flex;
+
     gap:7px;
+
+    flex-shrink:0;
+
 }
+
 
 .social{
+
     width:35px;
     height:35px;
-    border:1px solid rgba(255,255,255,.2);
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
     border-radius:50%;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     color:#fff;
-    transition:.3s;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+
     font-size:12px;
+
 }
 
-.social:hover{
+
+.social:hover,
+.social:focus-visible{
+
     color:var(--gold2);
+
     border-color:var(--gold);
+
     transform:translateY(-2px);
+
 }
+
 
 .social svg{
+
     width:17px;
     height:17px;
+
 }
 
 
-/* =========================
+/* =========================================================
 HERO
-========================= */
+========================================================= */
 
 .hero{
+
     min-height:650px;
+
     position:relative;
+
     display:flex;
+
     align-items:center;
+
     overflow:hidden;
+
     background:#071727;
+
 }
+
 
 .hero-image{
+
     position:absolute;
+
     inset:0;
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
+    object-position:center;
+
 }
+
 
 .hero-overlay{
+
     position:absolute;
+
     inset:0;
+
     background:
-    linear-gradient(
-        90deg,
-        rgba(3,12,23,.95),
-        rgba(3,12,23,.65),
-        rgba(3,12,23,.25)
-    );
+        linear-gradient(
+            90deg,
+            rgba(3,12,23,.95),
+            rgba(3,12,23,.65),
+            rgba(3,12,23,.25)
+        );
+
 }
+
 
 .hero-content{
+
     position:relative;
+
     z-index:2;
+
     color:#fff;
+
     max-width:700px;
+
 }
+
 
 .badge{
+
     display:inline-block;
+
     border:1px solid var(--gold);
+
     color:var(--gold2);
+
     padding:6px 17px;
+
     border-radius:30px;
+
     font-size:12px;
+
     margin-bottom:18px;
+
 }
+
 
 .hero h1{
-    font-size:clamp(38px,6vw,68px);
+
+    font-size:
+        clamp(38px,6vw,68px);
+
     line-height:1.2;
+
     margin-bottom:20px;
+
 }
+
 
 .hero h1 span{
+
     color:var(--gold2);
+
 }
+
 
 .hero p{
+
     color:#e0e4e8;
+
     font-size:17px;
+
     max-width:650px;
+
     margin-bottom:28px;
+
 }
+
 
 .buttons{
+
     display:flex;
+
     gap:12px;
+
     flex-wrap:wrap;
+
 }
+
 
 .btn{
+
+    min-height:46px;
+
     padding:12px 24px;
+
     border-radius:5px;
+
     font-weight:800;
-    transition:.3s;
+
+    transition:
+        .3s ease;
+
     display:inline-flex;
+
     justify-content:center;
+
     align-items:center;
+
     gap:7px;
+
+    cursor:pointer;
+
 }
+
 
 .btn-gold{
+
     background:var(--gold);
+
     color:#071727;
+
 }
 
-.btn-gold:hover{
+
+.btn-gold:hover,
+.btn-gold:focus-visible{
+
     background:var(--gold2);
+
     transform:translateY(-2px);
+
 }
+
 
 .btn-outline{
-    border:1px solid rgba(255,255,255,.45);
+
+    border:
+        1px solid rgba(255,255,255,.45);
+
     color:#fff;
+
 }
 
-.btn-outline:hover{
+
+.btn-outline:hover,
+.btn-outline:focus-visible{
+
     border-color:var(--gold);
+
     color:var(--gold2);
+
 }
 
 
-/* =========================
+/* =========================================================
 SECTIONS
-========================= */
+========================================================= */
 
 section{
+
     padding:85px 0;
+
 }
+
 
 .section-head{
+
     text-align:center;
+
     margin-bottom:45px;
+
 }
+
 
 .section-head .mini{
+
     color:var(--gold);
+
     font-size:13px;
+
     font-weight:800;
+
 }
+
 
 .section-head h2{
+
     color:var(--navy);
+
     font-size:35px;
+
     margin:5px 0;
+
 }
+
 
 .section-head p{
+
     color:var(--muted);
+
     font-size:14px;
+
 }
 
 
-/* =========================
+/* =========================================================
 QUICK MENU
-========================= */
+========================================================= */
 
 .quick-menu{
+
     background:#fff;
+
     padding:20px 0;
-    border-bottom:1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
 }
+
 
 .quick{
+
     display:grid;
-    grid-template-columns:repeat(6,1fr);
+
+    grid-template-columns:
+        repeat(6,1fr);
+
     gap:10px;
+
 }
+
 
 .quick a{
+
     padding:13px 8px;
+
     text-align:center;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:9px;
+
     font-size:13px;
+
     font-weight:700;
+
     background:#fff;
-    transition:.3s;
+
+    transition:
+        .3s ease;
+
 }
 
-.quick a:hover{
+
+.quick a:hover,
+.quick a:focus-visible{
+
     background:var(--navy);
+
     color:#fff;
+
     border-color:var(--navy);
+
 }
 
 
-/* =========================
+/* =========================================================
 PRODUCTS
-========================= */
+========================================================= */
 
 .products{
+
     background:var(--cream);
+
 }
+
 
 .search-box{
+
     width:min(600px,100%);
+
     margin:0 auto 35px;
+
     position:relative;
+
 }
+
 
 .search-box input{
+
     width:100%;
+
+    min-height:50px;
+
     padding:15px 20px;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:50px;
+
     outline:none;
+
     font-family:inherit;
+
     font-size:14px;
+
     background:#fff;
+
+    color:var(--text);
+
 }
+
+
+.search-box input::placeholder{
+
+    color:#8b9299;
+
+}
+
 
 .search-box input:focus{
+
     border-color:var(--gold);
-    box-shadow:0 0 0 3px rgba(201,164,92,.1);
+
+    box-shadow:
+        0 0 0 3px rgba(201,164,92,.1);
+
 }
+
 
 .product-grid{
+
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+
+    grid-template-columns:
+        repeat(5,1fr);
+
     gap:16px;
+
 }
+
 
 .product{
+
     background:#fff;
+
     border-radius:13px;
+
     overflow:hidden;
-    box-shadow:0 7px 25px rgba(0,0,0,.07);
-    transition:.35s;
+
+    box-shadow:
+        0 7px 25px rgba(0,0,0,.07);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
 }
+
 
 .product:hover{
+
     transform:translateY(-6px);
+
     box-shadow:var(--shadow);
+
 }
+
 
 .product-image{
+
     height:280px;
+
     overflow:hidden;
+
     background:#ddd;
+
 }
+
 
 .product-image img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
-    transition:.7s;
+
+    transition:
+        transform .7s ease;
+
 }
 
-.product:hover img{
+
+.product:hover .product-image img{
+
     transform:scale(1.06);
+
 }
+
 
 .product-info{
+
     padding:16px 13px;
+
     text-align:center;
+
 }
+
 
 .product-info h3{
+
     color:var(--navy);
+
     font-size:16px;
+
 }
+
 
 .product-info p{
+
     color:var(--muted);
+
     font-size:12px;
+
 }
 
 
-/* =========================
+/* =========================================================
 SALES REPRESENTATIVES
-========================= */
+========================================================= */
 
 .sales-reps{
+
     background:#fff;
+
 }
+
 
 .sales-reps-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap:20px;
+
 }
+
 
 .sales-rep{
+
     background:#fff;
+
     border-radius:16px;
+
     overflow:hidden;
+
     box-shadow:var(--shadow);
-    border:1px solid var(--border);
-    transition:.35s;
+
+    border:
+        1px solid var(--border);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
     text-align:center;
+
 }
+
 
 .sales-rep:hover{
+
     transform:translateY(-6px);
-    box-shadow:0 15px 40px rgba(0,0,0,.13);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.13);
+
 }
 
+
 .rep-image{
+
     height:280px;
+
     background:
         linear-gradient(
             135deg,
             #0d243a,
             #071727
         );
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     position:relative;
+
     overflow:hidden;
+
 }
+
 
 .rep-image img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
 }
+
 
 .rep-placeholder{
+
     width:105px;
     height:105px;
+
     border-radius:50%;
-    border:2px solid var(--gold);
+
+    border:
+        2px solid var(--gold);
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     color:var(--gold2);
+
     font-size:44px;
-    background:rgba(255,255,255,.04);
+
+    background:
+        rgba(255,255,255,.04);
+
 }
+
 
 .rep-info{
+
     padding:18px 15px 22px;
+
 }
+
 
 .rep-info h3{
+
     color:var(--navy);
+
     font-size:18px;
+
     margin-bottom:3px;
+
 }
+
 
 .rep-info p{
+
     color:var(--muted);
+
     font-size:12px;
+
     margin-bottom:13px;
+
 }
+
 
 .rep-whatsapp{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:6px;
+
     background:#25D366;
+
     color:#fff;
+
     padding:8px 20px;
+
     border-radius:25px;
+
     font-size:12px;
+
     font-weight:700;
-    transition:.3s;
+
+    transition:
+        .3s ease;
+
+    min-height:38px;
+
 }
 
-.rep-whatsapp:hover{
+
+.rep-whatsapp:hover,
+.rep-whatsapp:focus-visible{
+
     transform:translateY(-2px);
+
     opacity:.9;
+
 }
 
 
-/* =========================
+/* =========================================================
 TABLES
-========================= */
+========================================================= */
 
 .tables{
+
     background:#fff;
+
 }
+
 
 .table-grid{
+
     display:grid;
-    grid-template-columns:1.2fr .8fr;
+
+    grid-template-columns:
+        1.2fr .8fr;
+
     gap:20px;
+
 }
+
 
 .table-card{
+
     position:relative;
+
     min-height:400px;
+
     border-radius:18px;
+
     overflow:hidden;
+
     box-shadow:var(--shadow);
+
+    background:#ddd;
+
 }
+
 
 .table-card img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
 }
+
 
 .table-caption{
+
     position:absolute;
+
     bottom:0;
+
     right:0;
+
     left:0;
+
     padding:22px;
+
     color:#fff;
-    background:linear-gradient(
-        transparent,
-        rgba(4,15,27,.92)
-    );
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(4,15,27,.92)
+        );
+
 }
+
 
 .table-caption h3{
+
     color:var(--gold2);
+
     font-size:22px;
+
 }
+
 
 .table-caption p{
+
     font-size:13px;
+
 }
 
 
-/* =========================
+/* =========================================================
 DINING
-========================= */
+========================================================= */
 
 .dining{
+
     background:var(--cream);
+
 }
+
 
 .cards{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
+
 }
+
 
 .card{
+
     background:#fff;
+
     border-radius:15px;
+
     overflow:hidden;
+
     box-shadow:var(--shadow);
+
 }
+
 
 .card-img{
+
     height:270px;
+
     overflow:hidden;
+
 }
+
 
 .card-img img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
-    transition:.7s;
+
+    transition:
+        transform .7s ease;
+
 }
 
-.card:hover img{
+
+.card:hover .card-img img{
+
     transform:scale(1.05);
+
 }
+
 
 .card-body{
+
     padding:20px;
+
 }
+
 
 .card-body h3{
+
     color:var(--navy);
+
     margin-bottom:5px;
+
 }
+
 
 .card-body p{
+
     color:var(--muted);
+
     font-size:13px;
+
 }
 
 
-/* =========================
+/* =========================================================
 ABOUT
-========================= */
+========================================================= */
 
 .about{
+
     background:#fff;
+
 }
+
 
 .about-grid{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap:50px;
+
     align-items:center;
+
 }
+
 
 .about-image{
+
     height:500px;
+
     border-radius:18px;
+
     overflow:hidden;
+
     box-shadow:var(--shadow);
+
+    background:#ddd;
+
 }
+
 
 .about-image img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
 }
+
 
 .about-text .mini{
+
     color:var(--gold);
+
     font-weight:800;
+
 }
+
 
 .about-text h2{
+
     color:var(--navy);
+
     font-size:38px;
+
     margin:8px 0 18px;
+
 }
+
 
 .about-text p{
+
     color:var(--muted);
+
     font-size:14px;
+
     margin-bottom:20px;
+
 }
+
 
 .features{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap:12px;
+
 }
+
 
 .feature{
+
     padding:15px;
+
     background:var(--cream);
-    border-right:3px solid var(--gold);
+
+    border-right:
+        3px solid var(--gold);
+
     border-radius:8px;
+
 }
+
 
 .feature strong{
+
     color:var(--navy);
+
     display:block;
+
     font-size:14px;
+
 }
+
 
 .feature span{
+
     color:var(--muted);
+
     font-size:11px;
+
 }
 
 
-/* =========================
+/* =========================================================
 BRANCHES
-========================= */
+========================================================= */
 
 .branches{
+
     background:var(--navy);
+
 }
+
 
 .branches .section-head h2{
+
     color:#fff;
+
 }
+
 
 .branches .section-head p{
+
     color:#b8c0c8;
+
 }
+
 
 .branch-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap:16px;
+
 }
+
 
 .branch{
+
     background:#0c2238;
-    border:1px solid rgba(201,164,92,.22);
+
+    border:
+        1px solid rgba(201,164,92,.22);
+
     border-radius:14px;
+
     overflow:hidden;
+
     color:#fff;
+
 }
+
 
 .branch-top{
+
     height:135px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     position:relative;
+
     overflow:hidden;
+
 }
+
 
 .branch-top::before{
+
     content:"✦";
+
     position:absolute;
+
     font-size:120px;
-    color:rgba(255,255,255,.06);
+
+    color:
+        rgba(255,255,255,.06);
+
 }
+
 
 .branch-top strong{
+
     position:relative;
+
     z-index:2;
+
     font-size:25px;
+
 }
+
 
 .riyadh{
-    background:linear-gradient(135deg,#16375c,#725435);
+
+    background:
+        linear-gradient(
+            135deg,
+            #16375c,
+            #725435
+        );
+
 }
+
 
 .dammam{
-    background:linear-gradient(135deg,#075565,#193a67);
+
+    background:
+        linear-gradient(
+            135deg,
+            #075565,
+            #193a67
+        );
+
 }
+
 
 .tabuk{
-    background:linear-gradient(135deg,#654529,#b89055);
+
+    background:
+        linear-gradient(
+            135deg,
+            #654529,
+            #b89055
+        );
+
 }
+
 
 .ahsa{
-    background:linear-gradient(135deg,#20553d,#9b783b);
+
+    background:
+        linear-gradient(
+            135deg,
+            #20553d,
+            #9b783b
+        );
+
 }
+
 
 .branch-body{
+
     padding:18px;
+
 }
+
 
 .branch-body h3{
+
     color:var(--gold2);
+
     font-size:17px;
+
 }
+
 
 .branch-body p{
+
     color:#c5ccd3;
+
     font-size:12px;
+
 }
+
 
 .map-btn{
+
     display:inline-block;
+
     margin-top:10px;
+
     color:var(--gold2);
+
     font-size:12px;
+
+    padding:4px 0;
+
 }
 
 
-/* =========================
+/* =========================================================
 CONTACT
-========================= */
+========================================================= */
 
 .contact{
+
     background:var(--cream);
+
 }
+
 
 .contact-grid{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap:20px;
+
 }
+
 
 .contact-card{
+
     background:#fff;
+
     border-radius:15px;
+
     padding:25px;
+
     box-shadow:var(--shadow);
+
 }
+
 
 .contact-card h3{
+
     color:var(--navy);
+
     margin-bottom:15px;
+
 }
+
 
 .contact-row{
+
     display:flex;
+
     justify-content:space-between;
+
     gap:10px;
+
     padding:13px 0;
-    border-bottom:1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
 }
+
 
 .contact-row:last-child{
+
     border-bottom:0;
+
 }
+
 
 .contact-row span{
+
     color:var(--muted);
+
     font-size:12px;
+
 }
+
 
 .contact-row a{
+
     color:var(--navy);
+
     font-weight:800;
+
 }
 
 
-/* =========================
+/* =========================================================
 CTA
-========================= */
+========================================================= */
 
 .cta{
+
     min-height:380px;
+
     position:relative;
+
     overflow:hidden;
+
     display:flex;
+
     align-items:center;
+
 }
+
 
 .cta img{
+
     position:absolute;
+
     inset:0;
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
 }
+
 
 .cta::after{
+
     content:"";
+
     position:absolute;
+
     inset:0;
-    background:rgba(3,14,27,.83);
+
+    background:
+        rgba(3,14,27,.83);
+
 }
+
 
 .cta-content{
+
     position:relative;
+
     z-index:2;
+
     width:100%;
+
     text-align:center;
+
     color:#fff;
+
 }
+
 
 .cta-content h2{
+
     color:var(--gold2);
+
     font-size:42px;
+
 }
+
 
 .cta-content p{
+
     margin:8px 0 25px;
+
 }
 
 
-/* =========================
+/* =========================================================
 FOOTER
-========================= */
+========================================================= */
 
 footer{
+
     background:#030b14;
+
     color:#9ea7b0;
-    padding:50px 0 25px;
+
+    padding:50px 0
+        calc(25px + var(--safe-bottom));
+
 }
+
 
 .footer-grid{
+
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
     gap:40px;
+
 }
+
 
 footer h3{
+
     color:#fff;
+
     margin-bottom:14px;
+
 }
+
 
 footer p{
+
     font-size:12px;
+
 }
+
 
 .footer-links{
+
     display:flex;
+
     flex-direction:column;
+
     gap:7px;
+
 }
+
 
 .footer-links a{
+
     font-size:12px;
+
 }
 
-.footer-links a:hover{
+
+.footer-links a:hover,
+.footer-links a:focus-visible{
+
     color:var(--gold2);
+
 }
+
 
 .footer-social{
+
     display:flex;
+
     gap:7px;
+
     margin-top:15px;
+
+    flex-wrap:wrap;
+
 }
+
 
 .copyright{
+
     margin-top:35px;
+
     padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.1);
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
     text-align:center;
+
     font-size:11px;
+
 }
 
 
-/* =========================
+/* =========================================================
 WHATSAPP
-========================= */
+========================================================= */
 
 .whatsapp{
+
     position:fixed;
+
     left:20px;
-    bottom:20px;
+
+    bottom:
+        calc(20px + var(--safe-bottom));
+
     width:59px;
     height:59px;
+
     border-radius:50%;
+
     background:#25D366;
+
     color:#fff;
+
     display:flex;
+
     justify-content:center;
     align-items:center;
+
     z-index:5000;
-    box-shadow:0 7px 25px rgba(0,0,0,.25);
+
+    box-shadow:
+        0 7px 25px rgba(0,0,0,.25);
+
+    transition:
+        transform .25s ease;
+
 }
+
+
+.whatsapp:hover,
+.whatsapp:focus-visible{
+
+    transform:scale(1.06);
+
+}
+
 
 .whatsapp svg{
+
     width:31px;
     height:31px;
+
 }
 
 
-/* =========================
+/* =========================================================
+SEARCH EMPTY STATE
+========================================================= */
+
+.search-empty{
+
+    display:none;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    padding:25px;
+
+    font-size:14px;
+
+}
+
+
+/* =========================================================
+NOSCRIPT
+========================================================= */
+
+.noscript-message{
+
+    padding:15px;
+
+    background:#fff3cd;
+
+    color:#664d03;
+
+    text-align:center;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+FOCUS
+========================================================= */
+
+a:focus-visible,
+input:focus-visible{
+
+    outline:
+        3px solid rgba(201,164,92,.65);
+
+    outline-offset:3px;
+
+}
+
+
+/* =========================================================
 MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:1050px){
 
     .nav-links{
+
         display:none;
+
     }
+
 
     .product-grid{
-        grid-template-columns:repeat(3,1fr);
+
+        grid-template-columns:
+            repeat(3,1fr);
+
     }
+
 
     .branch-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
+
     }
 
+
     .sales-reps-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
+
     }
+
 }
+
 
 @media(max-width:750px){
 
-    .navbar{
-        min-height:68px;
+    html{
+
+        scroll-padding-top:70px;
+
     }
+
+
+    .navbar{
+
+        min-height:68px;
+
+    }
+
 
     .logo-text strong{
+
         font-size:13px;
+
     }
+
 
     .logo-text small{
+
         display:none;
+
     }
+
 
     .social{
+
         width:31px;
         height:31px;
+
     }
+
 
     .hero{
+
         min-height:580px;
+
     }
+
 
     .hero h1{
+
         font-size:38px;
+
     }
+
 
     .hero p{
+
         font-size:14px;
+
     }
+
 
     section{
+
         padding:65px 0;
+
     }
+
 
     .quick{
-        grid-template-columns:repeat(3,1fr);
+
+        grid-template-columns:
+            repeat(3,1fr);
+
     }
 
+
     .product-grid{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
+
     }
+
 
     .table-grid,
     .about-grid,
     .contact-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .table-card{
+
         min-height:320px;
+
     }
+
 
     .cards{
+
         grid-template-columns:1fr;
+
     }
+
 
     .about-image{
+
         height:350px;
+
     }
+
 
     .branch-grid{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
+
     }
+
 
     .footer-grid{
+
         grid-template-columns:1fr;
+
     }
 
+
     .rep-image{
+
         height:230px;
+
     }
+
+
+    .section-head h2{
+
+        font-size:30px;
+
+    }
+
 }
+
 
 @media(max-width:450px){
 
-    .brand{
-        gap:8px;
+    .container{
+
+        width:92%;
+
     }
+
+
+    .brand{
+
+        gap:8px;
+
+    }
+
 
     .logo-box{
+
         width:39px;
         height:39px;
+
     }
+
 
     .social{
+
         width:28px;
         height:28px;
+
     }
+
+
+    .socials{
+
+        gap:4px;
+
+    }
+
 
     .quick{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
+
     }
+
 
     .product-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .branch-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .sales-reps-grid{
+
         grid-template-columns:1fr;
+
     }
+
 
     .features{
+
         grid-template-columns:1fr;
+
     }
 
+
     .hero h1{
+
         font-size:34px;
+
+    }
+
+
+    .hero{
+
+        min-height:560px;
+
+    }
+
+
+    .buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+    .btn{
+
+        width:100%;
+
+    }
+
+
+    .contact-row{
+
+        align-items:flex-start;
+
+    }
+
+
+    .contact-row a{
+
+        text-align:left;
+
+    }
+
+
+    .whatsapp{
+
+        left:15px;
+
+        width:55px;
+        height:55px;
+
+    }
+
+}
+
+
+/* =========================================================
+REDUCE MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+        scroll-behavior:auto !important;
+
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<noscript>
+
+<div class="noscript-message">
+
+للحصول على كامل وظائف الموقع، يرجى تفعيل JavaScript في المتصفح.
+
+</div>
+
+</noscript>
+
+
+<!-- =========================================================
 HEADER
-========================= -->
+========================================================= -->
 
 <header>
 
 <div class="container navbar">
 
-<a href="#home" class="brand">
 
-<div class="logo-box"></div>
+<a
+    href="#home"
+    class="brand"
+    aria-label="نجوم الإبداع - الرئيسية">
+
+<div class="logo-box"
+     aria-hidden="true"></div>
 
 <div class="logo-text">
 
@@ -1138,7 +2361,9 @@ HEADER
 </a>
 
 
-<nav class="nav-links">
+<nav
+    class="nav-links"
+    aria-label="القائمة الرئيسية">
 
 <a href="#home">الرئيسية</a>
 
@@ -1157,14 +2382,21 @@ HEADER
 </nav>
 
 
-<div class="socials">
+<div class="socials"
+     aria-label="روابط التواصل الاجتماعي">
 
-<a class="social"
-href="https://www.tiktok.com/@user505_a3?_r=1&_t=ZS-9A92jhYQA2o"
-target="_blank"
-aria-label="TikTok">
 
-<svg viewBox="0 0 24 24" fill="currentColor">
+<a
+    class="social"
+    href="https://www.tiktok.com/@user505_a3?_r=1&_t=ZS-9A92jhYQA2o"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok">
+
+<svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true">
 
 <path d="M15.8 3c.4 2.5 1.8 4 4.2 4.2v3.1c-1.7-.1-3.1-.6-4.2-1.4v6.7c0 4-2.5 6.4-6.2 6.4-3.1 0-5.6-2.2-5.6-5.3 0-3.4 2.7-5.8 6.4-5.8.4 0 .8 0 1.2.1v3.2c-.4-.1-.7-.2-1.1-.2-1.6 0-2.8 1-2.8 2.5 0 1.3 1 2.3 2.2 2.3 1.5 0 2.4-1 2.4-2.9V3h3.5z"/>
 
@@ -1173,11 +2405,17 @@ aria-label="TikTok">
 </a>
 
 
-<a class="social"
-href="https://www.snapchat.com/add/ma484m"
-target="_blank">
+<a
+    class="social"
+    href="https://www.snapchat.com/add/ma484m"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Snapchat">
 
-<svg viewBox="0 0 24 24" fill="currentColor">
+<svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true">
 
 <path d="M12 2.2c-3.1 0-5.4 2.3-5.4 5.5v1.8c0 .5-.2.8-.7 1.1l-1.3.7c-.4.2-.6.5-.5.9.1.4.4.7.8.8l1.4.3c.1 1 .5 1.9 1.1 2.6.4.5 1 .9 1.6 1.2-.6.8-1.5 1.3-2.6 1.5-.3 0-.5.3-.5.6s.2.5.5.6c1.3.2 2.4.5 3.1.9.8.4 1.4.8 2.5.8s1.7-.4 2.5-.8c.7-.4 1.8-.7 3.1-.9.3 0 .5-.3.5-.6s-.2-.5-.5-.6c-1.1-.2-2-.7-2.6-1.5.7-.3 1.2-.7 1.6-1.2.6-.7 1-1.6 1.1-2.6l1.4-.3c.4-.1.7-.4.8-.8.1-.4-.1-.7-.5-.9l-1.3-.7c-.5-.3-.7-.6-.7-1.1V7.7c0-3.2-2.3-5.5-5.4-5.5z"/>
 
@@ -1186,31 +2424,55 @@ target="_blank">
 </a>
 
 
-<a class="social"
-href="https://www.instagram.com/jj_j505"
-target="_blank">
+<a
+    class="social"
+    href="https://www.instagram.com/jj_j505"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram">
 
-<svg viewBox="0 0 24 24"
-fill="none"
-stroke="currentColor"
-stroke-width="2">
+<svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true">
 
-<rect x="3" y="3" width="18" height="18" rx="5"/>
-<circle cx="12" cy="12" r="4"/>
-<circle cx="17.5" cy="6.5" r="1"
-fill="currentColor"
-stroke="none"/>
+<rect
+    x="3"
+    y="3"
+    width="18"
+    height="18"
+    rx="5"/>
+
+<circle
+    cx="12"
+    cy="12"
+    r="4"/>
+
+<circle
+    cx="17.5"
+    cy="6.5"
+    r="1"
+    fill="currentColor"
+    stroke="none"/>
 
 </svg>
 
 </a>
 
 
-<a class="social"
-href="https://wa.me/966551496121"
-target="_blank">
+<a
+    class="social"
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp">
 
-<svg viewBox="0 0 24 24" fill="currentColor">
+<svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true">
 
 <path d="M20.5 3.5A11.9 11.9 0 0012.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 005.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4zM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 012.1 12c0-5.5 4.5-9.9 10-9.9 2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.9 4.4 2.9 7.1-.1 5.3-4.5 9.7-10 9.7zm5.5-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.6-.4-.6.4-.6 1.1-2 .1-.3.1-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.1.6 2.5.6.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.2-.3-.3-.6-.4z"/>
 
@@ -1225,25 +2487,34 @@ target="_blank">
 </header>
 
 
-<!-- =========================
+<!-- =========================================================
 HERO
-========================= -->
+========================================================= -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
 
 <img
-class="hero-image"
-src="images/hero.jpg"
-alt="نجوم الإبداع للمفروشات والكنبات"
-fetchpriority="high">
+    class="hero-image"
+    src="images/hero.jpg"
+    alt="نجوم الإبداع للمفروشات والكنبات"
+    width="1920"
+    height="900"
+    fetchpriority="high"
+    decoding="async">
 
-<div class="hero-overlay"></div>
+<div
+    class="hero-overlay"
+    aria-hidden="true"></div>
+
 
 <div class="container hero-content">
 
 <span class="badge">
 ✦ فخامة تليق بكم
 </span>
+
 
 <h1>
 
@@ -1255,6 +2526,7 @@ fetchpriority="high">
 
 </h1>
 
+
 <p>
 
 نرحب بكم في نجوم الإبداع، حيث تجدون أرقى تصاميم
@@ -1265,10 +2537,12 @@ fetchpriority="high">
 
 <div class="buttons">
 
+
 <a
-class="btn btn-gold"
-href="https://wa.me/966551496121"
-target="_blank">
+    class="btn btn-gold"
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer">
 
 💬 تواصل معنا
 
@@ -1276,12 +2550,13 @@ target="_blank">
 
 
 <a
-class="btn btn-outline"
-href="#sofas">
+    class="btn btn-outline"
+    href="#sofas">
 
 استكشف المنتجات
 
 </a>
+
 
 </div>
 
@@ -1290,9 +2565,9 @@ href="#sofas">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 QUICK MENU
-========================= -->
+========================================================= -->
 
 <section class="quick-menu">
 
@@ -1319,13 +2594,16 @@ QUICK MENU
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 SOFAS
-========================= -->
+========================================================= -->
 
-<section class="products" id="sofas">
+<section
+    class="products"
+    id="sofas">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1346,26 +2624,45 @@ SOFAS
 
 <div class="search-box">
 
+<label
+    for="productSearch"
+    class="visually-hidden">
+
+البحث عن نوع الكنبة
+
+</label>
+
 <input
-type="search"
-id="productSearch"
-placeholder="🔎 ابحث عن نوع الكنبة...">
+    type="search"
+    id="productSearch"
+    name="productSearch"
+    placeholder="🔎 ابحث عن نوع الكنبة..."
+    autocomplete="off"
+    enterkeyhint="search"
+    spellcheck="false"
+    aria-label="ابحث عن نوع الكنبة">
 
 </div>
 
 
-<div class="product-grid" id="productGrid">
+<div
+    class="product-grid"
+    id="productGrid">
 
 
-<div class="product" data-name="صناعة سعودية">
+<div
+    class="product"
+    data-name="صناعة سعودية">
 
 <div class="product-image">
 
 <img
-src="images/sofas/saudi.jpg"
-alt="كنبات صناعة سعودية"
-loading="lazy"
-decoding="async">
+    src="images/sofas/saudi.jpg"
+    alt="كنبات صناعة سعودية"
+    width="600"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1380,15 +2677,19 @@ decoding="async">
 </div>
 
 
-<div class="product" data-name="كلاسيك">
+<div
+    class="product"
+    data-name="كلاسيك">
 
 <div class="product-image">
 
 <img
-src="images/sofas/classic.jpg"
-alt="كنبات كلاسيك"
-loading="lazy"
-decoding="async">
+    src="images/sofas/classic.jpg"
+    alt="كنبات كلاسيك"
+    width="600"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1403,15 +2704,19 @@ decoding="async">
 </div>
 
 
-<div class="product" data-name="مودرن">
+<div
+    class="product"
+    data-name="مودرن">
 
 <div class="product-image">
 
 <img
-src="images/sofas/modern.jpg"
-alt="كنبات مودرن"
-loading="lazy"
-decoding="async">
+    src="images/sofas/modern.jpg"
+    alt="كنبات مودرن"
+    width="600"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1426,15 +2731,19 @@ decoding="async">
 </div>
 
 
-<div class="product" data-name="تركي">
+<div
+    class="product"
+    data-name="تركي">
 
 <div class="product-image">
 
 <img
-src="images/sofas/turkish.jpg"
-alt="كنبات تركي"
-loading="lazy"
-decoding="async">
+    src="images/sofas/turkish.jpg"
+    alt="كنبات تركي"
+    width="600"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1449,15 +2758,19 @@ decoding="async">
 </div>
 
 
-<div class="product" data-name="أمريكي">
+<div
+    class="product"
+    data-name="أمريكي">
 
 <div class="product-image">
 
 <img
-src="images/sofas/american.jpg"
-alt="كنبات أمريكي"
-loading="lazy"
-decoding="async">
+    src="images/sofas/american.jpg"
+    alt="كنبات أمريكي"
+    width="600"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1474,18 +2787,32 @@ decoding="async">
 
 </div>
 
+
+<div
+    class="search-empty"
+    id="searchEmpty"
+    aria-live="polite">
+
+لا توجد نتائج مطابقة للبحث.
+
+</div>
+
+
 </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 SALES REPRESENTATIVES
-========================= -->
+========================================================= -->
 
-<section class="sales-reps" id="sales-reps">
+<section
+    class="sales-reps"
+    id="sales-reps">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1507,29 +2834,16 @@ SALES REPRESENTATIVES
 <div class="sales-reps-grid">
 
 
-<!-- =========================
-مندوب الرياض
-========================= -->
-
 <div class="sales-rep">
 
 <div class="rep-image">
 
-<!--
-إذا أردت إضافة صورة المندوب:
-ضع الصورة في:
-images/sales-reps/riyadh.jpg
+<div
+    class="rep-placeholder"
+    aria-hidden="true">
 
-ثم احذف div الخاص بالـ placeholder
-واستخدم الصورة التالية:
-
-<img
-src="images/sales-reps/riyadh.jpg"
-alt="مندوب مبيعات الرياض">
--->
-
-<div class="rep-placeholder">
 👤
+
 </div>
 
 </div>
@@ -1545,9 +2859,10 @@ alt="مندوب مبيعات الرياض">
 </p>
 
 <a
-class="rep-whatsapp"
-href="https://wa.me/966551496121"
-target="_blank">
+    class="rep-whatsapp"
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer">
 
 💬 تواصل واتساب
 
@@ -1558,22 +2873,16 @@ target="_blank">
 </div>
 
 
-<!-- =========================
-مندوب الرياض
-========================= -->
-
 <div class="sales-rep">
 
 <div class="rep-image">
 
-<!--
-<img
-src="images/sales-reps/dammam.jpg"
-alt="مندوب مبيعات الرياض">
--->
+<div
+    class="rep-placeholder"
+    aria-hidden="true">
 
-<div class="rep-placeholder">
 👤
+
 </div>
 
 </div>
@@ -1589,9 +2898,10 @@ alt="مندوب مبيعات الرياض">
 </p>
 
 <a
-class="rep-whatsapp"
-href="https://wa.me/966539589684"
-target="_blank">
+    class="rep-whatsapp"
+    href="https://wa.me/966539589684"
+    target="_blank"
+    rel="noopener noreferrer">
 
 💬 تواصل واتساب
 
@@ -1602,22 +2912,16 @@ target="_blank">
 </div>
 
 
-<!-- =========================
-مندوب الرياض
-========================= -->
-
 <div class="sales-rep">
 
 <div class="rep-image">
 
-<!--
-<img
-src="images/sales-reps/tabuk.jpg"
-alt="مندوب مبيعات الرياض">
--->
+<div
+    class="rep-placeholder"
+    aria-hidden="true">
 
-<div class="rep-placeholder">
 👤
+
 </div>
 
 </div>
@@ -1633,9 +2937,10 @@ alt="مندوب مبيعات الرياض">
 </p>
 
 <a
-class="rep-whatsapp"
-href="https://wa.me/966535152249"
-target="_blank">
+    class="rep-whatsapp"
+    href="https://wa.me/966535152249"
+    target="_blank"
+    rel="noopener noreferrer">
 
 💬 تواصل واتساب
 
@@ -1646,22 +2951,16 @@ target="_blank">
 </div>
 
 
-<!-- =========================
-مندوب الرياض
-========================= -->
-
 <div class="sales-rep">
 
 <div class="rep-image">
 
-<!--
-<img
-src="images/sales-reps/ahsa.jpg"
-alt="مندوب مبيعات الرياض">
--->
+<div
+    class="rep-placeholder"
+    aria-hidden="true">
 
-<div class="rep-placeholder">
 👤
+
 </div>
 
 </div>
@@ -1677,9 +2976,10 @@ alt="مندوب مبيعات الرياض">
 </p>
 
 <a
-class="rep-whatsapp"
-href="https://wa.me/966531302436"
-target="_blank">
+    class="rep-whatsapp"
+    href="https://wa.me/966531302436"
+    target="_blank"
+    rel="noopener noreferrer">
 
 💬 تواصل واتساب
 
@@ -1697,13 +2997,16 @@ target="_blank">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 TABLES
-========================= -->
+========================================================= -->
 
-<section class="tables" id="tables">
+<section
+    class="tables"
+    id="tables">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1728,10 +3031,12 @@ TABLES
 <div class="table-card">
 
 <img
-src="images/tables/service-main.jpg"
-alt="طاولة خدمة مجلس"
-loading="lazy"
-decoding="async">
+    src="images/tables/service-main.jpg"
+    alt="طاولة خدمة مجلس"
+    width="1000"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 <div class="table-caption">
 
@@ -1751,10 +3056,12 @@ decoding="async">
 <div class="table-card">
 
 <img
-src="images/tables/service-side.jpg"
-alt="خدمة جانبية"
-loading="lazy"
-decoding="async">
+    src="images/tables/service-side.jpg"
+    alt="خدمة جانبية"
+    width="800"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 <div class="table-caption">
 
@@ -1778,13 +3085,16 @@ decoding="async">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 DINING
-========================= -->
+========================================================= -->
 
-<section class="dining" id="dining">
+<section
+    class="dining"
+    id="dining">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1811,10 +3121,12 @@ DINING
 <div class="card-img">
 
 <img
-src="images/dining/dining-table.jpg"
-alt="طاولة طعام فاخرة"
-loading="lazy"
-decoding="async">
+    src="images/dining/dining-table.jpg"
+    alt="طاولة طعام فاخرة"
+    width="900"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1838,10 +3150,12 @@ decoding="async">
 <div class="card-img">
 
 <img
-src="images/dining/dining-chairs.jpg"
-alt="كراسي طعام"
-loading="lazy"
-decoding="async">
+    src="images/dining/dining-chairs.jpg"
+    alt="كراسي طعام"
+    width="900"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1865,10 +3179,12 @@ decoding="async">
 <div class="card-img">
 
 <img
-src="images/dining/buffet.jpg"
-alt="بوفيه طعام مودرن"
-loading="lazy"
-decoding="async">
+    src="images/dining/buffet.jpg"
+    alt="بوفيه طعام مودرن"
+    width="900"
+    height="700"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1894,11 +3210,13 @@ decoding="async">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 ABOUT
-========================= -->
+========================================================= -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about">
 
 <div class="container about-grid">
 
@@ -1906,10 +3224,12 @@ ABOUT
 <div class="about-image">
 
 <img
-src="images/about.jpg"
-alt="معرض نجوم الإبداع"
-loading="lazy"
-decoding="async">
+    src="images/about.jpg"
+    alt="معرض نجوم الإبداع"
+    width="1000"
+    height="800"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -1936,6 +3256,7 @@ decoding="async">
 
 
 <div class="features">
+
 
 <div class="feature">
 
@@ -1972,6 +3293,7 @@ decoding="async">
 
 </div>
 
+
 </div>
 
 </div>
@@ -1981,13 +3303,16 @@ decoding="async">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 BRANCHES
-========================= -->
+========================================================= -->
 
-<section class="branches" id="branches">
+<section
+    class="branches"
+    id="branches">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -2030,9 +3355,10 @@ BRANCHES
 </p>
 
 <a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
-target="_blank">
+    class="map-btn"
+    href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
+    target="_blank"
+    rel="noopener noreferrer">
 
 فتح الموقع ←
 
@@ -2068,9 +3394,10 @@ target="_blank">
 </p>
 
 <a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
-target="_blank">
+    class="map-btn"
+    href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
+    target="_blank"
+    rel="noopener noreferrer">
 
 فتح الموقع ←
 
@@ -2102,9 +3429,10 @@ target="_blank">
 </p>
 
 <a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
-target="_blank">
+    class="map-btn"
+    href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
+    target="_blank"
+    rel="noopener noreferrer">
 
 فتح الموقع ←
 
@@ -2136,9 +3464,10 @@ target="_blank">
 </p>
 
 <a
-class="map-btn"
-href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
-target="_blank">
+    class="map-btn"
+    href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
+    target="_blank"
+    rel="noopener noreferrer">
 
 فتح الموقع ←
 
@@ -2156,13 +3485,16 @@ target="_blank">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 CONTACT
-========================= -->
+========================================================= -->
 
-<section class="contact" id="contact">
+<section
+    class="contact"
+    id="contact">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -2198,8 +3530,9 @@ CONTACT
 </span>
 
 <a
-href="https://wa.me/966551496121"
-target="_blank">
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer">
 
 0551496121
 
@@ -2317,17 +3650,19 @@ target="_blank">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 CTA
-========================= -->
+========================================================= -->
 
 <section class="cta">
 
 <img
-src="images/cta.jpg"
-alt="كنبات نجوم الإبداع"
-loading="lazy"
-decoding="async">
+    src="images/cta.jpg"
+    alt="كنبات نجوم الإبداع"
+    width="1920"
+    height="800"
+    loading="lazy"
+    decoding="async">
 
 <div class="cta-content">
 
@@ -2342,9 +3677,10 @@ decoding="async">
 </p>
 
 <a
-class="btn btn-gold"
-href="https://wa.me/966551496121"
-target="_blank">
+    class="btn btn-gold"
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer">
 
 💬 تواصل عبر واتساب
 
@@ -2357,13 +3693,14 @@ target="_blank">
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
 FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
 <div class="container">
+
 
 <div class="footer-grid">
 
@@ -2382,41 +3719,54 @@ FOOTER
 
 <div class="footer-social">
 
+
 <a
-class="social"
-href="https://www.tiktok.com/@user505_a3"
-target="_blank">
+    class="social"
+    href="https://www.tiktok.com/@user505_a3"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok">
 
 TikTok
 
 </a>
 
+
 <a
-class="social"
-href="https://www.snapchat.com/add/ma484m"
-target="_blank">
+    class="social"
+    href="https://www.snapchat.com/add/ma484m"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Snapchat">
 
 Snap
 
 </a>
 
+
 <a
-class="social"
-href="https://www.instagram.com/jj_j505"
-target="_blank">
+    class="social"
+    href="https://www.instagram.com/jj_j505"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram">
 
 Instagram
 
 </a>
 
+
 <a
-class="social"
-href="https://wa.me/966551496121"
-target="_blank">
+    class="social"
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp">
 
 WhatsApp
 
 </a>
+
 
 </div>
 
@@ -2487,28 +3837,38 @@ WhatsApp
 
 </div>
 
-<div style="text-align:center;margin-top:10px;font-size:11px;">
+
+<div
+    style="
+    text-align:center;
+    margin-top:10px;
+    font-size:11px;">
 
 ©️ تكويد وتصميم المهندس دفاع عبد الله القياضي
 
 </div>
+
 
 </div>
 
 </footer>
 
 
-<!-- =========================
+<!-- =========================================================
 WHATSAPP FLOAT
-========================= -->
+========================================================= -->
 
 <a
-class="whatsapp"
-href="https://wa.me/966551496121"
-target="_blank"
-aria-label="واتساب">
+    class="whatsapp"
+    href="https://wa.me/966551496121"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="واتساب">
 
-<svg viewBox="0 0 24 24" fill="currentColor">
+<svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true">
 
 <path d="M20.5 3.5A11.9 11.9 0 0012.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 005.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4zM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 012.1 12c0-5.5 4.5-9.9 10-9.9 2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.9 4.4 2.9 7.1-.1 5.3-4.5 9.7-10 9.7zm5.5-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-2-.9-3.3-1.6-4.6-3.6-.4-.6.4-.6 1.1-2 .1-.3.1-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.1.6 2.5.6.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.2-.3-.3-.6-.4z"/>
 
@@ -2517,49 +3877,400 @@ aria-label="واتساب">
 </a>
 
 
-<!-- =========================
-SEARCH
-========================= -->
+<!-- =========================================================
+JAVASCRIPT
+========================================================= -->
 
 <script>
 
-const searchInput =
-document.getElementById("productSearch");
+/*
+=========================================================
+نجوم الإبداع
+وظائف الموقع الأساسية
 
-const products =
-document.querySelectorAll(".product");
+- البحث في المنتجات
+- بدون مكتبات خارجية
+- بدون innerHTML
+- معالجة آمنة للأحداث
+=========================================================
+*/
 
+(function(){
 
-searchInput.addEventListener(
-"input",
-function(){
-
-const value =
-this.value.trim().toLowerCase();
-
-
-products.forEach(function(product){
-
-const name =
-product.dataset.name.toLowerCase();
+    "use strict";
 
 
-if(name.includes(value)){
+    /*
+    ---------------------------------------------------------
+    الحصول على العناصر بأمان
+    ---------------------------------------------------------
+    */
 
-product.style.display="block";
+    const searchInput =
+        document.getElementById("productSearch");
 
-}else{
+    const productGrid =
+        document.getElementById("productGrid");
 
-product.style.display="none";
+    const searchEmpty =
+        document.getElementById("searchEmpty");
 
-}
 
-});
+    /*
+    ---------------------------------------------------------
+    إذا لم توجد عناصر البحث، لا نفعل شيئًا
+    ---------------------------------------------------------
+    */
 
-});
+    if(
+        !searchInput ||
+        !productGrid
+    ){
+
+        return;
+
+    }
+
+
+    /*
+    ---------------------------------------------------------
+    المنتجات
+    ---------------------------------------------------------
+    */
+
+    const products =
+        Array.from(
+            productGrid.querySelectorAll(".product")
+        );
+
+
+    /*
+    ---------------------------------------------------------
+    تطبيع النص العربي
+
+    يجعل البحث أكثر ذكاءً عند اختلاف:
+    أ / إ / آ
+    ى / ي
+    ة / ه
+    ---------------------------------------------------------
+    */
+
+    function normalizeArabic(value){
+
+        return String(value || "")
+            .trim()
+            .toLowerCase()
+
+            .replace(/[إأآا]/g,"ا")
+
+            .replace(/ى/g,"ي")
+
+            .replace(/ة/g,"ه")
+
+            .replace(/ؤ/g,"و")
+
+            .replace(/ئ/g,"ي")
+
+            .replace(/ـ/g,"")
+
+            .replace(/\s+/g," ");
+
+    }
+
+
+    /*
+    ---------------------------------------------------------
+    البحث
+    ---------------------------------------------------------
+    */
+
+    function filterProducts(){
+
+        const value =
+            normalizeArabic(
+                searchInput.value
+            );
+
+
+        let visibleCount = 0;
+
+
+        products.forEach(function(product){
+
+            const productName =
+                normalizeArabic(
+                    product.getAttribute("data-name")
+                );
+
+
+            const visible =
+                value === "" ||
+                productName.includes(value);
+
+
+            product.style.display =
+                visible ? "" : "none";
+
+
+            if(visible){
+
+                visibleCount++;
+
+            }
+
+        });
+
+
+        /*
+        إظهار رسالة عدم وجود نتائج
+        */
+
+        if(searchEmpty){
+
+            searchEmpty.style.display =
+                visibleCount === 0
+                    ? "block"
+                    : "none";
+
+        }
+
+    }
+
+
+    /*
+    ---------------------------------------------------------
+    تشغيل البحث أثناء الكتابة
+    ---------------------------------------------------------
+    */
+
+    searchInput.addEventListener(
+        "input",
+        filterProducts,
+        {
+            passive:true
+        }
+    );
+
+
+    /*
+    ---------------------------------------------------------
+    تنظيف البحث عند الضغط على Escape
+    ---------------------------------------------------------
+    */
+
+    searchInput.addEventListener(
+        "keydown",
+        function(event){
+
+            if(event.key === "Escape"){
+
+                searchInput.value = "";
+
+                filterProducts();
+
+                searchInput.blur();
+
+            }
+
+        }
+    );
+
+
+    /*
+    ---------------------------------------------------------
+    تشغيل أولي
+    ---------------------------------------------------------
+    */
+
+    filterProducts();
+
+
+})();
+
+
+/*
+=========================================================
+تحسين سلوك الروابط الخارجية
+=========================================================
+
+لا نغير الرابط نفسه.
+فقط نتأكد من خصائص الأمان للروابط
+التي تفتح تبويبًا جديدًا.
+=========================================================
+*/
+
+(function(){
+
+    "use strict";
+
+
+    const externalLinks =
+        document.querySelectorAll(
+            'a[target="_blank"]'
+        );
+
+
+    externalLinks.forEach(function(link){
+
+        const rel =
+            link.getAttribute("rel") || "";
+
+
+        const values =
+            new Set(
+                rel
+                    .split(/\s+/)
+                    .filter(Boolean)
+            );
+
+
+        values.add("noopener");
+
+        values.add("noreferrer");
+
+
+        link.setAttribute(
+            "rel",
+            Array.from(values).join(" ")
+        );
+
+    });
+
+})();
+
+
+/*
+=========================================================
+منع النقر المزدوج غير المقصود على الروابط
+=========================================================
+
+لا يمنع الاستخدام الطبيعي.
+=========================================================
+*/
+
+(function(){
+
+    "use strict";
+
+
+    let lastClickTime = 0;
+
+
+    document.addEventListener(
+        "click",
+        function(event){
+
+            const link =
+                event.target.closest("a");
+
+
+            if(!link){
+
+                return;
+
+            }
+
+
+            const now =
+                Date.now();
+
+
+            /*
+            لا نطبق المنع على روابط الهاتف
+            أو الروابط الداخلية.
+            */
+
+            const href =
+                link.getAttribute("href") || "";
+
+
+            if(
+                !href.startsWith("https://")
+            ){
+
+                return;
+
+            }
+
+
+            /*
+            يسمح بالنقر الطبيعي.
+            */
+
+            if(now - lastClickTime < 250){
+
+                /*
+                لا نلغي النقر،
+                فقط نتجاهل التسجيل.
+                */
+
+                return;
+
+            }
+
+
+            lastClickTime = now;
+
+        },
+        {
+            passive:true
+        }
+    );
+
+})();
+
+
+/*
+=========================================================
+معالجة أخطاء الصور
+
+إذا تعذر تحميل صورة لأي سبب،
+لا يظهر رمز صورة مكسورة بشكل مزعج.
+
+لا نغير الصور الأصلية.
+=========================================================
+*/
+
+(function(){
+
+    "use strict";
+
+
+    const images =
+        document.querySelectorAll("img");
+
+
+    images.forEach(function(image){
+
+        image.addEventListener(
+            "error",
+            function(){
+
+                /*
+                لا نحاول تحميل رابط خارجي.
+                فقط نضيف خلفية مناسبة.
+                */
+
+                image.style.background =
+                    "#e9e4da";
+
+                image.style.objectFit =
+                    "cover";
+
+            },
+            {
+                once:true,
+                passive:true
+            }
+        );
+
+    });
+
+})();
 
 </script>
 
 
 </body>
+
 </html>
