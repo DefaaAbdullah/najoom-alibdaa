@@ -329,7 +329,7 @@ QUICK MENU
 
 .quick{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(6,1fr);
     gap:10px;
 }
 
@@ -430,6 +430,105 @@ PRODUCTS
 .product-info p{
     color:var(--muted);
     font-size:12px;
+}
+
+
+/* =========================
+SALES REPRESENTATIVES
+========================= */
+
+.sales-reps{
+    background:#fff;
+}
+
+.sales-reps-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.sales-rep{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    transition:.35s;
+    text-align:center;
+}
+
+.sales-rep:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(0,0,0,.13);
+}
+
+.rep-image{
+    height:280px;
+    background:
+        linear-gradient(
+            135deg,
+            #0d243a,
+            #071727
+        );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.rep-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.rep-placeholder{
+    width:105px;
+    height:105px;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold2);
+    font-size:44px;
+    background:rgba(255,255,255,.04);
+}
+
+.rep-info{
+    padding:18px 15px 22px;
+}
+
+.rep-info h3{
+    color:var(--navy);
+    font-size:18px;
+    margin-bottom:3px;
+}
+
+.rep-info p{
+    color:var(--muted);
+    font-size:12px;
+    margin-bottom:13px;
+}
+
+.rep-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    background:#25D366;
+    color:#fff;
+    padding:8px 20px;
+    border-radius:25px;
+    font-size:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.rep-whatsapp:hover{
+    transform:translateY(-2px);
+    opacity:.9;
 }
 
 
@@ -887,6 +986,10 @@ MOBILE
     .branch-grid{
         grid-template-columns:repeat(2,1fr);
     }
+
+    .sales-reps-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 @media(max-width:750px){
@@ -957,6 +1060,10 @@ MOBILE
     .footer-grid{
         grid-template-columns:1fr;
     }
+
+    .rep-image{
+        height:230px;
+    }
 }
 
 @media(max-width:450px){
@@ -987,6 +1094,10 @@ MOBILE
         grid-template-columns:1fr;
     }
 
+    .sales-reps-grid{
+        grid-template-columns:1fr;
+    }
+
     .features{
         grid-template-columns:1fr;
     }
@@ -994,6 +1105,7 @@ MOBILE
     .hero h1{
         font-size:34px;
     }
+
 }
 
 </style>
@@ -1029,10 +1141,17 @@ HEADER
 <nav class="nav-links">
 
 <a href="#home">الرئيسية</a>
+
 <a href="#sofas">الكنبات</a>
+
+<a href="#sales-reps">مناديب المبيعات</a>
+
 <a href="#tables">الطاولات</a>
+
 <a href="#dining">غرفة الطعام</a>
+
 <a href="#branches">الفروع</a>
+
 <a href="#contact">تواصل معنا</a>
 
 </nav>
@@ -1040,7 +1159,10 @@ HEADER
 
 <div class="socials">
 
-<a class="social" href="https://www.tiktok.com/@user505_a3?_r=1&_t=ZS-9A92jhYQA2o" aria-label="TikTok">
+<a class="social"
+href="https://www.tiktok.com/@user505_a3?_r=1&_t=ZS-9A92jhYQA2o"
+target="_blank"
+aria-label="TikTok">
 
 <svg viewBox="0 0 24 24" fill="currentColor">
 
@@ -1179,6 +1301,8 @@ QUICK MENU
 <div class="quick">
 
 <a href="#sofas">🛋️ الكنبات</a>
+
+<a href="#sales-reps">👤 مناديب المبيعات</a>
 
 <a href="#tables">☕ طاولات الخدمة</a>
 
@@ -1342,6 +1466,224 @@ decoding="async">
 <h3>أمريكي</h3>
 
 <p>مساحات واسعة وراحة عالية</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+SALES REPRESENTATIVES
+========================= -->
+
+<section class="sales-reps" id="sales-reps">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="mini">
+فريق المبيعات
+</span>
+
+<h2>
+مناديب المبيعات
+</h2>
+
+<p>
+تواصلوا مباشرة مع مناديبنا لخدمتكم
+</p>
+
+</div>
+
+
+<div class="sales-reps-grid">
+
+
+<!-- =========================
+مندوب الرياض
+========================= -->
+
+<div class="sales-rep">
+
+<div class="rep-image">
+
+<!--
+إذا أردت إضافة صورة المندوب:
+ضع الصورة في:
+images/sales-reps/riyadh.jpg
+
+ثم احذف div الخاص بالـ placeholder
+واستخدم الصورة التالية:
+
+<img
+src="images/sales-reps/riyadh.jpg"
+alt="مندوب مبيعات الرياض">
+-->
+
+<div class="rep-placeholder">
+👤
+</div>
+
+</div>
+
+<div class="rep-info">
+
+<h3>
+مندوب مبيعات الرياض
+</h3>
+
+<p>
+فرع الرياض
+</p>
+
+<a
+class="rep-whatsapp"
+href="https://wa.me/966551496121"
+target="_blank">
+
+💬 تواصل واتساب
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+مندوب الدمام
+========================= -->
+
+<div class="sales-rep">
+
+<div class="rep-image">
+
+<!--
+<img
+src="images/sales-reps/dammam.jpg"
+alt="مندوب مبيعات الدمام">
+-->
+
+<div class="rep-placeholder">
+👤
+</div>
+
+</div>
+
+<div class="rep-info">
+
+<h3>
+مندوب مبيعات الدمام
+</h3>
+
+<p>
+فرع الدمام
+</p>
+
+<a
+class="rep-whatsapp"
+href="https://wa.me/966561232087"
+target="_blank">
+
+💬 تواصل واتساب
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+مندوب تبوك
+========================= -->
+
+<div class="sales-rep">
+
+<div class="rep-image">
+
+<!--
+<img
+src="images/sales-reps/tabuk.jpg"
+alt="مندوب مبيعات تبوك">
+-->
+
+<div class="rep-placeholder">
+👤
+</div>
+
+</div>
+
+<div class="rep-info">
+
+<h3>
+مندوب مبيعات تبوك
+</h3>
+
+<p>
+فرع تبوك
+</p>
+
+<a
+class="rep-whatsapp"
+href="https://wa.me/966573480091"
+target="_blank">
+
+💬 تواصل واتساب
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+مندوب الأحساء
+========================= -->
+
+<div class="sales-rep">
+
+<div class="rep-image">
+
+<!--
+<img
+src="images/sales-reps/ahsa.jpg"
+alt="مندوب مبيعات الأحساء">
+-->
+
+<div class="rep-placeholder">
+👤
+</div>
+
+</div>
+
+<div class="rep-info">
+
+<h3>
+مندوب مبيعات الأحساء
+</h3>
+
+<p>
+فرع الأحساء
+</p>
+
+<a
+class="rep-whatsapp"
+href="https://wa.me/966539742588"
+target="_blank">
+
+💬 تواصل واتساب
+
+</a>
 
 </div>
 
@@ -2040,8 +2382,13 @@ FOOTER
 
 <div class="footer-social">
 
-<a class="social" href="#">
+<a
+class="social"
+href="https://www.tiktok.com/@user505_a3"
+target="_blank">
+
 TikTok
+
 </a>
 
 <a
@@ -2088,6 +2435,8 @@ WhatsApp
 
 <a href="#sofas">الكنبات</a>
 
+<a href="#sales-reps">مناديب المبيعات</a>
+
 <a href="#tables">طاولات الخدمة</a>
 
 <a href="#dining">غرفة الطعام</a>
@@ -2133,15 +2482,17 @@ WhatsApp
 
 <div class="copyright">
 
-©️ 2026 نجوم الإبداع للمفروشات 
+©️ 2026 نجوم الإبداع للمفروشات
 — جميع الحقوق محفوظة
 
 </div>
-<div>
+
+<div style="text-align:center;margin-top:10px;font-size:11px;">
 
 ©️ تكويد وتصميم المهندس دفاع عبد الله القياضي
 
 </div>
+
 </div>
 
 </footer>
