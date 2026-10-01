@@ -1,151 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-<meta name="theme-color" content="#07111f">
+<title>نجوم الإبداع للمفروشات والكنبات</title>
 
 <meta name="description"
-      content="نجوم الإبداع للمفروشات والكنبات — مجالس وكنبات جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
+content="نجوم الإبداع للمفروشات والكنبات - مجالس وكنبات جاهزة وتفصيل وطاولات ومفروشات فاخرة">
 
-<meta name="robots" content="index,follow">
-
-<meta name="referrer"
-      content="strict-origin-when-cross-origin">
-
-<meta name="format-detection"
-      content="telephone=yes">
-
-<title>نجوم الإبداع | للمفروشات والكنبات</title>
-
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+<meta name="theme-color" content="#07131f">
 
 <style>
-
-/* =========================================================
-   ROOT
-========================================================= */
-
 :root{
-
-    --navy:#07111f;
-    --navy-2:#0b1b2c;
-    --navy-3:#10283e;
-
+    --navy:#07131f;
+    --navy2:#0b1d2d;
+    --navy3:#102b40;
     --gold:#c9a45c;
-    --gold-light:#f1d997;
-    --gold-soft:#dfc37e;
-
+    --gold2:#f0d58d;
+    --cream:#f8f3e8;
     --white:#ffffff;
-    --text:#e9eef2;
-    --muted:#9baab7;
-
+    --muted:#aab5bf;
+    --border:rgba(255,255,255,.11);
     --glass:rgba(255,255,255,.055);
-    --glass-strong:rgba(255,255,255,.085);
-
-    --border:rgba(241,217,151,.18);
-
-    --shadow:
-        0 30px 80px rgba(0,0,0,.32);
-
-    --radius:24px;
-
+    --shadow:0 25px 80px rgba(0,0,0,.38);
 }
 
-/* =========================================================
-   RESET
-========================================================= */
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
     scroll-behavior:smooth;
-    overflow-x:hidden;
 }
 
 body{
-
-    font-family:"Cairo",Arial,sans-serif;
-
     background:
-        radial-gradient(
-            circle at 85% 5%,
-            rgba(201,164,92,.13),
-            transparent 27%
-        ),
-        radial-gradient(
-            circle at 5% 35%,
-            rgba(27,78,115,.20),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #040b14,
-            #07111f 45%,
-            #0a1b2c
-        );
-
+        radial-gradient(circle at 15% 10%,rgba(201,164,92,.14),transparent 25%),
+        radial-gradient(circle at 85% 30%,rgba(27,100,140,.17),transparent 28%),
+        linear-gradient(135deg,#050e17,#07131f 45%,#0b1d2d);
     color:var(--white);
-
-    line-height:1.8;
-
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Tahoma,
+        Arial,
+        sans-serif;
     overflow-x:hidden;
 }
 
 body::before{
-
     content:"";
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
-    opacity:.035;
-
+    opacity:.18;
     background-image:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.5) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            rgba(255,255,255,.5) 1px,
-            transparent 1px
-        );
-
-    background-size:80px 80px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black,
-            transparent 80%
-        );
-
-    z-index:0;
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:55px 55px;
+    mask-image:linear-gradient(to bottom,black,transparent 85%);
 }
 
-img{
-    display:block;
-    max-width:100%;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 button,
@@ -158,3414 +81,1842 @@ button{
     cursor:pointer;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
 .container{
-    width:min(1240px,92%);
+    width:min(1180px,92%);
     margin:auto;
-    position:relative;
-    z-index:2;
 }
 
-/* =========================================================
-   SCROLLBAR
-========================================================= */
-
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-track{
-    background:#050c15;
-}
-
-::-webkit-scrollbar-thumb{
-    background:linear-gradient(
-        var(--gold),
-        var(--gold-light)
-    );
-    border-radius:20px;
-}
-
-/* =========================================================
-   TOP BAR
-========================================================= */
+/* =========================
+   HEADER
+========================= */
 
 .topbar{
-
-    position:relative;
-
-    z-index:1200;
-
-    padding:7px 15px;
-
     text-align:center;
-
-    font-size:11px;
-
-    letter-spacing:.3px;
-
-    color:var(--gold-light);
-
-    background:
-        linear-gradient(
-            90deg,
-            #050d17,
-            #0b1d30,
-            #050d17
-        );
-
-    border-bottom:
-        1px solid rgba(241,217,151,.10);
+    padding:9px 15px;
+    background:linear-gradient(90deg,#b28a43,#e2c277,#b28a43);
+    color:#17110a;
+    font-weight:800;
+    font-size:13px;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
-
-.header{
-
+header{
     position:sticky;
-
     top:0;
-
-    z-index:1100;
-
-    background:
-        rgba(4,13,23,.80);
-
-    backdrop-filter:blur(22px);
-
-    -webkit-backdrop-filter:blur(22px);
-
-    border-bottom:
-        1px solid rgba(241,217,151,.10);
+    z-index:1000;
+    backdrop-filter:blur(20px);
+    background:rgba(5,14,23,.78);
+    border-bottom:1px solid var(--border);
 }
 
 .nav{
-
     min-height:78px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
-    gap:25px;
+    gap:20px;
 }
 
-/* LOGO */
-
 .logo{
-
     display:flex;
-
     align-items:center;
-
-    gap:14px;
-
-    flex-shrink:0;
+    gap:12px;
 }
 
 .logo-mark{
-
-    width:50px;
-
-    height:50px;
-
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+    width:49px;
+    height:49px;
     transform:rotate(45deg);
-
-    border-radius:13px;
-
+    border:1px solid rgba(240,213,141,.6);
     background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-light)
-        );
-
+        linear-gradient(135deg,rgba(201,164,92,.25),rgba(255,255,255,.03));
+    display:grid;
+    place-items:center;
     box-shadow:
-        0 10px 30px
-        rgba(201,164,92,.22);
+        0 0 35px rgba(201,164,92,.13),
+        inset 0 0 25px rgba(201,164,92,.08);
 }
 
 .logo-mark span{
-
     transform:rotate(-45deg);
-
-    font-size:21px;
-
+    font-size:22px;
+    color:var(--gold2);
     font-weight:900;
-
-    color:#07111f;
 }
 
-.logo-name strong{
-
+.logo-text strong{
     display:block;
-
-    font-size:16px;
-
-    line-height:1.2;
-
-    color:var(--gold-light);
+    color:var(--cream);
+    font-size:17px;
 }
 
-.logo-name small{
-
-    color:#8fa0ae;
-
-    font-size:9px;
-
+.logo-text small{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:1px;
 }
 
-/* NAV */
-
-.nav-menu{
-
+.nav-links{
     display:flex;
-
     align-items:center;
-
-    gap:25px;
+    gap:8px;
 }
 
-.nav-menu a{
-
-    position:relative;
-
-    color:#d8e0e6;
-
-    font-size:12px;
-
-    transition:.3s;
-
+.nav-links a{
+    padding:10px 13px;
+    color:#d9e0e5;
+    font-size:14px;
+    border-radius:12px;
+    transition:.25s;
 }
 
-.nav-menu a::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:1px;
-
-    background:var(--gold-light);
-
-    transition:.3s;
+.nav-links a:hover{
+    color:var(--gold2);
+    background:rgba(255,255,255,.06);
 }
-
-.nav-menu a:hover{
-
-    color:var(--gold-light);
-
-}
-
-.nav-menu a:hover::after{
-
-    width:100%;
-
-}
-
-/* =========================================================
-   SOCIAL ICONS
-========================================================= */
 
 .socials{
-
     display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
+    gap:7px;
 }
 
 .social{
-
-    width:39px;
-
-    height:39px;
-
-    border-radius:13px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--gold-light);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.09),
-            rgba(255,255,255,.025)
-        );
-
-    border:
-        1px solid rgba(241,217,151,.20);
-
-    box-shadow:
-        inset 0 1px 0
-        rgba(255,255,255,.06);
-
-    transition:
-        transform .3s,
-        background .3s,
-        color .3s,
-        box-shadow .3s;
-}
-
-.social svg{
-
-    width:18px;
-    height:18px;
-
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--border);
+    background:var(--glass);
+    border-radius:12px;
+    transition:.25s;
 }
 
 .social:hover{
-
-    transform:
-        translateY(-4px)
-        rotate(-3deg);
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-light)
-        );
-
-    color:#07111f;
-
-    box-shadow:
-        0 12px 25px
-        rgba(201,164,92,.20);
-
+    transform:translateY(-3px);
+    border-color:rgba(240,213,141,.45);
 }
 
-.social.instagram svg{
-
+.social svg{
+    width:18px;
+    height:18px;
     fill:none;
-
     stroke:currentColor;
-
     stroke-width:1.8;
-
 }
 
-.social.whatsapp svg,
-.social.tiktok svg,
-.social.snapchat svg{
-
-    fill:currentColor;
-
+.menu{
+    display:none;
+    background:none;
+    border:1px solid var(--border);
+    color:white;
+    width:44px;
+    height:44px;
+    border-radius:12px;
 }
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
-
-    min-height:
-        calc(100vh - 86px);
-
-    min-height:
-        max(650px, calc(100vh - 86px));
-
-    display:flex;
-
+    min-height:calc(100vh - 125px);
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
     align-items:center;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(4,12,21,.98) 0%,
-            rgba(4,12,21,.88) 38%,
-            rgba(4,12,21,.43) 68%,
-            rgba(4,12,21,.16) 100%
-        ),
-
-        url("images/hero.jpg")
-        center/cover no-repeat;
+    gap:65px;
+    padding:75px 0;
 }
 
-/* GOLD LIGHT */
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-
-    height:500px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(241,217,151,.16),
-            transparent 65%
-        );
-
-    top:-220px;
-
-    left:-160px;
-
-    pointer-events:none;
-
-}
-
-.hero-content{
-
-    width:min(720px,100%);
-
-    padding:90px 0;
-
-}
-
-.hero-kicker{
-
+.badge{
     display:inline-flex;
-
     align-items:center;
-
-    gap:9px;
-
-    padding:7px 12px;
-
+    gap:8px;
+    border:1px solid rgba(201,164,92,.35);
+    background:rgba(201,164,92,.08);
+    color:var(--gold2);
+    padding:8px 13px;
     border-radius:100px;
-
-    color:var(--gold-light);
-
-    background:
-        rgba(241,217,151,.07);
-
-    border:
-        1px solid
-        rgba(241,217,151,.18);
-
-    font-size:11px;
-
+    font-size:12px;
     margin-bottom:22px;
-
 }
 
-.hero-kicker i{
-
-    width:6px;
-
-    height:6px;
-
+.badge-dot{
+    width:7px;
+    height:7px;
     border-radius:50%;
-
-    background:var(--gold-light);
-
-    box-shadow:
-        0 0 15px var(--gold-light);
-
+    background:#66e29a;
+    box-shadow:0 0 12px #66e29a;
 }
 
 .hero h1{
-
-    font-size:
-        clamp(42px,7vw,82px);
-
-    line-height:1.06;
-
-    letter-spacing:-2px;
-
+    font-size:clamp(44px,6vw,78px);
+    line-height:1.05;
+    letter-spacing:-3px;
     margin-bottom:25px;
-
 }
 
 .hero h1 span{
-
     display:block;
-
-    color:transparent;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--gold-light),
-            var(--gold),
-            #fff0bc
-        );
-
-    -webkit-background-clip:text;
-
-    background-clip:text;
-
+    color:var(--gold2);
 }
 
-.hero-description{
-
-    color:#c7d1d9;
-
-    max-width:620px;
-
-    font-size:16px;
-
+.hero p{
+    max-width:610px;
+    color:#b8c3cc;
+    line-height:2;
+    font-size:17px;
 }
 
-.hero-actions{
-
+.actions{
     display:flex;
-
     flex-wrap:wrap;
-
     gap:12px;
-
     margin-top:30px;
-
 }
 
 .btn{
-
-    min-height:48px;
-
-    padding:11px 22px;
-
-    border-radius:13px;
-
+    min-height:52px;
+    padding:0 21px;
+    border-radius:15px;
+    border:1px solid var(--border);
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:8px;
-
-    border:1px solid transparent;
-
-    font-size:12px;
-
+    gap:9px;
     font-weight:800;
-
-    transition:.3s;
-
+    transition:.25s;
 }
 
-.btn-gold{
-
-    color:#07111f;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-light)
-        );
-
-    box-shadow:
-        0 12px 30px
-        rgba(201,164,92,.18);
-
+.btn-primary{
+    color:#17110a;
+    background:linear-gradient(135deg,#b88b42,#f1d58d);
+    box-shadow:0 12px 40px rgba(201,164,92,.18);
 }
 
-.btn-gold:hover{
-
+.btn-primary:hover{
     transform:translateY(-3px);
-
-    box-shadow:
-        0 18px 35px
-        rgba(201,164,92,.27);
-
 }
 
 .btn-dark{
-
-    color:var(--gold-light);
-
-    background:
-        rgba(255,255,255,.045);
-
-    border-color:
-        rgba(241,217,151,.22);
-
+    background:rgba(255,255,255,.055);
+    color:white;
 }
 
-.btn-dark:hover{
-
-    background:
-        rgba(241,217,151,.09);
-
-    transform:translateY(-3px);
-
-}
-
-/* =========================================================
-   FLOATING HERO STATS
-========================================================= */
-
-.hero-stats{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:40px;
-
-}
-
-.hero-stat{
-
-    padding:11px 15px;
-
-    border-radius:14px;
-
-    background:
-        rgba(255,255,255,.045);
-
-    border:
-        1px solid
-        rgba(255,255,255,.09);
-
-    backdrop-filter:blur(10px);
-
-}
-
-.hero-stat strong{
-
-    display:block;
-
-    color:var(--gold-light);
-
-    font-size:14px;
-
-}
-
-.hero-stat span{
-
-    display:block;
-
-    color:#8798a6;
-
-    font-size:9px;
-
-}
-
-/* =========================================================
-   SECTION
-========================================================= */
-
-.section{
-
-    padding:100px 0;
-
+.hero-visual{
     position:relative;
-
 }
 
-.section-heading{
-
-    display:flex;
-
-    align-items:end;
-
-    justify-content:space-between;
-
-    gap:25px;
-
-    margin-bottom:42px;
-
-}
-
-.heading-label{
-
-    color:var(--gold);
-
-    font-size:11px;
-
-    font-weight:700;
-
-}
-
-.section-heading h2{
-
-    font-size:
-        clamp(28px,4vw,46px);
-
-    line-height:1.25;
-
-    margin-top:5px;
-
-    color:#fff;
-
-}
-
-.section-heading p{
-
-    max-width:450px;
-
-    color:#8999a6;
-
-    font-size:12px;
-
-}
-
-/* =========================================================
-   SOFAS
-========================================================= */
-
-.sofa-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(12,1fr);
-
-    gap:15px;
-
-}
-
-.sofa-card{
-
-    min-height:390px;
-
+.hero-frame{
     position:relative;
-
-    overflow:hidden;
-
-    border-radius:var(--radius);
-
-    border:
-        1px solid
-        rgba(241,217,151,.13);
-
-    background:#0b1b2c;
-
-    box-shadow:
-        0 20px 50px
-        rgba(0,0,0,.18);
-
+    border-radius:34px;
+    padding:10px;
+    background:
+        linear-gradient(145deg,
+        rgba(240,213,141,.6),
+        rgba(255,255,255,.06),
+        rgba(240,213,141,.3));
+    box-shadow:var(--shadow);
 }
 
-.sofa-card:nth-child(1){
-
-    grid-column:span 5;
-
-}
-
-.sofa-card:nth-child(2){
-
-    grid-column:span 3;
-
-}
-
-.sofa-card:nth-child(3){
-
-    grid-column:span 4;
-
-}
-
-.sofa-card:nth-child(4){
-
-    grid-column:span 4;
-
-}
-
-.sofa-card:nth-child(5){
-
-    grid-column:span 8;
-
-}
-
-.sofa-card img{
-
-    position:absolute;
-
-    inset:0;
-
+.hero-frame img{
+    display:block;
     width:100%;
-
-    height:100%;
-
+    aspect-ratio:4/5;
     object-fit:cover;
-
-    transition:
-        transform .8s
-        cubic-bezier(.2,.7,.2,1);
-
+    border-radius:27px;
 }
 
-.sofa-card::after{
-
-    content:"";
-
+.hero-card{
     position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(3,10,18,.97),
-            rgba(3,10,18,.05) 65%
-        );
-
+    left:-35px;
+    bottom:35px;
+    width:210px;
+    padding:18px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:rgba(8,20,31,.82);
+    backdrop-filter:blur(20px);
+    box-shadow:var(--shadow);
 }
 
-.sofa-card:hover img{
-
-    transform:scale(1.07);
-
+.hero-card small{
+    color:var(--muted);
 }
 
-.sofa-info{
-
-    position:absolute;
-
-    right:22px;
-
-    left:22px;
-
-    bottom:20px;
-
-    z-index:2;
-
+.hero-card strong{
+    display:block;
+    margin-top:5px;
+    color:var(--gold2);
+    font-size:20px;
 }
 
-.sofa-info span{
-
-    color:var(--gold-light);
-
-    font-size:10px;
-
+.payments{
+    display:flex;
+    gap:8px;
+    margin-top:20px;
 }
 
-.sofa-info h3{
-
-    font-size:23px;
-
-    margin-top:2px;
-
+.payment{
+    padding:7px 12px;
+    border-radius:9px;
+    background:#fff;
+    color:#111;
+    font-weight:900;
+    font-size:12px;
 }
 
-/* =========================================================
+.payment.tabby{
+    color:#15a878;
+}
+
+.payment.tamara{
+    color:#111;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-head{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:35px;
+}
+
+.section-head h2{
+    font-size:clamp(30px,4vw,46px);
+    letter-spacing:-1.5px;
+}
+
+.section-head p{
+    max-width:530px;
+    color:var(--muted);
+    line-height:1.9;
+}
+
+.gold{
+    color:var(--gold2);
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+}
+
+.product{
+    position:relative;
+    overflow:hidden;
+    min-height:330px;
+    border-radius:22px;
+    border:1px solid var(--border);
+    background:var(--glass);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+    border-color:rgba(240,213,141,.35);
+}
+
+.product img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-info{
+    padding:16px;
+}
+
+.product-info small{
+    color:var(--gold);
+}
+
+.product-info h3{
+    margin-top:4px;
+    font-size:18px;
+}
+
+/* =========================
    TABLES
-========================================================= */
-
-.tables-section{
-
-    background:
-
-        radial-gradient(
-            circle at 20% 40%,
-            rgba(201,164,92,.08),
-            transparent 30%
-        );
-
-}
+========================= */
 
 .table-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:15px;
-
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
 .table-card{
-
-    min-height:330px;
-
-    position:relative;
-
+    border:1px solid var(--border);
+    border-radius:25px;
     overflow:hidden;
-
-    border-radius:22px;
-
-    background:#0a1a2a;
-
-    border:
-        1px solid
-        rgba(241,217,151,.13);
-
-}
-
-.table-card.large{
-
-    grid-column:span 2;
-
-    min-height:430px;
-
+    background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
 }
 
 .table-card img{
-
     width:100%;
-
-    height:100%;
-
-    position:absolute;
-
-    inset:0;
-
+    height:350px;
     object-fit:cover;
-
-    transition:.7s;
-
-}
-
-.table-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(3,10,18,.95),
-            rgba(3,10,18,.02) 68%
-        );
-
-}
-
-.table-card:hover img{
-
-    transform:scale(1.06);
-
+    display:block;
 }
 
 .table-content{
-
-    position:absolute;
-
-    z-index:2;
-
-    bottom:18px;
-
-    right:18px;
-
-    left:18px;
-
-}
-
-.table-content small{
-
-    color:var(--gold);
-
-    font-size:10px;
-
+    padding:24px;
 }
 
 .table-content h3{
-
-    font-size:20px;
-
+    font-size:24px;
+    margin-bottom:9px;
 }
 
-/* =========================================================
+.table-content p{
+    color:var(--muted);
+    line-height:1.9;
+}
+
+.specs{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    margin-top:18px;
+}
+
+.spec{
+    padding:12px;
+    border-radius:12px;
+    background:rgba(255,255,255,.045);
+    color:#dce3e8;
+    font-size:13px;
+}
+
+/* =========================
    DINING
-========================================================= */
+========================= */
 
 .dining-grid{
-
     display:grid;
-
-    grid-template-columns:
-        1.2fr .8fr;
-
+    grid-template-columns:repeat(3,1fr);
     gap:15px;
-
 }
 
-.dining-main{
-
-    min-height:510px;
-
-    position:relative;
-
+.dining-card{
     overflow:hidden;
-
-    border-radius:25px;
-
-    border:
-        1px solid var(--border);
-
-}
-
-.dining-main img{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-.dining-main::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(3,10,18,.95),
-            transparent 65%
-        );
-
-}
-
-.dining-content{
-
-    position:absolute;
-
-    z-index:2;
-
-    right:28px;
-
-    bottom:25px;
-
-}
-
-.dining-content h3{
-
-    color:var(--gold-light);
-
-    font-size:30px;
-
-}
-
-.dining-side{
-
-    display:grid;
-
-    grid-template-rows:1fr 1fr;
-
-    gap:15px;
-
-}
-
-.dining-small{
-
-    position:relative;
-
-    overflow:hidden;
-
     border-radius:22px;
-
     border:1px solid var(--border);
-
+    background:var(--glass);
 }
 
-.dining-small img{
-
+.dining-card img{
     width:100%;
-
-    height:100%;
-
+    height:260px;
     object-fit:cover;
-
-    transition:.6s;
-
 }
 
-.dining-small::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(3,10,18,.90),
-            transparent 65%
-        );
-
+.dining-card div{
+    padding:18px;
 }
 
-.dining-small span{
-
-    position:absolute;
-
-    z-index:2;
-
-    right:20px;
-
-    bottom:17px;
-
-    color:#fff;
-
-    font-weight:700;
-
+.dining-card p{
+    color:var(--muted);
+    margin-top:7px;
 }
 
-/* =========================================================
-   AI SECTION
-========================================================= */
-
-.ai-showcase{
-
-    padding:95px 0;
-
-}
-
-.ai-showcase-box{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:32px;
-
-    padding:55px;
-
-    border:
-        1px solid
-        rgba(241,217,151,.22);
-
-    background:
-
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(201,164,92,.18),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            135deg,
-            #0a1d30,
-            #06111e
-        );
-
-    box-shadow:
-        var(--shadow);
-
-}
-
-.ai-showcase-box::before{
-
-    content:"✦";
-
-    position:absolute;
-
-    font-size:260px;
-
-    color:
-        rgba(241,217,151,.025);
-
-    left:-20px;
-
-    bottom:-90px;
-
-}
-
-.ai-showcase-content{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:700px;
-
-}
-
-.ai-badge{
-
-    display:inline-flex;
-
-    padding:7px 12px;
-
-    border-radius:100px;
-
-    background:
-        rgba(241,217,151,.08);
-
-    color:var(--gold-light);
-
-    border:
-        1px solid
-        rgba(241,217,151,.18);
-
-    font-size:10px;
-
-}
-
-.ai-showcase h2{
-
-    font-size:
-        clamp(30px,5vw,55px);
-
-    line-height:1.15;
-
-    margin:16px 0;
-
-}
-
-.ai-showcase h2 span{
-
-    color:var(--gold-light);
-
-}
-
-.ai-showcase p{
-
-    color:#aab8c2;
-
-    max-width:600px;
-
-    font-size:13px;
-
-}
-
-/* =========================================================
+/* =========================
    BRANCHES
-========================================================= */
+========================= */
 
-.branch-grid{
-
+.branches{
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:15px;
-
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
 }
 
 .branch{
-
-    min-height:220px;
-
-    padding:25px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:end;
-
-    border-radius:23px;
-
-    border:
-        1px solid
-        rgba(241,217,151,.14);
-
+    padding:23px;
+    border:1px solid var(--border);
+    border-radius:22px;
     background:
-        linear-gradient(
-            145deg,
-            #102a40,
-            #07111f
-        );
-
+        radial-gradient(circle at 100% 0,rgba(201,164,92,.12),transparent 45%),
+        rgba(255,255,255,.045);
 }
 
-.branch::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:150px;
-
-    height:150px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(241,217,151,.13),
-            transparent 70%
-        );
-
-    top:-70px;
-
-    left:-60px;
-
-}
-
-.branch-number{
-
-    position:absolute;
-
-    top:18px;
-
-    left:20px;
-
-    color:rgba(241,217,151,.3);
-
-    font-size:12px;
-
+.branch-icon{
+    width:48px;
+    height:48px;
+    display:grid;
+    place-items:center;
+    border-radius:15px;
+    background:rgba(201,164,92,.11);
+    color:var(--gold2);
+    margin-bottom:20px;
 }
 
 .branch h3{
-
-    color:var(--gold-light);
-
-    font-size:24px;
-
+    font-size:22px;
 }
 
 .branch p{
-
-    color:#98a8b5;
-
-    font-size:11px;
-
+    color:var(--muted);
+    margin:8px 0 20px;
 }
 
-/* =========================================================
-   PAYMENT
-========================================================= */
-
-.payment{
-
-    padding:70px 0;
-
+.branch a{
+    color:var(--gold2);
+    font-size:13px;
+    font-weight:800;
 }
 
-.payment-box{
+/* =========================
+   SALES
+========================= */
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+.reps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
     gap:14px;
-
-    flex-wrap:wrap;
-
 }
 
-.payment-card{
-
-    min-width:270px;
-
-    padding:18px 22px;
-
+.rep{
+    padding:20px;
     border-radius:20px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:14px;
-
-    background:#fff;
-
-    color:#111;
-
-    box-shadow:
-        0 20px 45px
-        rgba(0,0,0,.22);
-
+    border:1px solid var(--border);
+    background:var(--glass);
 }
 
-.payment-logo{
-
-    font-family:Arial,sans-serif;
-
+.rep-avatar{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    color:#1b1409;
+    background:linear-gradient(135deg,#b88b42,#f1d58d);
     font-weight:900;
-
-    font-size:25px;
-
+    margin-bottom:17px;
 }
 
-.payment-text{
-
-    font-size:10px;
-
-    font-weight:700;
-
-    color:#333;
-
+.rep h3{
+    font-size:17px;
 }
 
-/* =========================================================
+.rep small{
+    display:block;
+    color:var(--muted);
+    margin:5px 0 15px;
+}
+
+.rep a{
+    color:#7de7b1;
+    font-size:13px;
+}
+
+/* =========================
    CONTACT
-========================================================= */
+========================= */
+
+.contact-box{
+    padding:45px;
+    border:1px solid rgba(240,213,141,.2);
+    border-radius:32px;
+    background:
+        radial-gradient(circle at 90% 10%,rgba(201,164,92,.16),transparent 35%),
+        linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+}
 
 .contact-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:15px;
-
+    grid-template-columns:1fr 1fr;
+    gap:35px;
 }
 
-.contact-card{
-
-    padding:28px;
-
-    text-align:center;
-
-    border-radius:21px;
-
-    background:
-        rgba(255,255,255,.04);
-
-    border:
-        1px solid
-        rgba(241,217,151,.13);
-
+.contact-list{
+    display:grid;
+    gap:10px;
+    margin-top:20px;
 }
 
-.contact-card .icon{
-
-    width:48px;
-
-    height:48px;
-
-    margin:0 auto 12px;
-
+.contact-item{
     display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:15px;
-
-    background:
-        rgba(241,217,151,.08);
-
-    color:var(--gold-light);
-
+    justify-content:space-between;
+    gap:15px;
+    padding:15px;
+    border-radius:13px;
+    background:rgba(255,255,255,.04);
 }
 
-.contact-card h3{
-
-    color:var(--gold-light);
-
-    font-size:17px;
-
+.contact-item span{
+    color:var(--muted);
 }
 
-.contact-card p{
-
-    color:#9baab6;
-
-    font-size:12px;
-
-}
-
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-
-    padding:65px 0 25px;
-
-    background:#030a12;
-
-    border-top:
-        1px solid
-        rgba(241,217,151,.10);
-
+    border-top:1px solid var(--border);
+    padding:35px 0;
+    color:var(--muted);
 }
 
-.footer-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        1.7fr 1fr 1fr;
-
-    gap:45px;
-
-}
-
-.footer-title{
-
-    color:var(--gold-light);
-
-    font-size:18px;
-
-    margin-bottom:10px;
-
-}
-
-.footer-text{
-
-    color:#8494a0;
-
-    font-size:12px;
-
-    max-width:430px;
-
-}
-
-.footer-list{
-
-    list-style:none;
-
-}
-
-.footer-list li{
-
-    color:#8494a0;
-
-    font-size:11px;
-
-    margin:5px 0;
-
-}
-
-.footer-bottom{
-
-    text-align:center;
-
-    margin-top:45px;
-
-    padding-top:20px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.06);
-
-    color:#667581;
-
-    font-size:9px;
-
-}
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-.whatsapp{
-
-    position:fixed;
-
-    left:18px;
-
-    bottom:
-        max(18px, env(safe-area-inset-bottom));
-
-    width:58px;
-
-    height:58px;
-
-    z-index:2500;
-
-    border-radius:19px;
-
+.footer-row{
     display:flex;
-
+    justify-content:space-between;
+    gap:20px;
     align-items:center;
-
-    justify-content:center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #17c96b,
-            #0ca65a
-        );
-
-    color:#fff;
-
-    box-shadow:
-        0 15px 35px
-        rgba(0,0,0,.35);
-
-    transition:.3s;
-
 }
 
-.whatsapp:hover{
-
-    transform:
-        translateY(-5px)
-        rotate(-4deg);
-
+.footer-row strong{
+    color:var(--gold2);
 }
 
-.whatsapp svg{
-
-    width:29px;
-    height:29px;
-    fill:#fff;
-
-}
-
-/* =========================================================
-   AI LAUNCHER
-========================================================= */
+/* =========================
+   AI
+========================= */
 
 .ai-launcher{
-
     position:fixed;
-
-    right:18px;
-
-    bottom:
-        max(18px, env(safe-area-inset-bottom));
-
-    z-index:2500;
-
-    border:none;
-
-    padding:12px 17px;
-
-    border-radius:18px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    color:#07111f;
-
+    right:22px;
+    bottom:22px;
+    z-index:2000;
+    width:70px;
+    height:70px;
+    border:1px solid rgba(240,213,141,.55);
+    border-radius:23px;
     background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-light)
-        );
-
-    font-size:11px;
-
-    font-weight:900;
-
+        radial-gradient(circle at 35% 25%,#f5dda2,#a87d36 65%,#5d421c);
     box-shadow:
-        0 15px 35px
-        rgba(0,0,0,.35);
-
-    transition:.3s;
-
+        0 15px 50px rgba(0,0,0,.5),
+        0 0 45px rgba(201,164,92,.25);
+    color:#17110a;
+    display:grid;
+    place-items:center;
+    animation:aiFloat 3s ease-in-out infinite;
 }
 
-.ai-launcher:hover{
-
-    transform:translateY(-4px);
-
+@keyframes aiFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
 }
 
-/* =========================================================
-   AI WINDOW
-========================================================= */
+.ai-launcher svg{
+    width:30px;
+    height:30px;
+}
+
+.ai-badge{
+    position:absolute;
+    top:-8px;
+    left:-8px;
+    background:#07131f;
+    color:var(--gold2);
+    border:1px solid var(--gold);
+    padding:3px 7px;
+    border-radius:20px;
+    font-size:9px;
+    font-weight:900;
+}
 
 .ai-window{
-
     position:fixed;
-
-    right:18px;
-
-    bottom:85px;
-
-    z-index:2400;
-
-    width:min(
-        430px,
-        calc(100vw - 30px)
-    );
-
-    height:min(
-        680px,
-        calc(100vh - 105px)
-    );
-
+    z-index:1999;
+    right:22px;
+    bottom:105px;
+    width:min(440px,calc(100vw - 30px));
+    height:min(690px,calc(100vh - 130px));
     display:none;
-
     flex-direction:column;
-
     overflow:hidden;
-
-    border-radius:27px;
-
+    border:1px solid rgba(240,213,141,.25);
+    border-radius:28px;
     background:
-        linear-gradient(
-            160deg,
-            #0b2034,
-            #06111d
-        );
-
-    border:
-        1px solid
-        rgba(241,217,151,.22);
-
-    box-shadow:
-        0 30px 100px
-        rgba(0,0,0,.55);
-
+        radial-gradient(circle at 100% 0,rgba(201,164,92,.12),transparent 40%),
+        #07131f;
+    box-shadow:0 30px 100px rgba(0,0,0,.65);
+    backdrop-filter:blur(25px);
 }
 
 .ai-window.open{
-
     display:flex;
-
 }
 
 .ai-header{
-
-    padding:17px;
-
+    padding:18px;
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
-    background:
-        rgba(3,11,19,.7);
-
-    border-bottom:
-        1px solid
-        rgba(241,217,151,.12);
-
+    align-items:center;
+    border-bottom:1px solid var(--border);
 }
 
 .ai-title{
-
     display:flex;
-
     align-items:center;
-
-    gap:10px;
-
+    gap:12px;
 }
 
 .ai-avatar{
-
-    width:39px;
-
-    height:39px;
-
-    border-radius:13px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-light)
-        );
-
-    color:#07111f;
-
-    font-weight:900;
-
+    width:44px;
+    height:44px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    color:#17110a;
+    background:linear-gradient(135deg,#b88b42,#f1d58d);
 }
 
 .ai-title strong{
-
     display:block;
-
-    color:var(--gold-light);
-
-    font-size:13px;
-
 }
 
 .ai-title small{
-
-    color:#80919e;
-
-    font-size:9px;
-
+    color:#69df9e;
+    font-size:11px;
 }
 
 .ai-close{
-
-    width:35px;
-
-    height:35px;
-
-    border-radius:10px;
-
-    border:1px solid
-        rgba(255,255,255,.08);
-
-    background:
-        rgba(255,255,255,.04);
-
-    color:#fff;
-
-    font-size:20px;
-
+    border:0;
+    background:none;
+    color:#aeb8c2;
+    font-size:25px;
 }
-
-/* AI MESSAGES */
 
 .ai-messages{
-
     flex:1;
-
     overflow-y:auto;
-
-    padding:17px;
-
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
 
-.ai-message{
-
-    width:fit-content;
-
+.message{
     max-width:88%;
-
-    padding:11px 13px;
-
-    border-radius:16px;
-
-    margin-bottom:10px;
-
-    font-size:12px;
-
-    white-space:pre-wrap;
-
+    padding:13px 15px;
+    border-radius:17px;
+    line-height:1.8;
+    font-size:14px;
 }
 
-.ai-message.bot{
-
-    margin-left:auto;
-
-    background:
-        rgba(255,255,255,.065);
-
-    border:
-        1px solid
-        rgba(255,255,255,.06);
-
-    color:#dce4e9;
-
+.message.ai{
+    align-self:flex-start;
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--border);
 }
 
-.ai-message.user{
-
-    margin-right:auto;
-
-    background:
-        rgba(201,164,92,.13);
-
-    border:
-        1px solid
-        rgba(201,164,92,.16);
-
+.message.user{
+    align-self:flex-end;
+    background:linear-gradient(135deg,#b88b42,#dcb96e);
+    color:#17110a;
 }
 
-.ai-generated-image{
-
+.message img{
+    display:block;
     width:100%;
-
-    max-width:330px;
-
-    margin-top:7px;
-
-    border-radius:14px;
-
+    max-height:390px;
+    object-fit:contain;
+    border-radius:13px;
+    margin-top:10px;
+    background:#111;
 }
 
-.ai-image-preview{
-
-    display:none;
-
-    padding:9px 15px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.06);
-
+.quick{
+    display:flex;
+    gap:7px;
+    overflow-x:auto;
+    padding:0 15px 12px;
 }
 
-.ai-image-preview img{
-
-    max-height:130px;
-
-    margin:auto;
-
-    border-radius:12px;
-
-}
-
-/* AI CONTROLS */
-
-.ai-controls{
-
-    padding:10px;
-
-    background:
-        rgba(3,11,19,.8);
-
-    border-top:
-        1px solid
-        rgba(241,217,151,.12);
-
+.quick button{
+    white-space:nowrap;
+    padding:8px 11px;
+    border-radius:100px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.045);
+    color:#dbe2e7;
+    font-size:11px;
 }
 
 .ai-tools{
-
-    display:flex;
-
-    gap:6px;
-
-    margin-bottom:8px;
-
+    padding:10px 15px;
+    border-top:1px solid var(--border);
 }
 
-.ai-tool{
+.image-preview{
+    display:none;
+    position:relative;
+    margin-bottom:10px;
+}
 
-    border:
-        1px solid
-        rgba(241,217,151,.18);
+.image-preview.show{
+    display:block;
+}
 
-    background:
-        rgba(255,255,255,.04);
-
-    color:var(--gold-light);
-
+.image-preview img{
+    width:90px;
+    height:70px;
+    object-fit:cover;
     border-radius:10px;
+    border:1px solid var(--gold);
+}
 
-    padding:7px 9px;
-
-    font-size:10px;
-
+.remove-image{
+    position:absolute;
+    top:-7px;
+    right:-7px;
+    width:22px;
+    height:22px;
+    border:0;
+    border-radius:50%;
+    background:#d65b5b;
+    color:white;
 }
 
 .ai-input-row{
-
     display:flex;
-
     gap:7px;
-
+    align-items:end;
 }
 
-#aiInput{
-
+.ai-input{
     flex:1;
-
-    min-width:0;
-
-    min-height:45px;
-
-    max-height:120px;
-
+    min-height:48px;
+    max-height:130px;
     resize:none;
-
-    border-radius:13px;
-
+    border:1px solid var(--border);
+    border-radius:15px;
     outline:none;
-
-    border:
-        1px solid
-        rgba(241,217,151,.15);
-
-    background:#0a1e32;
-
-    color:#fff;
-
-    padding:10px;
-
-    font-size:12px;
-
+    background:rgba(255,255,255,.055);
+    color:white;
+    padding:13px;
 }
 
-#aiSend{
+.ai-input:focus{
+    border-color:rgba(240,213,141,.5);
+}
 
-    width:48px;
+.icon-btn{
+    width:47px;
+    height:47px;
+    flex:0 0 47px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.05);
+    color:#ddd;
+    display:grid;
+    place-items:center;
+}
 
-    flex:none;
+.icon-btn svg{
+    width:20px;
+    height:20px;
+}
 
-    border:none;
+.send-btn{
+    background:linear-gradient(135deg,#b88b42,#f1d58d);
+    color:#17110a;
+    border:0;
+}
 
+.generate-btn{
+    width:100%;
+    margin-top:8px;
+    min-height:43px;
     border-radius:13px;
-
-    color:#07111f;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-light)
-        );
-
-    font-weight:900;
-
-}
-
-#aiSend:disabled{
-
-    opacity:.5;
-
-    cursor:not-allowed;
-
+    border:1px solid rgba(240,213,141,.35);
+    color:var(--gold2);
+    background:rgba(201,164,92,.08);
+    font-weight:800;
 }
 
 .ai-status{
-
+    min-height:18px;
+    color:#8996a1;
+    font-size:10px;
     text-align:center;
-
-    color:#71818e;
-
-    font-size:9px;
-
     margin-top:5px;
-
 }
 
-.speak-btn{
-
-    margin-top:7px;
-
-    border:
-        1px solid
-        rgba(241,217,151,.16);
-
-    background:transparent;
-
-    color:var(--gold-light);
-
-    border-radius:8px;
-
-    padding:4px 8px;
-
-    font-size:9px;
-
+.typing{
+    display:flex;
+    gap:4px;
 }
 
-/* =========================================================
+.typing span{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#c9a45c;
+    animation:typing .8s infinite alternate;
+}
+
+.typing span:nth-child(2){animation-delay:.15s}
+.typing span:nth-child(3){animation-delay:.3s}
+
+@keyframes typing{
+    from{opacity:.2;transform:translateY(0)}
+    to{opacity:1;transform:translateY(-3px)}
+}
+
+/* =========================
    RESPONSIVE
-========================================================= */
+========================= */
 
-@media(max-width:1100px){
-
-    .nav-menu{
-        display:none;
+@media(max-width:1050px){
+    .grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .sofa-card:nth-child(n){
-        grid-column:span 6;
-    }
-
-    .table-grid{
+    .branches,
+    .reps{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .branch-grid{
-        grid-template-columns:repeat(2,1fr);
+    .hero{
+        grid-template-columns:1fr 1fr;
+        gap:35px;
     }
-
 }
 
 @media(max-width:800px){
-
-    .hero{
-        min-height:680px;
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(4,12,21,.96),
-                rgba(4,12,21,.67)
-            ),
-            url("images/hero.jpg")
-            center/cover no-repeat;
+    .nav-links,
+    .socials{
+        display:none;
     }
 
-    .hero h1{
-        letter-spacing:-1px;
-    }
-
-    .section-heading{
+    .menu{
         display:block;
     }
 
-    .section-heading p{
-        margin-top:10px;
+    .nav-links.mobile-open{
+        position:absolute;
+        top:78px;
+        right:4%;
+        left:4%;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        padding:10px;
+        background:#091724;
+        border:1px solid var(--border);
+        border-radius:18px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:55px;
+    }
+
+    .hero-visual{
+        max-width:620px;
+        margin:auto;
+    }
+
+    .table-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .dining-grid{
         grid-template-columns:1fr;
     }
 
-    .dining-side{
-        min-height:500px;
+    .section-head{
+        display:block;
     }
 
-    .contact-grid{
-        grid-template-columns:1fr;
+    .section-head p{
+        margin-top:10px;
     }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .footer-text{
-        margin:auto;
-    }
-
 }
 
-@media(max-width:600px){
-
+@media(max-width:520px){
     .container{
-        width:94%;
+        width:91%;
     }
 
-    .topbar{
-        font-size:9px;
-    }
-
-    .nav{
-        min-height:67px;
-    }
-
-    .logo-mark{
-        width:40px;
-        height:40px;
-        border-radius:10px;
-    }
-
-    .logo-mark span{
-        font-size:17px;
-    }
-
-    .logo-name strong{
-        font-size:12px;
-    }
-
-    .logo-name small{
-        display:none;
-    }
-
-    .socials{
-        gap:4px;
-    }
-
-    .social{
-        width:31px;
-        height:31px;
-        border-radius:9px;
-    }
-
-    .social svg{
-        width:15px;
-        height:15px;
+    section{
+        padding:65px 0;
     }
 
     .hero{
-        min-height:650px;
-    }
-
-    .hero-content{
-        padding:70px 0;
+        min-height:auto;
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:45px;
+        letter-spacing:-2px;
     }
 
-    .hero-description{
-        font-size:13px;
+    .hero p{
+        font-size:15px;
     }
 
-    .hero-stat{
-        padding:9px 11px;
-    }
-
-    .section{
-        padding:70px 0;
-    }
-
-    .sofa-grid{
+    .grid{
         grid-template-columns:1fr 1fr;
+        gap:9px;
     }
 
-    .sofa-card:nth-child(n){
-        grid-column:span 1;
+    .product{
         min-height:250px;
     }
 
-    .sofa-card:nth-child(1){
-        grid-column:span 2;
+    .product img{
+        height:175px;
     }
 
-    .sofa-card:nth-child(5){
-        grid-column:span 2;
+    .product-info{
+        padding:12px;
     }
 
-    .sofa-info{
-        right:13px;
-        left:13px;
-        bottom:13px;
+    .product-info h3{
+        font-size:15px;
     }
 
-    .sofa-info h3{
-        font-size:17px;
+    .table-card img{
+        height:240px;
     }
 
-    .table-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
+    .branches,
+    .reps{
+        grid-template-columns:1fr;
     }
 
-    .table-card,
-    .table-card.large{
-        grid-column:span 1;
-        min-height:245px;
+    .contact-box{
+        padding:25px 18px;
     }
 
-    .table-card.large{
-        grid-column:span 2;
+    .footer-row{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .dining-main{
-        min-height:360px;
-    }
-
-    .dining-side{
-        min-height:400px;
-    }
-
-    .branch-grid{
-        grid-template-columns:1fr 1fr;
-        gap:10px;
-    }
-
-    .branch{
-        min-height:175px;
-        padding:17px;
-    }
-
-    .branch h3{
-        font-size:19px;
-    }
-
-    .ai-showcase-box{
-        padding:30px 22px;
-        border-radius:25px;
-    }
-
-    .payment-card{
-        width:100%;
-        min-width:0;
-    }
-
-    .whatsapp{
-        width:50px;
-        height:50px;
-        left:12px;
-        border-radius:15px;
-    }
-
-    .whatsapp svg{
-        width:25px;
-        height:25px;
+    .hero-card{
+        left:10px;
+        bottom:15px;
+        width:175px;
     }
 
     .ai-launcher{
-        right:12px;
-        padding:10px 12px;
-        border-radius:15px;
-        font-size:10px;
+        right:15px;
+        bottom:15px;
     }
 
     .ai-window{
         right:10px;
-        bottom:72px;
+        bottom:95px;
         width:calc(100vw - 20px);
-        height:calc(100vh - 90px);
-        border-radius:21px;
+        height:calc(100vh - 110px);
+        border-radius:22px;
     }
-
 }
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-
-        animation:none!important;
-
-        transition:none!important;
-
-        scroll-behavior:auto!important;
-
-    }
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- =====================================================
-     TOP BAR
-===================================================== -->
-
 <div class="topbar">
-    ✦ شحن لجميع مدن المملكة وخارجها ✦
+    شحن لجميع مدن المملكة وخارجها
 </div>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<header>
+    <div class="container nav">
 
-<header class="header">
+        <a href="#" class="logo">
+            <div class="logo-mark">
+                <span>ن</span>
+            </div>
 
-<div class="container nav">
+            <div class="logo-text">
+                <strong>نجوم الإبداع</strong>
+                <small>للمفروشات والكنبات</small>
+            </div>
+        </a>
 
-<a href="#home"
-   class="logo"
-   aria-label="نجوم الإبداع للمفروشات والكنبات">
+        <nav class="nav-links" id="navLinks">
+            <a href="#sofas">الكنبات</a>
+            <a href="#tables">الطاولات</a>
+            <a href="#dining">غرفة الطعام</a>
+            <a href="#branches">الفروع</a>
+            <a href="#reps">مناديب المبيعات</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
 
-<div class="logo-mark">
-<span>ن</span>
-</div>
+        <div class="socials">
 
-<div class="logo-name">
-<strong>نجوم الإبداع</strong>
-<small>للمفروشات والكنبات</small>
-</div>
+            <a class="social"
+               href="https://wa.me/966551496121"
+               target="_blank"
+               aria-label="واتساب">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 11.5a8.3 8.3 0 0 1-12.4 7.2L4 20l1.3-3.4A8.3 8.3 0 1 1 20 11.5Z"/>
+                    <path d="M9 8.5c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c.8 1.3 1.7 2 3 2.6l.6-.7c.2-.2.4-.2.7-.1l1.5.7c.3.1.4.3.3.6-.2.7-.7 1.3-1.5 1.4-1.3.2-3.5-.9-5.1-2.4C9 12.1 8.2 10.1 8.5 9.2Z"/>
+                </svg>
+            </a>
 
-</a>
+            <a class="social"
+               href="https://www.instagram.com/jj_j505"
+               target="_blank"
+               aria-label="انستغرام">
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1"/>
+                </svg>
+            </a>
 
-<nav class="nav-menu"
-     aria-label="القائمة الرئيسية">
+            <a class="social"
+               href="https://www.tiktok.com/@user505_a3"
+               target="_blank"
+               aria-label="تيك توك">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15 4v10.2a4.8 4.8 0 1 1-4-4.7"/>
+                    <path d="M15 4c.5 2.4 2 3.8 4.5 4"/>
+                </svg>
+            </a>
 
-<a href="#sofas">الكنبات</a>
+            <a class="social"
+               href="https://www.snapchat.com/add/ma484m"
+               target="_blank"
+               aria-label="سناب شات">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3.5c-3.1 0-5.1 2.2-5.1 5.5v2.2c0 .8-.3 1.5-1 2-.5.4-1.1.7-1.6.8.8.7 1.7 1 2.8 1.2.2.9.7 1.5 1.7 1.7.6.1 1 .4 1.4.9.4.6 1 1 1.8 1.1.8.1 1.3-.2 2-.2s1.2.3 2 .2c.8-.1 1.4-.5 1.8-1.1.4-.5.8-.8 1.4-.9 1-.2 1.5-.8 1.7-1.7 1.1-.2 2-.5 2.8-1.2-.5-.1-1.1-.4-1.6-.8-.7-.5-1-1.2-1-2V9c0-3.3-2-5.5-5.1-5.5Z"/>
+                </svg>
+            </a>
 
-<a href="#tables">الطاولات</a>
+        </div>
 
-<a href="#dining">غرفة الطعام</a>
+        <button class="menu" id="menuBtn" aria-label="القائمة">
+            ☰
+        </button>
 
-<a href="#reps">المناديب</a>
-
-<a href="#branches">الفروع</a>
-
-<a href="#contact">تواصل معنا</a>
-
-</nav>
-
-<div class="socials">
-
-<!-- WhatsApp -->
-
-<a class="social"
-   href="https://wa.me/966551496121"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="واتساب">
-
-<svg viewBox="0 0 24 24">
-<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.7.9 3.5 1.3 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.5c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.9 1 1-3.8-.3-.4a9.6 9.6 0 0 1-1.5-5.1c0-5.3 4.3-9.6 9.6-9.6 2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.8c0 5.4-4.3 9.8-9.6 9.8Z"/>
-</svg>
-
-</a>
-
-<!-- Instagram -->
-
-<a class="social"
-   href="https://www.instagram.com/jj_j505"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="إنستغرام">
-
-<svg viewBox="0 0 24 24">
-<rect x="3"
-      y="3"
-      width="18"
-      height="18"
-      rx="5"></rect>
-<circle cx="12"
-        cy="12"
-        r="4"></circle>
-<circle cx="17.5"
-        cy="6.5"
-        r="1"></circle>
-</svg>
-
-</a>
-
-<!-- TikTok -->
-
-<a class="social"
-   href="https://www.tiktok.com/@user505_a3"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="تيك توك">
-
-<svg viewBox="0 0 24 24">
-<path d="M15.5 2h3.1c.3 1.7 1.3 3.2 2.8 4.1v3.2c-1.4 0-2.8-.4-4-1.1v7.1c0 4-2.8 6.7-6.7 6.7-3.5 0-6.2-2.5-6.2-5.9 0-3.5 2.8-6.1 6.4-6.1.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-1.5 0-2.7 1-2.7 2.6 0 1.4 1.1 2.5 2.6 2.5 1.7 0 2.8-1.1 2.8-3.2V2h1.9Z"/>
-</svg>
-
-</a>
-
-<!-- Snapchat -->
-
-<a class="social"
-   href="https://www.snapchat.com/add/ma484m"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="سناب شات">
-
-<svg viewBox="0 0 24 24">
-<path d="M12 2.2c-3.2 0-5.8 2.5-5.8 5.8v3.1c0 .7-.3 1.4-.9 1.8-.5.4-1.1.7-1.8.8-.3.1-.5.3-.5.6 0 .7 1.2 1.1 2 1.3.3.1.6.2.8.3.1.1.2.3.2.5-.1.5-.5.9-1 1.2-.3.2-.4.5-.2.8.2.4.8.5 1.5.5.8 0 1.5-.2 2-.4.5-.2 1-.1 1.4.2.9.8 1.8 1.2 3.3 1.2s2.4-.4 3.3-1.2c.4-.3.9-.4 1.4-.2.5.2 1.2.4 2 .4.7 0 1.3-.1 1.5-.5.2-.3.1-.6-.2-.8-.5-.3-.9-.7-1-1.2 0-.2.1-.4.2-.5.2-.1.5-.2.8-.3.8-.2 2-.6 2-1.3 0-.3-.2-.5-.5-.6-.7-.1-1.3-.4-1.8-.8-.6-.4-.9-1.1-.9-1.8V8c0-3.3-2.6-5.8-5.8-5.8Z"/>
-</svg>
-
-</a>
-
-</div>
-
-</div>
-
+    </div>
 </header>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<main>
 
-<section id="home" class="hero">
+<!-- HERO -->
+<section>
+    <div class="container hero">
 
-<div class="container">
+        <div>
 
-<div class="hero-content">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                تجربة أثاث بتفاصيل مختلفة
+            </div>
 
-<div class="hero-kicker">
-<i></i>
-نجوم الإبداع للمفروشات والكنبات
-</div>
+            <h1>
+                مجالس وكنبات
+                <span>بذوق يليق بمنزلك</span>
+            </h1>
 
-<h1>
-مساحة أجمل
-<span>تبدأ من اختيارك</span>
-</h1>
+            <p>
+                كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة،
+                بتصاميم تجمع بين الراحة والفخامة والتفاصيل التي تناسب ذوقك.
+            </p>
 
-<p class="hero-description">
+            <div class="actions">
 
-كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة،
-نصمم التفاصيل التي تجعل منزلك يحمل طابعك الخاص.
+                <a class="btn btn-primary"
+                   href="#sofas">
+                    اكتشف التشكيلة
+                </a>
 
-</p>
+                <button class="btn btn-dark"
+                        onclick="openAI()">
+                    ✦ صمّم مساحتك بالذكاء الاصطناعي
+                </button>
 
-<div class="hero-actions">
+            </div>
 
-<a href="#sofas"
-   class="btn btn-gold">
+            <div class="payments">
+                <div class="payment tabby">tabby</div>
+                <div class="payment tamara">تمارا</div>
+            </div>
 
-استكشف المجموعة
-<span>←</span>
+        </div>
 
-</a>
+        <div class="hero-visual">
 
-<button class="btn btn-dark"
-        type="button"
-        onclick="openAI()">
+            <div class="hero-frame">
+                <img src="images/hero.jpg"
+                     alt="نجوم الإبداع للمفروشات">
+            </div>
 
-✦ صمّم مع مستشار نجوم الإبداع
+            <div class="hero-card">
+                <small>مستشار التصميم</small>
+                <strong>نجوم الإبداع AI</strong>
+                <small>حلل صورتك وصمّم تصورك</small>
+            </div>
 
-</button>
+        </div>
 
-</div>
+    </div>
+</section>
 
-<div class="hero-stats">
 
-<div class="hero-stat">
-<strong>جاهز</strong>
-<span>مجالس وكنبات</span>
-</div>
+<!-- SOFAS -->
+<section id="sofas">
 
-<div class="hero-stat">
-<strong>تفصيل</strong>
-<span>حسب المساحة</span>
-</div>
+    <div class="container">
 
-<div class="hero-stat">
-<strong>تصميم</strong>
-<span>ألوان وأقمشة</span>
-</div>
+        <div class="section-head">
+            <div>
+                <div class="badge">التشكيلة</div>
+                <h2>الكنبات <span class="gold">والمجالس</span></h2>
+            </div>
 
-</div>
+            <p>
+                خيارات متعددة من التصاميم الكلاسيكية والمودرن
+                والتركية والأمريكية والصناعة السعودية.
+            </p>
+        </div>
 
-</div>
+        <div class="grid">
 
-</div>
+            <article class="product">
+                <img src="images/sofas/saudi.jpg" alt="كنبات صناعة سعودية">
+                <div class="product-info">
+                    <small>01</small>
+                    <h3>صناعة سعودية</h3>
+                </div>
+            </article>
+
+            <article class="product">
+                <img src="images/sofas/classic.jpg" alt="كنبات كلاسيك">
+                <div class="product-info">
+                    <small>02</small>
+                    <h3>كلاسيك</h3>
+                </div>
+            </article>
+
+            <article class="product">
+                <img src="images/sofas/modern.jpg" alt="كنبات مودرن">
+                <div class="product-info">
+                    <small>03</small>
+                    <h3>مودرن</h3>
+                </div>
+            </article>
+
+            <article class="product">
+                <img src="images/sofas/turkish.jpg" alt="كنبات تركية">
+                <div class="product-info">
+                    <small>04</small>
+                    <h3>تركي</h3>
+                </div>
+            </article>
+
+            <article class="product">
+                <img src="images/sofas/american.jpg" alt="كنبات أمريكية">
+                <div class="product-info">
+                    <small>05</small>
+                    <h3>أمريكي</h3>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- =====================================================
-     SOFAS
-===================================================== -->
 
-<section id="sofas" class="section">
+<!-- TABLES -->
+<section id="tables">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-heading">
+        <div class="section-head">
+            <div>
+                <div class="badge">تفاصيل الطاولات</div>
+                <h2>الطاولات <span class="gold">بأناقة مختلفة</span></h2>
+            </div>
 
-<div>
-<div class="heading-label">01 — COLLECTION</div>
-<h2>الكنبات والمجالس</h2>
-</div>
+            <p>
+                تصاميم مرتبة وواضحة لتسهيل اختيار الطاولة المناسبة
+                مع المجلس أو غرفة المعيشة.
+            </p>
+        </div>
 
-<p>
-تشكيلة تجمع بين الطابع السعودي والكلاسيكي
-والمودرن والتركي والأمريكي.
-</p>
+        <div class="table-grid">
 
-</div>
+            <article class="table-card">
 
-<div class="sofa-grid">
+                <img src="images/tables/service-main.jpg"
+                     alt="طاولة خدمة رئيسية">
 
-<div class="sofa-card">
+                <div class="table-content">
 
-<img src="images/sofas/saudi.jpg"
-     alt="كنبات صناعة سعودية"
-     loading="lazy">
+                    <h3>طاولات الخدمة الرئيسية</h3>
 
-<div class="sofa-info">
-<span>01</span>
-<h3>صناعة سعودية</h3>
-</div>
+                    <p>
+                        تصاميم عملية وأنيقة تضيف لمسة فاخرة
+                        إلى المجلس وتكمل توزيع الأثاث.
+                    </p>
 
-</div>
+                    <div class="specs">
+                        <div class="spec">تصاميم متعددة</div>
+                        <div class="spec">تشطيبات فاخرة</div>
+                        <div class="spec">مناسبة للمجالس</div>
+                        <div class="spec">خيارات تفصيل</div>
+                    </div>
 
-<div class="sofa-card">
+                </div>
 
-<img src="images/sofas/classic.jpg"
-     alt="كنبات كلاسيك"
-     loading="lazy">
+            </article>
 
-<div class="sofa-info">
-<span>02</span>
-<h3>كلاسيك</h3>
-</div>
+            <article class="table-card">
 
-</div>
+                <img src="images/tables/service-side.jpg"
+                     alt="طاولة جانبية">
 
-<div class="sofa-card">
+                <div class="table-content">
 
-<img src="images/sofas/modern.jpg"
-     alt="كنبات مودرن"
-     loading="lazy">
+                    <h3>الطاولات الجانبية</h3>
 
-<div class="sofa-info">
-<span>03</span>
-<h3>مودرن</h3>
-</div>
+                    <p>
+                        قطع جانبية تكمل توزيع الجلسة وتمنح المكان
+                        مظهراً أكثر ترتيباً وانسجاماً.
+                    </p>
 
-</div>
+                    <div class="specs">
+                        <div class="spec">أحجام متنوعة</div>
+                        <div class="spec">تصميم عصري</div>
+                        <div class="spec">سهولة الاستخدام</div>
+                        <div class="spec">تنسيق مع الكنبات</div>
+                    </div>
 
-<div class="sofa-card">
+                </div>
 
-<img src="images/sofas/turkish.jpg"
-     alt="كنبات تركية"
-     loading="lazy">
+            </article>
 
-<div class="sofa-info">
-<span>04</span>
-<h3>تركي</h3>
-</div>
+        </div>
 
-</div>
-
-<div class="sofa-card">
-
-<img src="images/sofas/american.jpg"
-     alt="كنبات أمريكية"
-     loading="lazy">
-
-<div class="sofa-info">
-<span>05</span>
-<h3>أمريكي</h3>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     TABLES
-===================================================== -->
 
-<section id="tables"
-         class="section tables-section">
+<!-- DINING -->
+<section id="dining">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-heading">
+        <div class="section-head">
+            <div>
+                <div class="badge">Dining</div>
+                <h2>غرفة <span class="gold">الطعام</span></h2>
+            </div>
 
-<div>
-<div class="heading-label">02 — TABLES</div>
-<h2>الطاولات</h2>
-</div>
+            <p>
+                تفاصيل متكاملة لطاولة الطعام والكراسي والبوفيه
+                بتنسيق يليق بالمساحات الفاخرة.
+            </p>
+        </div>
 
-<p>
-قطع مصممة لتكمل المجلس وغرفة المعيشة
-وتمنح المكان لمسة متكاملة.
-</p>
+        <div class="dining-grid">
 
-</div>
+            <article class="dining-card">
+                <img src="images/dining/dining-table.jpg"
+                     alt="طاولة طعام">
+                <div>
+                    <h3>طاولات الطعام</h3>
+                    <p>تصاميم تجمع بين الفخامة والعملية.</p>
+                </div>
+            </article>
 
-<div class="table-grid">
+            <article class="dining-card">
+                <img src="images/dining/dining-chairs.jpg"
+                     alt="كراسي طعام">
+                <div>
+                    <h3>كراسي الطعام</h3>
+                    <p>تفاصيل مريحة ومتناسقة مع الطاولة.</p>
+                </div>
+            </article>
 
-<div class="table-card large">
+            <article class="dining-card">
+                <img src="images/dining/buffet.jpg"
+                     alt="بوفيه">
+                <div>
+                    <h3>البوفيه</h3>
+                    <p>حلول تخزين أنيقة للمساحات الداخلية.</p>
+                </div>
+            </article>
 
-<img src="images/tables/service-main.jpg"
-     alt="طاولة رئيسية"
-     loading="lazy">
+        </div>
 
-<div class="table-content">
-<small>TABLE COLLECTION</small>
-<h3>الطاولات الرئيسية</h3>
-</div>
-
-</div>
-
-<div class="table-card">
-
-<img src="images/tables/service-side.jpg"
-     alt="طاولة جانبية"
-     loading="lazy">
-
-<div class="table-content">
-<small>DETAIL</small>
-<h3>طاولات جانبية</h3>
-</div>
-
-</div>
-
-<div class="table-card">
-
-<img src="images/tables/service-main.jpg"
-     alt="تصميم طاولة"
-     loading="lazy">
-
-<div class="table-content">
-<small>STYLE</small>
-<h3>تصاميم متنوعة</h3>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     DINING
-===================================================== -->
 
-<section id="dining"
-         class="section">
+<!-- BRANCHES -->
+<section id="branches">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-heading">
+        <div class="section-head">
+            <div>
+                <div class="badge">فروعنا</div>
+                <h2>نجوم الإبداع <span class="gold">بالقرب منك</span></h2>
+            </div>
+        </div>
 
-<div>
-<div class="heading-label">03 — DINING</div>
-<h2>غرفة الطعام</h2>
-</div>
+        <div class="branches">
 
-<p>
-تفاصيل متناسقة تجعل غرفة الطعام جزءًا
-من هوية منزلك.
-</p>
+            <article class="branch">
+                <div class="branch-icon">⌖</div>
+                <h3>الرياض</h3>
+                <p>حي نمار</p>
+                <a href="https://wa.me/966551496121" target="_blank">
+                    واتساب الفرع ←
+                </a>
+            </article>
 
-</div>
+            <article class="branch">
+                <div class="branch-icon">⌖</div>
+                <h3>الدمام</h3>
+                <p>شارع الملك عبد العزيز</p>
+                <a href="https://wa.me/966561232087" target="_blank">
+                    واتساب الفرع ←
+                </a>
+            </article>
 
-<div class="dining-grid">
+            <article class="branch">
+                <div class="branch-icon">⌖</div>
+                <h3>تبوك</h3>
+                <p>فرع تبوك</p>
+                <a href="https://wa.me/966573480091" target="_blank">
+                    واتساب الفرع ←
+                </a>
+            </article>
 
-<div class="dining-main">
+            <article class="branch">
+                <div class="branch-icon">⌖</div>
+                <h3>الأحساء</h3>
+                <p>فرع الأحساء</p>
+                <a href="https://wa.me/966539742588" target="_blank">
+                    واتساب الفرع ←
+                </a>
+            </article>
 
-<img src="images/dining/dining-table.jpg"
-     alt="طاولة غرفة الطعام"
-     loading="lazy">
+        </div>
 
-<div class="dining-content">
-<h3>طاولة الطعام</h3>
-</div>
-
-</div>
-
-<div class="dining-side">
-
-<div class="dining-small">
-
-<img src="images/dining/dining-chairs.jpg"
-     alt="كراسي غرفة الطعام"
-     loading="lazy">
-
-<span>كراسي الطعام</span>
-
-</div>
-
-<div class="dining-small">
-
-<img src="images/dining/buffet.jpg"
-     alt="بوفيه غرفة الطعام"
-     loading="lazy">
-
-<span>البوفيهات</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     AI SHOWCASE
-===================================================== -->
 
-<section class="ai-showcase">
+<!-- SALES REPS -->
+<section id="reps">
 
-<div class="container">
+    <div class="container">
 
-<div class="ai-showcase-box">
+        <div class="section-head">
+            <div>
+                <div class="badge">Sales</div>
+                <h2>مناديب <span class="gold">المبيعات</span></h2>
+            </div>
 
-<div class="ai-showcase-content">
+            <p>
+                تواصل مباشرة مع مندوب المبيعات للحصول على المساعدة
+                والاستفسار عن الطلب والتفاصيل.
+            </p>
+        </div>
 
-<div class="ai-badge">
-✦ مستشار نجوم الإبداع الذكي
-</div>
+        <div class="reps">
 
-<h2>
-لا تتخيل التصميم فقط...
-<span>شاهده.</span>
-</h2>
+            <article class="rep">
+                <div class="rep-avatar">أ</div>
+                <h3>أيمن راجح</h3>
+                <small>الرياض</small>
+                <a href="https://wa.me/966551496121" target="_blank">
+                    واتساب المندوب
+                </a>
+            </article>
 
-<p>
+            <article class="rep">
+                <div class="rep-avatar">ع</div>
+                <h3>عبد الله الرماني</h3>
+                <small>الرياض</small>
+                <a href="https://wa.me/966539589684" target="_blank">
+                    واتساب المندوب
+                </a>
+            </article>
 
-أرسل صورة لمكانك، اكتب مقاسات الغرفة أو أخبر المستشار
-بالذوق الذي تفضله، وسيقترح لك أفكارًا لتوزيع الأثاث
-والألوان والأقمشة، ويمكنه إنشاء تصور بصري جديد.
+            <article class="rep">
+                <div class="rep-avatar">ص</div>
+                <h3>صفوان المجلي</h3>
+                <small>الرياض</small>
+                <a href="https://wa.me/966535152249" target="_blank">
+                    واتساب المندوب
+                </a>
+            </article>
 
-</p>
+            <article class="rep">
+                <div class="rep-avatar">م</div>
+                <h3>محمد العقربي</h3>
+                <small>الرياض</small>
+                <a href="https://wa.me/966531302436" target="_blank">
+                    واتساب المندوب
+                </a>
+            </article>
 
-<br>
+        </div>
 
-<button class="btn btn-gold"
-        type="button"
-        onclick="openAI()">
-
-ابدأ التصميم الآن ✦
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     SALES REPS
-===================================================== -->
-
-<section id="reps"
-         class="section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div>
-<div class="heading-label">04 — SALES TEAM</div>
-<h2>مناديب المبيعات</h2>
-</div>
-
-<p>
-تواصل مباشرة مع فريق المبيعات للحصول على المساعدة
-والاستفسار عن المنتجات والتنفيذ.
-</p>
-
-</div>
-
-<div class="branch-grid">
-
-<div class="branch">
-
-<span class="branch-number">01</span>
-
-<h3>أيمن راجح</h3>
-
-<p>الرياض</p>
-
-<a href="https://wa.me/966551496121"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn btn-dark"
-   style="margin-top:12px;width:max-content;min-height:38px;padding:7px 13px;">
-
-واتساب
-
-</a>
-
-</div>
-
-<div class="branch">
-
-<span class="branch-number">02</span>
-
-<h3>عبد الله الرماني</h3>
-
-<p>الرياض</p>
-
-<a href="https://wa.me/966539589684"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn btn-dark"
-   style="margin-top:12px;width:max-content;min-height:38px;padding:7px 13px;">
-
-واتساب
-
-</a>
-
-</div>
-
-<div class="branch">
-
-<span class="branch-number">03</span>
-
-<h3>صفوان المجلي</h3>
-
-<p>الرياض</p>
-
-<a href="https://wa.me/966535152249"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn btn-dark"
-   style="margin-top:12px;width:max-content;min-height:38px;padding:7px 13px;">
-
-واتساب
-
-</a>
-
-</div>
-
-<div class="branch">
-
-<span class="branch-number">04</span>
-
-<h3>محمد العقربي</h3>
-
-<p>الرياض</p>
-
-<a href="https://wa.me/966531302436"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn btn-dark"
-   style="margin-top:12px;width:max-content;min-height:38px;padding:7px 13px;">
-
-واتساب
-
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     BRANCHES
-===================================================== -->
 
-<section id="branches"
-         class="section">
+<!-- CONTACT -->
+<section id="contact">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-heading">
+        <div class="contact-box">
 
-<div>
-<div class="heading-label">05 — SHOWROOMS</div>
-<h2>فروعنا</h2>
-</div>
+            <div class="contact-grid">
 
-<p>
-نسعد بخدمتكم في فروع نجوم الإبداع
-في مختلف مناطق المملكة.
-</p>
+                <div>
 
-</div>
+                    <div class="badge">تواصل معنا</div>
 
-<div class="branch-grid">
+                    <h2>
+                        نحن هنا لمساعدتك
+                    </h2>
 
-<div class="branch">
-<span class="branch-number">01</span>
-<h3>الرياض</h3>
-<p>حي نمار · 0551496121</p>
-</div>
+                    <p style="color:var(--muted);line-height:2;margin-top:12px">
+                        للاستفسار عن المجالس والكنبات والتفصيل
+                        والفروع والطلبات، تواصل معنا مباشرة.
+                    </p>
 
-<div class="branch">
-<span class="branch-number">02</span>
-<h3>الدمام</h3>
-<p>شارع الملك عبد العزيز · 0561232087</p>
-</div>
+                    <div class="actions">
+                        <a class="btn btn-primary"
+                           href="https://wa.me/966551496121"
+                           target="_blank">
+                            واتساب
+                        </a>
 
-<div class="branch">
-<span class="branch-number">03</span>
-<h3>تبوك</h3>
-<p>0573480091</p>
-</div>
+                        <button class="btn btn-dark"
+                                onclick="openAI()">
+                            ✦ تحدث مع المستشار
+                        </button>
+                    </div>
 
-<div class="branch">
-<span class="branch-number">04</span>
-<h3>الأحساء</h3>
-<p>0539742588</p>
-</div>
+                </div>
 
-</div>
+                <div class="contact-list">
 
-</div>
+                    <div class="contact-item">
+                        <span>واتساب</span>
+                        <strong>0551496121</strong>
+                    </div>
 
-</section>
+                    <div class="contact-item">
+                        <span>الإدارة</span>
+                        <strong>0530493382</strong>
+                    </div>
 
-<!-- =====================================================
-     PAYMENT
-===================================================== -->
+                    <div class="contact-item">
+                        <span>الشكاوى والمقترحات</span>
+                        <strong>0538677457</strong>
+                    </div>
 
-<section class="payment">
+                    <div class="contact-item">
+                        <span>الدوام</span>
+                        <strong>السبت - الخميس 9 ص - 12 م</strong>
+                    </div>
 
-<div class="container">
+                    <div class="contact-item">
+                        <span>الجمعة</span>
+                        <strong>2 م - 12 م</strong>
+                    </div>
 
-<div class="section-heading"
-     style="justify-content:center;text-align:center;">
+                </div>
 
-<div>
+            </div>
 
-<div class="heading-label">
-PAYMENT
-</div>
+        </div>
 
-<h2>
-خيارات دفع مرنة
-</h2>
-
-</div>
-
-</div>
-
-<div class="payment-box">
-
-<div class="payment-card">
-
-<div class="payment-logo">
-tabby
-</div>
-
-<div class="payment-text">
-خيارات دفع مرنة
-</div>
-
-</div>
-
-<div class="payment-card">
-
-<div class="payment-logo">
-tamara
-</div>
-
-<div class="payment-text">
-خيارات دفع مرنة
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+</main>
 
-<section id="contact"
-         class="section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div>
-<div class="heading-label">06 — CONTACT</div>
-<h2>تواصل معنا</h2>
-</div>
-
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<div class="icon">☎</div>
-
-<h3>الواتساب</h3>
-
-<p>0551496121</p>
-
-</div>
-
-<div class="contact-card">
-
-<div class="icon">✦</div>
-
-<h3>الإدارة</h3>
-
-<p>0530493382</p>
-
-</div>
-
-<div class="contact-card">
-
-<div class="icon">✉</div>
-
-<h3>الشكاوى والمقترحات</h3>
-
-<p>0538677457</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
 
 <footer>
 
-<div class="container">
+    <div class="container footer-row">
 
-<div class="footer-grid">
+        <div>
+            © 2026 نجوم الإبداع للمفروشات والكنبات
+        </div>
 
-<div>
+        <div>
+            ©️ تكويد وتصميم <strong>المهندس دفاع عبد الله القياضي</strong>
+        </div>
 
-<div class="footer-title">
-نجوم الإبداع
-</div>
-
-<p class="footer-text">
-
-للمفروشات والكنبات.
-مجالس وكنبات جاهزة وتفصيل وطاولات ومفروشات فاخرة.
-
-</p>
-
-<br>
-
-<div class="socials">
-
-<a class="social"
-   href="https://wa.me/966551496121"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="واتساب">
-
-<svg viewBox="0 0 24 24">
-<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.7.9 3.5 1.3 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3Z"/>
-</svg>
-
-</a>
-
-<a class="social"
-   href="https://www.instagram.com/jj_j505"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="إنستغرام">
-
-<svg viewBox="0 0 24 24">
-<rect x="3" y="3"
-      width="18"
-      height="18"
-      rx="5"></rect>
-<circle cx="12"
-        cy="12"
-        r="4"></circle>
-<circle cx="17.5"
-        cy="6.5"
-        r="1"></circle>
-</svg>
-
-</a>
-
-<a class="social"
-   href="https://www.tiktok.com/@user505_a3"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="تيك توك">
-
-<svg viewBox="0 0 24 24">
-<path d="M15.5 2h3.1c.3 1.7 1.3 3.2 2.8 4.1v3.2c-1.4 0-2.8-.4-4-1.1v7.1c0 4-2.8 6.7-6.7 6.7-3.5 0-6.2-2.5-6.2-5.9 0-3.5 2.8-6.1 6.4-6.1.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-1.5 0-2.7 1-2.7 2.6 0 1.4 1.1 2.5 2.6 2.5 1.7 0 2.8-1.1 2.8-3.2V2h1.9Z"/>
-</svg>
-
-</a>
-
-<a class="social"
-   href="https://www.snapchat.com/add/ma484m"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="سناب شات">
-
-<svg viewBox="0 0 24 24">
-<path d="M12 2.2c-3.2 0-5.8 2.5-5.8 5.8v3.1c0 .7-.3 1.4-.9 1.8-.5.4-1.1.7-1.8.8-.3.1-.5.3-.5.6 0 .7 1.2 1.1 2 1.3.3.1.6.2.8.3.1.1.2.3.2.5-.1.5-.5.9-1 1.2-.3.2-.4.5-.2.8.2.4.8.5 1.5.5.8 0 1.5-.2 2-.4.5-.2 1-.1 1.4.2.9.8 1.8 1.2 3.3 1.2s2.4-.4 3.3-1.2c.4-.3.9-.4 1.4-.2.5.2 1.2.4 2 .4.7 0 1.3-.1 1.5-.5.2-.3.1-.6-.2-.8-.5-.3-.9-.7-1-1.2 0-.2.1-.4.2-.5.2-.1.5-.2.8-.3.8-.2 2-.6 2-1.3 0-.3-.2-.5-.5-.6-.7-.1-1.3-.4-1.8-.8-.6-.4-.9-1.1-.9-1.8V8c0-3.3-2.6-5.8-5.8-5.8Z"/>
-</svg>
-
-</a>
-
-</div>
-
-</div>
-
-<div>
-
-<div class="footer-title">
-الفروع
-</div>
-
-<ul class="footer-list">
-
-<li>الرياض — حي نمار</li>
-<li>الدمام — شارع الملك عبد العزيز</li>
-<li>تبوك</li>
-<li>الأحساء</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<div class="footer-title">
-أوقات العمل
-</div>
-
-<ul class="footer-list">
-
-<li>السبت — الخميس</li>
-<li>9 صباحًا — 12 منتصف الليل</li>
-<li>الجمعة</li>
-<li>2 ظهرًا — 12 منتصف الليل</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-© 2026 نجوم الإبداع للمفروشات والكنبات
-<br>
-© تكويد وتصميم المهندس دفاع عبد الله القياضي
-
-</div>
-
-</div>
+    </div>
 
 </footer>
 
-<!-- =====================================================
-     WHATSAPP FLOAT
-===================================================== -->
 
-<a class="whatsapp"
-   href="https://wa.me/966551496121"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="واتساب نجوم الإبداع">
-
-<svg viewBox="0 0 24 24">
-
-<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.7.9 3.5 1.3 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.5c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.9 1 1-3.8-.3-.4a9.6 9.6 0 0 1-1.5-5.1c0-5.3 4.3-9.6 9.6-9.6 2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.8c0 5.4-4.3 9.8-9.6 9.8Z"/>
-
-</svg>
-
-</a>
-
-<!-- =====================================================
+<!-- =========================
      AI LAUNCHER
-===================================================== -->
+========================= -->
 
-<button id="aiLauncher"
-        class="ai-launcher"
-        type="button"
-        onclick="openAI()">
+<button class="ai-launcher"
+        id="aiLauncher"
+        onclick="toggleAI()"
+        aria-label="مستشار نجوم الإبداع">
 
-✦ مستشار نجوم الإبداع
+    <span class="ai-badge">AI</span>
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="1.8">
+        <path d="M12 2l1.7 6.3L20 10l-6.3 1.7L12 18l-1.7-6.3L4 10l6.3-1.7L12 2Z"/>
+        <path d="M19 15l.8 2.7L22.5 19l-2.7.8L19 22.5l-.8-2.7-2.7-.8 2.7-1.3L19 15Z"/>
+    </svg>
 
 </button>
 
-<!-- =====================================================
+
+<!-- =========================
      AI WINDOW
-===================================================== -->
+========================= -->
 
-<div id="aiWindow"
-     class="ai-window"
-     aria-label="مستشار نجوم الإبداع">
+<div class="ai-window" id="aiWindow">
 
-<div class="ai-header">
+    <div class="ai-header">
 
-<div class="ai-title">
+        <div class="ai-title">
 
-<div class="ai-avatar">
-✦
+            <div class="ai-avatar">
+                ✦
+            </div>
+
+            <div>
+                <strong>مستشار نجوم الإبداع</strong>
+                <small>● متصل الآن</small>
+            </div>
+
+        </div>
+
+        <button class="ai-close"
+                onclick="closeAI()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="ai-messages" id="aiMessages">
+
+        <div class="message ai">
+            أهلاً بك في نجوم الإبداع ✨
+            <br><br>
+            أرسل لي صورة لغرفتك، وقل لي ماذا تريد أن تغيّر فيها.
+            أستطيع تحليل المكان واقتراح تصميم ثم إنشاء <strong>تصور بصري جديد</strong> بناءً على طلبك.
+        </div>
+
+    </div>
+
+
+    <div class="quick">
+
+        <button onclick="quickPrompt('صمم لي مجلس مودرن فاخر بألوان بيج وذهبي')">
+            مجلس مودرن
+        </button>
+
+        <button onclick="quickPrompt('حلل صورة الغرفة واقترح أفضل توزيع للأثاث')">
+            حلل صورتي
+        </button>
+
+        <button onclick="quickPrompt('غيّر لون الكنبات إلى بيج فاتح مع طاولة رخام')">
+            غيّر الألوان
+        </button>
+
+        <button onclick="quickPrompt('صمم غرفة معيشة فاخرة وعملية')">
+            تصميم جديد
+        </button>
+
+    </div>
+
+
+    <div class="ai-tools">
+
+        <div class="image-preview"
+             id="aiImagePreview">
+
+            <img id="previewImage"
+                 src=""
+                 alt="الصورة المختارة">
+
+            <button class="remove-image"
+                    onclick="removeImage()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="ai-input-row">
+
+            <button class="icon-btn"
+                    id="uploadBtn"
+                    title="رفع صورة"
+                    onclick="document.getElementById('aiImageInput').click()">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8">
+                    <rect x="3" y="3" width="18" height="18" rx="3"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                </svg>
+
+            </button>
+
+            <input id="aiImageInput"
+                   type="file"
+                   accept="image/png,image/jpeg,image/webp"
+                   hidden>
+
+            <button class="icon-btn"
+                    id="micBtn"
+                    title="التحدث صوتياً">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.8">
+                    <rect x="9" y="3" width="6" height="12" rx="3"/>
+                    <path d="M5 11a7 7 0 0 0 14 0"/>
+                    <path d="M12 18v3"/>
+                    <path d="M9 21h6"/>
+                </svg>
+
+            </button>
+
+            <textarea
+                id="aiInput"
+                class="ai-input"
+                placeholder="اكتب كيف تريد التصميم..."
+                rows="1"></textarea>
+
+            <button class="icon-btn send-btn"
+                    id="aiSend"
+                    title="إرسال">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path d="M22 2L11 13"/>
+                    <path d="M22 2l-7 20-4-9-9-4 20-7Z"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <button class="generate-btn"
+                id="generateDesignBtn">
+            ✦ إنشاء التصميم بالصورة
+        </button>
+
+        <div class="ai-status"
+             id="aiStatus">
+            ارفع صورة أو اكتب طلبك
+        </div>
+
+    </div>
+
 </div>
 
-<div>
-
-<strong>
-مستشار نجوم الإبداع
-</strong>
-
-<small>
-تصميم · ألوان · توزيع · أفكار
-</small>
-
-</div>
-
-</div>
-
-<button id="aiClose"
-        class="ai-close"
-        type="button"
-        aria-label="إغلاق">
-
-×
-
-</button>
-
-</div>
-
-<div id="aiMessages"
-     class="ai-messages">
-
-<div class="ai-message bot">
-
-مرحبًا بك في نجوم الإبداع ✦
-
-أنا مستشارك الذكي للمفروشات والتصميم.
-
-أرسل لي:
-• مقاس الغرفة
-• عدد الأشخاص
-• ذوقك المفضل
-• ميزانيتك
-• أو صورة للمكان
-
-ويمكنني مساعدتك في ابتكار تصور مناسب.
-
-</div>
-
-</div>
-
-<div id="aiImagePreview"
-     class="ai-image-preview">
-
-<img id="aiPreviewImage"
-     alt="الصورة المختارة">
-
-</div>
-
-<div class="ai-controls">
-
-<div class="ai-tools">
-
-<label class="ai-tool">
-
-📷 صورة
-
-<input id="aiImageInput"
-       type="file"
-       accept="image/png,image/jpeg,image/webp"
-       hidden>
-
-</label>
-
-<button id="generateDesignBtn"
-        class="ai-tool"
-        type="button">
-
-✦ توليد تصميم
-
-</button>
-
-<button id="aiVoiceBtn"
-        class="ai-tool"
-        type="button">
-
-🎤 صوت
-
-</button>
-
-</div>
-
-<div class="ai-input-row">
-
-<textarea id="aiInput"
-          maxlength="3000"
-          placeholder="مثلاً: صمم لي مجلس مودرن بيج لمساحة 5×6 متر..."></textarea>
-
-<button id="aiSend"
-        type="button"
-        aria-label="إرسال">
-
-➤
-
-</button>
-
-</div>
-
-<div id="aiStatus"
-     class="ai-status">
-
-جاهز لخدمتك
-
-</div>
-
-</div>
-
-</div>
 
 <script>
 
-/* =========================================================
-   AI ELEMENTS
-========================================================= */
+/* ======================================
+   NAVIGATION
+====================================== */
 
-const aiWindow =
-    document.getElementById("aiWindow");
+var menuBtn = document.getElementById("menuBtn");
+var navLinks = document.getElementById("navLinks");
 
-const aiClose =
-    document.getElementById("aiClose");
+menuBtn.addEventListener("click", function(){
 
-const aiMessages =
-    document.getElementById("aiMessages");
+    navLinks.classList.toggle("mobile-open");
 
-const aiInput =
-    document.getElementById("aiInput");
+});
 
-const aiSend =
-    document.getElementById("aiSend");
+document.querySelectorAll(".nav-links a").forEach(function(link){
 
-const aiStatus =
-    document.getElementById("aiStatus");
+    link.addEventListener("click", function(){
+        navLinks.classList.remove("mobile-open");
+    });
 
-const aiImageInput =
-    document.getElementById("aiImageInput");
+});
 
-const aiImagePreview =
-    document.getElementById("aiImagePreview");
 
-const aiPreviewImage =
-    document.getElementById("aiPreviewImage");
+/* ======================================
+   AI
+====================================== */
 
-const generateDesignBtn =
-    document.getElementById(
-        "generateDesignBtn"
-    );
+var aiWindow = document.getElementById("aiWindow");
+var aiInput = document.getElementById("aiInput");
+var aiSend = document.getElementById("aiSend");
+var aiMessages = document.getElementById("aiMessages");
+var aiStatus = document.getElementById("aiStatus");
 
-const aiVoiceBtn =
-    document.getElementById(
-        "aiVoiceBtn"
-    );
+var aiImageInput = document.getElementById("aiImageInput");
+var aiImagePreview = document.getElementById("aiImagePreview");
+var previewImage = document.getElementById("previewImage");
 
-let selectedAIImage = null;
+var generateDesignBtn =
+    document.getElementById("generateDesignBtn");
 
-window.voiceModeActive = false;
+var micBtn =
+    document.getElementById("micBtn");
 
-/* =========================================================
-   OPEN / CLOSE
-========================================================= */
+var selectedImage = null;
+
+
+/* فتح المستشار */
 
 function openAI(){
 
     aiWindow.classList.add("open");
 
-    setTimeout(
-        ()=>{
-            aiInput.focus();
-        },
-        100
-    );
+    setTimeout(function(){
+        aiInput.focus();
+    },100);
 
 }
+
+
+/* إغلاق المستشار */
 
 function closeAI(){
 
@@ -3573,41 +1924,49 @@ function closeAI(){
 
 }
 
-aiClose.addEventListener(
-    "click",
-    closeAI
-);
 
-document.addEventListener(
-    "keydown",
-    event=>{
+/* تبديل */
 
-        if(event.key === "Escape"){
+function toggleAI(){
 
-            closeAI();
-
-        }
-
+    if(aiWindow.classList.contains("open")){
+        closeAI();
+    }else{
+        openAI();
     }
-);
 
-/* =========================================================
-   MESSAGE
-========================================================= */
+}
 
-function addMessage(
-    text,
-    type="bot"
-){
 
-    const div =
-        document.createElement("div");
+/* ======================================
+   SAFE HTML
+====================================== */
+
+function escapeHTML(text){
+
+    var div = document.createElement("div");
+
+    div.textContent = text || "";
+
+    return div.innerHTML
+        .replace(/\n/g,"<br>");
+
+}
+
+
+/* ======================================
+   ADD MESSAGE
+====================================== */
+
+function addMessage(type,text){
+
+    var div = document.createElement("div");
 
     div.className =
-        "ai-message " + type;
+        "message " + type;
 
-    div.textContent =
-        text;
+    div.innerHTML =
+        escapeHTML(text);
 
     aiMessages.appendChild(div);
 
@@ -3618,29 +1977,58 @@ function addMessage(
 
 }
 
-function addImageMessage(
-    image
-){
 
-    const div =
-        document.createElement("div");
+/* ======================================
+   IMAGE MESSAGE
+====================================== */
 
-    div.className =
-        "ai-message bot";
+function addImageMessage(reply,image){
 
-    const img =
-        document.createElement("img");
+    var div = document.createElement("div");
 
-    img.src =
-        image;
+    div.className = "message ai";
 
-    img.alt =
-        "تصور تصميم";
+    div.innerHTML =
+        escapeHTML(reply || "تم إنشاء التصميم.");
 
-    img.className =
-        "ai-generated-image";
+    if(image){
 
-    div.appendChild(img);
+        var img =
+            document.createElement("img");
+
+        img.src = image;
+
+        img.alt =
+            "التصميم الذي تم إنشاؤه";
+
+        div.appendChild(img);
+
+        var saveBtn =
+            document.createElement("a");
+
+        saveBtn.href = image;
+
+        saveBtn.download =
+            "najoom-design.png";
+
+        saveBtn.textContent =
+            "حفظ التصميم";
+
+        saveBtn.style.display =
+            "inline-block";
+
+        saveBtn.style.marginTop =
+            "10px";
+
+        saveBtn.style.color =
+            "#f0d58d";
+
+        saveBtn.style.fontWeight =
+            "800";
+
+        div.appendChild(saveBtn);
+
+    }
 
     aiMessages.appendChild(div);
 
@@ -3649,185 +2037,220 @@ function addImageMessage(
 
 }
 
-/* =========================================================
-   IMAGE COMPRESSION
-========================================================= */
 
-function compressImage(file){
+/* ======================================
+   TYPING
+====================================== */
 
-    return new Promise(
-        (resolve,reject)=>{
+function addTyping(){
 
-            if(file.size >
-               10 * 1024 * 1024){
+    var div =
+        document.createElement("div");
 
-                reject(
-                    new Error(
-                        "حجم الصورة أكبر من 10 ميجابايت."
-                    )
-                );
+    div.className =
+        "message ai";
 
-                return;
+    div.id =
+        "aiTyping";
 
-            }
+    div.innerHTML =
+        '<div class="typing">' +
+        '<span></span>' +
+        '<span></span>' +
+        '<span></span>' +
+        '</div>';
 
-            const reader =
-                new FileReader();
+    aiMessages.appendChild(div);
 
-            reader.onload =
-                function(){
-
-                    const img =
-                        new Image();
-
-                    img.onload =
-                        function(){
-
-                            const max =
-                                1600;
-
-                            let width =
-                                img.width;
-
-                            let height =
-                                img.height;
-
-                            if(
-                                width > max ||
-                                height > max
-                            ){
-
-                                if(
-                                    width > height
-                                ){
-
-                                    height =
-                                        Math.round(
-                                            height *
-                                            max /
-                                            width
-                                        );
-
-                                    width =
-                                        max;
-
-                                }else{
-
-                                    width =
-                                        Math.round(
-                                            width *
-                                            max /
-                                            height
-                                        );
-
-                                    height =
-                                        max;
-
-                                }
-
-                            }
-
-                            const canvas =
-                                document.createElement(
-                                    "canvas"
-                                );
-
-                            canvas.width =
-                                width;
-
-                            canvas.height =
-                                height;
-
-                            const ctx =
-                                canvas.getContext(
-                                    "2d"
-                                );
-
-                            ctx.drawImage(
-                                img,
-                                0,
-                                0,
-                                width,
-                                height
-                            );
-
-                            const dataUrl =
-                                canvas.toDataURL(
-                                    "image/jpeg",
-                                    .76
-                                );
-
-                            const size =
-                                Math.floor(
-                                    dataUrl.length *
-                                    .75
-                                );
-
-                            if(
-                                size >
-                                2 *
-                                1024 *
-                                1024
-                            ){
-
-                                reject(
-                                    new Error(
-                                        "الصورة ما زالت كبيرة بعد الضغط."
-                                    )
-                                );
-
-                                return;
-
-                            }
-
-                            resolve(
-                                dataUrl
-                            );
-
-                        };
-
-                    img.onerror =
-                        ()=>{
-                            reject(
-                                new Error(
-                                    "تعذر قراءة الصورة."
-                                )
-                            );
-                        };
-
-                    img.src =
-                        reader.result;
-
-                };
-
-            reader.onerror =
-                ()=>{
-                    reject(
-                        new Error(
-                            "تعذر قراءة الملف."
-                        )
-                    );
-                };
-
-            reader.readAsDataURL(file);
-
-        }
-    );
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
 
 }
 
-/* =========================================================
+
+/* ======================================
+   REMOVE TYPING
+====================================== */
+
+function removeTyping(){
+
+    var typing =
+        document.getElementById("aiTyping");
+
+    if(typing){
+        typing.remove();
+    }
+
+}
+
+
+/* ======================================
+   IMAGE COMPRESSION
+====================================== */
+
+function compressImage(file){
+
+    return new Promise(function(resolve,reject){
+
+        var reader =
+            new FileReader();
+
+        reader.onload =
+            function(event){
+
+                var img =
+                    new Image();
+
+                img.onload =
+                    function(){
+
+                        var maxSize = 1600;
+
+                        var width =
+                            img.width;
+
+                        var height =
+                            img.height;
+
+                        if(width > maxSize ||
+                           height > maxSize){
+
+                            if(width > height){
+
+                                height =
+                                    Math.round(
+                                        height *
+                                        maxSize /
+                                        width
+                                    );
+
+                                width =
+                                    maxSize;
+
+                            }else{
+
+                                width =
+                                    Math.round(
+                                        width *
+                                        maxSize /
+                                        height
+                                    );
+
+                                height =
+                                    maxSize;
+                            }
+                        }
+
+                        var canvas =
+                            document.createElement("canvas");
+
+                        canvas.width =
+                            width;
+
+                        canvas.height =
+                            height;
+
+                        var ctx =
+                            canvas.getContext("2d");
+
+                        ctx.drawImage(
+                            img,
+                            0,
+                            0,
+                            width,
+                            height
+                        );
+
+                        var quality =
+                            0.76;
+
+                        var dataUrl =
+                            canvas.toDataURL(
+                                "image/jpeg",
+                                quality
+                            );
+
+                        /*
+                         * نقلل الحجم إذا كانت الصورة
+                         * كبيرة جداً بالنسبة للطلب.
+                         */
+
+                        if(dataUrl.length > 1700000){
+
+                            dataUrl =
+                                canvas.toDataURL(
+                                    "image/jpeg",
+                                    0.60
+                                );
+                        }
+
+                        resolve(dataUrl);
+
+                    };
+
+                img.onerror =
+                    function(){
+
+                        reject(
+                            new Error(
+                                "تعذر قراءة الصورة."
+                            )
+                        );
+
+                    };
+
+                img.src =
+                    event.target.result;
+
+            };
+
+        reader.onerror =
+            function(){
+
+                reject(
+                    new Error(
+                        "تعذر تحميل الصورة."
+                    )
+                );
+
+            };
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
+
+
+/* ======================================
    IMAGE SELECT
-========================================================= */
+====================================== */
 
 aiImageInput.addEventListener(
     "change",
     async function(){
 
-        const file =
-            this.files?.[0];
+        var file =
+            this.files[0];
 
         if(!file){
+            return;
+        }
+
+        if(!file.type ||
+           file.type.indexOf("image/") !== 0){
+
+            alert("الرجاء اختيار صورة فقط.");
+
+            return;
+        }
+
+        if(file.size > 10 * 1024 * 1024){
+
+            alert(
+                "حجم الصورة كبير جداً. اختر صورة أقل من 10MB."
+            );
+
             return;
         }
 
@@ -3836,115 +2259,170 @@ aiImageInput.addEventListener(
             aiStatus.textContent =
                 "جاري تجهيز الصورة...";
 
-            selectedAIImage =
-                await compressImage(
-                    file
-                );
+            selectedImage =
+                await compressImage(file);
 
-            aiPreviewImage.src =
-                selectedAIImage;
+            previewImage.src =
+                selectedImage;
 
-            aiImagePreview.style.display =
-                "block";
+            aiImagePreview.classList.add("show");
 
             aiStatus.textContent =
-                "تم تجهيز الصورة.";
+                "الصورة جاهزة. اكتب ماذا تريد أن أغيّر.";
 
         }catch(error){
 
-            selectedAIImage =
-                null;
-
-            aiImagePreview.style.display =
-                "none";
+            selectedImage = null;
 
             aiStatus.textContent =
-                error.message;
+                "تعذر تجهيز الصورة.";
+
+            alert(error.message);
 
         }
 
     }
 );
 
-/* =========================================================
-   SEND AI
-========================================================= */
 
-async function sendAIMessage(
-    customMessage=null,
-    generateImage=false
-){
+/* ======================================
+   REMOVE IMAGE
+====================================== */
 
-    const message =
-        (
-            customMessage !== null
-                ? customMessage
-                : aiInput.value
-        ).trim();
+function removeImage(){
 
-    if(
-        !message &&
-        !selectedAIImage
-    ){
+    selectedImage = null;
+
+    aiImageInput.value = "";
+
+    previewImage.src = "";
+
+    aiImagePreview.classList.remove("show");
+
+    aiStatus.textContent =
+        "يمكنك رفع صورة جديدة.";
+
+}
+
+
+/* ======================================
+   QUICK PROMPT
+====================================== */
+
+function quickPrompt(text){
+
+    aiInput.value = text;
+
+    openAI();
+
+    aiInput.focus();
+
+}
+
+
+/* ======================================
+   SEND TO OPENAI
+====================================== */
+
+async function sendAI(generateImage){
+
+    var message =
+        aiInput.value.trim();
+
+    if(!message && !selectedImage){
+
+        aiStatus.textContent =
+            "اكتب طلبك أو ارفع صورة أولاً.";
+
+        aiInput.focus();
 
         return;
 
     }
 
+
+    if(generateImage && !message){
+
+        message =
+            "صمم تصوراً فاخراً مناسباً للصورة المرفوعة.";
+
+    }
+
+
+    /*
+     * نظهر رسالة المستخدم
+     */
+
     if(message){
 
         addMessage(
-            message,
-            "user"
+            "user",
+            message
+        );
+
+    }else if(selectedImage){
+
+        addMessage(
+            "user",
+            "حلل الصورة وأنشئ تصميماً مناسباً لها."
         );
 
     }
 
-    aiInput.value =
-        "";
+
+    aiInput.value = "";
 
     aiStatus.textContent =
         generateImage
-            ? "جاري ابتكار التصميم..."
-            : "جاري التفكير...";
+        ? "جاري إنشاء التصميم بالصورة..."
+        : "جاري تحليل طلبك...";
 
-    aiSend.disabled =
-        true;
+
+    addTyping();
+
 
     try{
 
-        const response =
+        var payload = {
+            message: message,
+            generateImage: generateImage === true
+        };
+
+
+        /*
+         * إذا توجد صورة:
+         * نرسل الصورة نفسها إلى backend
+         */
+
+        if(selectedImage){
+
+            payload.image =
+                selectedImage;
+
+        }
+
+
+        var response =
             await fetch(
                 "/api/chat",
                 {
                     method:"POST",
-
                     headers:{
                         "Content-Type":
                             "application/json"
                     },
-
-                    body:JSON.stringify({
-
-                        message:
-
-                            message,
-
-                        image:
-
-                            selectedAIImage,
-
-                        generateImage:
-
-                            generateImage
-
-                    })
-
+                    body:
+                        JSON.stringify(payload)
                 }
             );
 
-        const data =
+
+        var data =
             await response.json();
+
+
+        removeTyping();
+
 
         if(!response.ok){
 
@@ -3955,203 +2433,168 @@ async function sendAIMessage(
 
         }
 
-        if(
-            data.type ===
-            "image"
-        ){
 
-            if(data.reply){
+        /*
+         * هنا النقطة المهمة:
+         *
+         * إذا رجع backend:
+         *
+         * type: "image"
+         *
+         * نعرض الصورة الحقيقية.
+         */
 
-                addMessage(
-                    data.reply,
-                    "bot"
-                );
+        if(data.type === "image" &&
+           data.image){
 
-            }
-
-            if(data.image){
-
-                addImageMessage(
-                    data.image
-                );
-
-            }
-
-        }else{
-
-            const messageElement =
-                addMessage(
-                    data.reply ||
-                    "لم يصل رد.",
-                    "bot"
-                );
-
-            if(data.reply){
-
-                addSpeakButton(
-                    messageElement,
-                    data.reply
-                );
-
-                if(
-                    window.voiceModeActive
-                ){
-
-                    speakAIResponse(
-                        data.reply
-                    );
-
-                }
-
-            }
-
-        }
-
-        selectedAIImage =
-            null;
-
-        aiImageInput.value =
-            "";
-
-        aiImagePreview.style.display =
-            "none";
-
-        aiStatus.textContent =
-            "جاهز لخدمتك";
-
-    }catch(error){
-
-        addMessage(
-            error.message ||
-            "تعذر تشغيل المستشار حالياً.",
-            "bot"
-        );
-
-        aiStatus.textContent =
-            "حاول مرة أخرى.";
-
-    }finally{
-
-        aiSend.disabled =
-            false;
-
-    }
-
-}
-
-/* =========================================================
-   SEND BUTTON
-========================================================= */
-
-aiSend.addEventListener(
-    "click",
-    ()=>{
-        sendAIMessage();
-    }
-);
-
-/* =========================================================
-   ENTER
-========================================================= */
-
-aiInput.addEventListener(
-    "keydown",
-    event=>{
-
-        if(
-            event.key === "Enter" &&
-            !event.shiftKey
-        ){
-
-            event.preventDefault();
-
-            sendAIMessage();
-
-        }
-
-    }
-);
-
-/* =========================================================
-   GENERATE DESIGN
-========================================================= */
-
-generateDesignBtn.addEventListener(
-    "click",
-    ()=>{
-
-        const message =
-            aiInput.value.trim();
-
-        if(
-            !message &&
-            !selectedAIImage
-        ){
-
-            addMessage(
-                "اكتب وصف التصميم أو أرسل صورة للمكان أولاً.",
-                "bot"
+            addImageMessage(
+                data.reply,
+                data.image
             );
+
+            aiStatus.textContent =
+                "تم إنشاء التصميم.";
 
             return;
 
         }
 
-        sendAIMessage(
-            message ||
-            "غيّر الأثاث في الصورة إلى تصميم فاخر مناسب للمكان.",
-            true
+
+        /*
+         * الرد النصي
+         */
+
+        if(data.reply){
+
+            addMessage(
+                "ai",
+                data.reply
+            );
+
+            aiStatus.textContent =
+                "تم الرد.";
+
+            speakAI(data.reply);
+
+            return;
+
+        }
+
+
+        throw new Error(
+            "لم يصل رد صحيح من الخادم."
         );
+
+
+    }catch(error){
+
+        removeTyping();
+
+        addMessage(
+            "ai",
+            "تعذر تشغيل المستشار حالياً: " +
+            error.message
+        );
+
+        aiStatus.textContent =
+            "حدث خطأ.";
+
+    }
+
+}
+
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+aiSend.addEventListener(
+    "click",
+    function(){
+
+        sendAI(false);
 
     }
 );
 
-/* =========================================================
-   SPEECH RECOGNITION
-========================================================= */
 
-const SpeechRecognition =
+generateDesignBtn.addEventListener(
+    "click",
+    function(){
+
+        /*
+         * هذا الزر يطلب من backend
+         * إنشاء صورة فعلية.
+         */
+
+        sendAI(true);
+
+    }
+);
+
+
+/* ======================================
+   ENTER
+====================================== */
+
+aiInput.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter" &&
+           !event.shiftKey){
+
+            event.preventDefault();
+
+            sendAI(false);
+
+        }
+
+    }
+);
+
+
+/* ======================================
+   VOICE INPUT
+====================================== */
+
+var SpeechRecognition =
     window.SpeechRecognition ||
     window.webkitSpeechRecognition;
 
-let recognition = null;
-
-let recognizing = false;
 
 if(SpeechRecognition){
 
-    recognition =
+    var recognition =
         new SpeechRecognition();
 
     recognition.lang =
         "ar-SA";
 
-    recognition.continuous =
-        false;
-
     recognition.interimResults =
         false;
 
-    recognition.onstart =
-        ()=>{
-            recognizing =
-                true;
+    recognition.continuous =
+        false;
 
-            aiVoiceBtn.textContent =
-                "⏹ إيقاف";
+
+    recognition.onstart =
+        function(){
 
             aiStatus.textContent =
                 "أستمع إليك...";
 
+            micBtn.style.borderColor =
+                "#c9a45c";
+
         };
 
-    recognition.onresult =
-        event=>{
 
-            const text =
-                event.results
-                    [0][0]
-                    .transcript;
+    recognition.onresult =
+        function(event){
+
+            var text =
+                event.results[0][0].transcript;
 
             aiInput.value =
                 text;
@@ -4161,108 +2604,47 @@ if(SpeechRecognition){
 
         };
 
+
     recognition.onerror =
-        ()=>{
+        function(){
+
             aiStatus.textContent =
                 "تعذر التعرف على الصوت.";
+
         };
+
 
     recognition.onend =
-        ()=>{
+        function(){
 
-            recognizing =
-                false;
-
-            aiVoiceBtn.textContent =
-                "🎤 صوت";
+            micBtn.style.borderColor =
+                "";
 
         };
+
+
+    micBtn.addEventListener(
+        "click",
+        function(){
+
+            recognition.start();
+
+        }
+    );
 
 }else{
 
-    aiVoiceBtn.textContent =
-        "🎤 غير متاح";
+    micBtn.style.display =
+        "none";
 
 }
 
-/* =========================================================
-   VOICE BUTTON
-========================================================= */
 
-aiVoiceBtn.addEventListener(
-    "click",
-    ()=>{
+/* ======================================
+   PROFESSIONAL AI VOICE
+====================================== */
 
-        if(!recognition){
-
-            aiStatus.textContent =
-                "المتصفح الحالي لا يدعم إدخال الصوت.";
-
-            return;
-
-        }
-
-        if(recognizing){
-
-            recognition.stop();
-
-        }else{
-
-            try{
-
-                recognition.start();
-
-            }catch(error){
-
-                aiStatus.textContent =
-                    "الصوت قيد التشغيل.";
-
-            }
-
-        }
-
-    }
-);
-
-/* =========================================================
-   TTS
-========================================================= */
-
-function addSpeakButton(
-    element,
-    text
-){
-
-    const button =
-        document.createElement(
-            "button"
-        );
-
-    button.className =
-        "speak-btn";
-
-    button.type =
-        "button";
-
-    button.textContent =
-        "🔊 قراءة الرد";
-
-    button.addEventListener(
-        "click",
-        ()=>{
-            speakAIResponse(text);
-        }
-    );
-
-    element.appendChild(
-        button
-    );
-
-}
-
-async function speakAIResponse(
-    text
-){
+async function speakAI(text){
 
     if(!text){
         return;
@@ -4270,121 +2652,134 @@ async function speakAIResponse(
 
     try{
 
-        aiStatus.textContent =
-            "جاري تجهيز الصوت...";
-
-        const response =
+        var response =
             await fetch(
                 "/api/speech",
                 {
                     method:"POST",
-
                     headers:{
                         "Content-Type":
                             "application/json"
                     },
-
-                    body:JSON.stringify({
-                        text:text
-                    })
-
+                    body:
+                        JSON.stringify({
+                            text:text
+                        })
                 }
             );
 
-        if(!response.ok){
 
-            throw new Error(
-                "تعذر إنشاء الصوت."
-            );
+        if(!response.ok){
+            return;
+        }
+
+
+        var blob =
+            await response.blob();
+
+
+        var url =
+            URL.createObjectURL(blob);
+
+
+        var audio =
+            new Audio(url);
+
+
+        audio.onended =
+            function(){
+
+                URL.revokeObjectURL(url);
+
+            };
+
+
+        try{
+
+            await audio.play();
+
+        }catch(e){
+
+            /*
+             * بعض المتصفحات تمنع التشغيل
+             * التلقائي للصوت.
+             */
+
+            aiStatus.textContent =
+                "تم تجهيز الرد الصوتي.";
 
         }
 
-        const blob =
-            await response.blob();
-
-        const url =
-            URL.createObjectURL(
-                blob
-            );
-
-        const audio =
-            new Audio(url);
-
-        audio.onended =
-            ()=>{
-                URL.revokeObjectURL(
-                    url
-                );
-
-                aiStatus.textContent =
-                    "جاهز لخدمتك";
-            };
-
-        await audio.play();
-
     }catch(error){
 
-        aiStatus.textContent =
-            "اضغط «قراءة الرد» لتشغيل الصوت.";
+        /*
+         * الصوت اختياري.
+         * لا نعتبر فشله فشلاً للمستشار.
+         */
 
     }
 
 }
 
-/* =========================================================
-   DOUBLE CLICK VOICE MODE
-========================================================= */
 
-aiVoiceBtn.addEventListener(
-    "dblclick",
-    ()=>{
+/* ======================================
+   حماية بسيطة من الاستخدام العادي
+====================================== */
 
-        window.voiceModeActive =
-            !window.voiceModeActive;
+document.addEventListener(
+    "contextmenu",
+    function(event){
 
-        aiStatus.textContent =
-            window.voiceModeActive
-                ? "تم تفعيل الرد الصوتي."
-                : "تم إيقاف الرد الصوتي.";
+        event.preventDefault();
 
     }
 );
 
-/* =========================================================
-   SECURITY FOR EXTERNAL LINKS
-========================================================= */
+document.addEventListener(
+    "dragstart",
+    function(event){
 
-document
-.querySelectorAll(
-    'a[target="_blank"]'
-)
-.forEach(
-    link=>{
+        if(event.target.tagName === "IMG"){
 
-        link.setAttribute(
-            "rel",
-            "noopener noreferrer"
-        );
+            event.preventDefault();
+
+        }
 
     }
 );
 
-/* =========================================================
-   IMAGE ERROR HANDLING
-========================================================= */
 
-document
-.querySelectorAll("img")
-.forEach(
-    img=>{
+/*
+ * ملاحظة:
+ * هذه ليست حماية أمنية حقيقية.
+ * حماية الملفات والـ API يجب أن تكون
+ * من خلال Vercel والـ server وليس JavaScript فقط.
+ */
 
-        img.addEventListener(
-            "error",
-            ()=>{
-                img.style.background =
-                    "linear-gradient(135deg,#0b1b2c,#10283e)";
-            }
-        );
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "F12" ||
+            (
+                event.ctrlKey &&
+                event.shiftKey &&
+                (
+                    event.key === "I" ||
+                    event.key === "J" ||
+                    event.key === "C"
+                )
+            ) ||
+            (
+                event.ctrlKey &&
+                event.key === "U"
+            )
+        ){
+
+            event.preventDefault();
+
+        }
 
     }
 );
