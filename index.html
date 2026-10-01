@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- الخصوصية والحماية -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      img-src 'self' data: https:;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      script-src 'self' 'unsafe-inline';
+      connect-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    "
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
   <meta name="theme-color" content="#071727">
-  <meta name="color-scheme" content="light">
 
-  <meta name="description"
-        content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
+  <meta
+    name="description"
+    content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة"
+  >
 
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title"
-        content="نجوم الإبداع للمفروشات والكنبات">
+  <meta
+    property="og:title"
+    content="نجوم الإبداع للمفروشات والكنبات"
+  >
 
-  <meta property="og:description"
-        content="كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
+  <meta
+    property="og:description"
+    content="كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة"
+  >
 
   <meta property="og:type" content="website">
 
   <title>نجوم الإبداع للمفروشات والكنبات</title>
 
+
+  <!-- الخط -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+  >
+
 
   <style>
 
@@ -39,7 +77,7 @@
       --gold:#c9a45c;
       --gold2:#efd58f;
       --cream:#f7f3eb;
-      --white:#ffffff;
+      --white:#fff;
       --text:#17212b;
       --muted:#6d7680;
       --border:#e9e4da;
@@ -47,15 +85,18 @@
       --radius:18px;
     }
 
+
     *{
       box-sizing:border-box;
       margin:0;
       padding:0;
     }
 
+
     html{
       scroll-behavior:smooth;
     }
+
 
     body{
       font-family:"Cairo",Tahoma,Arial,sans-serif;
@@ -65,34 +106,41 @@
       overflow-x:hidden;
     }
 
+
     img{
       max-width:100%;
       display:block;
     }
+
 
     a{
       color:inherit;
       text-decoration:none;
     }
 
+
     button,
     input{
       font-family:inherit;
     }
 
+
     button{
       cursor:pointer;
     }
+
 
     ::selection{
       background:var(--gold);
       color:var(--navy);
     }
 
+
     .container{
       width:min(1180px,92%);
       margin:auto;
     }
+
 
     /* =========================
        HEADER
@@ -108,6 +156,7 @@
       -webkit-backdrop-filter:blur(14px);
     }
 
+
     .header-inner{
       min-height:76px;
       display:flex;
@@ -116,12 +165,14 @@
       gap:20px;
     }
 
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
       flex-shrink:0;
     }
+
 
     .brand-logo{
       width:45px;
@@ -130,6 +181,7 @@
       display:grid;
       place-items:center;
     }
+
 
     .brand-logo::before{
       content:"";
@@ -140,6 +192,7 @@
       position:absolute;
     }
 
+
     .brand-logo::after{
       content:"✦";
       color:var(--gold2);
@@ -147,6 +200,7 @@
       position:relative;
       z-index:2;
     }
+
 
     .brand-text strong{
       display:block;
@@ -156,12 +210,14 @@
       font-weight:800;
     }
 
+
     .brand-text span{
       display:block;
       color:var(--gold2);
       font-size:11px;
       margin-top:2px;
     }
+
 
     nav{
       display:flex;
@@ -170,6 +226,7 @@
       gap:5px;
       flex:1;
     }
+
 
     nav a{
       color:#eef2f5;
@@ -180,6 +237,7 @@
       white-space:nowrap;
     }
 
+
     nav a:hover,
     nav a:focus-visible{
       color:var(--gold2);
@@ -187,11 +245,17 @@
       outline:none;
     }
 
+
+    /* =========================
+       HEADER SOCIAL
+    ========================== */
+
     .header-social{
       display:flex;
       align-items:center;
       gap:7px;
     }
+
 
     .header-social a{
       width:36px;
@@ -205,6 +269,7 @@
       transition:.25s ease;
     }
 
+
     .header-social a:hover{
       transform:translateY(-2px);
       color:var(--gold2);
@@ -212,11 +277,13 @@
       background:rgba(201,164,92,.12);
     }
 
+
     .header-social svg{
       width:17px;
       height:17px;
       fill:currentColor;
     }
+
 
     /* =========================
        HERO
@@ -228,6 +295,7 @@
       isolation:isolate;
       display:flex;
       align-items:center;
+
       background:
         linear-gradient(
           90deg,
@@ -238,18 +306,22 @@
         url("images/hero.jpg") center/cover no-repeat;
     }
 
+
     .hero::after{
       content:"";
       position:absolute;
       inset:0;
+
       background:
         radial-gradient(
           circle at 75% 40%,
           rgba(201,164,92,.16),
           transparent 35%
         );
+
       pointer-events:none;
     }
+
 
     .hero-content{
       position:relative;
@@ -258,6 +330,7 @@
       color:#fff;
       padding:80px 0;
     }
+
 
     .hero-badge{
       display:inline-flex;
@@ -273,6 +346,7 @@
       backdrop-filter:blur(8px);
     }
 
+
     .hero h1{
       font-size:clamp(38px,6vw,72px);
       line-height:1.05;
@@ -281,10 +355,12 @@
       letter-spacing:-1px;
     }
 
+
     .hero h1 span{
       display:block;
       color:var(--gold2);
     }
+
 
     .hero p{
       color:#e8edf1;
@@ -293,11 +369,13 @@
       margin-bottom:28px;
     }
 
+
     .hero-buttons{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
     }
+
 
     .btn{
       min-height:48px;
@@ -313,22 +391,26 @@
       transition:.25s ease;
     }
 
+
     .btn-primary{
       background:var(--gold);
       color:var(--navy);
       box-shadow:0 8px 22px rgba(201,164,92,.22);
     }
 
+
     .btn-primary:hover{
       background:var(--gold2);
       transform:translateY(-2px);
     }
+
 
     .btn-outline{
       color:#fff;
       border-color:rgba(255,255,255,.28);
       background:rgba(255,255,255,.05);
     }
+
 
     .btn-outline:hover{
       border-color:var(--gold);
@@ -337,21 +419,24 @@
       transform:translateY(-2px);
     }
 
+
     /* =========================
        TABBY / TAMARA
     ========================== */
 
     .payment-box{
       margin-top:25px;
-      max-width:530px;
+      max-width:540px;
     }
+
 
     .payment-title{
       color:#fff;
       font-size:12px;
       margin-bottom:10px;
-      opacity:.9;
+      opacity:.92;
     }
+
 
     .payment-methods{
       display:flex;
@@ -359,21 +444,30 @@
       gap:10px;
     }
 
+
     .payment-card{
       min-width:170px;
       flex:1;
+
       display:flex;
       align-items:center;
       gap:12px;
+
       padding:11px 15px;
+
       border-radius:14px;
+
       background:rgba(255,255,255,.075);
       border:1px solid rgba(239,213,143,.25);
+
       box-shadow:0 8px 25px rgba(0,0,0,.12);
+
       backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
+
       transition:.25s ease;
     }
+
 
     .payment-card:hover{
       transform:translateY(-3px);
@@ -381,28 +475,39 @@
       background:rgba(255,255,255,.11);
     }
 
+
     .payment-logo{
-      width:48px;
+      width:50px;
       height:38px;
+
       border-radius:9px;
+
       background:#fff;
+
       display:grid;
       place-items:center;
+
       flex-shrink:0;
-      font-weight:900;
-      letter-spacing:-1px;
+
       box-shadow:0 4px 12px rgba(0,0,0,.16);
     }
 
+
     .payment-logo.tabby{
-      color:#101010;
-      font-size:16px;
+      color:#111;
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:-1px;
     }
 
+
     .payment-logo.tamara{
-      color:#1d2935;
-      font-size:13px;
+      color:#172433;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:-.5px;
     }
+
 
     .payment-card strong{
       display:block;
@@ -411,12 +516,14 @@
       line-height:1.4;
     }
 
+
     .payment-card small{
       display:block;
       color:#cdd5dc;
       font-size:10px;
       margin-top:2px;
     }
+
 
     /* =========================
        QUICK MENU
@@ -426,6 +533,7 @@
       background:var(--cream);
       border-bottom:1px solid var(--border);
     }
+
 
     .quick-menu-inner{
       min-height:78px;
@@ -437,6 +545,7 @@
       padding:12px 0;
     }
 
+
     .quick-menu a{
       padding:8px 14px;
       border:1px solid var(--border);
@@ -447,12 +556,14 @@
       transition:.25s ease;
     }
 
+
     .quick-menu a:hover{
       color:var(--navy);
       border-color:var(--gold);
       transform:translateY(-2px);
       box-shadow:0 5px 15px rgba(0,0,0,.05);
     }
+
 
     /* =========================
        SECTIONS
@@ -463,11 +574,13 @@
       scroll-margin-top:80px;
     }
 
+
     .section-head{
       text-align:center;
       max-width:720px;
       margin:0 auto 42px;
     }
+
 
     .section-kicker{
       color:var(--gold);
@@ -475,6 +588,7 @@
       font-weight:800;
       margin-bottom:5px;
     }
+
 
     .section-head h2{
       font-size:clamp(26px,4vw,38px);
@@ -484,10 +598,12 @@
       font-weight:900;
     }
 
+
     .section-head p{
       color:var(--muted);
       font-size:14px;
     }
+
 
     /* =========================
        SEARCH
@@ -499,26 +615,36 @@
       position:relative;
     }
 
+
     .search-box input{
       width:100%;
       height:52px;
+
       border:1px solid var(--border);
       border-radius:15px;
+
       padding:0 18px;
+
       outline:none;
+
       font-size:13px;
+
       background:#fff;
+
       box-shadow:0 5px 20px rgba(0,0,0,.04);
+
       transition:.25s ease;
     }
+
 
     .search-box input:focus{
       border-color:var(--gold);
       box-shadow:0 0 0 4px rgba(201,164,92,.12);
     }
 
+
     /* =========================
-       PRODUCT GRID
+       PRODUCTS
     ========================== */
 
     .products-grid{
@@ -526,6 +652,7 @@
       grid-template-columns:repeat(5,1fr);
       gap:18px;
     }
+
 
     .product-card{
       background:#fff;
@@ -536,17 +663,20 @@
       transition:.3s ease;
     }
 
+
     .product-card:hover{
       transform:translateY(-6px);
       border-color:rgba(201,164,92,.45);
       box-shadow:0 18px 40px rgba(0,0,0,.12);
     }
 
+
     .product-image{
       aspect-ratio:4/3;
       overflow:hidden;
       background:#eee;
     }
+
 
     .product-image img{
       width:100%;
@@ -555,13 +685,16 @@
       transition:.5s ease;
     }
 
+
     .product-card:hover .product-image img{
       transform:scale(1.05);
     }
 
+
     .product-info{
       padding:17px;
     }
+
 
     .product-info h3{
       font-size:15px;
@@ -569,24 +702,28 @@
       margin-bottom:5px;
     }
 
+
     .product-info p{
       color:var(--muted);
       font-size:12px;
     }
 
+
     /* =========================
-       SALES REPS
+       SALES
     ========================== */
 
     .sales-section{
       background:var(--cream);
     }
 
+
     .reps-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
+
 
     .rep-card{
       background:#fff;
@@ -598,33 +735,42 @@
       transition:.3s ease;
     }
 
+
     .rep-card:hover{
       transform:translateY(-5px);
       border-color:rgba(201,164,92,.5);
     }
+
 
     .rep-avatar{
       width:78px;
       height:78px;
       border-radius:50%;
       margin:0 auto 14px;
+
       display:grid;
       place-items:center;
+
       background:
         linear-gradient(
           135deg,
           var(--navy),
           var(--navy2)
         );
+
       color:var(--gold2);
+
       border:3px solid rgba(201,164,92,.3);
+
       font-size:28px;
     }
+
 
     .rep-card h3{
       font-size:15px;
       color:var(--navy);
     }
+
 
     .rep-card p{
       color:var(--muted);
@@ -632,22 +778,29 @@
       margin:3px 0 15px;
     }
 
+
     .rep-whatsapp{
       width:42px;
       height:42px;
       margin:auto;
+
       display:grid;
       place-items:center;
+
       border-radius:50%;
+
       background:#25D366;
       color:#fff;
+
       transition:.25s ease;
     }
+
 
     .rep-whatsapp:hover{
       transform:scale(1.08);
       box-shadow:0 8px 20px rgba(37,211,102,.25);
     }
+
 
     .rep-whatsapp svg{
       width:20px;
@@ -655,8 +808,9 @@
       fill:currentColor;
     }
 
+
     /* =========================
-       TABLES
+       FEATURES
     ========================== */
 
     .two-grid{
@@ -665,11 +819,13 @@
       gap:22px;
     }
 
+
     .three-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
     }
+
 
     .feature-card{
       background:#fff;
@@ -680,15 +836,18 @@
       transition:.3s ease;
     }
 
+
     .feature-card:hover{
       transform:translateY(-5px);
     }
+
 
     .feature-image{
       aspect-ratio:16/10;
       overflow:hidden;
       background:#eee;
     }
+
 
     .feature-image img{
       width:100%;
@@ -697,13 +856,16 @@
       transition:.45s ease;
     }
 
+
     .feature-card:hover img{
       transform:scale(1.04);
     }
 
+
     .feature-info{
       padding:18px;
     }
+
 
     .feature-info h3{
       color:var(--navy);
@@ -711,10 +873,12 @@
       margin-bottom:5px;
     }
 
+
     .feature-info p{
       color:var(--muted);
       font-size:12px;
     }
+
 
     /* =========================
        ABOUT
@@ -724,6 +888,7 @@
       background:var(--cream);
     }
 
+
     .about-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -731,17 +896,20 @@
       gap:55px;
     }
 
+
     .about-image{
       border-radius:22px;
       overflow:hidden;
       box-shadow:var(--shadow);
     }
 
+
     .about-image img{
       width:100%;
       aspect-ratio:4/3;
       object-fit:cover;
     }
+
 
     .about-content h2{
       color:var(--navy);
@@ -751,17 +919,20 @@
       font-weight:900;
     }
 
+
     .about-content p{
       color:var(--muted);
       font-size:14px;
       margin-bottom:14px;
     }
 
+
     .about-points{
       display:grid;
       gap:10px;
       margin-top:22px;
     }
+
 
     .about-point{
       display:flex;
@@ -770,6 +941,7 @@
       font-size:13px;
       color:var(--text);
     }
+
 
     .about-point span{
       width:28px;
@@ -782,6 +954,7 @@
       flex-shrink:0;
     }
 
+
     /* =========================
        BRANCHES
     ========================== */
@@ -790,11 +963,13 @@
       background:#fff;
     }
 
+
     .branch-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
+
 
     .branch-card{
       padding:23px 18px;
@@ -805,10 +980,12 @@
       transition:.3s ease;
     }
 
+
     .branch-card:hover{
       transform:translateY(-4px);
       border-color:rgba(201,164,92,.5);
     }
+
 
     .branch-icon{
       width:46px;
@@ -822,11 +999,13 @@
       font-size:20px;
     }
 
+
     .branch-card h3{
       font-size:16px;
       color:var(--navy);
       margin-bottom:6px;
     }
+
 
     .branch-card p{
       color:var(--muted);
@@ -834,11 +1013,13 @@
       margin-bottom:5px;
     }
 
+
     .branch-card a{
       color:var(--gold);
       font-size:12px;
       font-weight:700;
     }
+
 
     /* =========================
        CONTACT
@@ -848,11 +1029,13 @@
       background:var(--cream);
     }
 
+
     .contact-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:16px;
     }
+
 
     .contact-card{
       background:#fff;
@@ -863,16 +1046,21 @@
       box-shadow:var(--shadow);
     }
 
+
     .contact-icon{
       width:50px;
       height:50px;
       margin:0 auto 12px;
+
       border-radius:50%;
+
       display:grid;
       place-items:center;
+
       background:var(--navy);
       color:var(--gold2);
     }
+
 
     .contact-icon svg{
       width:21px;
@@ -880,17 +1068,20 @@
       fill:currentColor;
     }
 
+
     .contact-card h3{
       font-size:14px;
       color:var(--navy);
       margin-bottom:5px;
     }
 
+
     .contact-card a{
       color:var(--gold);
       font-size:13px;
       font-weight:700;
     }
+
 
     /* =========================
        CTA
@@ -899,9 +1090,12 @@
     .cta{
       position:relative;
       min-height:380px;
+
       display:flex;
       align-items:center;
+
       color:#fff;
+
       background:
         linear-gradient(
           90deg,
@@ -911,9 +1105,11 @@
         url("images/cta.jpg") center/cover no-repeat;
     }
 
+
     .cta-content{
       max-width:650px;
     }
+
 
     .cta h2{
       font-size:clamp(27px,4vw,43px);
@@ -922,11 +1118,13 @@
       font-weight:900;
     }
 
+
     .cta p{
       color:#e2e8ec;
       font-size:14px;
       margin-bottom:22px;
     }
+
 
     /* =========================
        FOOTER
@@ -938,6 +1136,7 @@
       padding-top:60px;
     }
 
+
     .footer-grid{
       display:grid;
       grid-template-columns:1.3fr 1fr 1fr;
@@ -945,19 +1144,23 @@
       padding-bottom:42px;
     }
 
+
     .footer-brand{
       max-width:390px;
     }
 
+
     .footer-brand .brand{
       margin-bottom:16px;
     }
+
 
     .footer-brand p{
       color:#aeb9c3;
       font-size:12px;
       line-height:2;
     }
+
 
     .footer-title{
       color:var(--gold2);
@@ -966,10 +1169,12 @@
       font-weight:800;
     }
 
+
     .footer-links{
       display:grid;
       gap:8px;
     }
+
 
     .footer-links a{
       color:#c9d1d8;
@@ -977,18 +1182,23 @@
       transition:.25s ease;
     }
 
+
     .footer-links a:hover{
       color:var(--gold2);
       transform:translateX(-3px);
     }
 
-    /* Social */
+
+    /* =========================
+       SOCIAL FOOTER
+    ========================== */
 
     .social-title{
       color:#fff;
       font-size:13px;
       margin-bottom:13px;
     }
+
 
     .footer-social{
       display:flex;
@@ -997,22 +1207,31 @@
       flex-wrap:wrap;
     }
 
+
     .social-link{
       position:relative;
-      width:48px;
-      height:48px;
-      border-radius:15px;
+
+      width:50px;
+      height:50px;
+
+      border-radius:16px;
+
       display:grid;
       place-items:center;
+
       color:#fff;
+
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,.10),
+          rgba(255,255,255,.11),
           rgba(255,255,255,.035)
         );
-      border:1px solid rgba(255,255,255,.13);
+
+      border:1px solid rgba(255,255,255,.14);
+
       overflow:hidden;
+
       transition:
         transform .3s ease,
         border-color .3s ease,
@@ -1020,49 +1239,73 @@
         background .3s ease;
     }
 
+
     .social-link::before{
       content:"";
+
       position:absolute;
-      width:60px;
-      height:60px;
+
+      width:75px;
+      height:75px;
+
       border-radius:50%;
+
       background:rgba(239,213,143,.13);
-      top:-42px;
-      right:-35px;
+
+      top:-52px;
+      right:-42px;
+
       transition:.3s ease;
     }
 
+
     .social-link:hover{
-      transform:translateY(-5px) scale(1.04);
-      border-color:rgba(239,213,143,.6);
-      box-shadow:0 12px 28px rgba(0,0,0,.25);
+      transform:translateY(-6px) scale(1.05);
+
+      border-color:rgba(239,213,143,.65);
+
+      box-shadow:
+        0 13px 30px rgba(0,0,0,.28);
+
       background:rgba(201,164,92,.12);
     }
 
+
     .social-link:hover::before{
       top:-20px;
-      right:-15px;
+      right:-14px;
     }
 
+
     .social-link svg{
-      width:22px;
-      height:22px;
+      width:23px;
+      height:23px;
       fill:currentColor;
       position:relative;
       z-index:2;
     }
 
-    .social-link.whatsapp:hover{
-      color:#25D366;
-    }
-
-    .social-link.instagram:hover{
-      color:#e1306c;
-    }
 
     .social-link.tiktok:hover{
       color:#fff;
     }
+
+
+    .social-link.snapchat:hover{
+      color:#fff;
+      background:rgba(255,255,255,.12);
+    }
+
+
+    .social-link.instagram:hover{
+      color:#ff4f91;
+    }
+
+
+    .social-link.whatsapp:hover{
+      color:#25D366;
+    }
+
 
     .social-label{
       margin-top:12px;
@@ -1070,21 +1313,32 @@
       font-size:10px;
     }
 
+
+    /* =========================
+       FOOTER BOTTOM
+    ========================== */
+
     .footer-bottom{
       border-top:1px solid rgba(255,255,255,.08);
+
       min-height:70px;
+
       display:flex;
       align-items:center;
       justify-content:space-between;
+
       gap:15px;
       flex-wrap:wrap;
+
       color:#8f9ba6;
       font-size:10px;
     }
 
+
     .footer-bottom strong{
       color:#c9d1d8;
     }
+
 
     /* =========================
        FLOATING WHATSAPP
@@ -1092,24 +1346,34 @@
 
     .floating-whatsapp{
       position:fixed;
+
       bottom:22px;
       left:20px;
+
       width:58px;
       height:58px;
+
       border-radius:50%;
+
       display:grid;
       place-items:center;
+
       background:#25D366;
       color:#fff;
+
       z-index:999;
+
       box-shadow:
         0 10px 30px rgba(37,211,102,.35);
+
       transition:.3s ease;
     }
+
 
     .floating-whatsapp:hover{
       transform:scale(1.08);
     }
+
 
     .floating-whatsapp svg{
       width:27px;
@@ -1117,17 +1381,18 @@
       fill:currentColor;
     }
 
+
     /* =========================
-       NOSCRIPT
+       ACCESSIBILITY
     ========================== */
 
-    .noscript{
-      background:#fff3cd;
-      color:#664d03;
-      padding:12px;
-      text-align:center;
-      font-size:12px;
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible{
+      outline:3px solid rgba(239,213,143,.65);
+      outline-offset:3px;
     }
+
 
     /* =========================
        RESPONSIVE
@@ -1140,7 +1405,7 @@
       }
 
       nav a{
-        padding:7px 7px;
+        padding:7px;
         font-size:11px;
       }
 
@@ -1162,11 +1427,13 @@
 
     }
 
+
     @media (max-width:750px){
 
       header{
         position:relative;
       }
+
 
       .header-inner{
         min-height:auto;
@@ -1174,56 +1441,72 @@
         flex-wrap:wrap;
       }
 
+
       nav{
         order:3;
         width:100%;
+
         overflow-x:auto;
+
         justify-content:flex-start;
+
         padding-bottom:3px;
+
         scrollbar-width:none;
       }
+
 
       nav::-webkit-scrollbar{
         display:none;
       }
+
 
       nav a{
         flex-shrink:0;
         font-size:11px;
       }
 
+
       .header-social{
         margin-right:auto;
       }
+
 
       .hero{
         min-height:650px;
       }
 
+
       .hero-content{
         padding:65px 0;
       }
+
 
       .hero h1{
         font-size:clamp(37px,11vw,58px);
       }
 
+
       .hero p{
         font-size:14px;
       }
+
 
       .two-grid,
       .about-grid{
         grid-template-columns:1fr;
       }
 
+
       .three-grid{
         grid-template-columns:1fr 1fr;
       }
 
+
       .footer-grid{
         grid-template-columns:1fr 1fr;
       }
+
 
       .footer-brand{
         grid-column:1/-1;
@@ -1231,114 +1514,140 @@
 
     }
 
+
     @media (max-width:500px){
 
       .container{
         width:min(92%,430px);
       }
 
+
       section{
         padding:65px 0;
       }
 
+
       .header-social{
         gap:4px;
       }
+
 
       .header-social a{
         width:33px;
         height:33px;
       }
 
+
       .brand-text strong{
         font-size:14px;
       }
+
 
       .brand-text span{
         font-size:9px;
       }
 
+
       .hero{
-        min-height:700px;
+        min-height:710px;
       }
+
 
       .hero-content{
         padding:50px 0;
       }
+
 
       .hero-buttons{
         flex-direction:column;
         align-items:stretch;
       }
 
+
       .btn{
         width:100%;
       }
 
+
       .payment-methods{
         flex-direction:column;
       }
+
 
       .payment-card{
         min-width:0;
         width:100%;
       }
 
+
       .products-grid{
         grid-template-columns:1fr 1fr;
         gap:12px;
       }
 
+
       .product-info{
         padding:13px;
       }
+
 
       .product-info h3{
         font-size:13px;
       }
 
+
       .product-info p{
         font-size:10px;
       }
+
 
       .reps-grid{
         grid-template-columns:1fr 1fr;
         gap:12px;
       }
 
+
       .rep-card{
         padding:18px 10px;
       }
+
 
       .rep-card h3{
         font-size:13px;
       }
 
+
       .three-grid{
         grid-template-columns:1fr;
       }
 
+
       .branch-grid{
         grid-template-columns:1fr;
       }
+
 
       .contact-grid{
         grid-template-columns:1fr 1fr;
         gap:12px;
       }
 
+
       .contact-card{
         padding:18px 10px;
       }
+
 
       .footer-grid{
         grid-template-columns:1fr;
         gap:30px;
       }
 
+
       .footer-brand{
         grid-column:auto;
       }
+
 
       .footer-bottom{
         justify-content:center;
@@ -1346,14 +1655,22 @@
         padding:18px 0;
       }
 
+
+      .footer-social{
+        justify-content:flex-start;
+      }
+
+
       .floating-whatsapp{
         width:53px;
         height:53px;
+
         left:14px;
         bottom:14px;
       }
 
     }
+
 
     @media (max-width:360px){
 
@@ -1361,9 +1678,11 @@
         grid-template-columns:1fr;
       }
 
+
       .reps-grid{
         grid-template-columns:1fr;
       }
+
 
       .contact-grid{
         grid-template-columns:1fr;
@@ -1371,20 +1690,13 @@
 
     }
 
-    /* Accessibility */
-
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible{
-      outline:3px solid rgba(239,213,143,.65);
-      outline-offset:3px;
-    }
 
     @media (prefers-reduced-motion:reduce){
 
       html{
         scroll-behavior:auto;
       }
+
 
       *,
       *::before,
@@ -1396,15 +1708,12 @@
     }
 
   </style>
+
 </head>
+
 
 <body>
 
-  <noscript>
-    <div class="noscript">
-      بعض وظائف البحث التفاعلية تحتاج إلى تفعيل JavaScript في المتصفح.
-    </div>
-  </noscript>
 
   <!-- =========================
        HEADER
@@ -1414,61 +1723,137 @@
 
     <div class="container header-inner">
 
-      <a href="#home" class="brand" aria-label="نجوم الإبداع للمفروشات والكنبات">
+
+      <a
+        href="#home"
+        class="brand"
+        aria-label="نجوم الإبداع للمفروشات والكنبات"
+      >
 
         <div class="brand-logo" aria-hidden="true"></div>
 
         <div class="brand-text">
-          <strong>نجوم الإبداع</strong>
-          <span>للمفروشات والكنبات</span>
+
+          <strong>
+            نجوم الإبداع
+          </strong>
+
+          <span>
+            للمفروشات والكنبات
+          </span>
+
         </div>
 
       </a>
 
+
       <nav aria-label="القائمة الرئيسية">
 
-        <a href="#sofas">الكنبات</a>
-        <a href="#sales">مناديب المبيعات</a>
-        <a href="#tables">الطاولات</a>
-        <a href="#dining">السفرة</a>
-        <a href="#branches">الفروع</a>
-        <a href="#contact">تواصل معنا</a>
+        <a href="#sofas">
+          الكنبات
+        </a>
+
+        <a href="#sales">
+          مناديب المبيعات
+        </a>
+
+        <a href="#tables">
+          الطاولات
+        </a>
+
+        <a href="#dining">
+          السفرة
+        </a>
+
+        <a href="#branches">
+          الفروع
+        </a>
+
+        <a href="#contact">
+          تواصل معنا
+        </a>
 
       </nav>
 
+
+      <!-- أيقونات الهيدر -->
+
       <div class="header-social">
+
+
+        <!-- TikTok -->
 
         <a
           href="https://www.tiktok.com/@user505_a3"
           target="_blank"
           rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
           aria-label="تيك توك"
         >
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
+
             <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.29v13.3a2.92 2.92 0 1 1-2.92-2.92c.31 0 .61.05.89.14V9.17a6.4 6.4 0 1 0 5.32 6.3V8.62a8.1 8.1 0 0 0 4.77 1.55V6.9c-.34 0-.67-.07-1-.21Z"/>
+
           </svg>
+
         </a>
+
+
+        <!-- Snapchat -->
+
+        <a
+          href="https://www.snapchat.com/add/ma484m"
+          target="_blank"
+          rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
+          aria-label="سناب شات"
+        >
+
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <path d="M12 2.2c-3.36 0-5.6 2.31-5.6 5.55v2.02c0 .66-.31 1.19-.94 1.61-.32.21-.7.39-1.14.54-.33.11-.5.35-.47.65.04.42.47.7 1.15.85.38.08.73.2 1.04.35-.17.51-.12.91.15 1.17.24.24.57.31 1.01.22.25-.05.5-.14.74-.25.12.54.39 1.06.8 1.56.63.76 1.48 1.26 2.52 1.5.06.48.22.83.47 1.05.26.23.59.3.98.2.5-.13.95-.37 1.29-.69.34.32.79.56 1.29.69.39.1.72.03.98-.2.25-.22.41-.57.47-1.05 1.04-.24 1.89-.74 2.52-1.5.41-.5.68-1.02.8-1.56.24.11.49.2.74.25.44.09.77.02 1.01-.22.27-.26.32-.66.15-1.17.31-.15.66-.27 1.04-.35.68-.15 1.11-.43 1.15-.85.03-.3-.14-.54-.47-.65-.44-.15-.82-.33-1.14-.54-.63-.42-.94-.95-.94-1.61V7.75C17.6 4.51 15.36 2.2 12 2.2Z"/>
+
+          </svg>
+
+        </a>
+
+
+        <!-- Instagram -->
 
         <a
           href="https://www.instagram.com/jj_j505"
           target="_blank"
           rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
           aria-label="انستقرام"
         >
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
+
             <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm8.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
           </svg>
+
         </a>
+
+
+        <!-- WhatsApp -->
 
         <a
           href="https://wa.me/966551496121"
           target="_blank"
           rel="noopener noreferrer"
+          referrerpolicy="no-referrer"
           aria-label="واتساب"
         >
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
+
             <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
           </svg>
+
         </a>
 
       </div>
@@ -1484,21 +1869,33 @@
 
   <main id="home">
 
+
     <section class="hero">
 
       <div class="container">
 
         <div class="hero-content">
 
+
           <div class="hero-badge">
+
             <span>✦</span>
+
             فخامة تليق بكم
+
           </div>
 
+
           <h1>
+
             نجوم الإبداع
-            <span>للمفروشات والكنبات</span>
+
+            <span>
+              للمفروشات والكنبات
+            </span>
+
           </h1>
+
 
           <p>
             نقدم لكم تشكيلة من الكنبات والمجالس الجاهزة والتفصيل
@@ -1506,26 +1903,34 @@
             وجودة التنفيذ.
           </p>
 
+
           <div class="hero-buttons">
+
 
             <a
               class="btn btn-primary"
               href="https://wa.me/966551496121"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
             >
-              <span>واتساب</span>
+              واتساب
               <span>↗</span>
             </a>
 
-            <a class="btn btn-outline" href="#sofas">
+
+            <a
+              class="btn btn-outline"
+              href="#sofas"
+            >
               استكشف المنتجات
             </a>
+
 
           </div>
 
 
-          <!-- Tabby / Tamara -->
+          <!-- الدفع -->
 
           <div class="payment-box">
 
@@ -1533,7 +1938,9 @@
               يتوفر لدينا الدفع عبر
             </div>
 
+
             <div class="payment-methods">
+
 
               <div class="payment-card">
 
@@ -1542,8 +1949,15 @@
                 </div>
 
                 <div>
-                  <strong>Tabby</strong>
-                  <small>متوفر لدينا</small>
+
+                  <strong>
+                    Tabby
+                  </strong>
+
+                  <small>
+                    متوفر لدينا
+                  </small>
+
                 </div>
 
               </div>
@@ -1556,15 +1970,24 @@
                 </div>
 
                 <div>
-                  <strong>Tamara</strong>
-                  <small>متوفر لدينا</small>
+
+                  <strong>
+                    Tamara
+                  </strong>
+
+                  <small>
+                    متوفر لدينا
+                  </small>
+
                 </div>
 
               </div>
 
+
             </div>
 
           </div>
+
 
         </div>
 
@@ -1581,12 +2004,29 @@
 
       <div class="container quick-menu-inner">
 
-        <a href="#sofas">الكنبات</a>
-        <a href="#sales">مناديب المبيعات</a>
-        <a href="#tables">الطاولات</a>
-        <a href="#dining">السفرة</a>
-        <a href="#branches">الفروع</a>
-        <a href="#contact">تواصل معنا</a>
+        <a href="#sofas">
+          الكنبات
+        </a>
+
+        <a href="#sales">
+          مناديب المبيعات
+        </a>
+
+        <a href="#tables">
+          الطاولات
+        </a>
+
+        <a href="#dining">
+          السفرة
+        </a>
+
+        <a href="#branches">
+          الفروع
+        </a>
+
+        <a href="#contact">
+          تواصل معنا
+        </a>
 
       </div>
 
@@ -1600,6 +2040,7 @@
     <section id="sofas">
 
       <div class="container">
+
 
         <div class="section-head">
 
@@ -1633,13 +2074,19 @@
 
         <div class="products-grid">
 
-          <article class="product-card" data-name="صناعة سعودية">
+
+          <article
+            class="product-card"
+            data-name="صناعة سعودية"
+          >
 
             <div class="product-image">
 
               <img
                 src="images/sofas/saudi.jpg"
-                alt="كنبات صناعة سعودية"
+                alt="صناعة سعودية"
+                width="800"
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -1648,7 +2095,9 @@
 
             <div class="product-info">
 
-              <h3>🇸🇦 صناعة سعودية</h3>
+              <h3>
+                🇸🇦 صناعة سعودية
+              </h3>
 
               <p>
                 تصاميم راقية ومريحة
@@ -1659,13 +2108,18 @@
           </article>
 
 
-          <article class="product-card" data-name="كلاسيك">
+          <article
+            class="product-card"
+            data-name="كلاسيك"
+          >
 
             <div class="product-image">
 
               <img
                 src="images/sofas/classic.jpg"
-                alt="كنبات كلاسيك"
+                alt="كلاسيك"
+                width="800"
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -1674,10 +2128,12 @@
 
             <div class="product-info">
 
-              <h3>كلاسيك</h3>
+              <h3>
+                كلاسيك
+              </h3>
 
               <p>
-                أناقة كلاسيكية فاخرة
+                تصاميم كلاسيكية فاخرة
               </p>
 
             </div>
@@ -1685,13 +2141,18 @@
           </article>
 
 
-          <article class="product-card" data-name="مودرن">
+          <article
+            class="product-card"
+            data-name="مودرن"
+          >
 
             <div class="product-image">
 
               <img
                 src="images/sofas/modern.jpg"
-                alt="كنبات مودرن"
+                alt="مودرن"
+                width="800"
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -1700,10 +2161,12 @@
 
             <div class="product-info">
 
-              <h3>مودرن</h3>
+              <h3>
+                مودرن
+              </h3>
 
               <p>
-                تصاميم عصرية مميزة
+                تصاميم عصرية
               </p>
 
             </div>
@@ -1711,13 +2174,18 @@
           </article>
 
 
-          <article class="product-card" data-name="تركي">
+          <article
+            class="product-card"
+            data-name="تركي"
+          >
 
             <div class="product-image">
 
               <img
                 src="images/sofas/turkish.jpg"
-                alt="كنبات تركية"
+                alt="تركي"
+                width="800"
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -1726,10 +2194,12 @@
 
             <div class="product-info">
 
-              <h3>تركي</h3>
+              <h3>
+                تركي
+              </h3>
 
               <p>
-                لمسة فاخرة بتصاميم تركية
+                تصاميم تركية
               </p>
 
             </div>
@@ -1737,13 +2207,18 @@
           </article>
 
 
-          <article class="product-card" data-name="أمريكي">
+          <article
+            class="product-card"
+            data-name="أمريكي"
+          >
 
             <div class="product-image">
 
               <img
                 src="images/sofas/american.jpg"
-                alt="كنبات أمريكية"
+                alt="أمريكي"
+                width="800"
+                height="600"
                 loading="lazy"
                 decoding="async"
               >
@@ -1752,15 +2227,18 @@
 
             <div class="product-info">
 
-              <h3>أمريكي</h3>
+              <h3>
+                أمريكي
+              </h3>
 
               <p>
-                راحة وأناقة بتصاميم مميزة
+                تصاميم أمريكية
               </p>
 
             </div>
 
           </article>
+
 
         </div>
 
@@ -1770,12 +2248,13 @@
 
 
     <!-- =========================
-         SALES REPRESENTATIVES
+         SALES
     ========================== -->
 
     <section id="sales" class="sales-section">
 
       <div class="container">
+
 
         <div class="section-head">
 
@@ -1796,6 +2275,7 @@
 
         <div class="reps-grid">
 
+
           <article class="rep-card">
 
             <div class="rep-avatar">
@@ -1815,11 +2295,12 @@
               href="https://wa.me/966551496121"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="التواصل مع ايمن راجح عبر واتساب"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+              <svg viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43Z"/>
               </svg>
 
             </a>
@@ -1846,11 +2327,12 @@
               href="https://wa.me/966539589684"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="التواصل مع عبد الله الرماني عبر واتساب"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+              <svg viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43Z"/>
               </svg>
 
             </a>
@@ -1877,11 +2359,12 @@
               href="https://wa.me/966535152249"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="التواصل مع صفوان المجلي عبر واتساب"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+              <svg viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43Z"/>
               </svg>
 
             </a>
@@ -1908,16 +2391,18 @@
               href="https://wa.me/966531302436"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="التواصل مع محمد العقربي عبر واتساب"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+              <svg viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43Z"/>
               </svg>
 
             </a>
 
           </article>
+
 
         </div>
 
@@ -1933,6 +2418,7 @@
     <section id="tables">
 
       <div class="container">
+
 
         <div class="section-head">
 
@@ -1952,6 +2438,7 @@
 
 
         <div class="two-grid">
+
 
           <article class="feature-card">
 
@@ -2008,6 +2495,7 @@
 
           </article>
 
+
         </div>
 
       </div>
@@ -2022,6 +2510,7 @@
     <section id="dining" class="sales-section">
 
       <div class="container">
+
 
         <div class="section-head">
 
@@ -2042,6 +2531,7 @@
 
         <div class="three-grid">
 
+
           <article class="feature-card">
 
             <div class="feature-image">
@@ -2056,8 +2546,11 @@
             </div>
 
             <div class="feature-info">
-              <h3>طاولات السفرة</h3>
-              <p>تصاميم أنيقة للمساحات المختلفة.</p>
+
+              <h3>
+                طاولة السفرة
+              </h3>
+
             </div>
 
           </article>
@@ -2077,8 +2570,11 @@
             </div>
 
             <div class="feature-info">
-              <h3>كراسي السفرة</h3>
-              <p>راحة وأناقة وتناسق مع الطاولة.</p>
+
+              <h3>
+                كراسي السفرة
+              </h3>
+
             </div>
 
           </article>
@@ -2098,11 +2594,15 @@
             </div>
 
             <div class="feature-info">
-              <h3>البوفيهات</h3>
-              <p>تفاصيل تكمل جمال غرفة الطعام.</p>
+
+              <h3>
+                البوفيه
+              </h3>
+
             </div>
 
           </article>
+
 
         </div>
 
@@ -2118,6 +2618,7 @@
     <section class="about">
 
       <div class="container about-grid">
+
 
         <div class="about-image">
 
@@ -2154,25 +2655,30 @@
 
           <div class="about-points">
 
+
             <div class="about-point">
               <span>✓</span>
               كنبات ومجالس جاهزة
             </div>
+
 
             <div class="about-point">
               <span>✓</span>
               تفصيل حسب الطلب
             </div>
 
+
             <div class="about-point">
               <span>✓</span>
               طاولات ومفروشات
             </div>
 
+
             <div class="about-point">
               <span>✓</span>
               خدمة وشحن لمختلف المدن
             </div>
+
 
           </div>
 
@@ -2190,6 +2696,7 @@
     <section id="branches" class="branches">
 
       <div class="container">
+
 
         <div class="section-head">
 
@@ -2210,6 +2717,7 @@
 
         <div class="branch-grid">
 
+
           <article class="branch-card">
 
             <div class="branch-icon">
@@ -2228,6 +2736,7 @@
               href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
             >
               فتح الموقع على الخريطة
             </a>
@@ -2257,6 +2766,7 @@
               href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
             >
               فتح الموقع على الخريطة
             </a>
@@ -2282,6 +2792,7 @@
               href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
             >
               فتح الموقع على الخريطة
             </a>
@@ -2307,11 +2818,13 @@
               href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
             >
               فتح الموقع على الخريطة
             </a>
 
           </article>
+
 
         </div>
 
@@ -2327,6 +2840,7 @@
     <section id="contact" class="contact">
 
       <div class="container">
+
 
         <div class="section-head">
 
@@ -2347,12 +2861,15 @@
 
         <div class="contact-grid">
 
+
           <article class="contact-card">
 
             <div class="contact-icon">
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+
                 <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43Z"/>
+
               </svg>
 
             </div>
@@ -2418,6 +2935,7 @@
 
           </article>
 
+
         </div>
 
       </div>
@@ -2448,6 +2966,7 @@
             href="https://wa.me/966551496121"
             target="_blank"
             rel="noopener noreferrer"
+            referrerpolicy="no-referrer"
           >
             تواصل معنا عبر واتساب
           </a>
@@ -2457,6 +2976,7 @@
       </div>
 
     </section>
+
 
   </main>
 
@@ -2469,10 +2989,14 @@
 
     <div class="container">
 
+
       <div class="footer-grid">
 
 
+        <!-- تعريف -->
+
         <div class="footer-brand">
+
 
           <div class="brand">
 
@@ -2492,20 +3016,26 @@
 
           </div>
 
+
           <p>
             نجوم الإبداع للمفروشات والكنبات، نقدم الكنبات والمجالس
             الجاهزة والتفصيل والطاولات والمفروشات بتصاميم تجمع
             بين الفخامة والراحة.
           </p>
 
+
         </div>
 
 
+        <!-- روابط -->
+
         <div>
+
 
           <div class="footer-title">
             روابط سريعة
           </div>
+
 
           <div class="footer-links">
 
@@ -2535,14 +3065,19 @@
 
           </div>
 
+
         </div>
 
 
+        <!-- التواصل الاجتماعي -->
+
         <div>
+
 
           <div class="footer-title">
             تابعنا وتواصل معنا
           </div>
+
 
           <div class="social-title">
             تابع حساباتنا على منصات التواصل
@@ -2559,12 +3094,36 @@
               href="https://www.tiktok.com/@user505_a3"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="تابعنا على تيك توك"
               title="TikTok"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77V2h-3.29v13.3a2.92 2.92 0 1 1-2.92-2.92c.31 0 .61.05.89.14V9.17a6.4 6.4 0 1 0 5.32 6.3V8.62a8.1 8.1 0 0 0 4.77 1.55V6.9c-.34 0-.67-.07-1-.21Z"/>
+
+              </svg>
+
+            </a>
+
+
+            <!-- Snapchat -->
+
+            <a
+              class="social-link snapchat"
+              href="https://www.snapchat.com/add/ma484m"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
+              aria-label="تابعنا على سناب شات"
+              title="Snapchat"
+            >
+
+              <svg viewBox="0 0 24 24">
+
+                <path d="M12 2.2c-3.36 0-5.6 2.31-5.6 5.55v2.02c0 .66-.31 1.19-.94 1.61-.32.21-.7.39-1.14.54-.33.11-.5.35-.47.65.04.42.47.7 1.15.85.38.08.73.2 1.04.35-.17.51-.12.91.15 1.17.24.24.57.31 1.01.22.25-.05.5-.14.74-.25.12.54.39 1.06.8 1.56.63.76 1.48 1.26 2.52 1.5.06.48.22.83.47 1.05.26.23.59.3.98.2.5-.13.95-.37 1.29-.69.34.32.79.56 1.29.69.39.1.72.03.98-.2.25-.22.41-.57.47-1.05 1.04-.24 1.89-.74 2.52-1.5.41-.5.68-1.02.8-1.56.24.11.49.2.74.25.44.09.77.02 1.01-.22.27-.26.32-.66.15-1.17.31-.15.66-.27 1.04-.35.68-.15 1.11-.43 1.15-.85.03-.3-.14-.54-.47-.65-.44-.15-.82-.33-1.14-.54-.63-.42-.94-.95-.94-1.61V7.75C17.6 4.51 15.36 2.2 12 2.2Z"/>
+
               </svg>
 
             </a>
@@ -2577,12 +3136,15 @@
               href="https://www.instagram.com/jj_j505"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="تابعنا على انستقرام"
               title="Instagram"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+
                 <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm8.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+
               </svg>
 
             </a>
@@ -2595,47 +3157,68 @@
               href="https://wa.me/966551496121"
               target="_blank"
               rel="noopener noreferrer"
+              referrerpolicy="no-referrer"
               aria-label="تواصل معنا على واتساب"
               title="WhatsApp"
             >
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+
                 <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
               </svg>
 
             </a>
 
+
           </div>
+
 
           <div class="social-label">
             نجوم الإبداع للمفروشات والكنبات
           </div>
 
+
         </div>
+
 
       </div>
 
 
+      <!-- أسفل الفوتر -->
+
       <div class="footer-bottom">
+
 
         <div>
           © 2026 نجوم الإبداع للمفروشات والكنبات
         </div>
 
+
         <div>
+
           ©️ تكويد وتصميم
+
           <strong>
             المهندس دفاع عبد الله القياضي
           </strong>
+
         </div>
+
 
         <div>
+
           السبت - الخميس: 9 ص - 12 م
+
           <br>
+
           الجمعة: 2 م - 12 م
+
         </div>
 
+
       </div>
+
 
     </div>
 
@@ -2651,12 +3234,15 @@
     href="https://wa.me/966551496121"
     target="_blank"
     rel="noopener noreferrer"
+    referrerpolicy="no-referrer"
     aria-label="تواصل معنا عبر واتساب"
     title="واتساب"
   >
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43ZM12.09 21.7h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.84 9.84 0 0 1-1.51-5.2C2.18 6.4 6.62 1.96 12.08 1.96c2.65 0 5.14 1.03 7.02 2.91a9.86 9.86 0 0 1 2.91 7.03c0 5.46-4.44 9.9-9.92 9.9Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.08 4.5.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+    <svg viewBox="0 0 24 24">
+
+      <path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.55 0 .24 5.31.24 11.84c0 2.09.55 4.13 1.59 5.93L.13 24l6.38-1.67a11.83 11.83 0 0 0 5.57 1.42h.01c6.52 0 11.83-5.31 11.83-11.84a11.8 11.8 0 0 0-3.4-8.43Z"/>
+
     </svg>
 
   </a>
@@ -2672,62 +3258,143 @@
 
       "use strict";
 
+
+      /* =========================
+         بحث المنتجات
+      ========================== */
+
       const searchInput =
         document.getElementById("productSearch");
 
       const products =
-        Array.from(document.querySelectorAll(".product-card"));
+        Array.from(
+          document.querySelectorAll(".product-card")
+        );
 
 
       if(searchInput){
 
-        searchInput.addEventListener("input", function(){
+        searchInput.addEventListener(
+          "input",
+          function(){
 
-          const value =
-            this.value
-              .trim()
-              .toLocaleLowerCase("ar");
+            const value =
+              this.value
+                .trim()
+                .toLocaleLowerCase("ar");
 
-          products.forEach(function(product){
 
-            const name =
-              (product.dataset.name || "")
-              .toLocaleLowerCase("ar");
+            products.forEach(function(product){
 
-            product.style.display =
-              !value || name.includes(value)
-                ? ""
-                : "none";
+              const name =
+                (product.dataset.name || "")
+                .toLocaleLowerCase("ar");
 
-          });
 
-        });
+              product.style.display =
+                !value || name.includes(value)
+                  ? ""
+                  : "none";
+
+            });
+
+          }
+        );
 
       }
 
 
-      /*
-       * إغلاق التركيز بعد الضغط على روابط التنقل
-       * لتحسين تجربة الجوال.
-       */
+      /* =========================
+         حماية إضافية للروابط الخارجية
+      ========================== */
+
+      document
+        .querySelectorAll(
+          'a[target="_blank"]'
+        )
+        .forEach(function(link){
+
+          const rel =
+            new Set(
+              (link.getAttribute("rel") || "")
+                .split(/\s+/)
+                .filter(Boolean)
+            );
+
+
+          rel.add("noopener");
+          rel.add("noreferrer");
+
+
+          link.setAttribute(
+            "rel",
+            Array.from(rel).join(" ")
+          );
+
+
+          if(
+            !link.hasAttribute("referrerpolicy")
+          ){
+
+            link.setAttribute(
+              "referrerpolicy",
+              "no-referrer"
+            );
+
+          }
+
+        });
+
+
+      /* =========================
+         منع أخطاء الروابط الداخلية
+      ========================== */
 
       document
         .querySelectorAll('a[href^="#"]')
         .forEach(function(link){
 
-          link.addEventListener("click", function(){
+          link.addEventListener(
+            "click",
+            function(){
 
-            try{
-              this.blur();
-            }catch(error){}
+              try{
+                this.blur();
+              }catch(error){}
 
-          });
+            }
+          );
 
         });
+
+
+      /* =========================
+         معالجة الصور المفقودة
+         بدون إيقاف الصفحة
+      ========================== */
+
+      document
+        .querySelectorAll("img")
+        .forEach(function(img){
+
+          img.addEventListener(
+            "error",
+            function(){
+
+              this.style.opacity = "0.25";
+
+            },
+            { once:true }
+          );
+
+        });
+
 
     })();
 
   </script>
 
+
 </body>
+
 </html>
