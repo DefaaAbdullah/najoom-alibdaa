@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 
 const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 const SYSTEM_INSTRUCTIONS = `
@@ -22,190 +22,101 @@ const SYSTEM_INSTRUCTIONS = `
 أسلوبك:
 - تحدث بالعربية بشكل طبيعي وراقي.
 - كن ودوداً ومختصراً وواضحاً.
-- ناقش العميل واسأله أسئلة ذكية قبل إعطاء اقتراح نهائي عندما تكون المعلومات ناقصة.
-- لا تتعامل مع نفسك كروبوت جامد.
+- اسأل العميل أسئلة ذكية عندما تكون المعلومات ناقصة.
 - ساعد العميل على تطوير فكرته خطوة بخطوة.
+- يمكنك ابتكار تصاميم جديدة من عندك.
 
-مهم جداً:
-
-1. لديك معرفة عامة بالتصميم ويمكنك ابتكار أفكار وموديلات جديدة من عندك.
-2. ليس شرطاً أن يكون التصميم المقترح موجوداً لدى نجوم الإبداع.
-3. إذا اقترحت تصميماً من ابتكارك، قل بوضوح إنه "اقتراح تصميم" وليس بالضرورة منتجاً موجوداً في المعرض.
-4. إذا تحدث العميل عن موديل موجود في الموقع، تعامل معه كموديل من تشكيلات الموقع فقط إذا كانت المعلومات متوفرة في سياق الموقع.
-5. لا تخترع سعراً أو مقاساً أو توفر منتج معين وتقدمه كحقيقة.
-6. إذا سأل العميل عن السعر، أخبره أن السعر يعتمد على المقاس والخامة والتفاصيل، ووجهه للتواصل مع المبيعات إذا لم يكن السعر موجوداً.
-7. إذا سأل عن توفر موديل معين، لا تؤكد التوفر بدون معلومات مؤكدة.
-8. يمكنك إعطاء مقاسات تقريبية للتصميم كاقتراح، لكن وضح أنها مقاسات مبدئية وليست مخطط تصنيع نهائي.
-9. عندما يذكر العميل مساحة المجلس، فكر في:
-   - عدد الأشخاص
-   - شكل المجلس
-   - المداخل
-   - النوافذ
-   - التلفزيون
-   - الطاولات
-   - الممرات
-   - عمق الجلسة
-   - ارتفاع الجلسة
-10. إذا كان العميل يريد موديل جديداً، ابتكر له وصفاً واضحاً للموديل:
-   الشكل + التكوين + الأذرع + الظهر + الأرجل + اللون + القماش + طريقة التوزيع.
-11. لا تدعي أنك تستطيع تصنيع التصميم أو ضمان توفره.
-12. لا تعطي معلومات غير مؤكدة عن فروع أو أرقام هاتف.
-13. إذا أراد العميل التواصل مع المبيعات، اقترح واتساب نجوم الإبداع.
+مهم:
+- ليس شرطاً أن يكون التصميم المقترح موجوداً لدى نجوم الإبداع.
+- إذا اقترحت تصميماً من ابتكارك، وضح أنه اقتراح تصميم وليس بالضرورة منتجاً موجوداً.
+- لا تخترع أسعاراً أو توفر منتجات أو مقاسات مؤكدة.
+- المقاسات التي تقترحها للتصميم هي مقاسات مبدئية وليست مخطط تصنيع نهائي.
+- إذا سأل العميل عن السعر، وضح أن السعر يعتمد على المقاس والخامة والتفاصيل ووجهه للمبيعات عند الحاجة.
+- إذا أراد العميل التواصل مع المبيعات، أعطه واتساب نجوم الإبداع.
 
 واتساب الرئيسي:
 0551496121
 
-فروع نجوم الإبداع المعروفة في الموقع:
+فروع الموقع:
 - الرياض: حي نمار
 - الدمام: شارع الملك عبد العزيز
 - تبوك
 - الأحساء
 
-أنواع التصاميم التي يعرضها الموقع:
+التصاميم الموجودة في الموقع:
 - صناعة سعودية
 - كلاسيك
 - مودرن
 - تركي
 - أمريكي
 
-يمكنك أيضاً اقتراح تصاميم جديدة خارج هذه التصنيفات.
+يمكنك ابتكار تصاميم جديدة خارج هذه التصنيفات.
 `;
 
-function getClientIP(request) {
-
-    const forwarded =
-        request.headers.get("x-forwarded-for");
-
-    if (forwarded) {
-
-        return forwarded
-            .split(",")[0]
-            .trim();
-
+export default async function handler(req, res) {
+  try {
+    if (req.method !== "POST") {
+      return res.status(405).json({
+        error: "Method Not Allowed"
+      });
     }
 
-    return "unknown";
-}
+    if (!process.env.OPENAI_API_KEY) {
+      console.error("OPENAI_API_KEY is missing");
 
-
-export default async function handler(request, response) {
-
-    if (request.method !== "POST") {
-
-        return response
-            .status(405)
-            .json({
-                error:"Method Not Allowed"
-            });
-
+      return res.status(500).json({
+        error: "OPENAI_API_KEY غير موجود في إعدادات الاستضافة."
+      });
     }
 
+    const body = req.body || {};
 
-    try {
+    const message =
+      typeof body.message === "string"
+        ? body.message.trim()
+        : "";
 
-        const body =
-            request.body || {};
-
-        const message =
-            typeof body.message === "string"
-                ? body.message.trim()
-                : "";
-
-
-        if (!message) {
-
-            return response
-                .status(400)
-                .json({
-                    error:"الرسالة فارغة"
-                });
-
-        }
-
-
-        if (message.length > 1500) {
-
-            return response
-                .status(413)
-                .json({
-                    error:"الرسالة طويلة جداً"
-                });
-
-        }
-
-
-        /*
-         * منع الطلبات المتكررة جداً من نفس المصدر
-         * حماية بسيطة على مستوى الوظيفة.
-         */
-
-        const ip =
-            getClientIP(request);
-
-        /*
-         * يمكن لاحقاً ربط هذا المكان
-         * بـ Redis / KV لتطبيق Rate Limit
-         * حقيقي لكل IP.
-         */
-
-
-        const result =
-            await client.responses.create({
-
-                model:"gpt-5.6-luna",
-
-                instructions:
-                    SYSTEM_INSTRUCTIONS,
-
-                input:[
-                    {
-                        role:"user",
-                        content:message
-                    }
-                ],
-
-                max_output_tokens:700
-
-            });
-
-
-        const reply =
-            typeof result.output_text === "string"
-                ? result.output_text.trim()
-                : "";
-
-
-        if (!reply) {
-
-            throw new Error(
-                "Empty AI response"
-            );
-
-        }
-
-
-        return response
-            .status(200)
-            .json({
-                reply:reply
-            });
-
-
-    } catch(error) {
-
-        console.error(
-            "AI error:",
-            error?.message || error
-        );
-
-
-        return response
-            .status(500)
-            .json({
-                error:
-                    "حدث خطأ مؤقت في المستشار."
-            });
-
+    if (!message) {
+      return res.status(400).json({
+        error: "الرسالة فارغة."
+      });
     }
 
+    if (message.length > 1500) {
+      return res.status(413).json({
+        error: "الرسالة طويلة جداً."
+      });
+    }
+
+    const result = await client.responses.create({
+      model: "gpt-5.6-luna",
+      instructions: SYSTEM_INSTRUCTIONS,
+      input: message,
+      max_output_tokens: 700
+    });
+
+    const reply =
+      typeof result.output_text === "string"
+        ? result.output_text.trim()
+        : "";
+
+    if (!reply) {
+      console.error("OpenAI returned an empty response");
+
+      return res.status(500).json({
+        error: "لم يصل رد من المستشار."
+      });
+    }
+
+    return res.status(200).json({
+      reply
+    });
+
+  } catch (error) {
+    console.error("AI ERROR:", error);
+
+    return res.status(500).json({
+      error: "تعذر الاتصال بالمستشار حالياً."
+    });
+  }
 }
