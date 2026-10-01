@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width,initial-scale=1.0"
->
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>
-نجوم الإبداع للمفروشات والكنبات
-</title>
+<meta name="theme-color" content="#071727">
 
-<meta
-    name="description"
-    content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة"
->
+<meta name="description"
+      content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
 
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
->
+<meta name="robots" content="index,follow">
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<title>نجوم الإبداع للمفروشات والكنبات</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
->
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
->
-
+ href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+ rel="stylesheet">
 
 <style>
 
 /* =====================================================
-   الأساس
+   RESET
 ===================================================== */
 
 *{
@@ -50,27 +38,20 @@
 
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
 }
 
 body{
-
-    font-family:"Cairo",sans-serif;
-
+    font-family:"Cairo",Arial,sans-serif;
     background:#071727;
-
     color:#fff;
-
     line-height:1.8;
-
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
+    overflow-x:hidden;
 }
 
 img{
     max-width:100%;
+    height:auto;
     display:block;
 }
 
@@ -80,1428 +61,1059 @@ textarea{
     font-family:inherit;
 }
 
-
-/* =====================================================
-   الألوان
-===================================================== */
-
-:root{
-
-    --navy:#071727;
-
-    --navy2:#0b2035;
-
-    --gold:#c9a45c;
-
-    --gold2:#efd58f;
-
-    --white:#ffffff;
-
-    --muted:#aebdca;
-
-    --card:#0d2439;
-
-    --border:rgba(239,213,143,.18);
-
-}
-
-
-/* =====================================================
-   الهيدر
-===================================================== */
-
-header{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:rgba(7,23,39,.96);
-
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid var(--border);
-
-}
-
-.navbar{
-
-    width:min(1250px,94%);
-
-    margin:auto;
-
-    min-height:78px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:20px;
-
-}
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    font-weight:800;
-
-    color:var(--gold2);
-
-}
-
-.logo-box{
-
-    width:48px;
-
-    height:48px;
-
-    display:grid;
-
-    place-items:center;
-
-    border:2px solid var(--gold);
-
-    transform:rotate(45deg);
-
-    border-radius:8px;
-
-}
-
-.logo-box span{
-
-    transform:rotate(-45deg);
-
-    font-size:20px;
-
-}
-
-.logo-text{
-
-    line-height:1.25;
-
-}
-
-.logo-text small{
-
-    display:block;
-
-    color:#fff;
-
-    font-size:11px;
-
-    font-weight:500;
-
-}
-
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
-.nav-links a{
-
-    color:#fff;
-
-    font-size:14px;
-
-    transition:.25s;
-
-}
-
-.nav-links a:hover{
-
-    color:var(--gold2);
-
-}
-
-.nav-social{
-
-    display:flex;
-
-    gap:8px;
-
-}
-
-.nav-social a{
-
-    width:35px;
-
-    height:35px;
-
-    display:grid;
-
-    place-items:center;
-
-    border:1px solid var(--border);
-
-    border-radius:50%;
-
-    color:var(--gold2);
-
-    font-size:12px;
-
-}
-
-
-/* =====================================================
-   البطل
-===================================================== */
-
-.hero{
-
-    min-height:650px;
-
-    display:grid;
-
-    place-items:center;
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-
-        linear-gradient(
-            rgba(7,23,39,.68),
-            rgba(7,23,39,.9)
-        ),
-
-        url("images/hero.jpg")
-        center/cover;
-
-}
-
-.hero-content{
-
-    width:min(1100px,92%);
-
-    text-align:center;
-
-    padding:90px 0;
-
-}
-
-.hero h1{
-
-    font-size:clamp(38px,6vw,75px);
-
-    line-height:1.15;
-
-    color:var(--gold2);
-
-    margin-bottom:18px;
-
-    font-weight:800;
-
-}
-
-.hero h2{
-
-    font-size:clamp(22px,4vw,40px);
-
-    margin-bottom:18px;
-
-}
-
-.hero p{
-
-    max-width:800px;
-
-    margin:0 auto 30px;
-
-    color:#d6e0e8;
-
-    font-size:18px;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-}
-
-.btn{
-
-    border:0;
-
-    padding:13px 24px;
-
-    border-radius:12px;
-
+button{
     cursor:pointer;
-
-    font-weight:700;
-
-    transition:.25s;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
 }
 
-.btn-gold{
-
-    background:var(--gold);
-
-    color:#071727;
-
+a{
+    color:inherit;
+    text-decoration:none;
 }
-
-.btn-dark{
-
-    background:#102b42;
-
-    color:#fff;
-
-    border:1px solid var(--border);
-
-}
-
-.btn:hover{
-
-    transform:translateY(-2px);
-
-}
-
-
-/* =====================================================
-   الأقسام
-===================================================== */
 
 section{
-
-    padding:80px 0;
-
+    width:100%;
+    position:relative;
 }
 
 .container{
-
     width:min(1200px,92%);
-
     margin:auto;
-
 }
-
-.section-head{
-
-    text-align:center;
-
-    margin-bottom:40px;
-
-}
-
-.section-head h2{
-
-    color:var(--gold2);
-
-    font-size:34px;
-
-    margin-bottom:8px;
-
-}
-
-.section-head p{
-
-    color:var(--muted);
-
-}
-
 
 /* =====================================================
-   المنتجات
+   COLORS
+===================================================== */
+
+:root{
+    --navy:#071727;
+    --navy2:#0c2135;
+    --gold:#c9a45c;
+    --gold2:#efd58f;
+    --white:#fff;
+    --muted:#c7d0d8;
+    --glass:rgba(255,255,255,.06);
+    --border:rgba(239,213,143,.22);
+}
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar{
+    background:#040f1b;
+    border-bottom:1px solid rgba(239,213,143,.15);
+    text-align:center;
+    padding:7px 12px;
+    color:var(--gold2);
+    font-size:13px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,23,39,.96);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(239,213,143,.15);
+}
+
+.nav{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:0;
+}
+
+.logo-box{
+    width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
+    font-weight:800;
+    transform:rotate(45deg);
+    border-radius:9px;
+    flex:none;
+}
+
+.logo-box span{
+    transform:rotate(-45deg);
+    font-size:19px;
+}
+
+.logo-text{
+    line-height:1.25;
+}
+
+.logo-text strong{
+    display:block;
+    color:var(--gold2);
+    font-size:16px;
+}
+
+.logo-text small{
+    display:block;
+    color:#b8c2cb;
+    font-size:10px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.nav-links a{
+    color:#e7edf2;
+    font-size:13px;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--gold2);
+}
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.social-icons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+}
+
+.social-icon{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(239,213,143,.35);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.045);
+    color:var(--gold2);
+    transition:.25s ease;
+}
+
+.social-icon svg{
+    width:20px;
+    height:20px;
+    display:block;
+}
+
+.social-icon:hover{
+    background:var(--gold2);
+    color:var(--navy);
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px rgba(239,213,143,.25);
+}
+
+.social-icon.instagram svg{
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+}
+
+.social-icon.whatsapp svg,
+.social-icon.tiktok svg,
+.social-icon.snapchat svg{
+    fill:currentColor;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(90deg,
+        rgba(7,23,39,.98) 0%,
+        rgba(7,23,39,.82) 42%,
+        rgba(7,23,39,.35) 100%),
+        url("images/hero.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+    width:min(650px,100%);
+    padding:90px 0;
+}
+
+.hero-label{
+    color:var(--gold2);
+    font-size:15px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,72px);
+    line-height:1.15;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+.hero p{
+    color:#d4dce2;
+    font-size:17px;
+    max-width:620px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:28px;
+}
+
+.btn{
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
+}
+
+.btn-outline{
+    background:transparent;
+    color:var(--gold2);
+    border:1px solid var(--gold);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title small{
+    color:var(--gold);
+    font-size:13px;
+}
+
+.section-title h2{
+    font-size:clamp(28px,4vw,42px);
+    color:var(--gold2);
+    margin-top:5px;
+}
+
+.section-title p{
+    color:var(--muted);
+    max-width:650px;
+    margin:8px auto 0;
+}
+
+/* =====================================================
+   PRODUCTS
 ===================================================== */
 
 .products{
-
     display:grid;
-
     grid-template-columns:repeat(5,1fr);
-
     gap:18px;
-
 }
 
 .product-card{
-
-    background:var(--card);
-
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
     border:1px solid var(--border);
-
     border-radius:18px;
-
     overflow:hidden;
-
-    transition:.25s;
-
+    transition:.3s;
 }
 
 .product-card:hover{
-
-    transform:translateY(-5px);
-
+    transform:translateY(-6px);
+    border-color:rgba(239,213,143,.55);
 }
 
 .product-card img{
-
     width:100%;
-
     aspect-ratio:1/1;
-
     object-fit:cover;
-
 }
 
 .product-info{
-
-    padding:16px;
-
+    padding:15px;
 }
 
 .product-info h3{
-
     color:var(--gold2);
-
-    margin-bottom:5px;
-
+    font-size:17px;
+    margin-bottom:4px;
 }
 
 .product-info p{
-
-    color:var(--muted);
-
-    font-size:13px;
-
+    color:#bfc8d0;
+    font-size:12px;
 }
 
-
 /* =====================================================
-   المناديب
+   SALES REPS
 ===================================================== */
 
 .reps{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:18px;
-
 }
 
 .rep-card{
-
-    background:
-
-        linear-gradient(
-            145deg,
-            #102b42,
-            #091a2b
-        );
-
+    background:var(--glass);
     border:1px solid var(--border);
-
     border-radius:18px;
-
-    padding:25px;
-
+    padding:24px;
     text-align:center;
-
 }
 
-.rep-icon{
-
-    width:60px;
-
-    height:60px;
-
-    margin:0 auto 15px;
-
+.rep-avatar{
+    width:70px;
+    height:70px;
     border-radius:50%;
-
-    display:grid;
-
-    place-items:center;
-
-    background:rgba(201,164,92,.13);
-
-    border:1px solid var(--gold);
-
-    font-size:24px;
-
+    margin:0 auto 14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
+    font-weight:800;
+    font-size:23px;
 }
 
 .rep-card h3{
-
     color:var(--gold2);
-
+    font-size:18px;
 }
 
 .rep-card p{
-
-    color:var(--muted);
-
-    font-size:14px;
-
-    margin-bottom:15px;
-
+    color:#bac4cc;
+    font-size:13px;
 }
 
-.rep-actions{
-
-    display:flex;
-
-    gap:8px;
-
-}
-
-.rep-actions a{
-
-    flex:1;
-
-    padding:9px;
-
+.rep-btn{
+    display:inline-flex;
+    margin-top:13px;
+    padding:8px 15px;
     border-radius:10px;
-
+    background:#168b58;
     font-size:12px;
-
-    background:#142f47;
-
-}
-
-.rep-actions a.whatsapp{
-
-    background:#198754;
-
-}
-
-
-/* =====================================================
-   الخدمات
-===================================================== */
-
-.service-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-
-}
-
-.service-card{
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-}
-
-.service-card img{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-}
-
-.service-card-content{
-
-    padding:20px;
-
-}
-
-.service-card h3{
-
-    color:var(--gold2);
-
-    margin-bottom:6px;
-
-}
-
-.service-card p{
-
-    color:var(--muted);
-
-    font-size:14px;
-
-}
-
-
-/* =====================================================
-   الدفع
-===================================================== */
-
-.payment{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-    margin-top:25px;
-
-}
-
-.payment span{
-
-    padding:10px 18px;
-
-    border:1px solid var(--border);
-
-    border-radius:12px;
-
-    background:#0c2135;
-
-    color:var(--gold2);
-
     font-weight:700;
-
 }
 
+/* =====================================================
+   TABLES / DINING
+===================================================== */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.feature-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:22px;
+    border:1px solid var(--border);
+    min-height:360px;
+}
+
+.feature-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.feature-overlay{
+    position:absolute;
+    inset:auto 0 0;
+    padding:28px;
+    background:linear-gradient(
+        transparent,
+        rgba(4,15,27,.95)
+    );
+}
+
+.feature-overlay h3{
+    color:var(--gold2);
+    font-size:25px;
+}
 
 /* =====================================================
-   الفروع
+   BRANCHES
 ===================================================== */
 
 .branches{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:18px;
-
 }
 
 .branch-card{
-
-    min-height:250px;
-
+    min-height:200px;
     padding:25px;
-
     border-radius:20px;
-
     border:1px solid var(--border);
-
     display:flex;
-
     flex-direction:column;
-
-    justify-content:space-between;
-
+    justify-content:flex-end;
     background:
-
         linear-gradient(
-            145deg,
-            #112f49,
-            #081827
+            180deg,
+            rgba(7,23,39,.2),
+            rgba(7,23,39,.96)
         );
-
 }
 
-.branch-card:nth-child(2){
-
+.branch-card.riyadh{
     background:
-
-        linear-gradient(
-            145deg,
-            #263b50,
-            #081827
-        );
-
+        linear-gradient(180deg,rgba(7,23,39,.2),rgba(7,23,39,.96)),
+        linear-gradient(135deg,#314b67,#071727);
 }
 
-.branch-card:nth-child(3){
-
+.branch-card.dammam{
     background:
-
-        linear-gradient(
-            145deg,
-            #473b2a,
-            #081827
-        );
-
+        linear-gradient(180deg,rgba(7,23,39,.2),rgba(7,23,39,.96)),
+        linear-gradient(135deg,#48624e,#071727);
 }
 
-.branch-card:nth-child(4){
-
+.branch-card.tabuk{
     background:
+        linear-gradient(180deg,rgba(7,23,39,.2),rgba(7,23,39,.96)),
+        linear-gradient(135deg,#675238,#071727);
+}
 
-        linear-gradient(
-            145deg,
-            #243f3b,
-            #081827
-        );
-
+.branch-card.ahsa{
+    background:
+        linear-gradient(180deg,rgba(7,23,39,.2),rgba(7,23,39,.96)),
+        linear-gradient(135deg,#554667,#071727);
 }
 
 .branch-card h3{
-
     color:var(--gold2);
-
-    font-size:25px;
-
+    font-size:23px;
 }
 
 .branch-card p{
-
-    color:#d5dee5;
-
-    font-size:14px;
-
+    color:#d1d9df;
+    font-size:13px;
 }
-
-.branch-actions{
-
-    display:flex;
-
-    gap:8px;
-
-    margin-top:15px;
-
-}
-
-.branch-actions a{
-
-    flex:1;
-
-    text-align:center;
-
-    padding:9px;
-
-    border-radius:10px;
-
-    background:#152e45;
-
-    font-size:12px;
-
-}
-
-.branch-actions a.whatsapp{
-
-    background:#198754;
-
-}
-
 
 /* =====================================================
-   التواصل
+   PAYMENT
 ===================================================== */
 
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:18px;
-
+.payment-section{
+    padding:55px 0;
 }
 
-.contact-card{
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:25px;
-
-    text-align:center;
-
+.payment-options{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
 }
 
-.contact-card h3{
-
-    color:var(--gold2);
-
-    margin-bottom:8px;
-
+.payment-badge{
+    min-width:250px;
+    min-height:72px;
+    padding:12px 20px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:13px;
+    direction:rtl;
+    background:#fff;
+    border:1px solid rgba(201,164,92,.4);
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+    transition:.25s;
 }
 
-.contact-card a{
-
-    color:#fff;
-
+.payment-badge:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
 }
 
+.payment-logo{
+    font-family:Arial,sans-serif;
+    font-size:26px;
+    font-weight:900;
+    color:#111;
+}
+
+.payment-badge span:last-child{
+    color:#333;
+    font-size:11px;
+    font-weight:600;
+}
 
 /* =====================================================
    CTA
 ===================================================== */
 
 .cta{
-
-    text-align:center;
-
+    padding:70px 0;
     background:
-
-        linear-gradient(
-            135deg,
-            #102d45,
-            #071727
-        );
-
-    border-top:1px solid var(--border);
-
-    border-bottom:1px solid var(--border);
-
+        radial-gradient(circle at center,
+        rgba(201,164,92,.15),
+        transparent 60%);
 }
 
-.cta h2{
+.cta-box{
+    padding:55px 25px;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:rgba(255,255,255,.035);
+    text-align:center;
+}
 
+.cta-box h2{
     color:var(--gold2);
-
-    font-size:35px;
-
-    margin-bottom:10px;
-
+    font-size:clamp(28px,5vw,45px);
 }
 
-.cta p{
-
-    color:var(--muted);
-
-    margin-bottom:25px;
-
+.cta-box p{
+    color:#c8d0d6;
+    margin:10px auto 25px;
 }
-
 
 /* =====================================================
-   الفوتر
+   CONTACT
+===================================================== */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    padding:25px;
+    border-radius:18px;
+    background:var(--glass);
+    border:1px solid var(--border);
+    text-align:center;
+}
+
+.contact-card h3{
+    color:var(--gold2);
+    margin-bottom:7px;
+}
+
+.contact-card p{
+    color:#c7d0d8;
+    font-size:14px;
+}
+
+/* =====================================================
+   FOOTER
 ===================================================== */
 
 footer{
-
-    padding:35px 0;
-
     border-top:1px solid var(--border);
-
-    background:#050f19;
-
+    padding:45px 0 25px;
+    background:#040f1b;
 }
 
-.footer-content{
-
-    width:min(1200px,92%);
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:35px;
 }
 
-.footer-social{
-
-    display:flex;
-
-    gap:8px;
-
-    flex-wrap:wrap;
-
-}
-
-.footer-social a{
-
-    padding:7px 12px;
-
-    border:1px solid var(--border);
-
-    border-radius:8px;
-
+.footer-title{
     color:var(--gold2);
-
-    font-size:12px;
-
+    font-size:18px;
+    margin-bottom:10px;
 }
 
+footer p,
+footer li{
+    color:#aeb9c2;
+    font-size:13px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:5px 0;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:30px;
+    padding-top:18px;
+    text-align:center;
+    color:#87939c;
+    font-size:11px;
+}
 
 /* =====================================================
-   زر واتساب
+   WHATSAPP
 ===================================================== */
 
 .whatsapp-float{
-
     position:fixed;
-
     left:20px;
-
     bottom:20px;
-
-    z-index:999;
-
-    width:60px;
-
-    height:60px;
-
+    width:58px;
+    height:58px;
     border-radius:50%;
-
-    display:grid;
-
-    place-items:center;
-
-    background:#198754;
-
+    background:#20c66b;
     color:#fff;
-
-    font-size:28px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+    transition:.25s;
 }
 
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp-float svg{
+    width:30px;
+    height:30px;
+    fill:#fff;
+}
 
 /* =====================================================
-   مستشار الذكاء الاصطناعي
+   AI CONSULTANT
 ===================================================== */
 
 .ai-launcher{
-
     position:fixed;
-
     right:20px;
-
     bottom:20px;
-
-    z-index:1100;
-
-    border:0;
-
+    z-index:2100;
+    border:none;
     border-radius:50px;
-
-    padding:14px 20px;
-
-    background:linear-gradient(
-        135deg,
-        var(--gold2),
-        var(--gold)
-    );
-
-    color:#071727;
-
+    padding:13px 19px;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
     font-weight:800;
-
-    cursor:pointer;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
-
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
 .ai-window{
-
     position:fixed;
-
     right:20px;
-
-    bottom:90px;
-
-    z-index:1099;
-
-    width:min(430px,calc(100vw - 30px));
-
-    height:min(700px,calc(100vh - 110px));
-
-    background:#081a2b;
-
+    bottom:85px;
+    width:min(420px,calc(100vw - 30px));
+    height:min(650px,calc(100vh - 110px));
+    background:#081b2d;
     border:1px solid var(--border);
-
     border-radius:22px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.5);
-
+    z-index:2050;
     display:none;
-
     overflow:hidden;
-
+    box-shadow:0 20px 70px rgba(0,0,0,.5);
 }
 
 .ai-window.open{
-
     display:flex;
-
     flex-direction:column;
-
 }
 
 .ai-header{
-
-    padding:16px;
-
-    background:#0d2942;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
+    padding:15px;
+    background:#061321;
     border-bottom:1px solid var(--border);
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .ai-header strong{
-
     color:var(--gold2);
-
 }
 
 .ai-close{
-
-    border:0;
-
-    background:transparent;
-
+    border:none;
+    background:none;
     color:#fff;
-
     font-size:22px;
-
-    cursor:pointer;
-
-}
-
-.ai-status{
-
-    padding:7px 14px;
-
-    font-size:11px;
-
-    color:#9fb0bf;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
 }
 
 .ai-messages{
-
     flex:1;
-
     overflow-y:auto;
-
     padding:15px;
-
 }
 
 .ai-message{
-
-    max-width:90%;
-
-    padding:12px 14px;
-
-    border-radius:15px;
-
+    max-width:88%;
+    padding:10px 13px;
+    border-radius:14px;
     margin-bottom:10px;
-
+    font-size:13px;
     white-space:pre-wrap;
+}
 
-    line-height:1.8;
-
-    font-size:14px;
-
+.ai-message.bot{
+    background:rgba(255,255,255,.07);
+    color:#e8edf0;
+    margin-left:auto;
 }
 
 .ai-message.user{
-
-    margin-right:auto;
-
-    background:#15344f;
-
+    background:rgba(201,164,92,.16);
+    border:1px solid rgba(201,164,92,.2);
     color:#fff;
-
-}
-
-.ai-message.assistant{
-
-    margin-left:auto;
-
-    background:#102638;
-
-    border:1px solid var(--border);
-
-    color:#f5f5f5;
-
+    margin-right:auto;
 }
 
 .ai-image-preview{
-
+    padding:10px 15px;
     display:none;
-
-    margin:10px 15px;
-
-    position:relative;
-
 }
 
 .ai-image-preview img{
-
-    width:100%;
-
-    max-height:200px;
-
-    object-fit:cover;
-
-    border-radius:14px;
-
-    border:1px solid var(--border);
-
+    max-height:140px;
+    border-radius:12px;
+    margin:auto;
 }
 
-.ai-input-area{
-
-    padding:12px;
-
+.ai-controls{
     border-top:1px solid var(--border);
-
-    background:#071727;
-
+    padding:10px;
+    background:#061321;
 }
 
 .ai-tools{
-
     display:flex;
-
     gap:7px;
-
     margin-bottom:8px;
-
 }
 
-.ai-tool-btn{
-
-    flex:1;
-
-    border:1px solid var(--border);
-
-    background:#102a40;
-
+.ai-tool{
+    border:1px solid rgba(239,213,143,.25);
+    background:rgba(255,255,255,.05);
     color:var(--gold2);
-
-    padding:9px 5px;
-
     border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:12px;
-
+    padding:7px 9px;
+    font-size:11px;
 }
 
-.ai-tool-btn:hover{
-
-    background:#173852;
-
-}
-
-.ai-voice-btn{
-
-    flex:1;
-
-    border:1px solid var(--border);
-
-    background:#122e45;
-
-    color:var(--gold2);
-
-    padding:9px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:12px;
-
-}
-
-.ai-voice-btn.listening{
-
-    background:#a83232;
-
-    color:#fff;
-
-    animation:pulseVoice 1s infinite;
-
-}
-
-@keyframes pulseVoice{
-
-    0%{
-        box-shadow:0 0 0 0 rgba(168,50,50,.7);
-    }
-
-    70%{
-        box-shadow:0 0 0 10px rgba(168,50,50,0);
-    }
-
-    100%{
-        box-shadow:0 0 0 0 rgba(168,50,50,0);
-    }
-
-}
-
-.ai-text-row{
-
+.ai-input-row{
     display:flex;
-
-    gap:8px;
-
+    gap:7px;
 }
 
-.ai-input{
-
+#aiInput{
     flex:1;
-
-    min-height:48px;
-
-    max-height:120px;
-
+    min-width:0;
     resize:none;
-
-    border:1px solid var(--border);
-
+    min-height:45px;
+    max-height:120px;
     border-radius:12px;
-
-    background:#0d2134;
-
+    border:1px solid rgba(239,213,143,.2);
+    background:#0b2238;
     color:#fff;
-
-    padding:12px;
-
+    padding:10px;
     outline:none;
-
 }
 
-.ai-input:focus{
-
-    border-color:var(--gold);
-
-}
-
-.ai-send{
-
-    width:55px;
-
-    border:0;
-
+#aiSend{
+    width:48px;
+    border:none;
     border-radius:12px;
+    background:var(--gold2);
+    color:var(--navy);
+    font-weight:800;
+}
 
-    background:var(--gold);
-
-    color:#071727;
-
-    font-size:20px;
-
-    cursor:pointer;
-
+.ai-status{
+    font-size:10px;
+    color:#98a7b2;
+    margin-top:5px;
+    text-align:center;
 }
 
 .ai-generated-image{
-
     width:100%;
-
-    border-radius:15px;
-
-    margin-top:10px;
-
-    border:1px solid var(--border);
-
+    border-radius:12px;
+    margin-top:8px;
 }
 
-.ai-speaker{
-
-    display:inline-flex;
-
+.speak-btn{
     margin-top:7px;
-
-    border:1px solid var(--border);
-
-    background:#132e44;
-
+    border:1px solid rgba(239,213,143,.25);
+    background:transparent;
     color:var(--gold2);
-
-    padding:5px 9px;
-
     border-radius:8px;
-
-    cursor:pointer;
-
-    font-size:11px;
-
+    padding:5px 9px;
+    font-size:10px;
 }
-
 
 /* =====================================================
-   تجاوب
+   RESPONSIVE
 ===================================================== */
 
-@media(max-width:1050px){
+@media(max-width:1100px){
 
     .products{
-
         grid-template-columns:repeat(3,1fr);
-
-    }
-
-    .branches{
-
-        grid-template-columns:repeat(2,1fr);
-
     }
 
     .reps{
-
         grid-template-columns:repeat(2,1fr);
+    }
 
+    .branches{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
 
-@media(max-width:700px){
+@media(max-width:800px){
 
-    .navbar{
-
-        padding:10px 0;
-
+    .nav{
+        min-height:70px;
     }
 
     .nav-links{
-
         display:none;
-
     }
 
-    .nav-social{
-
-        margin-right:auto;
-
+    .logo-text small{
+        display:none;
     }
 
     .hero{
-
-        min-height:570px;
-
+        min-height:580px;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7,23,39,.97),
+                rgba(7,23,39,.68)
+            ),
+            url("images/hero.jpg") center/cover no-repeat;
     }
 
-    section{
-
-        padding:60px 0;
-
+    .hero-content{
+        padding:70px 0;
     }
 
     .products{
-
         grid-template-columns:repeat(2,1fr);
-
-        gap:10px;
-
     }
 
-    .reps,
-    .service-grid,
-    .branches,
-    .contact-grid{
-
+    .feature-grid{
         grid-template-columns:1fr;
+    }
 
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(94%,1200px);
+    }
+
+    .topbar{
+        font-size:11px;
+    }
+
+    .logo-box{
+        width:42px;
+        height:42px;
+    }
+
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .social-icons{
+        gap:5px;
+    }
+
+    .social-icon{
+        width:34px;
+        height:34px;
+    }
+
+    .social-icon svg{
+        width:17px;
+        height:17px;
     }
 
     .hero h1{
-
-        font-size:40px;
-
+        font-size:39px;
     }
 
     .hero p{
-
-        font-size:15px;
-
+        font-size:14px;
     }
 
-    .ai-window{
+    .section{
+        padding:60px 0;
+    }
 
-        right:10px;
+    .products{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
 
-        bottom:80px;
+    .product-info{
+        padding:11px;
+    }
 
-        width:calc(100vw - 20px);
+    .product-info h3{
+        font-size:14px;
+    }
 
-        height:calc(100vh - 100px);
+    .reps{
+        grid-template-columns:1fr;
+    }
 
+    .branches{
+        grid-template-columns:1fr;
+    }
+
+    .payment-badge{
+        width:100%;
+        max-width:340px;
+        min-width:0;
+        min-height:60px;
+    }
+
+    .payment-logo{
+        font-size:22px;
+    }
+
+    .payment-badge span:last-child{
+        font-size:10px;
+    }
+
+    .whatsapp-float{
+        width:50px;
+        height:50px;
+        left:13px;
+        bottom:13px;
     }
 
     .ai-launcher{
+        right:13px;
+        bottom:13px;
+        padding:11px 14px;
+        font-size:12px;
+    }
 
-        right:12px;
-
-        bottom:12px;
-
+    .ai-window{
+        right:10px;
+        bottom:72px;
+        width:calc(100vw - 20px);
+        height:calc(100vh - 95px);
+        border-radius:17px;
     }
 
 }
 
+/* iPhone safe area */
 
-/* =====================================================
-   إخفاء input الصورة
-===================================================== */
+@supports(padding:max(0px)){
 
-#aiImageInput{
+    .whatsapp-float{
+        bottom:max(13px,env(safe-area-inset-bottom));
+    }
 
-    display:none;
+    .ai-launcher{
+        bottom:max(13px,env(safe-area-inset-bottom));
+    }
+}
 
+/* منع تحديد العناصر الحساسة بصرياً */
+.logo-box,
+.payment-badge{
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+/* تقليل الحركة لمن يفضل ذلك */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto!important;
+        transition:none!important;
+        animation:none!important;
+    }
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<!-- =====================================================
+     TOP
+===================================================== -->
+
+<div class="topbar">
+    شحن لجميع مدن المملكة وخارجها
+</div>
 
 <!-- =====================================================
      HEADER
@@ -1509,646 +1121,392 @@ footer{
 
 <header>
 
-<nav class="navbar">
+<div class="container nav">
 
-<a href="#home" class="logo">
+    <a href="#home" class="logo" aria-label="نجوم الإبداع">
 
-<div class="logo-box">
+        <div class="logo-box">
+            <span>ن</span>
+        </div>
 
-<span>ن</span>
+        <div class="logo-text">
+            <strong>نجوم الإبداع</strong>
+            <small>للمفروشات والكنبات</small>
+        </div>
+
+    </a>
+
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+        <a href="#sofas">الكنبات</a>
+        <a href="#reps">مناديب المبيعات</a>
+        <a href="#tables">الطاولات</a>
+        <a href="#dining">غرفة الطعام</a>
+        <a href="#branches">الفروع</a>
+        <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <div class="social-icons">
+
+        <!-- WhatsApp -->
+
+        <a href="https://wa.me/966551496121"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-icon"
+           aria-label="واتساب">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.7.9 3.5 1.3 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.5c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.9 1 1-3.8-.3-.4a9.6 9.6 0 0 1-1.5-5.1c0-5.3 4.3-9.6 9.6-9.6 2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.8c0 5.4-4.3 9.8-9.6 9.8Zm5.3-7.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.5.8-1.7.1-.2.1-.4 0-.6-.1-.2-.7-1.8-1-2.5-.3-.7-.5-.6-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.7-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6Z"/>
+            </svg>
+
+        </a>
+
+        <!-- Instagram -->
+
+        <a href="https://www.instagram.com/jj_j505"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-icon"
+           aria-label="إنستغرام">
+
+            <svg viewBox="0 0 24 24">
+                <rect x="3" y="3"
+                      width="18"
+                      height="18"
+                      rx="5"
+                      ry="5"></rect>
+
+                <circle cx="12" cy="12" r="4"></circle>
+
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+
+        </a>
+
+        <!-- TikTok -->
+
+        <a href="https://www.tiktok.com/@user505_a3"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-icon"
+           aria-label="تيك توك">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M15.5 2h3.1c.3 1.7 1.3 3.2 2.8 4.1v3.2c-1.4 0-2.8-.4-4-1.1v7.1c0 4-2.8 6.7-6.7 6.7-3.5 0-6.2-2.5-6.2-5.9 0-3.5 2.8-6.1 6.4-6.1.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-1.5 0-2.7 1-2.7 2.6 0 1.4 1.1 2.5 2.6 2.5 1.7 0 2.8-1.1 2.8-3.2V2h1.9Z"></path>
+            </svg>
+
+        </a>
+
+        <!-- Snapchat -->
+
+        <a href="https://www.snapchat.com/add/ma484m"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-icon"
+           aria-label="سناب شات">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2.2c-3.2 0-5.8 2.5-5.8 5.8v3.1c0 .7-.3 1.4-.9 1.8-.5.4-1.1.7-1.8.8-.3.1-.5.3-.5.6 0 .7 1.2 1.1 2 1.3.3.1.6.2.8.3.1.1.2.3.2.5-.1.5-.5.9-1 1.2-.3.2-.4.5-.2.8.2.4.8.5 1.5.5.8 0 1.5-.2 2-.4.5-.2 1-.1 1.4.2.9.8 1.8 1.2 3.3 1.2s2.4-.4 3.3-1.2c.4-.3.9-.4 1.4-.2.5.2 1.2.4 2 .4.7 0 1.3-.1 1.5-.5.2-.3.1-.6-.2-.8-.5-.3-.9-.7-1-1.2 0-.2.1-.4.2-.5.2-.1.5-.2.8-.3.8-.2 2-.6 2-1.3 0-.3-.2-.5-.5-.6-.7-.1-1.3-.4-1.8-.8-.6-.4-.9-1.1-.9-1.8V8c0-3.3-2.6-5.8-5.8-5.8Z"></path>
+            </svg>
+
+        </a>
+
+    </div>
 
 </div>
-
-<div class="logo-text">
-
-نجوم الإبداع
-
-<small>
-للمفروشات والكنبات
-</small>
-
-</div>
-
-</a>
-
-
-<div class="nav-links">
-
-<a href="#sofas">الكنبات</a>
-
-<a href="#reps">المناديب</a>
-
-<a href="#tables">الطاولات</a>
-
-<a href="#dining">غرفة الطعام</a>
-
-<a href="#branches">الفروع</a>
-
-<a href="#contact">تواصل معنا</a>
-
-</div>
-
-
-<div class="nav-social">
-
-<a
-    href="https://www.tiktok.com/@user505_a3"
-    target="_blank"
-    rel="noopener noreferrer"
->
-TT
-</a>
-
-<a
-    href="https://www.snapchat.com/add/ma484m"
-    target="_blank"
-    rel="noopener noreferrer"
->
-SC
-</a>
-
-<a
-    href="https://www.instagram.com/jj_j505"
-    target="_blank"
-    rel="noopener noreferrer"
->
-IG
-</a>
-
-</div>
-
-</nav>
 
 </header>
-
-
 
 <!-- =====================================================
      HERO
 ===================================================== -->
 
+<main>
+
 <section id="home" class="hero">
+
+<div class="container">
 
 <div class="hero-content">
 
+<div class="hero-label">
+    نجوم الإبداع للمفروشات والكنبات
+</div>
+
 <h1>
-مجالس وكنبات
+    مجالس وكنبات<br>
+    <span>بذوق يليق بمنزلك</span>
 </h1>
 
-<h2>
-بذوق يليق بمنزلك
-</h2>
-
 <p>
-كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة
+    كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة،
+    بتصاميم تجمع بين الراحة والأناقة وتناسب مختلف الأذواق.
 </p>
 
 <div class="hero-buttons">
 
-<a
-    href="#sofas"
-    class="btn btn-gold"
->
-استكشف منتجاتنا
+<a href="#sofas" class="btn btn-gold">
+    استعرض منتجاتنا
 </a>
 
-<a
-    href="#branches"
-    class="btn btn-dark"
->
-فروعنا
+<a href="https://wa.me/966551496121"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn btn-outline">
+    تواصل معنا
 </a>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =====================================================
      SOFAS
 ===================================================== -->
 
-<section id="sofas">
+<section id="sofas" class="section">
 
 <div class="container">
 
-<div class="section-head">
-
-<h2>
-الكنبات والمجالس
-</h2>
-
-<p>
-تشكيلة متنوعة من التصاميم والخامات
-</p>
-
+<div class="section-title">
+    <small>اختيارات نجوم الإبداع</small>
+    <h2>الكنبات والمجالس</h2>
+    <p>
+        تشكيلة من التصاميم الكلاسيكية والمودرن والتركية والأمريكية.
+    </p>
 </div>
-
 
 <div class="products">
 
+<div class="product-card">
+<img src="images/sofas/saudi.jpg"
+     alt="كنبات صناعة سعودية"
+     loading="lazy">
+<div class="product-info">
+<h3>صناعة سعودية</h3>
+<p>تصاميم عملية وأنيقة</p>
+</div>
+</div>
 
 <div class="product-card">
-
-<img
-    src="images/sofas/saudi.jpg"
-    alt="كنبات صناعة سعودية"
->
-
+<img src="images/sofas/classic.jpg"
+     alt="كنبات كلاسيك"
+     loading="lazy">
 <div class="product-info">
-
-<h3>
-صناعة سعودية
-</h3>
-
-<p>
-تصاميم تناسب الذوق المحلي
-</p>
-
+<h3>كلاسيك</h3>
+<p>فخامة وتفاصيل راقية</p>
 </div>
-
 </div>
-
 
 <div class="product-card">
-
-<img
-    src="images/sofas/classic.jpg"
-    alt="كنبات كلاسيك"
->
-
+<img src="images/sofas/modern.jpg"
+     alt="كنبات مودرن"
+     loading="lazy">
 <div class="product-info">
-
-<h3>
-كلاسيك
-</h3>
-
-<p>
-فخامة وتفاصيل راقية
-</p>
-
+<h3>مودرن</h3>
+<p>خطوط عصرية وأنيقة</p>
 </div>
-
 </div>
-
 
 <div class="product-card">
-
-<img
-    src="images/sofas/modern.jpg"
-    alt="كنبات مودرن"
->
-
+<img src="images/sofas/turkish.jpg"
+     alt="كنبات تركية"
+     loading="lazy">
 <div class="product-info">
-
-<h3>
-مودرن
-</h3>
-
-<p>
-تصاميم عصرية وأنيقة
-</p>
-
+<h3>تركي</h3>
+<p>لمسات فاخرة ومميزة</p>
 </div>
-
 </div>
-
 
 <div class="product-card">
-
-<img
-    src="images/sofas/turkish.jpg"
-    alt="كنبات تركية"
->
-
+<img src="images/sofas/american.jpg"
+     alt="كنبات أمريكية"
+     loading="lazy">
 <div class="product-info">
-
-<h3>
-تركي
-</h3>
-
-<p>
-لمسات أنيقة وخامات راقية
-</p>
-
+<h3>أمريكي</h3>
+<p>راحة ومساحات واسعة</p>
 </div>
-
 </div>
-
-
-<div class="product-card">
-
-<img
-    src="images/sofas/american.jpg"
-    alt="كنبات أمريكية"
->
-
-<div class="product-info">
-
-<h3>
-أمريكي
-</h3>
-
-<p>
-راحة ومساحات واسعة
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<div class="payment">
-
-<span>
-Tabby
-</span>
-
-<span>
-Tamara
-</span>
-
-<span>
-دفع مرن
-</span>
 
 </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =====================================================
      SALES REPS
 ===================================================== -->
 
-<section id="reps">
+<section id="reps" class="section">
 
 <div class="container">
 
-<div class="section-head">
-
-<h2>
-مناديب المبيعات
-</h2>
-
-<p>
-تواصل مباشرة مع مندوب المبيعات
-</p>
-
+<div class="section-title">
+    <small>خدمة العملاء</small>
+    <h2>مناديب المبيعات</h2>
+    <p>
+        تواصل مباشرة مع أحد مناديب المبيعات للاستفسار والمساعدة.
+    </p>
 </div>
-
 
 <div class="reps">
 
+<div class="rep-card">
+<div class="rep-avatar">أ</div>
+<h3>أيمن راجح</h3>
+<p>الرياض</p>
+<a class="rep-btn"
+   href="https://wa.me/966551496121"
+   target="_blank"
+   rel="noopener noreferrer">
+    واتساب
+</a>
+</div>
 
 <div class="rep-card">
-
-<div class="rep-icon">
-👤
-</div>
-
-<h3>
-أيمن راجح
-</h3>
-
-<p>
-الرياض
-</p>
-
-<div class="rep-actions">
-
-<a
-    href="tel:0551496121"
->
-اتصال
+<div class="rep-avatar">ع</div>
+<h3>عبد الله الرماني</h3>
+<p>الرياض</p>
+<a class="rep-btn"
+   href="https://wa.me/966539589684"
+   target="_blank"
+   rel="noopener noreferrer">
+    واتساب
 </a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966551496121"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
 </div>
-
-</div>
-
 
 <div class="rep-card">
-
-<div class="rep-icon">
-👤
-</div>
-
-<h3>
-عبد الله الرماني
-</h3>
-
-<p>
-الرياض
-</p>
-
-<div class="rep-actions">
-
-<a
-    href="tel:053959589684"
->
-اتصال
+<div class="rep-avatar">ص</div>
+<h3>صفوان المجلي</h3>
+<p>الرياض</p>
+<a class="rep-btn"
+   href="https://wa.me/966535152249"
+   target="_blank"
+   rel="noopener noreferrer">
+    واتساب
 </a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966539589684"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
 </div>
-
-</div>
-
 
 <div class="rep-card">
-
-<div class="rep-icon">
-👤
-</div>
-
-<h3>
-صفوان المجلي
-</h3>
-
-<p>
-الرياض
-</p>
-
-<div class="rep-actions">
-
-<a
-    href="tel:0535152249"
->
-اتصال
+<div class="rep-avatar">م</div>
+<h3>محمد العقربي</h3>
+<p>الرياض</p>
+<a class="rep-btn"
+   href="https://wa.me/966531302436"
+   target="_blank"
+   rel="noopener noreferrer">
+    واتساب
 </a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966535152249"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
 </div>
-
-</div>
-
-
-<div class="rep-card">
-
-<div class="rep-icon">
-👤
-</div>
-
-<h3>
-محمد العقربي
-</h3>
-
-<p>
-الرياض
-</p>
-
-<div class="rep-actions">
-
-<a
-    href="tel:0531302436"
->
-اتصال
-</a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966531302436"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
-</div>
-
-</div>
-
 
 </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =====================================================
      TABLES
 ===================================================== -->
 
-<section id="tables">
+<section id="tables" class="section">
 
 <div class="container">
 
-<div class="section-head">
-
-<h2>
-الطاولات
-</h2>
-
-<p>
-تفاصيل تكمل جمال المجلس والمنزل
-</p>
-
+<div class="section-title">
+    <small>لمسات تكمل المكان</small>
+    <h2>الطاولات</h2>
 </div>
 
+<div class="feature-grid">
 
-<div class="service-grid">
+<div class="feature-card">
 
+<img src="images/tables/service-main.jpg"
+     alt="طاولة رئيسية"
+     loading="lazy">
 
-<div class="service-card">
-
-<img
-    src="images/tables/service-main.jpg"
-    alt="طاولة رئيسية"
->
-
-<div class="service-card-content">
-
-<h3>
-طاولات رئيسية
-</h3>
-
-<p>
-تصاميم أنيقة للمجالس وغرف المعيشة.
-</p>
-
+<div class="feature-overlay">
+<h3>طاولات رئيسية</h3>
 </div>
 
 </div>
 
+<div class="feature-card">
 
-<div class="service-card">
+<img src="images/tables/service-side.jpg"
+     alt="طاولة جانبية"
+     loading="lazy">
 
-<img
-    src="images/tables/service-side.jpg"
-    alt="طاولة جانبية"
->
-
-<div class="service-card-content">
-
-<h3>
-طاولات جانبية
-</h3>
-
-<p>
-خيارات عملية وأنيقة بجانب الكنبات.
-</p>
-
+<div class="feature-overlay">
+<h3>طاولات جانبية</h3>
 </div>
 
 </div>
-
-
-<div class="service-card">
-
-<img
-    src="images/tables/service-main.jpg"
-    alt="تفصيل الطاولات"
->
-
-<div class="service-card-content">
-
-<h3>
-تفصيل حسب الطلب
-</h3>
-
-<p>
-يمكن للمستشار مساعدتك في تصور المقاس والشكل المناسب.
-</p>
-
-</div>
-
-</div>
-
 
 </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =====================================================
      DINING
 ===================================================== -->
 
-<section id="dining">
+<section id="dining" class="section">
 
 <div class="container">
 
-<div class="section-head">
+<div class="section-title">
+    <small>أناقة غرفة الطعام</small>
+    <h2>غرفة الطعام</h2>
+</div>
 
-<h2>
-غرفة الطعام
-</h2>
+<div class="feature-grid">
 
-<p>
-تشكيلات متكاملة لغرفة الطعام
-</p>
+<div class="feature-card">
+
+<img src="images/dining/dining-table.jpg"
+     alt="طاولة غرفة الطعام"
+     loading="lazy">
+
+<div class="feature-overlay">
+<h3>طاولات الطعام</h3>
+</div>
 
 </div>
 
+<div class="feature-card">
 
-<div class="service-grid">
+<img src="images/dining/dining-chairs.jpg"
+     alt="كراسي غرفة الطعام"
+     loading="lazy">
 
-
-<div class="service-card">
-
-<img
-    src="images/dining/dining-table.jpg"
-    alt="طاولة طعام"
->
-
-<div class="service-card-content">
-
-<h3>
-طاولات الطعام
-</h3>
-
-<p>
-تصاميم تناسب المساحات المختلفة.
-</p>
+<div class="feature-overlay">
+<h3>كراسي الطعام</h3>
+</div>
 
 </div>
 
 </div>
 
+<br>
 
-<div class="service-card">
+<div class="feature-card">
 
-<img
-    src="images/dining/dining-chairs.jpg"
-    alt="كراسي طعام"
->
+<img src="images/dining/buffet.jpg"
+     alt="بوفيه غرفة الطعام"
+     loading="lazy">
 
-<div class="service-card-content">
-
-<h3>
-كراسي الطعام
-</h3>
-
-<p>
-ألوان وخامات متعددة.
-</p>
-
+<div class="feature-overlay">
+<h3>بوفيهات</h3>
 </div>
-
-</div>
-
-
-<div class="service-card">
-
-<img
-    src="images/dining/buffet.jpg"
-    alt="بوفيه"
->
-
-<div class="service-card-content">
-
-<h3>
-البوفيه
-</h3>
-
-<p>
-إضافة أنيقة ومتكاملة لغرفة الطعام.
-</p>
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -2156,198 +1514,81 @@ Tamara
 
 </section>
 
+<!-- =====================================================
+     PAYMENT
+===================================================== -->
 
+<section class="payment-section">
+
+<div class="container">
+
+<div class="section-title">
+    <small>طرق دفع مرنة</small>
+    <h2>الدفع بالتقسيط</h2>
+</div>
+
+<div class="payment-options">
+
+<div class="payment-badge">
+    <span class="payment-logo">tabby</span>
+    <span>قسّم دفعتك على دفعات</span>
+</div>
+
+<div class="payment-badge">
+    <span class="payment-logo">tamara</span>
+    <span>قسّم دفعتك على دفعات</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <!-- =====================================================
      BRANCHES
 ===================================================== -->
 
-<section id="branches">
+<section id="branches" class="section">
 
 <div class="container">
 
-<div class="section-head">
-
-<h2>
-فروع نجوم الإبداع
-</h2>
-
-<p>
-نسعد بخدمتكم في فروعنا
-</p>
-
+<div class="section-title">
+    <small>نخدمكم في عدة مدن</small>
+    <h2>فروع نجوم الإبداع</h2>
 </div>
-
 
 <div class="branches">
 
-
-<div class="branch-card">
-
-<div>
-
-<h3>
-الرياض
-</h3>
-
-<p>
-حي نمار
-</p>
-
-<p>
-📞 0551496121
-</p>
-
+<div class="branch-card riyadh">
+<h3>الرياض</h3>
+<p>حي نمار</p>
+<p>0551496121</p>
 </div>
 
-
-<div class="branch-actions">
-
-<a href="tel:0551496121">
-اتصال
-</a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966551496121"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
+<div class="branch-card dammam">
+<h3>الدمام</h3>
+<p>شارع الملك عبد العزيز</p>
+<p>0561232087</p>
 </div>
 
+<div class="branch-card tabuk">
+<h3>تبوك</h3>
+<p>للتواصل والاستفسار</p>
+<p>0573480091</p>
 </div>
 
-
-
-<div class="branch-card">
-
-<div>
-
-<h3>
-الدمام
-</h3>
-
-<p>
-شارع الملك عبد العزيز
-</p>
-
-<p>
-📞 0561232087
-</p>
-
+<div class="branch-card ahsa">
+<h3>الأحساء</h3>
+<p>للتواصل والاستفسار</p>
+<p>0539742588</p>
 </div>
-
-
-<div class="branch-actions">
-
-<a href="tel:0561232087">
-اتصال
-</a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966561232087"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="branch-card">
-
-<div>
-
-<h3>
-تبوك
-</h3>
-
-<p>
-فرع تبوك
-</p>
-
-<p>
-📞 0573480091
-</p>
-
-</div>
-
-
-<div class="branch-actions">
-
-<a href="tel:0573480091">
-اتصال
-</a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966573480091"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="branch-card">
-
-<div>
-
-<h3>
-الأحساء
-</h3>
-
-<p>
-فرع الأحساء
-</p>
-
-<p>
-📞 0539742588
-</p>
-
-</div>
-
-
-<div class="branch-actions">
-
-<a href="tel:0539742588">
-اتصال
-</a>
-
-<a
-    class="whatsapp"
-    href="https://wa.me/966539742588"
-    target="_blank"
-    rel="noopener noreferrer"
->
-واتساب
-</a>
-
-</div>
-
-</div>
-
 
 </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =====================================================
      CTA
@@ -2357,104 +1598,55 @@ Tamara
 
 <div class="container">
 
-<h2>
-تحتاج مساعدة في اختيار التصميم؟
-</h2>
+<div class="cta-box">
+
+<h2>هل لديك تصميم معين؟</h2>
 
 <p>
-دع مستشار نجوم الإبداع يساعدك في اختيار الشكل واللون والمقاس المناسب.
+    تحدث مع مستشارنا الذكي واحصل على تصور مبدئي يناسب مساحتك وذوقك.
 </p>
 
-<button
-    class="btn btn-gold"
-    onclick="openAI()"
->
-🤖 تحدث مع المستشار
+<button class="btn btn-gold"
+        type="button"
+        onclick="openAI()">
+    تحدث مع المستشار الذكي
 </button>
 
 </div>
 
+</div>
+
 </section>
-
-
 
 <!-- =====================================================
      CONTACT
 ===================================================== -->
 
-<section id="contact">
+<section id="contact" class="section">
 
 <div class="container">
 
-<div class="section-head">
-
-<h2>
-تواصل معنا
-</h2>
-
-<p>
-نسعد بخدمتكم
-</p>
-
+<div class="section-title">
+    <small>نسعد بخدمتكم</small>
+    <h2>تواصل معنا</h2>
 </div>
-
 
 <div class="contact-grid">
 
+<div class="contact-card">
+<h3>الواتساب</h3>
+<p>0551496121</p>
+</div>
 
 <div class="contact-card">
-
-<h3>
-واتساب
-</h3>
-
-<a
-    href="https://wa.me/966551496121"
-    target="_blank"
-    rel="noopener noreferrer"
->
-0551496121
-</a>
-
+<h3>الإدارة</h3>
+<p>0530493382</p>
 </div>
-
 
 <div class="contact-card">
-
-<h3>
-الإدارة
-</h3>
-
-<a href="tel:0530493382">
-0530493382
-</a>
-
+<h3>الشكاوى والمقترحات</h3>
+<p>0538677457</p>
 </div>
-
-
-<div class="contact-card">
-
-<h3>
-الشكاوى والمقترحات
-</h3>
-
-<a href="tel:0538677457">
-0538677457
-</a>
-
-</div>
-
-
-</div>
-
-
-<div class="section-head" style="margin-top:40px;margin-bottom:0">
-
-<p>
-السبت – الخميس: 9 صباحًا – 12 منتصف الليل
-<br>
-الجمعة: 2 ظهرًا – 12 منتصف الليل
-</p>
 
 </div>
 
@@ -2462,7 +1654,7 @@ Tamara
 
 </section>
 
-
+</main>
 
 <!-- =====================================================
      FOOTER
@@ -2470,46 +1662,111 @@ Tamara
 
 <footer>
 
-<div class="footer-content">
+<div class="container">
+
+<div class="footer-grid">
 
 <div>
 
-©️ 2026 نجوم الإبداع للمفروشات والكنبات
+<div class="footer-title">
+نجوم الإبداع للمفروشات والكنبات
+</div>
+
+<p>
+كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.
+</p>
 
 <br>
 
-<small>
-تكويد وتصميم المهندس دفاع عبد الله القياضي
-</small>
+<div class="social-icons">
+
+<a href="https://wa.me/966551496121"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-icon"
+   aria-label="واتساب">
+
+<svg viewBox="0 0 24 24">
+<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.7.9 3.5 1.3 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3Z"/>
+</svg>
+
+</a>
+
+<a href="https://www.instagram.com/jj_j505"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-icon"
+   aria-label="إنستغرام">
+
+<svg viewBox="0 0 24 24">
+<rect x="3" y="3" width="18" height="18" rx="5"></rect>
+<circle cx="12" cy="12" r="4"></circle>
+<circle cx="17.5" cy="6.5" r="1"></circle>
+</svg>
+
+</a>
+
+<a href="https://www.tiktok.com/@user505_a3"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-icon"
+   aria-label="تيك توك">
+
+<svg viewBox="0 0 24 24">
+<path d="M15.5 2h3.1c.3 1.7 1.3 3.2 2.8 4.1v3.2c-1.4 0-2.8-.4-4-1.1v7.1c0 4-2.8 6.7-6.7 6.7-3.5 0-6.2-2.5-6.2-5.9 0-3.5 2.8-6.1 6.4-6.1.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-1.5 0-2.7 1-2.7 2.6 0 1.4 1.1 2.5 2.6 2.5 1.7 0 2.8-1.1 2.8-3.2V2h1.9Z"></path>
+</svg>
+
+</a>
+
+<a href="https://www.snapchat.com/add/ma484m"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-icon"
+   aria-label="سناب شات">
+
+<svg viewBox="0 0 24 24">
+<path d="M12 2.2c-3.2 0-5.8 2.5-5.8 5.8v3.1c0 .7-.3 1.4-.9 1.8-.5.4-1.1.7-1.8.8-.3.1-.5.3-.5.6 0 .7 1.2 1.1 2 1.3.3.1.6.2.8.3.1.1.2.3.2.5-.1.5-.5.9-1 1.2-.3.2-.4.5-.2.8.2.4.8.5 1.5.5.8 0 1.5-.2 2-.4.5-.2 1-.1 1.4.2.9.8 1.8 1.2 3.3 1.2s2.4-.4 3.3-1.2c.4-.3.9-.4 1.4-.2.5.2 1.2.4 2 .4.7 0 1.3-.1 1.5-.5.2-.3.1-.6-.2-.8-.5-.3-.9-.7-1-1.2 0-.2.1-.4.2-.5.2-.1.5-.2.8-.3.8-.2 2-.6 2-1.3 0-.3-.2-.5-.5-.6-.7-.1-1.3-.4-1.8-.8-.6-.4-.9-1.1-.9-1.8V8c0-3.3-2.6-5.8-5.8-5.8Z"></path>
+</svg>
+
+</a>
 
 </div>
 
+</div>
 
-<div class="footer-social">
+<div>
 
-<a
-    href="https://www.tiktok.com/@user505_a3"
-    target="_blank"
-    rel="noopener noreferrer"
->
-TikTok
-</a>
+<div class="footer-title">الفروع</div>
 
-<a
-    href="https://www.snapchat.com/add/ma484m"
-    target="_blank"
-    rel="noopener noreferrer"
->
-Snapchat
-</a>
+<ul>
+<li>الرياض – حي نمار</li>
+<li>الدمام – شارع الملك عبد العزيز</li>
+<li>تبوك</li>
+<li>الأحساء</li>
+</ul>
 
-<a
-    href="https://www.instagram.com/jj_j505"
-    target="_blank"
-    rel="noopener noreferrer"
->
-Instagram
-</a>
+</div>
+
+<div>
+
+<div class="footer-title">أوقات العمل</div>
+
+<ul>
+<li>السبت – الخميس</li>
+<li>9 صباحاً – 12 منتصف الليل</li>
+<li>الجمعة</li>
+<li>2 ظهراً – 12 منتصف الليل</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+©️ 2026 نجوم الإبداع للمفروشات والكنبات
+<br>
+©️ تكويد وتصميم المهندس دفاع عبد الله القياضي
 
 </div>
 
@@ -2517,223 +1774,133 @@ Instagram
 
 </footer>
 
-
-
 <!-- =====================================================
-     WHATSAPP
+     WHATSAPP FLOAT
 ===================================================== -->
 
-<a
-    class="whatsapp-float"
-    href="https://wa.me/966551496121"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="واتساب"
->
-☎
+<a href="https://wa.me/966551496121"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="whatsapp-float"
+   aria-label="التواصل عبر واتساب">
+
+<svg viewBox="0 0 24 24">
+<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.7.9 3.5 1.3 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.5c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.9 1 1-3.8-.3-.4a9.6 9.6 0 0 1-1.5-5.1c0-5.3 4.3-9.6 9.6-9.6 2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.8c0 5.4-4.3 9.8-9.6 9.8Z"/>
+</svg>
+
 </a>
-
-
 
 <!-- =====================================================
      AI LAUNCHER
 ===================================================== -->
 
-<button
-    id="aiLauncher"
-    class="ai-launcher"
-    onclick="openAI()"
->
-🤖 مستشار نجوم الإبداع
+<button id="aiLauncher"
+        class="ai-launcher"
+        type="button"
+        onclick="openAI()">
+
+    ✨ المستشار الذكي
+
 </button>
-
-
 
 <!-- =====================================================
      AI WINDOW
 ===================================================== -->
 
-<div
-    id="aiWindow"
-    class="ai-window"
->
-
+<div id="aiWindow" class="ai-window">
 
 <div class="ai-header">
 
-<div>
+<strong>✨ مستشار نجوم الإبداع</strong>
 
-<strong>
-🤖 مستشار نجوم الإبداع
-</strong>
-
-<div style="font-size:11px;color:#9fb0bf">
-تصميم • ألوان • مقاسات • أثاث
-</div>
-
-</div>
-
-
-<button
-    class="ai-close"
-    onclick="closeAI()"
->
-×
+<button class="ai-close"
+        type="button"
+        onclick="closeAI()"
+        aria-label="إغلاق">
+    ×
 </button>
 
 </div>
 
+<div id="aiMessages" class="ai-messages">
 
+<div class="ai-message bot">
+مرحباً بك في نجوم الإبداع 🌟
+أنا مستشارك في اختيار المجالس والكنبات وتوزيع الأثاث.
 
-<div
-    id="aiStatus"
-    class="ai-status"
->
-جاهز لمساعدتك
+يمكنك إرسال مقاس الغرفة أو صورة للمكان، وسأساعدك في اقتراح التصميم المناسب.
 </div>
-
-
-
-<div
-    id="aiMessages"
-    class="ai-messages"
->
-
-
-<div class="ai-message assistant">
-
-مرحبًا بك في نجوم الإبداع 🌟
-
-أنا مستشارك لتصميم المجالس والكنبات.
-
-يمكنك:
-• سؤالي عن الألوان والتصاميم.
-• إرسال صورة لغرفتك.
-• طلب تحليل توزيع الأثاث.
-• طلب إنشاء تصميم جديد.
-• طلب تعديل صورة غرفتك.
-
-ويمكنك التحدث معي بالصوت 🎤
 
 </div>
 
+<div id="aiImagePreview"
+     class="ai-image-preview">
+
+<img id="aiPreviewImage"
+     alt="الصورة المختارة">
 
 </div>
 
-
-
-<div
-    id="aiImagePreview"
-    class="ai-image-preview"
->
-
-<img
-    id="aiPreviewImage"
-    src=""
-    alt="الصورة المختارة"
->
-
-</div>
-
-
-
-<div class="ai-input-area">
-
+<div class="ai-controls">
 
 <div class="ai-tools">
 
-
-<label
-    for="aiImageInput"
-    class="ai-tool-btn"
->
-📷 إضافة صورة
+<label class="ai-tool">
+📷 صورة
+<input id="aiImageInput"
+       type="file"
+       accept="image/png,image/jpeg,image/webp"
+       hidden>
 </label>
 
-
-<input
-    type="file"
-    id="aiImageInput"
-    accept="image/png,image/jpeg,image/webp"
->
-
-
-<button
-    id="generateDesignBtn"
-    type="button"
-    class="ai-tool-btn"
->
-🎨 إنشاء تصميم
+<button id="generateDesignBtn"
+        class="ai-tool"
+        type="button">
+    🎨 توليد تصميم
 </button>
 
-
-</div>
-
-
-
-<div class="ai-tools">
-
-
-<button
-    type="button"
-    id="aiMicBtn"
-    class="ai-voice-btn"
->
-🎤 تحدث
-</button>
-
-
-<button
-    type="button"
-    id="aiStopVoiceBtn"
-    class="ai-voice-btn"
->
-🔇 إيقاف الصوت
+<button id="aiVoiceBtn"
+        class="ai-tool"
+        type="button">
+    🎤 صوت
 </button>
 
 </div>
 
+<div class="ai-input-row">
 
+<textarea id="aiInput"
+          placeholder="اكتب طلبك هنا..."
+          maxlength="3000"></textarea>
 
-<div class="ai-text-row">
-
-
-<textarea
-    id="aiInput"
-    class="ai-input"
-    placeholder="اكتب أو تحدث مع المستشار..."
-></textarea>
-
-
-<button
-    id="aiSend"
-    class="ai-send"
-    type="button"
->
-➤
+<button id="aiSend"
+        type="button"
+        aria-label="إرسال">
+    ➤
 </button>
 
+</div>
+
+<div id="aiStatus"
+     class="ai-status">
+    جاهز لخدمتك
+</div>
 
 </div>
 
-
 </div>
-
-</div>
-
-
 
 <script>
 
 /* =====================================================
-   عناصر المستشار
+   AI UI
 ===================================================== */
-
-const aiLauncher =
-    document.getElementById("aiLauncher");
 
 const aiWindow =
     document.getElementById("aiWindow");
+
+const aiLauncher =
+    document.getElementById("aiLauncher");
 
 const aiMessages =
     document.getElementById("aiMessages");
@@ -2759,289 +1926,217 @@ const aiPreviewImage =
 const generateDesignBtn =
     document.getElementById("generateDesignBtn");
 
-const aiMicBtn =
-    document.getElementById("aiMicBtn");
-
-const aiStopVoiceBtn =
-    document.getElementById("aiStopVoiceBtn");
-
+const aiVoiceBtn =
+    document.getElementById("aiVoiceBtn");
 
 let selectedAIImage = null;
-
-let currentAudio = null;
-
-let recognition = null;
-
-let isListening = false;
-
-
-/* =====================================================
-   فتح المستشار
-===================================================== */
 
 function openAI(){
 
     aiWindow.classList.add("open");
 
-    setTimeout(() => {
-
+    setTimeout(()=>{
         aiInput.focus();
-
     },100);
 
 }
-
-
-/* =====================================================
-   إغلاق المستشار
-===================================================== */
 
 function closeAI(){
 
     aiWindow.classList.remove("open");
 
-    stopAIAudio();
-
 }
 
+function addMessage(text,type="bot"){
 
-/* =====================================================
-   إضافة رسالة
-===================================================== */
-
-function addMessage(
-    text,
-    type="assistant",
-    image=null
-){
-
-    const message =
+    const div =
         document.createElement("div");
 
-    message.className =
-        "ai-message " +
-        (
-            type === "user"
-            ? "user"
-            : "assistant"
-        );
+    div.className =
+        "ai-message " + type;
 
+    div.textContent = text;
 
-    const textDiv =
-        document.createElement("div");
-
-    textDiv.textContent =
-        text || "";
-
-
-    message.appendChild(
-        textDiv
-    );
-
-
-    if(image){
-
-        const img =
-            document.createElement("img");
-
-        img.src =
-            image;
-
-        img.className =
-            "ai-generated-image";
-
-        img.alt =
-            "تصميم مقترح";
-
-        message.appendChild(
-            img
-        );
-
-    }
-
-
-    if(type !== "user" && text){
-
-        const speaker =
-            document.createElement("button");
-
-        speaker.type =
-            "button";
-
-        speaker.className =
-            "ai-speaker";
-
-        speaker.textContent =
-            "🔊 استمع للرد";
-
-
-        speaker.onclick =
-            function(){
-
-                speakAIResponse(
-                    text
-                );
-
-            };
-
-
-        message.appendChild(
-            speaker
-        );
-
-    }
-
-
-    aiMessages.appendChild(
-        message
-    );
-
+    aiMessages.appendChild(div);
 
     aiMessages.scrollTop =
         aiMessages.scrollHeight;
 
+    return div;
+}
 
-    return message;
+function addImageMessage(image){
+
+    const div =
+        document.createElement("div");
+
+    div.className =
+        "ai-message bot";
+
+    const img =
+        document.createElement("img");
+
+    img.src = image;
+
+    img.alt =
+        "تصور تصميم من المستشار الذكي";
+
+    img.className =
+        "ai-generated-image";
+
+    div.appendChild(img);
+
+    aiMessages.appendChild(div);
+
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
 
 }
 
-
 /* =====================================================
-   حالة المستشار
+   IMAGE COMPRESSION
 ===================================================== */
 
-function setStatus(text){
+function compressImage(file){
 
-    aiStatus.textContent =
-        text;
+    return new Promise((resolve,reject)=>{
 
-}
+        if(file.size > 10 * 1024 * 1024){
 
+            reject(
+                new Error(
+                    "حجم الصورة أكبر من 10 ميجابايت."
+                )
+            );
 
-/* =====================================================
-   ضغط الصورة
-===================================================== */
+            return;
+        }
 
-function compressImage(
-    file,
-    maxSize=1600,
-    quality=.78
-){
+        const reader =
+            new FileReader();
 
-    return new Promise(
-        (resolve,reject) => {
+        reader.onload = function(){
 
-            const reader =
-                new FileReader();
+            const img =
+                new Image();
 
+            img.onload = function(){
 
-            reader.onload =
-                function(event){
+                const maxSize = 1600;
 
-                    const img =
-                        new Image();
+                let width =
+                    img.width;
 
+                let height =
+                    img.height;
 
-                    img.onload =
-                        function(){
+                if(width > maxSize ||
+                   height > maxSize){
 
-                            let width =
-                                img.width;
+                    if(width > height){
 
-                            let height =
-                                img.height;
+                        height =
+                            Math.round(
+                                height *
+                                maxSize /
+                                width
+                            );
 
+                        width =
+                            maxSize;
 
-                            if(
-                                width >
-                                maxSize ||
-                                height >
-                                maxSize
-                            ){
+                    }else{
 
-                                const ratio =
-                                    Math.min(
-                                        maxSize / width,
-                                        maxSize / height
-                                    );
-
-                                width =
-                                    Math.round(
-                                        width * ratio
-                                    );
-
-                                height =
-                                    Math.round(
-                                        height * ratio
-                                    );
-
-                            }
-
-
-                            const canvas =
-                                document.createElement(
-                                    "canvas"
-                                );
-
-
-                            canvas.width =
-                                width;
-
-                            canvas.height =
-                                height;
-
-
-                            const ctx =
-                                canvas.getContext(
-                                    "2d"
-                                );
-
-
-                            ctx.drawImage(
-                                img,
-                                0,
-                                0,
-                                width,
+                        width =
+                            Math.round(
+                                width *
+                                maxSize /
                                 height
                             );
 
+                        height =
+                            maxSize;
 
-                            resolve(
-                                canvas.toDataURL(
-                                    "image/jpeg",
-                                    quality
-                                )
-                            );
+                    }
 
-                        };
+                }
 
+                const canvas =
+                    document.createElement("canvas");
 
-                    img.onerror =
-                        reject;
+                canvas.width =
+                    width;
 
+                canvas.height =
+                    height;
 
-                    img.src =
-                        event.target.result;
+                const ctx =
+                    canvas.getContext("2d");
 
-                };
+                ctx.drawImage(
+                    img,
+                    0,
+                    0,
+                    width,
+                    height
+                );
 
+                const dataUrl =
+                    canvas.toDataURL(
+                        "image/jpeg",
+                        .78
+                    );
 
-            reader.onerror =
-                reject;
+                const approximateSize =
+                    Math.floor(
+                        dataUrl.length * .75
+                    );
 
+                if(
+                    approximateSize >
+                    2 * 1024 * 1024
+                ){
 
-            reader.readAsDataURL(
-                file
+                    reject(
+                        new Error(
+                            "الصورة بعد الضغط ما زالت كبيرة."
+                        )
+                    );
+
+                    return;
+                }
+
+                resolve(dataUrl);
+
+            };
+
+            img.onerror =
+                ()=>reject(
+                    new Error(
+                        "تعذر قراءة الصورة."
+                    )
+                );
+
+            img.src =
+                reader.result;
+
+        };
+
+        reader.onerror =
+            ()=>reject(
+                new Error(
+                    "تعذر قراءة الملف."
+                )
             );
 
-        }
-    );
+        reader.readAsDataURL(file);
+
+    });
 
 }
 
-
 /* =====================================================
-   اختيار الصورة
+   IMAGE INPUT
 ===================================================== */
 
 aiImageInput.addEventListener(
@@ -3051,144 +2146,83 @@ aiImageInput.addEventListener(
         const file =
             this.files?.[0];
 
-
         if(!file){
-
             return;
-
         }
-
-
-        if(
-            file.size >
-            10 * 1024 * 1024
-        ){
-
-            alert(
-                "حجم الصورة الأصلي كبير جدًا. اختر صورة أقل من 10MB."
-            );
-
-            this.value =
-                "";
-
-            return;
-
-        }
-
 
         try{
 
-            setStatus(
-                "جاري تجهيز الصورة..."
-            );
-
+            aiStatus.textContent =
+                "جاري تجهيز الصورة...";
 
             selectedAIImage =
-                await compressImage(
-                    file,
-                    1600,
-                    .78
-                );
-
-
-            /*
-            التأكد من أن الصورة المضغوطة
-            أقل من 2MB
-            */
-
-            const base64Size =
-                Math.floor(
-                    selectedAIImage.length *
-                    .75
-                );
-
-
-            if(
-                base64Size >
-                2 * 1024 * 1024
-            ){
-
-                selectedAIImage =
-                    await compressImage(
-                        file,
-                        1200,
-                        .65
-                    );
-
-            }
-
+                await compressImage(file);
 
             aiPreviewImage.src =
                 selectedAIImage;
 
-
             aiImagePreview.style.display =
                 "block";
 
+            aiStatus.textContent =
+                "تم تجهيز الصورة.";
 
-            setStatus(
-                "تم تجهيز الصورة"
-            );
-
-        }
-
-        catch(error){
-
-            console.error(error);
+        }catch(error){
 
             selectedAIImage =
                 null;
 
-            setStatus(
-                "تعذر تجهيز الصورة"
-            );
+            aiImagePreview.style.display =
+                "none";
+
+            aiStatus.textContent =
+                error.message ||
+                "تعذر تجهيز الصورة.";
 
         }
 
     }
 );
 
-
 /* =====================================================
-   إرسال للمستشار
+   SEND
 ===================================================== */
 
-async function sendToAI(){
+async function sendAIMessage(
+    customMessage = null,
+    generateImage = false
+){
 
     const message =
-        aiInput.value.trim();
+        (
+            customMessage !== null
+                ? customMessage
+                : aiInput.value
+        ).trim();
 
-
-    if(
-        !message &&
-        !selectedAIImage
-    ){
+    if(!message && !selectedAIImage){
 
         return;
+    }
+
+    if(message){
+
+        addMessage(
+            message,
+            "user"
+        );
 
     }
 
+    aiInput.value = "";
 
-    addMessage(
-        message ||
-        "حلل هذه الصورة.",
-        "user",
-        selectedAIImage
-    );
-
-
-    aiInput.value =
-        "";
-
-
-    setStatus(
-        "المستشار يفكر..."
-    );
-
+    aiStatus.textContent =
+        generateImage
+            ? "جاري إعداد التصور..."
+            : "جاري التفكير...";
 
     aiSend.disabled =
         true;
-
 
     try{
 
@@ -3196,7 +2230,6 @@ async function sendToAI(){
             await fetch(
                 "/api/chat",
                 {
-
                     method:"POST",
 
                     headers:{
@@ -3206,21 +2239,20 @@ async function sendToAI(){
 
                     body:JSON.stringify({
 
-                        message:
-                            message,
+                        message:message,
 
                         image:
-                            selectedAIImage
+                            selectedAIImage,
+
+                        generateImage:
+                            generateImage
 
                     })
-
                 }
             );
 
-
         const data =
             await response.json();
-
 
         if(!response.ok){
 
@@ -3231,97 +2263,97 @@ async function sendToAI(){
 
         }
 
-
-        if(
-            data.type ===
-            "image"
-        ){
-
-            addMessage(
-                data.reply ||
-                "تم إنشاء التصميم.",
-                "assistant",
-                data.image
-            );
-
-        }
-
-        else{
-
-            addMessage(
-                data.reply ||
-                "لم يصل رد.",
-                "assistant"
-            );
-
+        if(data.type === "image"){
 
             if(data.reply){
 
-                speakAIResponse(
+                addMessage(
+                    data.reply,
+                    "bot"
+                );
+
+            }
+
+            if(data.image){
+
+                addImageMessage(
+                    data.image
+                );
+
+            }
+
+        }else{
+
+            const botMessage =
+                addMessage(
+                    data.reply ||
+                    "لم يصل رد من المستشار.",
+                    "bot"
+                );
+
+            if(data.reply){
+
+                addSpeakButton(
+                    botMessage,
                     data.reply
                 );
+
+                if(
+                    window.voiceModeActive
+                ){
+
+                    speakAIResponse(
+                        data.reply
+                    );
+
+                }
 
             }
 
         }
 
-
-        setStatus(
-            "جاهز"
-        );
-
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-
-        addMessage(
-            "تعذر تشغيل المستشار حالياً. حاول مرة أخرى.",
-            "assistant"
-        );
-
-
-        setStatus(
-            "حدث خطأ"
-        );
-
-    }
-
-    finally{
-
-        aiSend.disabled =
-            false;
-
         selectedAIImage =
             null;
+
+        aiImagePreview.style.display =
+            "none";
 
         aiImageInput.value =
             "";
 
-        aiImagePreview.style.display =
-            "none";
+        aiStatus.textContent =
+            "جاهز لخدمتك";
+
+    }catch(error){
+
+        addMessage(
+            error.message ||
+            "تعذر تشغيل المستشار حالياً.",
+            "bot"
+        );
+
+        aiStatus.textContent =
+            "حدث خطأ، حاول مرة أخرى.";
+
+    }finally{
+
+        aiSend.disabled =
+            false;
 
     }
 
 }
 
-
 /* =====================================================
-   زر الإرسال
+   BUTTON
 ===================================================== */
 
 aiSend.addEventListener(
     "click",
-    sendToAI
+    ()=>{
+        sendAIMessage();
+    }
 );
-
-
-/* =====================================================
-   Enter للإرسال
-===================================================== */
 
 aiInput.addEventListener(
     "keydown",
@@ -3334,203 +2366,206 @@ aiInput.addEventListener(
 
             event.preventDefault();
 
-            sendToAI();
+            sendAIMessage();
 
         }
 
     }
 );
 
-
 /* =====================================================
-   إنشاء تصميم / تعديل صورة
+   GENERATE
 ===================================================== */
 
 generateDesignBtn.addEventListener(
     "click",
-    async function(){
+    function(){
 
         const message =
             aiInput.value.trim();
 
+        if(!message && !selectedAIImage){
 
-        if(
-            !message &&
-            !selectedAIImage
-        ){
-
-            alert(
-                "اكتب وصف التصميم أو أضف صورة أولاً."
+            addMessage(
+                "اكتب وصف التصميم أو أرسل صورة للمكان أولاً.",
+                "bot"
             );
 
             return;
-
         }
 
-
-        addMessage(
+        sendAIMessage(
             message ||
-            "عدّل هذه الصورة بتصميم مناسب.",
-            "user",
-            selectedAIImage
+            "عدّل الصورة بتصميم أثاث مناسب.",
+            true
         );
 
+    }
+);
 
-        aiInput.value =
-            "";
+/* =====================================================
+   SPEECH RECOGNITION
+===================================================== */
 
+let recognition = null;
 
-        setStatus(
-            selectedAIImage
-            ? "جاري تعديل الصورة..."
-            : "جاري إنشاء التصميم..."
-        );
+let recognizing = false;
 
+const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
 
-        generateDesignBtn.disabled =
-            true;
+if(SpeechRecognition){
 
+    recognition =
+        new SpeechRecognition();
 
-        try{
+    recognition.lang =
+        "ar-SA";
 
-            const response =
-                await fetch(
-                    "/api/chat",
-                    {
+    recognition.continuous =
+        false;
 
-                        method:"POST",
+    recognition.interimResults =
+        false;
 
-                        headers:{
-                            "Content-Type":
-                                "application/json"
-                        },
+    recognition.onstart =
+        function(){
 
-                        body:JSON.stringify({
+            recognizing =
+                true;
 
-                            message:
-                                message,
+            aiVoiceBtn.textContent =
+                "⏹ إيقاف الصوت";
 
-                            image:
-                                selectedAIImage,
+            aiStatus.textContent =
+                "أستمع إليك...";
 
-                            generateImage:
-                                true
+        };
 
-                        })
+    recognition.onresult =
+        function(event){
 
-                    }
-                );
+            const transcript =
+                event.results[0][0].transcript;
 
+            aiInput.value =
+                transcript;
 
-            const data =
-                await response.json();
+            aiStatus.textContent =
+                "تم التعرف على كلامك.";
 
+        };
 
-            if(!response.ok){
+    recognition.onerror =
+        function(){
 
-                throw new Error(
-                    data.error ||
-                    "تعذر إنشاء الصورة."
-                );
+            aiStatus.textContent =
+                "تعذر التعرف على الصوت.";
 
-            }
+        };
 
+    recognition.onend =
+        function(){
 
-            if(data.image){
-
-                addMessage(
-                    data.reply ||
-                    "تم إنشاء التصور.",
-                    "assistant",
-                    data.image
-                );
-
-            }
-
-
-            setStatus(
-                "تم إنشاء التصميم"
-            );
-
-        }
-
-        catch(error){
-
-            console.error(error);
-
-            addMessage(
-                "تعذر إنشاء التصميم حالياً.",
-                "assistant"
-            );
-
-            setStatus(
-                "حدث خطأ"
-            );
-
-        }
-
-        finally{
-
-            generateDesignBtn.disabled =
+            recognizing =
                 false;
 
-            selectedAIImage =
-                null;
+            aiVoiceBtn.textContent =
+                "🎤 صوت";
 
-            aiImageInput.value =
-                "";
+        };
 
-            aiImagePreview.style.display =
-                "none";
+}else{
+
+    aiVoiceBtn.textContent =
+        "🎤 غير مدعوم";
+
+}
+
+/* =====================================================
+   VOICE BUTTON
+===================================================== */
+
+aiVoiceBtn.addEventListener(
+    "click",
+    function(){
+
+        if(!recognition){
+
+            aiStatus.textContent =
+                "المتصفح الحالي لا يدعم إدخال الصوت.";
+
+            return;
+        }
+
+        if(recognizing){
+
+            recognition.stop();
+
+        }else{
+
+            recognition.start();
 
         }
 
     }
 );
 
-
 /* =====================================================
-   الصوت الاحترافي
+   PROFESSIONAL TTS
 ===================================================== */
+
+window.voiceModeActive =
+    false;
+
+function addSpeakButton(
+    messageElement,
+    text
+){
+
+    const button =
+        document.createElement("button");
+
+    button.className =
+        "speak-btn";
+
+    button.type =
+        "button";
+
+    button.textContent =
+        "🔊 قراءة الرد";
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            speakAIResponse(text);
+
+        }
+    );
+
+    messageElement.appendChild(
+        button
+    );
+
+}
 
 async function speakAIResponse(text){
 
     if(!text){
-
         return;
-
     }
-
 
     try{
 
-        stopAIAudio();
-
-
-        const cleanText =
-            text
-                .replace(/[*#_`]/g,"")
-                .replace(/\n+/g," ")
-                .trim();
-
-
-        if(!cleanText){
-
-            return;
-
-        }
-
-
-        setStatus(
-            "جاري تجهيز الرد الصوتي..."
-        );
-
+        aiStatus.textContent =
+            "جاري تجهيز الصوت...";
 
         const response =
             await fetch(
                 "/api/speech",
                 {
-
                     method:"POST",
 
                     headers:{
@@ -3539,298 +2574,98 @@ async function speakAIResponse(text){
                     },
 
                     body:JSON.stringify({
-
-                        text:
-                            cleanText
-
+                        text:text
                     })
-
                 }
             );
-
 
         if(!response.ok){
 
             throw new Error(
-                "فشل إنشاء الصوت."
+                "تعذر إنشاء الصوت."
             );
 
         }
 
-
-        const audioBlob =
+        const blob =
             await response.blob();
 
+        const url =
+            URL.createObjectURL(blob);
 
-        const audioURL =
-            URL.createObjectURL(
-                audioBlob
-            );
+        const audio =
+            new Audio(url);
 
-
-        currentAudio =
-            new Audio(
-                audioURL
-            );
-
-
-        currentAudio.volume =
-            1;
-
-
-        currentAudio.onended =
+        audio.onended =
             function(){
 
-                URL.revokeObjectURL(
-                    audioURL
-                );
+                URL.revokeObjectURL(url);
 
-                currentAudio =
-                    null;
-
-                setStatus(
-                    "جاهز"
-                );
+                aiStatus.textContent =
+                    "جاهز لخدمتك";
 
             };
 
+        await audio.play();
 
-        await currentAudio.play();
+    }catch(error){
 
-
-        setStatus(
-            "🔊 المستشار يتحدث..."
-        );
-
-    }
-
-    catch(error){
-
-        console.error(
-            "VOICE ERROR:",
-            error
-        );
-
-
-        setStatus(
-            "جاهز"
-        );
+        aiStatus.textContent =
+            "تعذر تشغيل الصوت. اضغط قراءة الرد.";
 
     }
 
 }
 
-
 /* =====================================================
-   إيقاف الصوت
+   OPTIONAL VOICE MODE
 ===================================================== */
 
-function stopAIAudio(){
+aiVoiceBtn.addEventListener(
+    "dblclick",
+    function(){
 
-    if(currentAudio){
+        window.voiceModeActive =
+            !window.voiceModeActive;
 
-        currentAudio.pause();
-
-        currentAudio.currentTime =
-            0;
-
-        currentAudio =
-            null;
+        aiStatus.textContent =
+            window.voiceModeActive
+                ? "تم تفعيل الرد الصوتي."
+                : "تم إيقاف الرد الصوتي.";
 
     }
-
-}
-
-
-/* =====================================================
-   زر إيقاف الصوت
-===================================================== */
-
-aiStopVoiceBtn.addEventListener(
-    "click",
-    stopAIAudio
 );
 
-
 /* =====================================================
-   التحدث بالميكروفون
+   SECURITY: EXTERNAL LINKS
 ===================================================== */
 
-const SpeechRecognition =
-    window.SpeechRecognition ||
-    window.webkitSpeechRecognition;
+document
+    .querySelectorAll(
+        'a[target="_blank"]'
+    )
+    .forEach(
+        function(link){
 
-
-if(SpeechRecognition){
-
-    recognition =
-        new SpeechRecognition();
-
-
-    recognition.lang =
-        "ar-SA";
-
-
-    recognition.continuous =
-        false;
-
-
-    recognition.interimResults =
-        false;
-
-
-    recognition.maxAlternatives =
-        1;
-
-
-    recognition.onstart =
-        function(){
-
-            isListening =
-                true;
-
-
-            aiMicBtn.classList.add(
-                "listening"
+            link.setAttribute(
+                "rel",
+                "noopener noreferrer"
             );
-
-
-            aiMicBtn.textContent =
-                "🔴 جاري الاستماع";
-
-        };
-
-
-    recognition.onresult =
-        function(event){
-
-            const transcript =
-                event
-                    .results[0][0]
-                    .transcript;
-
-
-            aiInput.value =
-                transcript;
-
-
-            /*
-            إرسال الكلام مباشرة
-            */
-
-            sendToAI();
-
-        };
-
-
-    recognition.onend =
-        function(){
-
-            isListening =
-                false;
-
-
-            aiMicBtn.classList.remove(
-                "listening"
-            );
-
-
-            aiMicBtn.textContent =
-                "🎤 تحدث";
-
-        };
-
-
-    recognition.onerror =
-        function(event){
-
-            console.error(
-                "MIC ERROR:",
-                event.error
-            );
-
-
-            isListening =
-                false;
-
-
-            aiMicBtn.classList.remove(
-                "listening"
-            );
-
-
-            aiMicBtn.textContent =
-                "🎤 تحدث";
-
-        };
-
-
-    aiMicBtn.addEventListener(
-        "click",
-        function(){
-
-            if(isListening){
-
-                recognition.stop();
-
-                return;
-
-            }
-
-
-            try{
-
-                recognition.start();
-
-            }
-
-            catch(error){
-
-                console.error(error);
-
-            }
 
         }
     );
 
-}
-
-else{
-
-    aiMicBtn.disabled =
-        true;
-
-    aiMicBtn.textContent =
-        "🎤 غير مدعوم";
-
-}
-
-
 /* =====================================================
-   إغلاق بالضغط خارج النافذة
+   CLOSE AI WITH ESC
 ===================================================== */
 
 document.addEventListener(
-    "click",
+    "keydown",
     function(event){
 
-        if(
-            !aiWindow.classList.contains(
-                "open"
-            )
-        ){
+        if(event.key === "Escape"){
 
-            return;
-
-        }
-
-
-        if(
-            aiWindow.contains(event.target) ||
-            aiLauncher.contains(event.target)
-        ){
-
-            return;
+            closeAI();
 
         }
 
@@ -3839,7 +2674,5 @@ document.addEventListener(
 
 </script>
 
-
 </body>
-
 </html>
