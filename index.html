@@ -3,32 +3,61 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>نجوم الإبداع للمفروشات </title>
+<title>نجوم الإبداع للمفروشات والكنبات</title>
 
 <meta name="description"
       content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
 
+<!-- =========================
+     BROWSER / SHARING
+========================= -->
+
 <meta name="theme-color" content="#071522">
 
+<!-- أيقونة المتصفح -->
 <link rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23071522'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='62' font-family='Arial' font-weight='bold' fill='%23e4c57e'%3Eن%3C/text%3E%3C/svg%3E">
 
+<!-- أيقونة أجهزة Apple -->
 <link rel="apple-touch-icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='35' fill='%23071522'/%3E%3Ctext x='90' y='122' text-anchor='middle' font-size='110' font-family='Arial' font-weight='bold' fill='%23e4c57e'%3Eن%3C/text%3E%3C/svg%3E">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="نجوم الإبداع للمفروشات والكنبات">
-<meta property="og:description" content="كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
-<meta property="og:image" content="images/hero.jpg">
-<meta property="og:image:alt" content="نجوم الإبداع للمفروشات والكنبات">
-<meta property="og:site_name" content="نجوم الإبداع للمفروشات والكنبات">
+<!-- بيانات ظهور الموقع عند مشاركة الرابط -->
+<meta property="og:type"
+      content="website">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="نجوم الإبداع للمفروشات والكنبات">
-<meta name="twitter:description" content="كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
-<meta name="twitter:image" content="images/hero.jpg">
+<meta property="og:title"
+      content="نجوم الإبداع للمفروشات والكنبات">
+
+<meta property="og:description"
+      content="كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
+
+<meta property="og:image"
+      content="images/hero.jpg">
+
+<meta property="og:image:alt"
+      content="نجوم الإبداع للمفروشات والكنبات">
+
+<meta property="og:site_name"
+      content="نجوم الإبداع للمفروشات والكنبات">
+
+<meta name="twitter:card"
+      content="summary_large_image">
+
+<meta name="twitter:title"
+      content="نجوم الإبداع للمفروشات والكنبات">
+
+<meta name="twitter:description"
+      content="كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
+
+<meta name="twitter:image"
+      content="images/hero.jpg">
+
+<!-- =========================
+     FONTS
+========================= -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,11 +68,11 @@
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-      rel="stylesheet">
-
 <style>
+
+/* =========================
+   ROOT
+========================= */
 
 :root{
     --navy:#071522;
@@ -57,6 +86,10 @@
     --border:#e8e6df;
     --shadow:0 20px 60px rgba(5,18,29,.10);
 }
+
+/* =========================
+   RESET
+========================= */
 
 *{
     box-sizing:border-box;
@@ -73,7 +106,6 @@ body{
     background:#fff;
     color:var(--text);
     line-height:1.8;
-    overflow-x:hidden;
 }
 
 a{
@@ -92,10 +124,18 @@ textarea{
     font-family:inherit;
 }
 
+/* =========================
+   CONTAINER
+========================= */
+
 .container{
     width:min(1200px,92%);
     margin:auto;
 }
+
+/* =========================
+   TOP BAR
+========================= */
 
 .topbar{
     background:var(--navy);
@@ -104,6 +144,10 @@ textarea{
     padding:7px 15px;
     font-size:13px;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 .header{
     position:sticky;
@@ -121,6 +165,10 @@ textarea{
     justify-content:space-between;
     gap:20px;
 }
+
+/* =========================
+   LOGO
+========================= */
 
 .logo{
     display:flex;
@@ -165,6 +213,10 @@ textarea{
     font-weight:700;
 }
 
+/* =========================
+   NAV LINKS
+========================= */
+
 .nav-links{
     display:flex;
     align-items:center;
@@ -198,6 +250,10 @@ textarea{
     width:100%;
 }
 
+/* =========================
+   SOCIAL
+========================= */
+
 .nav-social{
     display:flex;
     align-items:center;
@@ -222,6 +278,10 @@ textarea{
     transform:translateY(-2px);
 }
 
+/* =========================
+   MOBILE BUTTON
+========================= */
+
 .menu-btn{
     display:none;
     border:0;
@@ -233,6 +293,10 @@ textarea{
     cursor:pointer;
     font-size:18px;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:650px;
@@ -326,6 +390,10 @@ textarea{
     color:var(--navy);
 }
 
+/* =========================
+   HERO AI BUTTON
+========================= */
+
 .hero-ai-button{
     margin-top:18px;
     width:min(440px,100%);
@@ -398,6 +466,10 @@ textarea{
     transform:translateX(-5px);
 }
 
+/* =========================
+   SECTION
+========================= */
+
 .section{
     padding:90px 0;
 }
@@ -432,6 +504,10 @@ textarea{
     color:var(--muted);
     margin-top:7px;
 }
+
+/* =========================
+   SOFAS
+========================= */
 
 .products{
     display:grid;
@@ -485,6 +561,10 @@ textarea{
     font-size:13px;
 }
 
+/* =========================
+   TABLES
+========================= */
+
 .feature-grid{
     display:grid;
     grid-template-columns:1.5fr 1fr;
@@ -535,6 +615,10 @@ textarea{
     font-size:13px;
 }
 
+/* =========================
+   DINING
+========================= */
+
 .dining-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -569,6 +653,10 @@ textarea{
     color:var(--muted);
     font-size:13px;
 }
+
+/* =========================
+   PAYMENT
+========================= */
 
 .payment-section{
     background:var(--navy) !important;
@@ -626,6 +714,10 @@ textarea{
     color:#aeb8bf;
     font-size:12px;
 }
+
+/* =========================
+   BRANCHES
+========================= */
 
 .branches{
     display:grid;
@@ -711,6 +803,10 @@ textarea{
     background:linear-gradient(135deg,#304334,#071522);
 }
 
+/* =========================
+   SALES REPRESENTATIVES
+========================= */
+
 .reps{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -779,6 +875,10 @@ textarea{
     color:var(--gold2);
 }
 
+/* =========================
+   CONTACT
+========================= */
+
 .contact-box{
     background:var(--navy);
     border-radius:28px;
@@ -835,6 +935,10 @@ textarea{
     color:var(--gold2);
 }
 
+/* =========================
+   ACCOUNTS
+========================= */
+
 .accounts{
     background:var(--cream);
     border-radius:24px;
@@ -869,6 +973,10 @@ textarea{
     background:var(--navy);
     color:#fff;
 }
+
+/* =========================
+   MODAL
+========================= */
 
 .modal{
     position:fixed;
@@ -934,11 +1042,9 @@ textarea{
     color:var(--gold);
 }
 
-
-/* =====================================================
+/* =========================================================
    AI ASSISTANT
-   RESPONSIVE + BOOTSTRAP SUPPORT
-===================================================== */
+========================================================= */
 
 .ai-launcher{
     position:fixed;
@@ -960,7 +1066,6 @@ textarea{
     font-size:13px;
     font-weight:800;
     transition:.3s;
-    touch-action:manipulation;
 }
 
 .ai-launcher:hover{
@@ -980,50 +1085,33 @@ textarea{
     font-size:17px;
 }
 
-
-/* =====================================================
+/* =========================
    AI WINDOW
-===================================================== */
+========================= */
 
 .ai-window{
     position:fixed;
     right:20px;
     bottom:90px;
-
-    width:min(430px,calc(100vw - 30px));
-
-    height:min(
-        650px,
-        calc(100dvh - 120px)
-    );
-
-    min-height:0;
-
+    width:min(430px,calc(100% - 30px));
+    height:min(650px,calc(100vh - 120px));
     background:#fff;
     z-index:1600;
-
     border-radius:24px;
-
     box-shadow:0 25px 80px rgba(0,0,0,.28);
-
     overflow:hidden;
-
     display:none;
     flex-direction:column;
-
     border:1px solid rgba(0,0,0,.06);
-
-    isolation:isolate;
 }
 
 .ai-window.show{
     display:flex;
 }
 
-
-/* =====================================================
+/* =========================
    AI HEADER
-===================================================== */
+========================= */
 
 .ai-header{
     background:linear-gradient(
@@ -1031,37 +1119,24 @@ textarea{
         var(--navy),
         #0c2638
     );
-
     color:#fff;
-
     min-height:72px;
-    height:72px;
-
-    flex:0 0 72px;
-
     padding:13px 15px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     gap:12px;
-
-    position:relative;
-    z-index:3;
 }
 
 .ai-header-info{
     display:flex;
     align-items:center;
     gap:11px;
-    min-width:0;
 }
 
 .ai-header-icon{
     width:43px;
     height:43px;
-    min-width:43px;
     border-radius:14px;
     background:rgba(228,197,126,.13);
     color:var(--gold2);
@@ -1074,15 +1149,11 @@ textarea{
 .ai-header-text{
     display:flex;
     flex-direction:column;
-    min-width:0;
 }
 
 .ai-header strong{
     font-size:14px;
     font-weight:900;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
 }
 
 .ai-status{
@@ -1104,37 +1175,26 @@ textarea{
 .ai-close{
     width:36px;
     height:36px;
-    min-width:36px;
     border:0;
     background:rgba(255,255,255,.08);
     color:#fff;
     border-radius:10px;
     cursor:pointer;
     transition:.2s;
-    touch-action:manipulation;
 }
 
 .ai-close:hover{
     background:rgba(255,255,255,.16);
 }
 
-
-/* =====================================================
+/* =========================
    AI MESSAGES
-===================================================== */
+========================= */
 
 .ai-messages{
-    flex:1 1 auto;
-
-    min-height:0;
-
-    overflow-x:hidden;
-    overflow-y:auto;
-
-    -webkit-overflow-scrolling:touch;
-
+    flex:1;
+    overflow:auto;
     padding:18px 14px;
-
     background:
         radial-gradient(
             circle at top right,
@@ -1142,7 +1202,6 @@ textarea{
             transparent 35%
         ),
         #f7f8f8;
-
     scroll-behavior:smooth;
 }
 
@@ -1151,7 +1210,6 @@ textarea{
     align-items:flex-end;
     gap:7px;
     margin-bottom:13px;
-    min-width:0;
 }
 
 .ai-message-row.user{
@@ -1177,7 +1235,6 @@ textarea{
 
 .ai-bubble-wrap{
     max-width:84%;
-    min-width:0;
     display:flex;
     flex-direction:column;
 }
@@ -1188,7 +1245,6 @@ textarea{
     font-size:13px;
     line-height:1.9;
     white-space:pre-wrap;
-    overflow-wrap:anywhere;
     word-break:break-word;
 }
 
@@ -1235,7 +1291,6 @@ textarea{
     align-items:center;
     justify-content:center;
     transition:.2s;
-    touch-action:manipulation;
 }
 
 .ai-speak:hover,
@@ -1249,10 +1304,9 @@ textarea{
     color:var(--gold2);
 }
 
-
-/* =====================================================
+/* =========================
    TYPING
-===================================================== */
+========================= */
 
 .ai-typing{
     display:flex;
@@ -1282,23 +1336,20 @@ textarea{
         transform:translateY(0);
         opacity:.4;
     }
-
     40%{
         transform:translateY(-4px);
         opacity:1;
     }
 }
 
-
-/* =====================================================
+/* =========================
    IMAGE PREVIEW
-===================================================== */
+========================= */
 
 .ai-attachment{
     display:none;
     padding:8px 12px 0;
     background:#fff;
-    flex:0 0 auto;
 }
 
 .ai-attachment.show{
@@ -1333,41 +1384,25 @@ textarea{
     font-size:11px;
 }
 
-
-/* =====================================================
+/* =========================
    AI INPUT
-===================================================== */
+========================= */
 
 .ai-input-area{
     background:#fff;
     border-top:1px solid #e7e9ea;
-
-    padding:
-        10px
-        10px
-        max(10px, env(safe-area-inset-bottom));
-
-    flex:0 0 auto;
-
-    position:relative;
-    z-index:5;
+    padding:10px;
 }
 
 .ai-input-box{
     border:1px solid #dfe3e5;
     border-radius:17px;
     background:#fff;
-
     display:flex;
     align-items:flex-end;
-
     gap:7px;
-
     padding:7px;
-
     transition:.2s;
-
-    min-width:0;
 }
 
 .ai-input-box:focus-within{
@@ -1377,7 +1412,6 @@ textarea{
 
 .ai-input{
     flex:1;
-    min-width:0;
 }
 
 .ai-input textarea{
@@ -1385,19 +1419,12 @@ textarea{
     resize:none;
     height:42px;
     max-height:120px;
-
     border:0;
     outline:none;
-
     padding:8px 7px;
-
     font-size:13px;
     color:var(--text);
     background:transparent;
-
-    overflow-y:auto;
-
-    -webkit-appearance:none;
 }
 
 .ai-input textarea::placeholder{
@@ -1408,29 +1435,20 @@ textarea{
     display:flex;
     align-items:center;
     gap:3px;
-    flex:0 0 auto;
 }
 
 .ai-tool{
     width:38px;
     height:38px;
-    min-width:38px;
-
     border:0;
     background:transparent;
     color:#707b82;
     border-radius:11px;
-
     cursor:pointer;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     transition:.2s;
-
-    touch-action:manipulation;
-    -webkit-tap-highlight-color:transparent;
 }
 
 .ai-tool:hover{
@@ -1448,7 +1466,6 @@ textarea{
     0%,100%{
         box-shadow:0 0 0 0 rgba(166,59,44,.15);
     }
-
     50%{
         box-shadow:0 0 0 7px rgba(166,59,44,0);
     }
@@ -1457,24 +1474,15 @@ textarea{
 .ai-send{
     width:40px;
     height:40px;
-    min-width:40px;
-
     border:0;
     border-radius:12px;
-
     background:var(--navy);
     color:var(--gold2);
-
     cursor:pointer;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     transition:.2s;
-
-    touch-action:manipulation;
-    -webkit-tap-highlight-color:transparent;
 }
 
 .ai-send:hover{
@@ -1495,64 +1503,9 @@ textarea{
     margin-top:5px;
 }
 
-
-/* =====================================================
-   RECORDING STATUS
-===================================================== */
-
-.ai-recording-status{
-    display:none;
-
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-
-    padding:7px 10px;
-
-    color:#a63b2c;
-    background:#fff7f5;
-
-    border-radius:10px;
-
-    font-size:11px;
-    font-weight:800;
-
-    margin-bottom:7px;
-}
-
-.ai-recording-status.show{
-    display:flex;
-}
-
-.ai-recording-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#d94235;
-    animation:recordingDot 1s infinite;
-}
-
-@keyframes recordingDot{
-    0%,100%{
-        opacity:1;
-        transform:scale(1);
-    }
-
-    50%{
-        opacity:.35;
-        transform:scale(.75);
-    }
-}
-
-.ai-recording-time{
-    direction:ltr;
-    unicode-bidi:plaintext;
-}
-
-
-/* =====================================================
+/* =========================
    DESIGN RESULT
-===================================================== */
+========================= */
 
 .ai-design-result{
     margin-top:8px;
@@ -1560,7 +1513,6 @@ textarea{
     overflow:hidden;
     border:1px solid var(--border);
     background:#fff;
-    max-width:100%;
 }
 
 .ai-design-result img{
@@ -1576,10 +1528,9 @@ textarea{
     font-size:11px;
 }
 
-
-/* =====================================================
+/* =========================
    SAVE IMAGE BUTTON
-===================================================== */
+========================= */
 
 .ai-save-image{
     width:calc(100% - 20px);
@@ -1587,27 +1538,20 @@ textarea{
     padding:11px 14px;
     border:0;
     border-radius:12px;
-
     background:linear-gradient(
         135deg,
         var(--gold),
         var(--gold2)
     );
-
     color:var(--navy);
-
     font-family:inherit;
     font-size:12px;
     font-weight:900;
-
     cursor:pointer;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     gap:8px;
-
     transition:.25s;
 }
 
@@ -1620,39 +1564,30 @@ textarea{
     transform:scale(.98);
 }
 
-
-/* =====================================================
+/* =========================
    WHATSAPP
-===================================================== */
+========================= */
 
 .whatsapp{
     position:fixed;
     left:20px;
     bottom:20px;
-
     width:55px;
     height:55px;
-
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     background:#25d366;
     color:#fff;
-
     font-size:28px;
-
     z-index:1500;
-
     box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-
-/* =====================================================
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 .footer{
     background:#04101b;
@@ -1699,10 +1634,9 @@ textarea{
     font-size:11px;
 }
 
-
-/* =====================================================
+/* =========================
    RESPONSIVE
-===================================================== */
+========================= */
 
 @media(max-width:1100px){
 
@@ -1752,7 +1686,6 @@ textarea{
         grid-template-columns:repeat(2,1fr);
     }
 }
-
 
 @media(max-width:700px){
 
@@ -1861,115 +1794,30 @@ textarea{
         grid-template-columns:1fr;
     }
 
-    /*
-       المستشار على الهاتف:
-       يأخذ تقريبًا كامل عرض الشاشة
-       ويستخدم ارتفاع الشاشة الحقيقي الديناميكي.
-    */
-
     .ai-window{
-        top:auto;
-        right:8px;
-        left:8px;
-
-        bottom:
-            calc(72px + env(safe-area-inset-bottom));
-
+        right:10px;
+        left:10px;
+        bottom:80px;
         width:auto;
-
-        height:
-            calc(
-                100dvh -
-                92px -
-                env(safe-area-inset-bottom)
-            );
-
-        max-height:none;
-        min-height:0;
-
+        height:calc(100vh - 105px);
+        max-height:680px;
         border-radius:20px;
-    }
-
-    .ai-header{
-        min-height:64px;
-        height:64px;
-        flex-basis:64px;
-        padding:10px 11px;
-    }
-
-    .ai-header-icon{
-        width:38px;
-        height:38px;
-        min-width:38px;
-        border-radius:11px;
-    }
-
-    .ai-header strong{
-        font-size:13px;
-    }
-
-    .ai-messages{
-        padding:14px 10px;
-    }
-
-    .ai-bubble-wrap{
-        max-width:88%;
-    }
-
-    .ai-message{
-        font-size:13px;
-        padding:10px 11px;
-    }
-
-    .ai-input-area{
-        padding:
-            8px
-            8px
-            max(8px,env(safe-area-inset-bottom));
-    }
-
-    .ai-input-box{
-        gap:4px;
-        padding:5px;
-        border-radius:15px;
-    }
-
-    .ai-tool{
-        width:35px;
-        height:35px;
-        min-width:35px;
-    }
-
-    .ai-send{
-        width:37px;
-        height:37px;
-        min-width:37px;
-    }
-
-    .ai-input textarea{
-        font-size:13px;
-        padding:7px 5px;
     }
 
     .ai-launcher{
         right:12px;
-        bottom:
-            calc(12px + env(safe-area-inset-bottom));
-
+        bottom:12px;
         padding:0 13px 0 9px;
         min-height:54px;
     }
 
     .whatsapp{
         left:12px;
-        bottom:
-            calc(12px + env(safe-area-inset-bottom));
-
+        bottom:12px;
         width:54px;
         height:54px;
     }
 }
-
 
 @media(max-width:430px){
 
@@ -2012,105 +1860,7 @@ textarea{
         width:34px;
         height:34px;
     }
-
-    .ai-window{
-        right:5px;
-        left:5px;
-
-        border-radius:18px;
-
-        bottom:
-            calc(68px + env(safe-area-inset-bottom));
-
-        height:
-            calc(
-                100dvh -
-                88px -
-                env(safe-area-inset-bottom)
-            );
-    }
-
-    .ai-header{
-        padding-left:9px;
-        padding-right:9px;
-    }
-
-    .ai-message-row{
-        gap:5px;
-    }
-
-    .ai-avatar{
-        width:27px;
-        height:27px;
-        flex-basis:27px;
-    }
-
-    .ai-bubble-wrap{
-        max-width:89%;
-    }
-
-    .ai-tools{
-        gap:1px;
-    }
-
-    .ai-tool{
-        width:33px;
-        min-width:33px;
-    }
-
-    .ai-send{
-        width:36px;
-        min-width:36px;
-    }
 }
-
-
-/*
-   أجهزة iPhone الصغيرة جدًا
-*/
-
-@media(max-width:375px){
-
-    .ai-window{
-        right:3px;
-        left:3px;
-    }
-
-    .ai-header-text{
-        max-width:175px;
-    }
-
-    .ai-message{
-        font-size:12px;
-        line-height:1.8;
-    }
-
-    .ai-input textarea{
-        font-size:12px;
-    }
-}
-
-
-/*
-   Landscape على الهاتف
-*/
-
-@media(max-width:700px) and (orientation:landscape){
-
-    .ai-window{
-        bottom:8px;
-        height:
-            calc(
-                100dvh - 16px
-            );
-    }
-
-    .ai-launcher,
-    .whatsapp{
-        display:none;
-    }
-}
-
 
 /* =========================
    NO SCROLL
@@ -2120,49 +1870,22 @@ body.modal-open{
     overflow:hidden;
 }
 
-body.ai-fullscreen-open{
-    overflow:hidden;
-}
-
-
-/*
-   عند فتح لوحة المفاتيح على الهاتف
-*/
-
-@supports (height: 100dvh){
-
-    .ai-window{
-        max-height:100dvh;
-    }
-
-}
-
-
-/* منع التحديد والضغط المزدوج على أزرار المستشار */
-
-.ai-window button{
-    -webkit-tap-highlight-color:transparent;
-    user-select:none;
-}
-
-
-/* تحسين Safari */
-
-.ai-window,
-.ai-messages,
-.ai-input-area{
-    -webkit-backface-visibility:hidden;
-    backface-visibility:hidden;
-}
-
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     TOP BAR
+========================= -->
+
 <div class="topbar">
     شحن لجميع مدن المملكة وخارجها
 </div>
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header class="header">
 
@@ -2239,6 +1962,9 @@ body.ai-fullscreen-open{
 
 </header>
 
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -2327,6 +2053,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     SOFAS
+========================= -->
 
 <section class="section" id="sofas">
 
@@ -2465,6 +2194,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     TABLES
+========================= -->
 
 <section class="section" id="tables">
 
@@ -2552,6 +2284,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     DINING
+========================= -->
 
 <section class="section" id="dining">
 
@@ -2642,6 +2377,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     PAYMENT OPTIONS
+========================= -->
 
 <section class="section payment-section">
 
@@ -2755,6 +2493,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     BRANCHES
+========================= -->
 
 <section class="section" id="branches">
 
@@ -2944,6 +2685,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     SALES REPS
+========================= -->
 
 <section class="section" id="reps">
 
@@ -3100,7 +2844,9 @@ body.ai-fullscreen-open{
 </div>
 
 </section>
-
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section" id="contact">
 
@@ -3229,6 +2975,9 @@ body.ai-fullscreen-open{
 
 </section>
 
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
@@ -3310,6 +3059,9 @@ body.ai-fullscreen-open{
 
 </footer>
 
+<!-- =========================
+     ACCOUNTS MODAL
+========================= -->
 
 <div class="modal"
      id="accountsModal"
@@ -3337,7 +3089,6 @@ body.ai-fullscreen-open{
 
 </div>
 
-
 <!-- =====================================================
      AI LAUNCHER
 ===================================================== -->
@@ -3355,16 +3106,12 @@ body.ai-fullscreen-open{
 
 </button>
 
-
 <!-- =====================================================
      AI WINDOW
 ===================================================== -->
 
 <div class="ai-window"
-     id="aiWindow"
-     role="dialog"
-     aria-modal="false"
-     aria-label="مستشار نجوم الإبداع">
+     id="aiWindow">
 
     <div class="ai-header">
 
@@ -3400,7 +3147,6 @@ body.ai-fullscreen-open{
 
     </div>
 
-
     <div class="ai-messages"
          id="aiMessages">
 
@@ -3414,7 +3160,7 @@ body.ai-fullscreen-open{
 
                 <div class="ai-message bot">
 
-                    أهلاً بك في نجوم الإبداع للمفروشات.
+                    أهلاً بك في نجوم الإبداع للمفروشات والكنبات.
                     أنا مستشارك، تحدث معي بشكل طبيعي عن المجلس أو الكنبة أو المقاس أو اللون أو الصورة التي تريد تحليلها، وسأكمل معك الحوار خطوة بخطوة.
 
                 </div>
@@ -3445,7 +3191,6 @@ body.ai-fullscreen-open{
 
     </div>
 
-
     <div class="ai-attachment"
          id="aiAttachment">
 
@@ -3467,27 +3212,7 @@ body.ai-fullscreen-open{
 
     </div>
 
-
     <div class="ai-input-area">
-
-        <!-- حالة التسجيل -->
-
-        <div class="ai-recording-status"
-             id="aiRecordingStatus">
-
-            <span class="ai-recording-dot"></span>
-
-            <span>
-                جاري التسجيل
-            </span>
-
-            <span class="ai-recording-time"
-                  id="aiRecordingTime">
-                00:00
-            </span>
-
-        </div>
-
 
         <div class="ai-input-box">
 
@@ -3495,8 +3220,7 @@ body.ai-fullscreen-open{
 
                 <textarea id="aiInput"
                           placeholder="اكتب رسالتك هنا..."
-                          rows="1"
-                          autocomplete="off"></textarea>
+                          rows="1"></textarea>
 
             </div>
 
@@ -3508,7 +3232,6 @@ body.ai-fullscreen-open{
                        hidden>
 
                 <button class="ai-tool"
-                        type="button"
                         onclick="document.getElementById('aiImageInput').click()"
                         aria-label="إضافة صورة">
 
@@ -3517,7 +3240,6 @@ body.ai-fullscreen-open{
                 </button>
 
                 <button class="ai-tool"
-                        type="button"
                         id="aiMicButton"
                         onclick="toggleRecording()"
                         aria-label="تسجيل صوت">
@@ -3527,7 +3249,6 @@ body.ai-fullscreen-open{
                 </button>
 
                 <button class="ai-send"
-                        type="button"
                         id="aiSendButton"
                         onclick="sendAI()"
                         aria-label="إرسال">
@@ -3548,6 +3269,9 @@ body.ai-fullscreen-open{
 
 </div>
 
+<!-- =========================
+     WHATSAPP
+========================= -->
 
 <a class="whatsapp"
    href="https://wa.me/966551496121"
@@ -3557,7 +3281,6 @@ body.ai-fullscreen-open{
     <i class="fa-brands fa-whatsapp"></i>
 
 </a>
-
 
 <script>
 
@@ -3609,6 +3332,7 @@ document.querySelectorAll(".nav-links a")
 
 /* =====================================================
    ACCOUNTS
+   الإدارة حُذفت من القائمة
 ===================================================== */
 
 const accountData = {
@@ -3630,7 +3354,6 @@ const accountData = {
         snapchat:"https://snapchat.com/t/px7IcCsS",
         instagram:"https://www.instagram.com/njwmlbdl?stkn=NmFoNHRhd3p5a24x&utm_source=qr",
         tiktok:"https://www.tiktok.com/@jj_505jj?_r=1&_t=ZS-9ADns4CpTC4"
-
     },
 
     "تبوك":{
@@ -3640,7 +3363,6 @@ const accountData = {
         snapchat:"https://apps.apple.com/app/id447188370",
         instagram:"https://www.instagram.com/njwmlbdl?stkn=NmFoNHRhd3p5a24x&utm_source=qr",
         tiktok:"https://apps.apple.com/app/id835599320"
-
     },
 
     "الأحساء":{
@@ -3779,13 +3501,9 @@ let activeSpeechButton = null;
 
 let activeUtterance = null;
 
-let recordingStartedAt = null;
-
-let recordingTimer = null;
-
 
 /* =====================================================
-   OPEN AI
+   OPEN AI FROM HOMEPAGE
 ===================================================== */
 
 function openNajoomAI(){
@@ -3798,10 +3516,6 @@ function openNajoomAI(){
     }
 
     windowAI.classList.add("show");
-
-    document.body.classList.add("ai-fullscreen-open");
-
-    updateAIViewport();
 
     setTimeout(() => {
 
@@ -3932,22 +3646,9 @@ function toggleAI(){
     const windowAI =
         document.getElementById("aiWindow");
 
-    if(!windowAI){
-        return;
-    }
-
-    const opening =
-        !windowAI.classList.contains("show");
-
     windowAI.classList.toggle("show");
 
-    if(opening){
-
-        document.body.classList.add(
-            "ai-fullscreen-open"
-        );
-
-        updateAIViewport();
+    if(windowAI.classList.contains("show")){
 
         setTimeout(() => {
 
@@ -3955,122 +3656,20 @@ function toggleAI(){
                 document.getElementById("aiInput");
 
             if(input){
-
                 input.focus();
-
             }
 
             scrollAIMessages();
 
-        },150);
+        },100);
 
     }else{
 
-        document.body.classList.remove(
-            "ai-fullscreen-open"
-        );
-
         stopCurrentSpeech();
 
-        /*
-           لا نوقف التسجيل تلقائيًا عند إغلاق المستشار
-           إلا إذا كان المستخدم فعليًا يسجل.
-        */
-
-        if(isRecording){
-
-            stopRecording();
-
-        }
-
     }
 
 }
-
-
-/* =====================================================
-   MOBILE VIEWPORT
-===================================================== */
-
-function updateAIViewport(){
-
-    const windowAI =
-        document.getElementById("aiWindow");
-
-    if(!windowAI){
-        return;
-    }
-
-    /*
-       visualViewport يساعد Safari وiPhone
-       عندما تظهر لوحة المفاتيح.
-    */
-
-    if(window.visualViewport){
-
-        const viewport =
-            window.visualViewport;
-
-        const height =
-            viewport.height;
-
-        if(window.innerWidth <= 700){
-
-            const bottomGap =
-                Math.max(
-                    0,
-                    window.innerHeight -
-                    viewport.height -
-                    viewport.offsetTop
-                );
-
-            windowAI.style.setProperty(
-                "--keyboard-height",
-                bottomGap + "px"
-            );
-
-        }
-
-    }
-
-}
-
-
-if(window.visualViewport){
-
-    window.visualViewport.addEventListener(
-        "resize",
-        function(){
-
-            updateAIViewport();
-
-            setTimeout(
-                scrollAIMessages,
-                80
-            );
-
-        }
-    );
-
-    window.visualViewport.addEventListener(
-        "scroll",
-        function(){
-
-            updateAIViewport();
-
-        }
-    );
-
-}
-
-window.addEventListener(
-    "resize",
-    function(){
-
-        updateAIViewport();
-
-    }
-);
 
 
 /* =====================================================
@@ -4202,16 +3801,8 @@ function scrollAIMessages(){
     const messages =
         document.getElementById("aiMessages");
 
-    if(!messages){
-        return;
-    }
-
-    requestAnimationFrame(() => {
-
-        messages.scrollTop =
-            messages.scrollHeight;
-
-    });
+    messages.scrollTop =
+        messages.scrollHeight;
 
 }
 
@@ -4383,7 +3974,7 @@ function removeSelectedImage(){
 
 
 /* =====================================================
-   CHECK DESIGN FOLLOW UP
+   CHECK IF MESSAGE IS IMAGE FOLLOW-UP
 ===================================================== */
 
 function isDesignFollowUp(message){
@@ -4490,6 +4081,12 @@ async function sendAI(){
         addUserImageMessage(
             selectedImageBase64
         );
+
+    }else if(
+        currentDesignImage &&
+        imageToSend === currentDesignImage &&
+        isDesignFollowUp(message)
+    ){
 
     }
 
@@ -4712,7 +4309,7 @@ function addUserImageMessage(image){
 
 
 /* =====================================================
-   DESIGN IMAGE
+   DESIGN IMAGE + SAVE BUTTON
 ===================================================== */
 
 function addDesignImage(
@@ -4911,7 +4508,7 @@ async function saveAIImage(imageUrl){
 
 
 /* =====================================================
-   VOICE SYNTHESIS
+   VOICE / SPEECH SYNTHESIS
 ===================================================== */
 
 function stopCurrentSpeech(){
@@ -4941,6 +4538,10 @@ function stopCurrentSpeech(){
 
 }
 
+
+/* =====================================================
+   SPEAK MESSAGE
+===================================================== */
 
 function speakMessage(button){
 
@@ -5069,7 +4670,6 @@ function speakMessage(button){
 
 }
 
-
 if(
     "speechSynthesis" in window
 ){
@@ -5141,280 +4741,10 @@ async function copyMessage(button){
 
 
 /* =====================================================
-   MICROPHONE
-   تحديد صيغة التسجيل المناسبة للمتصفح
-===================================================== */
-
-function getSupportedAudioMimeType(){
-
-    if(
-        typeof MediaRecorder === "undefined"
-    ){
-
-        return "";
-
-    }
-
-    const types = [
-
-        "audio/mp4",
-
-        "audio/webm;codecs=opus",
-
-        "audio/webm",
-
-        "audio/ogg;codecs=opus",
-
-        "audio/ogg"
-
-    ];
-
-    for(
-        const type of types
-    ){
-
-        try{
-
-            if(
-                MediaRecorder.isTypeSupported &&
-                MediaRecorder.isTypeSupported(type)
-            ){
-
-                return type;
-
-            }
-
-        }catch(error){
-
-            console.warn(
-                "MIME CHECK ERROR:",
-                error
-            );
-
-        }
-
-    }
-
-    return "";
-
-}
-
-
-/* =====================================================
-   START RECORDING TIMER
-===================================================== */
-
-function startRecordingTimer(){
-
-    stopRecordingTimer();
-
-    recordingStartedAt =
-        Date.now();
-
-    const timeElement =
-        document.getElementById(
-            "aiRecordingTime"
-        );
-
-    recordingTimer =
-        setInterval(
-            function(){
-
-                if(!recordingStartedAt){
-
-                    return;
-
-                }
-
-                const elapsed =
-                    Math.floor(
-                        (
-                            Date.now() -
-                            recordingStartedAt
-                        ) / 1000
-                    );
-
-                const minutes =
-                    Math.floor(
-                        elapsed / 60
-                    );
-
-                const seconds =
-                    elapsed % 60;
-
-                timeElement.textContent =
-                    String(minutes).padStart(2,"0") +
-                    ":" +
-                    String(seconds).padStart(2,"0");
-
-            },
-            250
-        );
-
-}
-
-
-function stopRecordingTimer(){
-
-    if(recordingTimer){
-
-        clearInterval(
-            recordingTimer
-        );
-
-        recordingTimer = null;
-
-    }
-
-    recordingStartedAt =
-        null;
-
-    const timeElement =
-        document.getElementById(
-            "aiRecordingTime"
-        );
-
-    if(timeElement){
-
-        timeElement.textContent =
-            "00:00";
-
-    }
-
-}
-
-
-/* =====================================================
-   SHOW RECORDING UI
-===================================================== */
-
-function setRecordingUI(active){
-
-    const mic =
-        document.getElementById(
-            "aiMicButton"
-        );
-
-    const status =
-        document.getElementById(
-            "aiRecordingStatus"
-        );
-
-    if(active){
-
-        mic.classList.add(
-            "recording"
-        );
-
-        mic.innerHTML =
-            '<i class="fa-solid fa-stop"></i>';
-
-        mic.setAttribute(
-            "aria-label",
-            "إيقاف التسجيل"
-        );
-
-        status.classList.add(
-            "show"
-        );
-
-        startRecordingTimer();
-
-    }else{
-
-        mic.classList.remove(
-            "recording"
-        );
-
-        mic.innerHTML =
-            '<i class="fa-solid fa-microphone"></i>';
-
-        mic.setAttribute(
-            "aria-label",
-            "تسجيل صوت"
-        );
-
-        status.classList.remove(
-            "show"
-        );
-
-        stopRecordingTimer();
-
-    }
-
-}
-
-
-/* =====================================================
-   MICROPHONE ERROR MESSAGE
-===================================================== */
-
-function showMicrophoneError(error){
-
-    let message =
-        "لم أتمكن من الوصول إلى الميكروفون.";
-
-    if(error){
-
-        if(
-            error.name === "NotAllowedError" ||
-            error.name === "PermissionDeniedError"
-        ){
-
-            message =
-                "تم رفض إذن الميكروفون. اسمح للموقع باستخدام الميكروفون من إعدادات المتصفح، ثم اضغط على الميكروفون مرة أخرى.";
-
-        }else if(
-            error.name === "NotFoundError"
-        ){
-
-            message =
-                "لم يتم العثور على ميكروفون متاح في هذا الجهاز.";
-
-        }else if(
-            error.name === "NotReadableError"
-        ){
-
-            message =
-                "الميكروفون مستخدم حاليًا من تطبيق أو صفحة أخرى. أغلق الاستخدام الآخر ثم حاول مرة أخرى.";
-
-        }else if(
-            error.name === "SecurityError"
-        ){
-
-            message =
-                "المتصفح منع استخدام الميكروفون لأسباب أمنية. تأكد من فتح الموقع عبر HTTPS.";
-
-        }else if(
-            error.name === "AbortError"
-        ){
-
-            message =
-                "تم إيقاف الوصول إلى الميكروفون. حاول مرة أخرى.";
-
-        }
-
-    }
-
-    addAIMessage(
-        message,
-        "bot",
-        true
-    );
-
-}
-
-
-/* =====================================================
    MICROPHONE RECORDING
 ===================================================== */
 
 async function toggleRecording(){
-
-    /*
-       إذا كان يسجل بالفعل:
-       اضغط مرة ثانية لإيقاف التسجيل.
-    */
 
     if(isRecording){
 
@@ -5424,18 +4754,13 @@ async function toggleRecording(){
 
     }
 
-
-    /*
-       فحص دعم المتصفح.
-    */
-
     if(
         !navigator.mediaDevices ||
         !navigator.mediaDevices.getUserMedia
     ){
 
         addAIMessage(
-            "المتصفح لا يدعم تسجيل الصوت. جرّب Safari أو Chrome بأحدث إصدار.",
+            "المتصفح لا يدعم تسجيل الصوت.",
             "bot",
             true
         );
@@ -5443,106 +4768,20 @@ async function toggleRecording(){
         return;
 
     }
-
-
-    /*
-       تسجيل الصوت يحتاج HTTPS في أغلب الحالات.
-    */
-
-    if(
-        location.protocol !== "https:" &&
-        location.hostname !== "localhost" &&
-        location.hostname !== "127.0.0.1"
-    ){
-
-        addAIMessage(
-            "لأسباب أمنية، يجب فتح الموقع عبر HTTPS حتى يمكن استخدام الميكروفون.",
-            "bot",
-            true
-        );
-
-        return;
-
-    }
-
-
-    const mic =
-        document.getElementById(
-            "aiMicButton"
-        );
-
-    /*
-       منع الضغط المتكرر أثناء طلب الصلاحية.
-    */
-
-    mic.disabled = true;
 
     try{
-
-        /*
-           طلب الإذن من المستخدم.
-           في iPhone Safari يجب أن يكون هذا
-           داخل حدث الضغط نفسه، وهذا الكود كذلك.
-        */
 
         const stream =
             await navigator
                 .mediaDevices
                 .getUserMedia({
-                    audio:{
-                        echoCancellation:true,
-                        noiseSuppression:true,
-                        autoGainControl:true
-                    }
+                    audio:true
                 });
-
-
-        /*
-           اختيار صيغة التسجيل التي يدعمها الجهاز.
-        */
-
-        const mimeType =
-            getSupportedAudioMimeType();
-
-        let recorderOptions = {};
-
-        if(mimeType){
-
-            recorderOptions.mimeType =
-                mimeType;
-
-        }
-
-
-        try{
-
-            mediaRecorder =
-                new MediaRecorder(
-                    stream,
-                    recorderOptions
-                );
-
-        }catch(recorderError){
-
-            console.warn(
-                "MEDIA RECORDER OPTIONS ERROR:",
-                recorderError
-            );
-
-            /*
-               محاولة ثانية بدون تحديد MIME.
-            */
-
-            mediaRecorder =
-                new MediaRecorder(
-                    stream
-                );
-
-        }
-
 
         recordedChunks = [];
 
+        mediaRecorder =
+            new MediaRecorder(stream);
 
         mediaRecorder.ondataavailable =
             function(event){
@@ -5560,99 +4799,47 @@ async function toggleRecording(){
 
             };
 
-
-        mediaRecorder.onerror =
-            function(event){
-
-                console.error(
-                    "MEDIA RECORDER ERROR:",
-                    event
-                );
-
-            };
-
-
         mediaRecorder.onstop =
             async function(){
-
-                /*
-                   إيقاف الميكروفون فعليًا.
-                */
 
                 stream
                     .getTracks()
                     .forEach(
-                        track => {
-
-                            track.stop();
-
-                        }
+                        track =>
+                            track.stop()
                     );
-
-
-                const finalType =
-                    mediaRecorder.mimeType ||
-                    mimeType ||
-                    "audio/webm";
-
 
                 const audioBlob =
                     new Blob(
                         recordedChunks,
                         {
                             type:
-                                finalType
+                                mediaRecorder.mimeType ||
+                                "audio/webm"
                         }
                     );
 
-
-                /*
-                   إعادة ضبط حالة الواجهة.
-                */
-
-                isRecording =
-                    false;
-
-                setRecordingUI(false);
-
-                /*
-                   إرسال التسجيل إلى API.
-                */
-
-                if(audioBlob.size > 0){
-
-                    await sendAudioToAI(
-                        audioBlob,
-                        finalType
-                    );
-
-                }else{
-
-                    addAIMessage(
-                        "لم يتم تسجيل أي صوت. حاول مرة أخرى.",
-                        "bot",
-                        true
-                    );
-
-                }
+                await sendAudioToAI(
+                    audioBlob
+                );
 
             };
 
+        mediaRecorder.start();
 
-        /*
-           بدء التسجيل.
-           timeslice يجعل البيانات تصل تدريجيًا
-           بدل الانتظار حتى نهاية التسجيل.
-        */
+        isRecording = true;
 
-        mediaRecorder.start(250);
+        const mic =
+            document.getElementById(
+                "aiMicButton"
+            );
 
+        mic.classList.add(
+            "recording"
+        );
 
-        isRecording =
-            true;
-
-        setRecordingUI(true);
-
+        mic.innerHTML =
+            '<i class="fa-solid fa-stop"></i>';
 
     }catch(error){
 
@@ -5661,19 +4848,11 @@ async function toggleRecording(){
             error
         );
 
-        isRecording =
-            false;
-
-        setRecordingUI(false);
-
-        showMicrophoneError(
-            error
+        addAIMessage(
+            "لم أتمكن من الوصول إلى الميكروفون. تأكد من السماح للموقع باستخدام الميكروفون.",
+            "bot",
+            true
         );
-
-    }finally{
-
-        mic.disabled =
-            false;
 
     }
 
@@ -5687,48 +4866,27 @@ async function toggleRecording(){
 function stopRecording(){
 
     if(
-        !mediaRecorder
+        mediaRecorder &&
+        mediaRecorder.state !== "inactive"
     ){
 
-        isRecording =
-            false;
-
-        setRecordingUI(false);
-
-        return;
+        mediaRecorder.stop();
 
     }
 
+    isRecording = false;
 
-    /*
-       تغيير الحالة مباشرة حتى لا يكرر المستخدم
-       الضغط ويبدأ تسجيلًا ثانيًا.
-    */
-
-    isRecording =
-        false;
-
-    setRecordingUI(false);
-
-
-    try{
-
-        if(
-            mediaRecorder.state !== "inactive"
-        ){
-
-            mediaRecorder.stop();
-
-        }
-
-    }catch(error){
-
-        console.error(
-            "STOP RECORDING ERROR:",
-            error
+    const mic =
+        document.getElementById(
+            "aiMicButton"
         );
 
-    }
+    mic.classList.remove(
+        "recording"
+    );
+
+    mic.innerHTML =
+        '<i class="fa-solid fa-microphone"></i>';
 
 }
 
@@ -5738,25 +4896,8 @@ function stopRecording(){
 ===================================================== */
 
 async function sendAudioToAI(
-    audioBlob,
-    mimeType
+    audioBlob
 ){
-
-    if(
-        !audioBlob ||
-        audioBlob.size === 0
-    ){
-
-        addAIMessage(
-            "التسجيل الصوتي فارغ. حاول مرة أخرى.",
-            "bot",
-            true
-        );
-
-        return;
-
-    }
-
 
     addAIMessage(
         "تم تسجيل الصوت، جاري فهمه...",
@@ -5766,53 +4907,16 @@ async function sendAudioToAI(
 
     addTyping();
 
-
     try{
 
         const formData =
             new FormData();
 
-
-        /*
-           تحديد امتداد الملف حسب الصيغة.
-        */
-
-        let extension =
-            "webm";
-
-        if(
-            mimeType &&
-            mimeType.includes("mp4")
-        ){
-
-            extension =
-                "m4a";
-
-        }else if(
-            mimeType &&
-            mimeType.includes("ogg")
-        ){
-
-            extension =
-                "ogg";
-
-        }
-
-
         formData.append(
             "audio",
             audioBlob,
-            "voice." + extension
+            "voice.webm"
         );
-
-
-        formData.append(
-            "audio_type",
-            mimeType ||
-            audioBlob.type ||
-            "audio/webm"
-        );
-
 
         formData.append(
             "history",
@@ -5820,7 +4924,6 @@ async function sendAudioToAI(
                 aiHistory.slice(-30)
             )
         );
-
 
         const response =
             await fetch(
@@ -5831,29 +4934,23 @@ async function sendAudioToAI(
                 }
             );
 
-
         if(!response.ok){
 
             throw new Error(
-                "Speech API Error: " +
-                response.status
+                "Speech API Error"
             );
 
         }
 
-
         const data =
             await response.json();
 
-
         removeTyping();
-
 
         const transcript =
             data.transcript ||
             data.text ||
             data.message;
-
 
         if(transcript){
 
@@ -5869,13 +4966,11 @@ async function sendAudioToAI(
 
         }
 
-
         const reply =
             data.reply ||
             data.content ||
             data.output_text ||
             "تم استلام الصوت، لكن لم يصل رد المستشار.";
-
 
         aiHistory.push({
 
@@ -5885,9 +4980,7 @@ async function sendAudioToAI(
 
         });
 
-
         saveAIHistory();
-
 
         addAIMessage(
             reply,
@@ -5895,13 +4988,12 @@ async function sendAudioToAI(
             true
         );
 
-
     }catch(error){
 
         removeTyping();
 
         addAIMessage(
-            "تعذر معالجة التسجيل الصوتي حاليًا. تأكد من وجود /api/speech في الخادم ودعم صيغة التسجيل المرسلة.",
+            "تعذر معالجة التسجيل الصوتي حاليًا. تأكد من وجود /api/speech في الخادم.",
             "bot",
             true
         );
@@ -5941,11 +5033,6 @@ document
 
             autoResizeTextarea(
                 this
-            );
-
-            setTimeout(
-                scrollAIMessages,
-                50
             );
 
         }
@@ -6053,31 +5140,6 @@ window.addEventListener(
 
         }
 
-
-        /*
-           إيقاف الميكروفون عند مغادرة الصفحة.
-        */
-
-        if(
-            mediaRecorder &&
-            mediaRecorder.state !== "inactive"
-        ){
-
-            try{
-
-                mediaRecorder.stop();
-
-            }catch(error){
-
-                console.warn(
-                    "Recorder cleanup:",
-                    error
-                );
-
-            }
-
-        }
-
     }
 );
 
@@ -6096,12 +5158,6 @@ document.addEventListener(
 
             stopCurrentSpeech();
 
-            if(isRecording){
-
-                stopRecording();
-
-            }
-
         }
 
     }
@@ -6118,10 +5174,5 @@ renderAIHistory();
 
 </script>
 
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
-```
