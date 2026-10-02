@@ -28,34 +28,18 @@
 
 <style>
 
-/* =========================
-   ROOT
-========================= */
-
 :root{
-
     --navy:#071522;
     --navy2:#0b1d2c;
-
     --gold:#c8a15b;
     --gold2:#e4c57e;
-
     --cream:#f7f5ef;
     --white:#ffffff;
-
     --text:#17232d;
     --muted:#707a82;
-
     --border:#e8e6df;
-
     --shadow:0 20px 60px rgba(5,18,29,.10);
-
 }
-
-
-/* =========================
-   RESET
-========================= */
 
 *{
     box-sizing:border-box;
@@ -68,15 +52,10 @@ html{
 }
 
 body{
-
     font-family:"Cairo",sans-serif;
-
     background:#fff;
-
     color:var(--text);
-
     line-height:1.8;
-
 }
 
 a{
@@ -101,11 +80,8 @@ textarea{
 ========================= */
 
 .container{
-
     width:min(1200px,92%);
-
     margin:auto;
-
 }
 
 
@@ -114,17 +90,11 @@ textarea{
 ========================= */
 
 .topbar{
-
     background:var(--navy);
-
     color:#fff;
-
     text-align:center;
-
     padding:7px 15px;
-
     font-size:13px;
-
 }
 
 
@@ -133,33 +103,20 @@ textarea{
 ========================= */
 
 .header{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
     background:rgba(255,255,255,.96);
-
     backdrop-filter:blur(12px);
-
     border-bottom:1px solid var(--border);
-
 }
 
 .nav{
-
     min-height:82px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:20px;
-
 }
 
 
@@ -168,138 +125,84 @@ textarea{
 ========================= */
 
 .logo{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     min-width:max-content;
-
 }
 
 .logo-box{
-
     width:48px;
-
     height:48px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     background:var(--navy);
-
     color:var(--gold2);
-
     font-size:20px;
-
     font-weight:900;
-
     transform:rotate(45deg);
-
     border-radius:10px;
-
 }
 
 .logo-box span{
-
     transform:rotate(-45deg);
-
 }
 
 .logo-text{
-
     display:flex;
-
     flex-direction:column;
-
     line-height:1.25;
-
 }
 
 .logo-text strong{
-
     font-size:17px;
-
     font-weight:900;
-
     color:var(--navy);
-
 }
 
 .logo-text small{
-
     color:var(--gold);
-
     font-size:10px;
-
     font-weight:700;
-
 }
 
 
 /* =========================
-   NAV LINKS
+   NAV
 ========================= */
 
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:24px;
-
 }
 
 .nav-links a{
-
     font-size:14px;
-
     font-weight:700;
-
     color:var(--text);
-
     transition:.3s;
-
     position:relative;
-
 }
 
 .nav-links a:hover{
-
     color:var(--gold);
-
 }
 
 .nav-links a::after{
-
     content:"";
-
     position:absolute;
-
     bottom:-8px;
-
     right:0;
-
     width:0;
-
     height:2px;
-
     background:var(--gold);
-
     transition:.3s;
-
 }
 
 .nav-links a:hover::after{
-
     width:100%;
-
 }
 
 
@@ -308,45 +211,27 @@ textarea{
 ========================= */
 
 .nav-social{
-
     display:flex;
-
     align-items:center;
-
     gap:7px;
-
 }
 
 .nav-social a{
-
     width:34px;
-
     height:34px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:50%;
-
     background:#f5f3ed;
-
     color:var(--navy);
-
     transition:.3s;
-
 }
 
 .nav-social a:hover{
-
     background:var(--navy);
-
     color:var(--gold2);
-
     transform:translateY(-2px);
-
 }
 
 
@@ -355,25 +240,15 @@ textarea{
 ========================= */
 
 .menu-btn{
-
     display:none;
-
     border:0;
-
     background:var(--navy);
-
     color:#fff;
-
     width:42px;
-
     height:42px;
-
     border-radius:10px;
-
     cursor:pointer;
-
     font-size:18px;
-
 }
 
 
@@ -382,158 +257,113 @@ textarea{
 ========================= */
 
 .hero{
-
     min-height:650px;
-
     position:relative;
-
     display:flex;
-
     align-items:center;
-
     overflow:hidden;
-
     background:
-
         linear-gradient(
             90deg,
             rgba(7,21,34,.92),
             rgba(7,21,34,.55),
             rgba(7,21,34,.15)
         ),
-
         url("images/hero.jpg") center/cover no-repeat;
-
 }
 
 .hero-content{
-
     width:min(700px,92%);
-
     color:#fff;
-
     padding:90px 0;
-
 }
 
 .hero-badge{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
-
     border:1px solid rgba(228,197,126,.55);
-
     color:var(--gold2);
-
     padding:7px 15px;
-
     border-radius:30px;
-
     margin-bottom:20px;
-
     font-size:13px;
-
     font-weight:700;
-
 }
 
 .hero h1{
-
     font-size:clamp(38px,6vw,72px);
-
     line-height:1.15;
-
     font-weight:900;
-
     margin-bottom:22px;
-
 }
 
 .hero h1 span{
-
     color:var(--gold2);
-
 }
 
 .hero p{
-
     max-width:620px;
-
     color:#e7ebee;
-
     font-size:17px;
-
     line-height:2;
-
     margin-bottom:30px;
-
 }
 
 .hero-actions{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:12px;
-
 }
 
 .btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:9px;
-
     padding:12px 22px;
-
     border-radius:12px;
-
     font-size:14px;
-
     font-weight:800;
-
     transition:.3s;
-
 }
 
 .btn-gold{
-
     background:var(--gold);
-
     color:var(--navy);
-
 }
 
 .btn-gold:hover{
-
     background:var(--gold2);
-
     transform:translateY(-2px);
-
 }
 
 .btn-outline{
-
     border:1px solid rgba(255,255,255,.5);
-
     color:#fff;
-
 }
 
 .btn-outline:hover{
-
     background:#fff;
-
     color:var(--navy);
+}
 
+
+/* =========================
+   HOME AI BUTTON
+========================= */
+
+.hero-ai-btn{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(228,197,126,.65);
+    color:#fff;
+    cursor:pointer;
+}
+
+.hero-ai-btn:hover{
+    background:var(--gold);
+    color:var(--navy);
+    transform:translateY(-2px);
 }
 
 
@@ -542,61 +372,38 @@ textarea{
 ========================= */
 
 .section{
-
     padding:90px 0;
-
 }
 
 .section:nth-of-type(even){
-
     background:var(--cream);
-
 }
 
 .section-head{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:end;
-
     gap:30px;
-
     margin-bottom:38px;
-
 }
 
 .section-title .mini{
-
     color:var(--gold);
-
     font-size:13px;
-
     font-weight:800;
-
     margin-bottom:6px;
-
 }
 
 .section-title h2{
-
     font-size:34px;
-
     color:var(--navy);
-
     font-weight:900;
-
     line-height:1.3;
-
 }
 
 .section-title p{
-
     color:var(--muted);
-
     margin-top:7px;
-
 }
 
 
@@ -605,89 +412,55 @@ textarea{
 ========================= */
 
 .products{
-
     display:grid;
-
     grid-template-columns:repeat(5,1fr);
-
     gap:17px;
-
 }
 
 .product{
-
     position:relative;
-
     overflow:hidden;
-
     background:#fff;
-
     border-radius:20px;
-
     box-shadow:var(--shadow);
-
     border:1px solid var(--border);
-
     transition:.35s;
-
 }
 
 .product:hover{
-
     transform:translateY(-6px);
-
 }
 
 .product-image{
-
     height:270px;
-
     overflow:hidden;
-
 }
 
 .product-image img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     transition:.5s;
-
 }
 
 .product:hover img{
-
     transform:scale(1.06);
-
 }
 
 .product-info{
-
     padding:17px;
-
 }
 
 .product-info h3{
-
     font-size:17px;
-
     color:var(--navy);
-
     font-weight:900;
-
     margin-bottom:3px;
-
 }
 
 .product-info p{
-
     color:var(--muted);
-
     font-size:13px;
-
 }
 
 
@@ -696,88 +469,54 @@ textarea{
 ========================= */
 
 .feature-grid{
-
     display:grid;
-
     grid-template-columns:1.5fr 1fr;
-
     gap:20px;
-
 }
 
 .feature-card{
-
     min-height:420px;
-
     position:relative;
-
     overflow:hidden;
-
     border-radius:25px;
-
     background:var(--navy);
-
     color:#fff;
-
 }
 
 .feature-card.small{
-
     min-height:200px;
-
 }
 
 .feature-card img{
-
     position:absolute;
-
     inset:0;
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
 }
 
 .feature-overlay{
-
     position:absolute;
-
     inset:0;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:end;
-
     padding:30px;
-
     background:
-
         linear-gradient(
             transparent 20%,
             rgba(7,21,34,.92)
         );
-
 }
 
 .feature-overlay h3{
-
     font-size:26px;
-
     font-weight:900;
-
 }
 
 .feature-overlay p{
-
     color:#e5e8eb;
-
     font-size:13px;
-
 }
 
 
@@ -786,61 +525,38 @@ textarea{
 ========================= */
 
 .dining-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:18px;
-
 }
 
 .dining-card{
-
     background:#fff;
-
     border-radius:22px;
-
     overflow:hidden;
-
     border:1px solid var(--border);
-
     box-shadow:var(--shadow);
-
 }
 
 .dining-card img{
-
     width:100%;
-
     height:260px;
-
     object-fit:cover;
-
 }
 
 .dining-card-content{
-
     padding:20px;
-
 }
 
 .dining-card-content h3{
-
     color:var(--navy);
-
     font-weight:900;
-
     font-size:18px;
-
 }
 
 .dining-card-content p{
-
     color:var(--muted);
-
     font-size:13px;
-
 }
 
 
@@ -849,99 +565,60 @@ textarea{
 ========================= */
 
 .payment-section{
-
     background:var(--navy) !important;
-
     color:#fff;
-
 }
 
 .payment-section .section-title h2{
-
     color:#fff;
-
 }
 
 .payment-section .section-title p{
-
     color:#c9d0d5;
-
 }
 
 .payment-grid{
-
     display:grid;
-
     grid-template-columns:repeat(5,1fr);
-
     gap:16px;
-
 }
 
 .payment-card{
-
     background:rgba(255,255,255,.06);
-
     border:1px solid rgba(228,197,126,.25);
-
     border-radius:20px;
-
     padding:28px 18px;
-
     text-align:center;
-
     transition:.3s;
-
 }
 
 .payment-card:hover{
-
     transform:translateY(-5px);
-
     border-color:var(--gold);
-
     background:rgba(255,255,255,.09);
-
 }
 
 .payment-icon{
-
     width:62px;
-
     height:62px;
-
     margin:0 auto 15px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:50%;
-
     background:rgba(200,161,91,.14);
-
     color:var(--gold2);
-
     font-size:25px;
-
 }
 
 .payment-card h3{
-
     font-size:16px;
-
     margin-bottom:5px;
-
 }
 
 .payment-card p{
-
     color:#aeb8bf;
-
     font-size:12px;
-
 }
 
 
@@ -950,142 +627,87 @@ textarea{
 ========================= */
 
 .branches{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:18px;
-
 }
 
 .branch{
-
     position:relative;
-
     overflow:hidden;
-
     min-height:280px;
-
     border-radius:23px;
-
     color:#fff;
-
     padding:26px;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:end;
-
     box-shadow:var(--shadow);
-
 }
 
 .branch::before{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:linear-gradient(
         transparent,
         rgba(0,0,0,.8)
     );
-
 }
 
 .branch-content{
-
     position:relative;
-
     z-index:2;
-
 }
 
 .branch h3{
-
     font-size:25px;
-
     font-weight:900;
-
 }
 
 .branch p{
-
     font-size:13px;
-
     color:#eee;
-
     margin-bottom:12px;
-
 }
 
 .branch-links{
-
     display:flex;
-
     gap:8px;
-
     flex-wrap:wrap;
-
 }
 
 .branch-links a{
-
     width:38px;
-
     height:38px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:10px;
-
     background:rgba(255,255,255,.14);
-
     border:1px solid rgba(255,255,255,.25);
-
     transition:.3s;
-
 }
 
 .branch-links a:hover{
-
     background:var(--gold);
-
     color:var(--navy);
-
 }
 
 .riyadh{
-
-    background:
-        linear-gradient(135deg,#172f42,#071522);
+    background:linear-gradient(135deg,#172f42,#071522);
 }
 
 .dammam{
-
-    background:
-        linear-gradient(135deg,#21404c,#071522);
+    background:linear-gradient(135deg,#21404c,#071522);
 }
 
 .tabuk{
-
-    background:
-        linear-gradient(135deg,#493f31,#071522);
+    background:linear-gradient(135deg,#493f31,#071522);
 }
 
 .ahsa{
-
-    background:
-        linear-gradient(135deg,#304334,#071522);
+    background:linear-gradient(135deg,#304334,#071522);
 }
 
 
@@ -1094,121 +716,71 @@ textarea{
 ========================= */
 
 .reps{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:18px;
-
 }
 
 .rep{
-
     background:#fff;
-
     border:1px solid var(--border);
-
     border-radius:20px;
-
     padding:25px;
-
     box-shadow:var(--shadow);
-
     text-align:center;
-
     transition:.3s;
-
 }
 
 .rep:hover{
-
     transform:translateY(-5px);
-
 }
 
 .rep-icon{
-
     width:70px;
-
     height:70px;
-
     margin:0 auto 14px;
-
     border-radius:50%;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     background:var(--navy);
-
     color:var(--gold2);
-
     font-size:24px;
-
 }
 
 .rep h3{
-
     color:var(--navy);
-
     font-size:17px;
-
     font-weight:900;
-
 }
 
 .rep .branch-name{
-
     color:var(--gold);
-
     font-size:12px;
-
     font-weight:800;
-
     margin-bottom:12px;
-
 }
 
 .rep-actions{
-
     display:flex;
-
     justify-content:center;
-
     gap:8px;
-
 }
 
 .rep-actions a{
-
     width:38px;
-
     height:38px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:10px;
-
     background:#f5f3ed;
-
     color:var(--navy);
-
 }
 
 .rep-actions a:hover{
-
     background:var(--navy);
-
     color:var(--gold2);
-
 }
 
 
@@ -1217,97 +789,59 @@ textarea{
 ========================= */
 
 .contact-box{
-
     background:var(--navy);
-
     border-radius:28px;
-
     padding:45px;
-
     color:#fff;
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:30px;
-
 }
 
 .contact-box h2{
-
     font-size:31px;
-
     font-weight:900;
-
     margin-bottom:12px;
-
 }
 
 .contact-box p{
-
     color:#c9d0d5;
-
     font-size:14px;
-
 }
 
 .contact-list{
-
     display:grid;
-
     gap:10px;
-
     margin-top:20px;
-
 }
 
 .contact-item{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
 }
 
 .contact-item i{
-
     width:40px;
-
     height:40px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:10px;
-
     background:rgba(200,161,91,.15);
-
     color:var(--gold2);
-
 }
 
 .contact-item span{
-
     font-size:13px;
-
 }
 
 .contact-item a{
-
     color:#fff;
-
 }
 
 .contact-item a:hover{
-
     color:var(--gold2);
-
 }
 
 
@@ -1316,63 +850,38 @@ textarea{
 ========================= */
 
 .accounts{
-
     background:var(--cream);
-
     border-radius:24px;
-
     padding:30px;
-
 }
 
 .accounts h3{
-
     color:var(--navy);
-
     font-size:22px;
-
     font-weight:900;
-
     margin-bottom:15px;
-
 }
 
 .accounts-grid{
-
     display:grid;
-
     grid-template-columns:repeat(5,1fr);
-
     gap:10px;
-
 }
 
 .account-btn{
-
     border:1px solid var(--border);
-
     background:#fff;
-
     padding:13px;
-
     border-radius:12px;
-
     cursor:pointer;
-
     font-weight:800;
-
     color:var(--navy);
-
     transition:.3s;
-
 }
 
 .account-btn:hover{
-
     background:var(--navy);
-
     color:#fff;
-
 }
 
 
@@ -1381,131 +890,83 @@ textarea{
 ========================= */
 
 .modal{
-
     position:fixed;
-
     inset:0;
-
     background:rgba(0,0,0,.65);
-
     z-index:2000;
-
     display:none;
-
     align-items:center;
-
     justify-content:center;
-
     padding:20px;
-
 }
 
 .modal.show{
-
     display:flex;
-
 }
 
 .modal-box{
-
     width:min(520px,100%);
-
     background:#fff;
-
     border-radius:25px;
-
     padding:30px;
-
     position:relative;
-
     max-height:90vh;
-
     overflow:auto;
-
 }
 
 .modal-close{
-
     position:absolute;
-
     top:15px;
-
     left:15px;
-
     width:38px;
-
     height:38px;
-
     border:0;
-
     background:#f1f1f1;
-
     border-radius:10px;
-
     cursor:pointer;
-
     font-size:18px;
-
 }
 
 .modal-title{
-
     color:var(--navy);
-
     font-size:25px;
-
     font-weight:900;
-
     margin-bottom:20px;
-
 }
 
 .modal-links{
-
     display:grid;
-
     gap:10px;
-
 }
 
 .modal-links a{
-
     padding:14px;
-
     border-radius:12px;
-
     background:#f6f4ef;
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     font-weight:700;
-
 }
 
 .modal-links a i{
-
     color:var(--gold);
-
 }
 
 
-/* =========================
-   AI ASSISTANT
-========================= */
+/* =========================================================
+   CHATGPT STYLE AI
+========================================================= */
 
 .ai-launcher{
 
     position:fixed;
 
-    left:20px;
+    right:20px;
 
     bottom:20px;
 
-    z-index:1500;
+    z-index:1600;
 
     border:0;
 
@@ -1513,11 +974,13 @@ textarea{
 
     color:#fff;
 
-    padding:13px 17px;
+    width:58px;
 
-    border-radius:50px;
+    height:58px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    border-radius:50%;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
 
     cursor:pointer;
 
@@ -1525,43 +988,90 @@ textarea{
 
     align-items:center;
 
-    gap:9px;
+    justify-content:center;
 
-    font-weight:800;
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.ai-launcher:hover{
+
+    background:#102c40;
+
+    transform:translateY(-3px);
 
 }
 
-.ai-launcher i{
+.ai-launcher span{
 
-    color:var(--gold2);
+    position:absolute;
+
+    right:70px;
+
+    white-space:nowrap;
+
+    background:var(--navy);
+
+    color:#fff;
+
+    padding:7px 12px;
+
+    border-radius:10px;
+
+    font-size:12px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transform:translateX(5px);
+
+    transition:.25s;
 
 }
+
+.ai-launcher:hover span{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/* =========================
+   AI WINDOW
+========================= */
 
 .ai-window{
 
     position:fixed;
 
-    left:20px;
+    right:20px;
 
-    bottom:82px;
+    bottom:90px;
 
-    width:min(390px,calc(100% - 40px));
+    width:min(430px,calc(100% - 30px));
 
-    height:560px;
+    height:min(650px,calc(100vh - 120px));
 
     background:#fff;
 
-    z-index:1500;
+    z-index:1700;
 
     border-radius:22px;
 
-    box-shadow:0 20px 70px rgba(0,0,0,.25);
+    box-shadow:0 25px 90px rgba(0,0,0,.28);
 
     overflow:hidden;
 
     display:none;
 
     flex-direction:column;
+
+    border:1px solid #e5e5e5;
 
 }
 
@@ -1571,13 +1081,20 @@ textarea{
 
 }
 
+
+/* =========================
+   AI HEADER
+========================= */
+
 .ai-header{
 
-    background:var(--navy);
+    min-height:64px;
 
-    color:#fff;
+    background:#fff;
 
-    padding:17px;
+    color:var(--navy);
+
+    padding:12px 15px;
 
     display:flex;
 
@@ -1585,11 +1102,53 @@ textarea{
 
     align-items:center;
 
+    border-bottom:1px solid #ececec;
+
+}
+
+.ai-header-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.ai-header-icon{
+
+    width:38px;
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:var(--gold2);
+
 }
 
 .ai-header strong{
 
-    font-size:15px;
+    font-size:14px;
+
+}
+
+.ai-header small{
+
+    display:block;
+
+    color:#7b8389;
+
+    font-size:10px;
 
 }
 
@@ -1597,15 +1156,26 @@ textarea{
 
     border:0;
 
-    background:transparent;
+    background:#f3f3f3;
 
-    color:#fff;
+    color:#333;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
 
     cursor:pointer;
 
-    font-size:18px;
+    font-size:16px;
 
 }
+
+
+/* =========================
+   AI MESSAGES
+========================= */
 
 .ai-messages{
 
@@ -1613,53 +1183,175 @@ textarea{
 
     overflow:auto;
 
-    padding:15px;
+    padding:22px 16px;
 
-    background:#f8f8f6;
+    background:#fff;
+
+    scroll-behavior:smooth;
+
+}
+
+.ai-message-row{
+
+    display:flex;
+
+    width:100%;
+
+    margin-bottom:18px;
+
+}
+
+.ai-message-row.user{
+
+    justify-content:flex-start;
+
+}
+
+.ai-message-row.bot{
+
+    justify-content:flex-end;
 
 }
 
 .ai-message{
 
-    padding:11px 13px;
-
-    border-radius:14px;
-
-    margin-bottom:9px;
-
     font-size:13px;
 
-    max-width:90%;
+    line-height:1.9;
+
+    max-width:88%;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
 
 }
 
 .ai-message.bot{
 
-    background:#fff;
-
-    border:1px solid var(--border);
+    color:#1f2933;
 
 }
 
 .ai-message.user{
 
-    background:var(--navy);
+    background:#f1f1f1;
 
-    color:#fff;
+    color:#17232d;
 
-    margin-right:auto;
+    padding:10px 14px;
+
+    border-radius:18px;
 
 }
 
-.ai-input{
+.ai-image-preview-message{
 
-    padding:10px;
+    max-width:220px;
 
-    border-top:1px solid var(--border);
+    border-radius:15px;
+
+    margin-bottom:7px;
+
+    border:1px solid #ddd;
+
+}
+
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
+.ai-attachment-preview{
+
+    display:none;
+
+    padding:8px 12px;
+
+    border-top:1px solid #eee;
+
+    background:#fafafa;
+
+}
+
+.ai-attachment-preview.show{
 
     display:flex;
 
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.ai-attachment-preview img{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+.ai-remove-image{
+
+    width:30px;
+
+    height:30px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#eee;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================
+   AI INPUT
+========================= */
+
+.ai-input{
+
+    padding:10px 12px 12px;
+
+    border-top:1px solid #e8e8e8;
+
+    background:#fff;
+
+}
+
+.ai-input-box{
+
+    display:flex;
+
+    align-items:flex-end;
+
     gap:7px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:18px;
+
+    padding:7px;
+
+    background:#fff;
+
+    transition:.2s;
+
+}
+
+.ai-input-box:focus-within{
+
+    border-color:#aaa;
+
+    box-shadow:0 0 0 2px rgba(0,0,0,.03);
 
 }
 
@@ -1669,31 +1361,134 @@ textarea{
 
     resize:none;
 
-    height:45px;
+    height:40px;
 
-    border:1px solid var(--border);
-
-    border-radius:10px;
-
-    padding:9px;
-
-    outline:none;
-
-}
-
-.ai-send{
-
-    width:45px;
+    max-height:120px;
 
     border:0;
 
-    border-radius:10px;
+    outline:none;
 
-    background:var(--gold);
+    padding:8px 5px;
 
-    color:var(--navy);
+    font-size:13px;
+
+    background:transparent;
+
+}
+
+.ai-action{
+
+    flex:0 0 auto;
+
+    width:38px;
+
+    height:38px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:#555;
 
     cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:16px;
+
+}
+
+.ai-action:hover{
+
+    background:#f1f1f1;
+
+}
+
+.ai-action.recording{
+
+    background:#111;
+
+    color:#fff;
+
+    animation:pulseMic 1.1s infinite;
+
+}
+
+.ai-action.send{
+
+    background:var(--navy);
+
+    color:#fff;
+
+}
+
+.ai-action.send:hover{
+
+    background:#102c40;
+
+}
+
+@keyframes pulseMic{
+
+    0%{box-shadow:0 0 0 0 rgba(0,0,0,.3)}
+
+    70%{box-shadow:0 0 0 10px rgba(0,0,0,0)}
+
+    100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}
+
+}
+
+
+/* =========================
+   AUDIO MESSAGE
+========================= */
+
+.ai-audio-message{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#f3f3f3;
+
+    padding:9px 12px;
+
+    border-radius:18px;
+
+}
+
+.ai-audio-message button{
+
+    width:34px;
+
+    height:34px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+.ai-audio-label{
+
+    font-size:11px;
+
+    color:#555;
 
 }
 
@@ -1706,7 +1501,7 @@ textarea{
 
     position:fixed;
 
-    right:20px;
+    left:20px;
 
     bottom:20px;
 
@@ -1731,6 +1526,14 @@ textarea{
     z-index:1500;
 
     box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+    transform:translateY(-3px) scale(1.04);
 
 }
 
@@ -2054,6 +1857,56 @@ textarea{
 
     }
 
+    .ai-window{
+
+        right:10px;
+
+        left:10px;
+
+        bottom:80px;
+
+        width:auto;
+
+        height:calc(100vh - 110px);
+
+        max-height:650px;
+
+        border-radius:20px;
+
+    }
+
+    .ai-launcher{
+
+        right:15px;
+
+        bottom:15px;
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+    .whatsapp{
+
+        left:15px;
+
+        bottom:15px;
+
+        width:52px;
+
+        height:52px;
+
+        font-size:25px;
+
+    }
+
+    .ai-launcher span{
+
+        display:none;
+
+    }
+
 }
 
 
@@ -2103,6 +1956,20 @@ textarea{
 
     }
 
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .hero-actions .btn{
+
+        width:100%;
+
+    }
+
 }
 
 
@@ -2124,9 +1991,7 @@ body.modal-open{
 <body>
 
 
-<!-- =========================
-     TOP BAR
-========================= -->
+<!-- TOP BAR -->
 
 <div class="topbar">
 
@@ -2135,9 +2000,7 @@ body.modal-open{
 </div>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header class="header">
 
@@ -2247,9 +2110,7 @@ body.modal-open{
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -2310,6 +2171,16 @@ body.modal-open{
 
         </a>
 
+
+        <button class="btn hero-ai-btn"
+                onclick="openAI()">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            اسأل مستشار نجوم الإبداع
+
+        </button>
+
     </div>
 
 
@@ -2320,9 +2191,7 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     SOFAS
-========================= -->
+<!-- SOFAS -->
 
 <section class="section" id="sofas">
 
@@ -2480,9 +2349,7 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     TABLES
-========================= -->
+<!-- TABLES -->
 
 <section class="section" id="tables">
 
@@ -2577,9 +2444,7 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     DINING
-========================= -->
+<!-- DINING -->
 
 <section class="section" id="dining">
 
@@ -2677,9 +2542,7 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     PAYMENT OPTIONS
-========================= -->
+<!-- PAYMENT OPTIONS -->
 
 <section class="section payment-section">
 
@@ -2812,12 +2675,9 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     BRANCHES
-========================= -->
+<!-- BRANCHES -->
 
-<section class="section"
-         id="branches">
+<section class="section" id="branches">
 
 <div class="container">
 
@@ -2845,8 +2705,6 @@ body.modal-open{
 
 <div class="branches">
 
-
-    <!-- الرياض -->
 
     <div class="branch riyadh">
 
@@ -2894,8 +2752,6 @@ body.modal-open{
     </div>
 
 
-    <!-- الدمام -->
-
     <div class="branch dammam">
 
         <div class="branch-content">
@@ -2942,8 +2798,6 @@ body.modal-open{
     </div>
 
 
-    <!-- تبوك -->
-
     <div class="branch tabuk">
 
         <div class="branch-content">
@@ -2989,8 +2843,6 @@ body.modal-open{
 
     </div>
 
-
-    <!-- الأحساء -->
 
     <div class="branch ahsa">
 
@@ -3045,12 +2897,9 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     SALES REPS
-========================= -->
+<!-- SALES REPS -->
 
-<section class="section"
-         id="reps">
+<section class="section" id="reps">
 
 <div class="container">
 
@@ -3238,12 +3087,9 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
-<section class="section"
-         id="contact">
+<section class="section" id="contact">
 
 <div class="container">
 
@@ -3350,37 +3196,27 @@ body.modal-open{
 
         <button class="account-btn"
                 onclick="openAccounts('الرياض')">
-
             الرياض
-
         </button>
 
         <button class="account-btn"
                 onclick="openAccounts('الدمام')">
-
             الدمام
-
         </button>
 
         <button class="account-btn"
                 onclick="openAccounts('تبوك')">
-
             تبوك
-
         </button>
 
         <button class="account-btn"
                 onclick="openAccounts('الأحساء')">
-
             الأحساء
-
         </button>
 
         <button class="account-btn"
                 onclick="openAccounts('الإدارة')">
-
             الإدارة
-
         </button>
 
     </div>
@@ -3395,9 +3231,7 @@ body.modal-open{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -3535,70 +3369,179 @@ body.modal-open{
 </div>
 
 
-<!-- =========================
-     AI LAUNCHER
-========================= -->
+<!-- =========================================================
+     AI FLOATING BUTTON
+========================================================= -->
 
 <button class="ai-launcher"
-        onclick="toggleAI()">
+        id="aiLauncher"
+        onclick="toggleAI()"
+        aria-label="فتح مستشار نجوم الإبداع">
 
     <i class="fa-solid fa-wand-magic-sparkles"></i>
 
-    مستشار نجوم الإبداع
+    <span>
+        مستشار نجوم الإبداع
+    </span>
 
 </button>
 
 
-<!-- =========================
-     AI WINDOW
-========================= -->
+<!-- =========================================================
+     AI CHAT WINDOW
+========================================================= -->
 
 <div class="ai-window"
      id="aiWindow">
 
 
-<div class="ai-header">
+    <!-- HEADER -->
 
-    <strong>
-        مستشار نجوم الإبداع
-    </strong>
+    <div class="ai-header">
 
-    <button class="ai-close"
-            onclick="toggleAI()">
+        <div class="ai-header-title">
 
-        <i class="fa-solid fa-xmark"></i>
+            <div class="ai-header-icon">
 
-    </button>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
 
-</div>
+            </div>
+
+            <div>
+
+                <strong>
+                    مستشار نجوم الإبداع
+                </strong>
+
+                <small>
+                    اسأل عن الكنبات والمجالس والمفروشات
+                </small>
+
+            </div>
+
+        </div>
 
 
-<div class="ai-messages"
-     id="aiMessages">
+        <button class="ai-close"
+                onclick="toggleAI()"
+                aria-label="إغلاق المستشار">
 
-    <div class="ai-message bot">
+            <i class="fa-solid fa-xmark"></i>
 
-        أهلاً بك في نجوم الإبداع للمفروشات والكنبات.
-        كيف يمكنني مساعدتك؟
+        </button>
 
     </div>
 
-</div>
+
+    <!-- MESSAGES -->
+
+    <div class="ai-messages"
+         id="aiMessages">
 
 
-<div class="ai-input">
+        <div class="ai-message-row bot">
 
-    <textarea id="aiInput"
-              placeholder="اكتب استفسارك هنا..."></textarea>
+            <div class="ai-message bot">
 
-    <button class="ai-send"
-            onclick="sendAI()">
+                أهلاً بك في نجوم الإبداع للمفروشات والكنبات.
+                <br>
+                كيف يمكنني مساعدتك؟
+                <br><br>
+                يمكنك إرسال نص أو صورة أو رسالة صوتية.
 
-        <i class="fa-solid fa-paper-plane"></i>
+            </div>
 
-    </button>
+        </div>
 
-</div>
+
+    </div>
+
+
+    <!-- IMAGE PREVIEW -->
+
+    <div class="ai-attachment-preview"
+         id="aiAttachmentPreview">
+
+        <img id="aiPreviewImage"
+             src=""
+             alt="الصورة المرفقة">
+
+        <div style="flex:1;font-size:11px;">
+
+            صورة مرفقة
+
+        </div>
+
+        <button class="ai-remove-image"
+                onclick="removeSelectedImage()"
+                aria-label="حذف الصورة">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- INPUT -->
+
+    <div class="ai-input">
+
+        <div class="ai-input-box">
+
+
+            <!-- IMAGE -->
+
+            <button class="ai-action"
+                    onclick="document.getElementById('aiImageInput').click()"
+                    aria-label="إضافة صورة">
+
+                <i class="fa-regular fa-image"></i>
+
+            </button>
+
+
+            <!-- HIDDEN IMAGE INPUT -->
+
+            <input type="file"
+                   id="aiImageInput"
+                   accept="image/*"
+                   style="display:none;">
+
+
+            <!-- MICROPHONE -->
+
+            <button class="ai-action"
+                    id="aiMicButton"
+                    onclick="toggleRecording()"
+                    aria-label="تسجيل صوت">
+
+                <i class="fa-solid fa-microphone"></i>
+
+            </button>
+
+
+            <!-- TEXT -->
+
+            <textarea id="aiInput"
+                      placeholder="اكتب رسالتك..."
+                      rows="1"></textarea>
+
+
+            <!-- SEND -->
+
+            <button class="ai-action send"
+                    onclick="sendAI()"
+                    aria-label="إرسال">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </button>
+
+
+        </div>
+
+    </div>
 
 
 </div>
@@ -3620,9 +3563,9 @@ body.modal-open{
 
 <script>
 
-/* =========================
+/* =========================================================
    MOBILE MENU
-========================= */
+========================================================= */
 
 const menuBtn =
     document.getElementById("menuBtn");
@@ -3668,60 +3611,50 @@ document.querySelectorAll(".nav-links a")
 });
 
 
-/* =========================
+/* =========================================================
    ACCOUNTS
-========================= */
+========================================================= */
 
 const accountData = {
 
     "الرياض":{
-
         whatsapp:"https://wa.me/966551496121",
         phone:"tel:0551496121",
         snapchat:"https://www.snapchat.com/add/ma484m",
         instagram:"https://www.instagram.com/jj_j505",
         tiktok:"https://www.tiktok.com/@user505_a3"
-
     },
 
     "الدمام":{
-
         whatsapp:"https://wa.me/966561232087",
         phone:"tel:0561232087",
         snapchat:"https://www.snapchat.com/add/ma484m",
         instagram:"https://www.instagram.com/jj_j505",
         tiktok:"https://www.tiktok.com/@user505_a3"
-
     },
 
     "تبوك":{
-
         whatsapp:"https://wa.me/966573480091",
         phone:"tel:0573480091",
         snapchat:"https://www.snapchat.com/add/ma484m",
         instagram:"https://www.instagram.com/jj_j505",
         tiktok:"https://www.tiktok.com/@user505_a3"
-
     },
 
     "الأحساء":{
-
         whatsapp:"https://wa.me/966539742588",
         phone:"tel:0539742588",
         snapchat:"https://www.snapchat.com/add/ma484m",
         instagram:"https://www.instagram.com/jj_j505",
         tiktok:"https://www.tiktok.com/@user505_a3"
-
     },
 
     "الإدارة":{
-
         whatsapp:"https://wa.me/966530493382",
         phone:"tel:0530493382",
         snapchat:"https://www.snapchat.com/add/ma484m",
         instagram:"https://www.instagram.com/jj_j505",
         tiktok:"https://www.tiktok.com/@user505_a3"
-
     }
 
 };
@@ -3746,15 +3679,13 @@ function openAccounts(branch){
 
     links.innerHTML = `
 
-        <a href="${data.whatsapp}"
-           target="_blank">
+        <a href="${data.whatsapp}" target="_blank">
 
             <i class="fa-brands fa-whatsapp"></i>
 
             واتساب ${branch}
 
         </a>
-
 
         <a href="${data.phone}">
 
@@ -3764,9 +3695,7 @@ function openAccounts(branch){
 
         </a>
 
-
-        <a href="${data.snapchat}"
-           target="_blank">
+        <a href="${data.snapchat}" target="_blank">
 
             <i class="fa-brands fa-snapchat"></i>
 
@@ -3774,9 +3703,7 @@ function openAccounts(branch){
 
         </a>
 
-
-        <a href="${data.instagram}"
-           target="_blank">
+        <a href="${data.instagram}" target="_blank">
 
             <i class="fa-brands fa-instagram"></i>
 
@@ -3784,9 +3711,7 @@ function openAccounts(branch){
 
         </a>
 
-
-        <a href="${data.tiktok}"
-           target="_blank">
+        <a href="${data.tiktok}" target="_blank">
 
             <i class="fa-brands fa-tiktok"></i>
 
@@ -3825,23 +3750,85 @@ function closeModalOutside(event){
 }
 
 
-/* =========================
-   AI
-========================= */
+/* =========================================================
+   AI VARIABLES
+========================================================= */
 
-function toggleAI(){
+let selectedImageBase64 = null;
 
-    document
-        .getElementById("aiWindow")
-        .classList.toggle("show");
+let selectedImageType = null;
+
+let mediaRecorder = null;
+
+let audioChunks = [];
+
+let isRecording = false;
+
+let currentAudio = null;
+
+
+/* =========================================================
+   OPEN AI
+========================================================= */
+
+function openAI(){
+
+    const windowAI =
+        document.getElementById("aiWindow");
+
+    windowAI.classList.add("show");
+
+    setTimeout(() => {
+
+        document
+            .getElementById("aiInput")
+            .focus();
+
+    },150);
 
 }
 
+
+/* =========================================================
+   TOGGLE AI
+========================================================= */
+
+function toggleAI(){
+
+    const windowAI =
+        document.getElementById("aiWindow");
+
+    windowAI.classList.toggle("show");
+
+    if(windowAI.classList.contains("show")){
+
+        setTimeout(() => {
+
+            document
+                .getElementById("aiInput")
+                .focus();
+
+        },150);
+
+    }
+
+}
+
+
+/* =========================================================
+   ADD TEXT MESSAGE
+========================================================= */
 
 function addAIMessage(text,type){
 
     const messages =
         document.getElementById("aiMessages");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "ai-message-row " + type;
 
     const div =
         document.createElement("div");
@@ -3852,13 +3839,136 @@ function addAIMessage(text,type){
     div.textContent =
         text;
 
-    messages.appendChild(div);
+    row.appendChild(div);
+
+    messages.appendChild(row);
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+    return row;
+
+}
+
+
+/* =========================================================
+   ADD IMAGE MESSAGE
+========================================================= */
+
+function addUserImageMessage(src){
+
+    const messages =
+        document.getElementById("aiMessages");
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "ai-message-row user";
+
+    const box =
+        document.createElement("div");
+
+    box.className =
+        "ai-message user";
+
+    const img =
+        document.createElement("img");
+
+    img.src =
+        src;
+
+    img.className =
+        "ai-image-preview-message";
+
+    box.appendChild(img);
+
+    row.appendChild(box);
+
+    messages.appendChild(row);
 
     messages.scrollTop =
         messages.scrollHeight;
 
 }
 
+
+/* =========================================================
+   IMAGE SELECT
+========================================================= */
+
+document
+    .getElementById("aiImageInput")
+    .addEventListener("change",function(event){
+
+        const file =
+            event.target.files[0];
+
+        if(!file){
+
+            return;
+
+        }
+
+        if(!file.type.startsWith("image/")){
+
+            alert("الملف المختار ليس صورة.");
+
+            return;
+
+        }
+
+        const reader =
+            new FileReader();
+
+        reader.onload = function(e){
+
+            selectedImageBase64 =
+                e.target.result;
+
+            selectedImageType =
+                file.type;
+
+            document
+                .getElementById("aiPreviewImage")
+                .src =
+                selectedImageBase64;
+
+            document
+                .getElementById("aiAttachmentPreview")
+                .classList.add("show");
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+
+/* =========================================================
+   REMOVE IMAGE
+========================================================= */
+
+function removeSelectedImage(){
+
+    selectedImageBase64 = null;
+
+    selectedImageType = null;
+
+    document
+        .getElementById("aiImageInput")
+        .value = "";
+
+    document
+        .getElementById("aiAttachmentPreview")
+        .classList.remove("show");
+
+}
+
+
+/* =========================================================
+   SEND AI
+========================================================= */
 
 async function sendAI(){
 
@@ -3868,35 +3978,83 @@ async function sendAI(){
     const message =
         input.value.trim();
 
-    if(!message){
+    const hasImage =
+        !!selectedImageBase64;
+
+    if(!message && !hasImage){
 
         return;
 
     }
 
 
-    addAIMessage(
-        message,
-        "user"
-    );
+    /* USER TEXT */
+
+    if(message){
+
+        addAIMessage(
+            message,
+            "user"
+        );
+
+    }
+
+
+    /* USER IMAGE */
+
+    if(hasImage){
+
+        addUserImageMessage(
+            selectedImageBase64
+        );
+
+    }
+
 
     input.value = "";
 
-
-    addAIMessage(
-        "جاري تجهيز الرد...",
-        "bot"
-    );
+    input.style.height = "40px";
 
 
-    const messages =
-        document.getElementById("aiMessages");
+    /* LOADING */
 
     const loading =
-        messages.lastElementChild;
+        addAIMessage(
+            "جاري التفكير...",
+            "bot"
+        );
+
+
+    const loadingText =
+        loading.querySelector(".ai-message");
+
+
+    const imageToSend =
+        selectedImageBase64;
+
+
+    removeSelectedImage();
 
 
     try{
+
+        const bodyData = {
+
+            message: message || "حلل هذه الصورة."
+
+        };
+
+
+        if(imageToSend){
+
+            bodyData.image =
+                imageToSend;
+
+            bodyData.image_type =
+                selectedImageType || "image/jpeg";
+
+        }
+
 
         const response =
             await fetch("/api/chat",{
@@ -3904,15 +4062,13 @@ async function sendAI(){
                 method:"POST",
 
                 headers:{
+
                     "Content-Type":
                         "application/json"
+
                 },
 
-                body:JSON.stringify({
-
-                    message:message
-
-                })
+                body:JSON.stringify(bodyData)
 
             });
 
@@ -3933,26 +4089,49 @@ async function sendAI(){
         loading.remove();
 
 
-        addAIMessage(
-
+        const reply =
             data.reply ||
             data.message ||
-            "عذرًا، لم أتمكن من الحصول على رد الآن.",
+            "عذرًا، لم أتمكن من الحصول على رد الآن.";
 
-            "bot"
 
-        );
+        const botRow =
+            addAIMessage(
+                reply,
+                "bot"
+            );
+
+
+        /*
+           إذا كان الـAPI يعيد رابطًا
+           للصوت في response:
+           data.audio
+           فسيظهر زر سماع تلقائيًا.
+        */
+
+        if(data.audio){
+
+            addAudioButton(
+                botRow,
+                data.audio
+            );
+
+        }
 
 
     }catch(error){
 
-        loading.textContent =
+        loadingText.textContent =
             "عذرًا، المستشار غير متاح حاليًا. يمكنك التواصل معنا عبر واتساب.";
 
     }
 
 }
 
+
+/* =========================================================
+   ENTER TO SEND
+========================================================= */
 
 document
     .getElementById("aiInput")
@@ -3970,19 +4149,586 @@ document
     });
 
 
-/* =========================
-   ESC CLOSE
-========================= */
+/* =========================================================
+   AUTO TEXTAREA HEIGHT
+========================================================= */
 
-document.addEventListener("keydown",function(event){
+document
+    .getElementById("aiInput")
+    .addEventListener("input",function(){
 
-    if(event.key === "Escape"){
+        this.style.height =
+            "40px";
 
-        closeAccounts();
+        this.style.height =
+            Math.min(
+                this.scrollHeight,
+                120
+            ) + "px";
+
+    });
+
+
+/* =========================================================
+   AUDIO RECORDING
+========================================================= */
+
+async function toggleRecording(){
+
+    if(isRecording){
+
+        stopRecording();
+
+        return;
 
     }
 
-});
+
+    try{
+
+        const stream =
+            await navigator.mediaDevices.getUserMedia({
+                audio:true
+            });
+
+
+        audioChunks = [];
+
+
+        mediaRecorder =
+            new MediaRecorder(stream);
+
+
+        mediaRecorder.ondataavailable =
+            function(event){
+
+                if(event.data.size > 0){
+
+                    audioChunks.push(
+                        event.data
+                    );
+
+                }
+
+            };
+
+
+        mediaRecorder.onstop =
+            async function(){
+
+                stream
+                    .getTracks()
+                    .forEach(track =>
+                        track.stop()
+                    );
+
+
+                const audioBlob =
+                    new Blob(
+                        audioChunks,
+                        {
+                            type:
+                                mediaRecorder.mimeType ||
+                                "audio/webm"
+                        }
+                    );
+
+
+                await sendAudioToAI(
+                    audioBlob
+                );
+
+            };
+
+
+        mediaRecorder.start();
+
+        isRecording = true;
+
+
+        const mic =
+            document.getElementById(
+                "aiMicButton"
+            );
+
+
+        mic.classList.add(
+            "recording"
+        );
+
+
+        mic.innerHTML =
+            '<i class="fa-solid fa-stop"></i>';
+
+
+    }catch(error){
+
+        alert(
+            "لا يمكن استخدام الميكروفون. يرجى السماح للموقع باستخدام الميكروفون."
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   STOP RECORDING
+========================================================= */
+
+function stopRecording(){
+
+    if(!mediaRecorder ||
+       !isRecording){
+
+        return;
+
+    }
+
+
+    mediaRecorder.stop();
+
+    isRecording = false;
+
+
+    const mic =
+        document.getElementById(
+            "aiMicButton"
+        );
+
+
+    mic.classList.remove(
+        "recording"
+    );
+
+
+    mic.innerHTML =
+        '<i class="fa-solid fa-microphone"></i>';
+
+}
+
+
+/* =========================================================
+   SEND AUDIO
+========================================================= */
+
+async function sendAudioToAI(audioBlob){
+
+    const messages =
+        document.getElementById(
+            "aiMessages"
+        );
+
+
+    const row =
+        document.createElement(
+            "div"
+        );
+
+
+    row.className =
+        "ai-message-row user";
+
+
+    const audioBox =
+        document.createElement(
+            "div"
+        );
+
+
+    audioBox.className =
+        "ai-audio-message";
+
+
+    const audioUrl =
+        URL.createObjectURL(
+            audioBlob
+        );
+
+
+    const playButton =
+        document.createElement(
+            "button"
+        );
+
+
+    playButton.innerHTML =
+        '<i class="fa-solid fa-play"></i>';
+
+
+    const label =
+        document.createElement(
+            "span"
+        );
+
+
+    label.className =
+        "ai-audio-label";
+
+
+    label.textContent =
+        "رسالة صوتية";
+
+
+    const audio =
+        new Audio(
+            audioUrl
+        );
+
+
+    let playing = false;
+
+
+    playButton.onclick =
+        function(){
+
+            if(playing){
+
+                audio.pause();
+
+                audio.currentTime = 0;
+
+                playing = false;
+
+                playButton.innerHTML =
+                    '<i class="fa-solid fa-play"></i>';
+
+                return;
+
+            }
+
+
+            stopCurrentAudio();
+
+
+            audio.play();
+
+            currentAudio =
+                audio;
+
+            playing = true;
+
+            playButton.innerHTML =
+                '<i class="fa-solid fa-stop"></i>';
+
+
+            audio.onended =
+                function(){
+
+                    playing = false;
+
+                    playButton.innerHTML =
+                        '<i class="fa-solid fa-play"></i>';
+
+                    if(currentAudio === audio){
+
+                        currentAudio = null;
+
+                    }
+
+                };
+
+        };
+
+
+    audioBox.appendChild(
+        playButton
+    );
+
+    audioBox.appendChild(
+        label
+    );
+
+    row.appendChild(
+        audioBox
+    );
+
+    messages.appendChild(
+        row
+    );
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+
+    /* SEND TO API */
+
+    const loading =
+        addAIMessage(
+            "جاري معالجة الرسالة الصوتية...",
+            "bot"
+        );
+
+
+    try{
+
+        const formData =
+            new FormData();
+
+
+        formData.append(
+            "audio",
+            audioBlob,
+            "voice.webm"
+        );
+
+
+        const response =
+            await fetch(
+                "/api/speech",
+                {
+                    method:"POST",
+                    body:formData
+                }
+            );
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "Speech API Error"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        loading.remove();
+
+
+        const reply =
+            data.reply ||
+            data.message ||
+            data.text ||
+            "تم استلام الرسالة الصوتية.";
+
+
+        const botRow =
+            addAIMessage(
+                reply,
+                "bot"
+            );
+
+
+        /*
+           إذا أعاد الـAPI صوت الرد:
+           data.audio
+        */
+
+        if(data.audio){
+
+            addAudioButton(
+                botRow,
+                data.audio
+            );
+
+        }
+
+
+    }catch(error){
+
+        loading.querySelector(
+            ".ai-message"
+        ).textContent =
+            "تعذر معالجة الرسالة الصوتية حاليًا.";
+
+    }
+
+}
+
+
+/* =========================================================
+   STOP CURRENT AUDIO
+========================================================= */
+
+function stopCurrentAudio(){
+
+    if(currentAudio){
+
+        currentAudio.pause();
+
+        currentAudio.currentTime = 0;
+
+        currentAudio = null;
+
+    }
+
+}
+
+
+/* =========================================================
+   ADD AUDIO RESPONSE BUTTON
+========================================================= */
+
+function addAudioButton(
+    messageRow,
+    audioSource
+){
+
+    const message =
+        messageRow.querySelector(
+            ".ai-message"
+        );
+
+
+    if(!message){
+
+        return;
+
+    }
+
+
+    const button =
+        document.createElement(
+            "button"
+        );
+
+
+    button.type =
+        "button";
+
+
+    button.style.cssText = `
+
+        margin-top:10px;
+        width:38px;
+        height:38px;
+        border:0;
+        border-radius:50%;
+        background:#071522;
+        color:#fff;
+        cursor:pointer;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+    `;
+
+
+    const icon =
+        document.createElement(
+            "i"
+        );
+
+
+    icon.className =
+        "fa-solid fa-volume-high";
+
+
+    button.appendChild(
+        icon
+    );
+
+
+    const audio =
+        new Audio(
+            audioSource
+        );
+
+
+    let playing = false;
+
+
+    button.onclick =
+        function(){
+
+            /*
+               إذا كان الصوت الحالي هو نفسه
+               وكان يعمل، يتم إيقافه.
+            */
+
+            if(
+                currentAudio === audio &&
+                playing
+            ){
+
+                audio.pause();
+
+                audio.currentTime = 0;
+
+                playing = false;
+
+                currentAudio = null;
+
+                icon.className =
+                    "fa-solid fa-volume-high";
+
+                return;
+
+            }
+
+
+            /*
+               إيقاف أي صوت آخر أولاً
+            */
+
+            stopCurrentAudio();
+
+
+            audio.play();
+
+
+            currentAudio =
+                audio;
+
+            playing = true;
+
+
+            icon.className =
+                "fa-solid fa-stop";
+
+
+            audio.onended =
+                function(){
+
+                    playing = false;
+
+                    currentAudio = null;
+
+                    icon.className =
+                        "fa-solid fa-volume-high";
+
+                };
+
+        };
+
+
+    message.appendChild(
+        document.createElement("br")
+    );
+
+
+    message.appendChild(
+        button
+    );
+
+}
+
+
+/* =========================================================
+   ESC CLOSE
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeAccounts();
+
+            document
+                .getElementById("aiWindow")
+                .classList.remove("show");
+
+        }
+
+    }
+);
 
 </script>
 
