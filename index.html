@@ -1,44 +1,35 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>نجوم الإبداع للمفروشات والكنبات</title>
 
 <meta name="description"
-      content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة.">
+content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة">
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
 :root{
-    --navy:#071522;
-    --navy2:#0b1d2c;
-    --gold:#c8a15b;
-    --gold2:#e4c57e;
-    --cream:#f7f5ef;
-    --white:#ffffff;
-    --text:#17232d;
-    --muted:#707a82;
-    --border:#e8e6df;
-    --shadow:0 20px 60px rgba(5,18,29,.10);
+    --navy:#071727;
+    --navy2:#102c40;
+    --gold:#c9a45c;
+    --gold2:#efd58f;
+    --white:#fff;
+    --light:#f7f5ef;
+    --text:#17202a;
+    --muted:#69737d;
+    --shadow:0 12px 35px rgba(0,0,0,.12);
 }
 
 *{
@@ -76,16 +67,6 @@ textarea{
 
 
 /* =========================
-   CONTAINER
-========================= */
-
-.container{
-    width:min(1200px,92%);
-    margin:auto;
-}
-
-
-/* =========================
    TOP BAR
 ========================= */
 
@@ -95,6 +76,7 @@ textarea{
     text-align:center;
     padding:7px 15px;
     font-size:13px;
+    font-weight:600;
 }
 
 
@@ -102,153 +84,82 @@ textarea{
    HEADER
 ========================= */
 
-.header{
+header{
     position:sticky;
     top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--border);
+    z-index:1500;
+    background:rgba(7,23,39,.97);
+    border-bottom:1px solid rgba(201,164,92,.25);
+    backdrop-filter:blur(10px);
 }
 
-.nav{
-    min-height:82px;
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    min-height:75px;
+    padding:10px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:20px;
 }
 
-
-/* =========================
-   LOGO
-========================= */
-
 .logo{
     display:flex;
     align-items:center;
     gap:12px;
-    min-width:max-content;
+    color:#fff;
+    font-weight:900;
+    font-size:18px;
 }
 
 .logo-box{
     width:48px;
     height:48px;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
     display:flex;
     align-items:center;
     justify-content:center;
-    background:var(--navy);
+    clip-path:polygon(50% 0%,92% 25%,92% 75%,50% 100%,8% 75%,8% 25%);
+    font-size:21px;
+}
+
+.logo small{
+    display:block;
     color:var(--gold2);
-    font-size:20px;
-    font-weight:900;
-    transform:rotate(45deg);
-    border-radius:10px;
-}
-
-.logo-box span{
-    transform:rotate(-45deg);
-}
-
-.logo-text{
-    display:flex;
-    flex-direction:column;
-    line-height:1.25;
-}
-
-.logo-text strong{
-    font-size:17px;
-    font-weight:900;
-    color:var(--navy);
-}
-
-.logo-text small{
-    color:var(--gold);
     font-size:10px;
-    font-weight:700;
+    font-weight:500;
+    margin-top:-3px;
 }
-
-
-/* =========================
-   NAV
-========================= */
 
 .nav-links{
-    display:flex;
-    align-items:center;
-    gap:24px;
-}
-
-.nav-links a{
-    font-size:14px;
-    font-weight:700;
-    color:var(--text);
-    transition:.3s;
-    position:relative;
-}
-
-.nav-links a:hover{
-    color:var(--gold);
-}
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    bottom:-8px;
-    right:0;
-    width:0;
-    height:2px;
-    background:var(--gold);
-    transition:.3s;
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}
-
-
-/* =========================
-   SOCIAL
-========================= */
-
-.nav-social{
     display:flex;
     align-items:center;
     gap:7px;
 }
 
-.nav-social a{
-    width:34px;
-    height:34px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:#f5f3ed;
-    color:var(--navy);
-    transition:.3s;
+.nav-links a{
+    color:#fff;
+    padding:9px 13px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    transition:.25s;
 }
 
-.nav-social a:hover{
-    background:var(--navy);
+.nav-links a:hover{
     color:var(--gold2);
-    transform:translateY(-2px);
+    background:rgba(255,255,255,.05);
 }
-
-
-/* =========================
-   MOBILE BUTTON
-========================= */
 
 .menu-btn{
     display:none;
     border:0;
-    background:var(--navy);
+    background:none;
     color:#fff;
-    width:42px;
-    height:42px;
-    border-radius:10px;
+    font-size:23px;
     cursor:pointer;
-    font-size:18px;
 }
 
 
@@ -258,44 +169,33 @@ textarea{
 
 .hero{
     min-height:650px;
-    position:relative;
+    background:
+        linear-gradient(rgba(7,23,39,.74),rgba(7,23,39,.87)),
+        url("images/hero.jpg") center/cover no-repeat;
     display:flex;
     align-items:center;
-    overflow:hidden;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(7,21,34,.92),
-            rgba(7,21,34,.55),
-            rgba(7,21,34,.15)
-        ),
-        url("images/hero.jpg") center/cover no-repeat;
+    position:relative;
 }
 
 .hero-content{
-    width:min(700px,92%);
+    width:min(1200px,92%);
+    margin:auto;
     color:#fff;
-    padding:90px 0;
+    padding:70px 20px;
 }
 
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    border:1px solid rgba(228,197,126,.55);
+.hero-content .small-title{
     color:var(--gold2);
-    padding:7px 15px;
-    border-radius:30px;
-    margin-bottom:20px;
-    font-size:13px;
     font-weight:700;
+    font-size:15px;
+    margin-bottom:10px;
 }
 
 .hero h1{
-    font-size:clamp(38px,6vw,72px);
-    line-height:1.15;
+    font-size:clamp(40px,6vw,76px);
+    line-height:1.2;
     font-weight:900;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
@@ -303,164 +203,145 @@ textarea{
 }
 
 .hero p{
-    max-width:620px;
-    color:#e7ebee;
+    max-width:720px;
+    color:#f2f2f2;
     font-size:17px;
     line-height:2;
     margin-bottom:30px;
 }
 
-.hero-actions{
+.hero-buttons{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
 }
 
 .btn{
+    border:0;
+    cursor:pointer;
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:9px;
+    gap:8px;
     padding:12px 22px;
-    border-radius:12px;
+    border-radius:10px;
     font-size:14px;
-    font-weight:800;
-    transition:.3s;
+    font-weight:700;
+    transition:.25s;
 }
 
 .btn-gold{
-    background:var(--gold);
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
     color:var(--navy);
 }
 
-.btn-gold:hover{
-    background:var(--gold2);
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.5);
+.btn-dark{
+    background:rgba(255,255,255,.08);
     color:#fff;
+    border:1px solid rgba(255,255,255,.3);
 }
 
-.btn-outline:hover{
-    background:#fff;
-    color:var(--navy);
-}
-
-
-/* =========================
-   HOME AI BUTTON
-========================= */
-
-.hero-ai-btn{
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(228,197,126,.65);
-    color:#fff;
-    cursor:pointer;
-}
-
-.hero-ai-btn:hover{
-    background:var(--gold);
-    color:var(--navy);
+.btn:hover{
     transform:translateY(-2px);
 }
 
 
 /* =========================
-   SECTION
+   GENERAL
 ========================= */
 
-.section{
-    padding:90px 0;
-}
-
-.section:nth-of-type(even){
-    background:var(--cream);
+section{
+    padding:80px 20px;
 }
 
 .section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    gap:30px;
-    margin-bottom:38px;
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px;
 }
 
-.section-title .mini{
+.section-head .eyebrow{
     color:var(--gold);
     font-size:13px;
     font-weight:800;
     margin-bottom:6px;
 }
 
-.section-title h2{
-    font-size:34px;
+.section-head h2{
     color:var(--navy);
+    font-size:34px;
     font-weight:900;
-    line-height:1.3;
+    margin-bottom:8px;
 }
 
-.section-title p{
+.section-head p{
     color:var(--muted);
-    margin-top:7px;
+    font-size:14px;
+}
+
+.container{
+    width:min(1200px,100%);
+    margin:auto;
 }
 
 
 /* =========================
-   SOFAS
+   PRODUCTS
 ========================= */
 
 .products{
+    background:#fff;
+}
+
+.product-grid{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:17px;
+    gap:18px;
 }
 
-.product{
-    position:relative;
-    overflow:hidden;
+.product-card{
     background:#fff;
-    border-radius:20px;
+    border-radius:15px;
+    overflow:hidden;
     box-shadow:var(--shadow);
-    border:1px solid var(--border);
-    transition:.35s;
+    border:1px solid #eee;
+    transition:.3s;
 }
 
-.product:hover{
-    transform:translateY(-6px);
+.product-card:hover{
+    transform:translateY(-5px);
 }
 
 .product-image{
-    height:270px;
+    height:220px;
     overflow:hidden;
+    background:#eee;
 }
 
 .product-image img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.5s;
+    transition:.4s;
 }
 
-.product:hover img{
-    transform:scale(1.06);
+.product-card:hover img{
+    transform:scale(1.05);
 }
 
 .product-info{
-    padding:17px;
+    padding:16px;
 }
 
 .product-info h3{
-    font-size:17px;
     color:var(--navy);
-    font-weight:900;
-    margin-bottom:3px;
+    font-size:17px;
+    margin-bottom:5px;
 }
 
 .product-info p{
     color:var(--muted);
-    font-size:13px;
+    font-size:12px;
 }
 
 
@@ -468,54 +349,45 @@ textarea{
    TABLES
 ========================= */
 
-.feature-grid{
+.tables{
+    background:var(--light);
+}
+
+.two-grid{
     display:grid;
-    grid-template-columns:1.5fr 1fr;
-    gap:20px;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.feature-card{
-    min-height:420px;
-    position:relative;
+.big-card{
+    background:#fff;
+    border-radius:18px;
     overflow:hidden;
-    border-radius:25px;
-    background:var(--navy);
-    color:#fff;
+    box-shadow:var(--shadow);
 }
 
-.feature-card.small{
-    min-height:200px;
+.big-card-image{
+    height:300px;
 }
 
-.feature-card img{
-    position:absolute;
-    inset:0;
+.big-card-image img{
     width:100%;
     height:100%;
     object-fit:cover;
 }
 
-.feature-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:end;
-    padding:30px;
-    background:
-        linear-gradient(
-            transparent 20%,
-            rgba(7,21,34,.92)
-        );
+.big-card-info{
+    padding:22px;
 }
 
-.feature-overlay h3{
-    font-size:26px;
-    font-weight:900;
+.big-card-info h3{
+    color:var(--navy);
+    font-size:21px;
+    margin-bottom:5px;
 }
 
-.feature-overlay p{
-    color:#e5e8eb;
+.big-card-info p{
+    color:var(--muted);
     font-size:13px;
 }
 
@@ -524,39 +396,37 @@ textarea{
    DINING
 ========================= */
 
+.dining{
+    background:#fff;
+}
+
 .dining-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:20px;
 }
 
 .dining-card{
     background:#fff;
-    border-radius:22px;
+    border:1px solid #eee;
+    border-radius:15px;
     overflow:hidden;
-    border:1px solid var(--border);
     box-shadow:var(--shadow);
 }
 
 .dining-card img{
     width:100%;
-    height:260px;
+    height:240px;
     object-fit:cover;
 }
 
-.dining-card-content{
-    padding:20px;
+.dining-card div{
+    padding:17px;
 }
 
-.dining-card-content h3{
+.dining-card h3{
     color:var(--navy);
-    font-weight:900;
-    font-size:18px;
-}
-
-.dining-card-content p{
-    color:var(--muted);
-    font-size:13px;
+    font-size:17px;
 }
 
 
@@ -564,61 +434,47 @@ textarea{
    PAYMENT
 ========================= */
 
-.payment-section{
-    background:var(--navy) !important;
+.payment{
+    background:var(--navy);
     color:#fff;
 }
 
-.payment-section .section-title h2{
+.payment .section-head h2{
     color:#fff;
 }
 
-.payment-section .section-title p{
-    color:#c9d0d5;
+.payment .section-head p{
+    color:#c9d0d6;
 }
 
 .payment-grid{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:16px;
+    gap:15px;
 }
 
 .payment-card{
     background:rgba(255,255,255,.06);
-    border:1px solid rgba(228,197,126,.25);
-    border-radius:20px;
-    padding:28px 18px;
+    border:1px solid rgba(201,164,92,.25);
+    border-radius:15px;
+    padding:25px 15px;
     text-align:center;
-    transition:.3s;
+    transition:.25s;
 }
 
 .payment-card:hover{
-    transform:translateY(-5px);
-    border-color:var(--gold);
-    background:rgba(255,255,255,.09);
+    background:rgba(255,255,255,.1);
+    transform:translateY(-4px);
 }
 
-.payment-icon{
-    width:62px;
-    height:62px;
-    margin:0 auto 15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:rgba(200,161,91,.14);
+.payment-card i{
     color:var(--gold2);
-    font-size:25px;
+    font-size:29px;
+    margin-bottom:10px;
 }
 
 .payment-card h3{
-    font-size:16px;
-    margin-bottom:5px;
-}
-
-.payment-card p{
-    color:#aeb8bf;
-    font-size:12px;
+    font-size:15px;
 }
 
 
@@ -627,160 +483,166 @@ textarea{
 ========================= */
 
 .branches{
+    background:var(--light);
+}
+
+.branch-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
-.branch{
+.branch-card{
+    color:#fff;
+    min-height:280px;
+    padding:25px;
+    border-radius:18px;
     position:relative;
     overflow:hidden;
-    min-height:280px;
-    border-radius:23px;
-    color:#fff;
-    padding:26px;
-    display:flex;
-    flex-direction:column;
-    justify-content:end;
     box-shadow:var(--shadow);
 }
 
-.branch::before{
+.branch-card::before{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(
-        transparent,
-        rgba(0,0,0,.8)
-    );
+    background:linear-gradient(135deg,rgba(7,23,39,.9),rgba(7,23,39,.35));
 }
 
-.branch-content{
+.branch-card > *{
     position:relative;
-    z-index:2;
+    z-index:1;
 }
 
-.branch h3{
-    font-size:25px;
-    font-weight:900;
+.branch-riyadh{
+    background:
+        url("images/hero.jpg") center/cover;
 }
 
-.branch p{
+.branch-dammam{
+    background:
+        url("images/sofas/modern.jpg") center/cover;
+}
+
+.branch-tabuk{
+    background:
+        url("images/sofas/turkish.jpg") center/cover;
+}
+
+.branch-ahsa{
+    background:
+        url("images/sofas/classic.jpg") center/cover;
+}
+
+.branch-card .icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:rgba(201,164,92,.9);
+    color:var(--navy);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:15px;
+}
+
+.branch-card h3{
+    font-size:23px;
+    margin-bottom:7px;
+}
+
+.branch-card p{
     font-size:13px;
     color:#eee;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-.branch-links{
+.branch-info{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-size:12px;
+}
+
+.branch-actions{
+    margin-top:18px;
     display:flex;
     gap:8px;
     flex-wrap:wrap;
 }
 
-.branch-links a{
-    width:38px;
-    height:38px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.25);
-    transition:.3s;
-}
-
-.branch-links a:hover{
-    background:var(--gold);
+.branch-actions a{
+    background:#fff;
     color:var(--navy);
-}
-
-.riyadh{
-    background:linear-gradient(135deg,#172f42,#071522);
-}
-
-.dammam{
-    background:linear-gradient(135deg,#21404c,#071522);
-}
-
-.tabuk{
-    background:linear-gradient(135deg,#493f31,#071522);
-}
-
-.ahsa{
-    background:linear-gradient(135deg,#304334,#071522);
+    padding:7px 12px;
+    border-radius:7px;
+    font-size:11px;
+    font-weight:700;
 }
 
 
 /* =========================
-   SALES REPRESENTATIVES
+   SALES REPS
 ========================= */
 
-.reps{
+.sales-reps{
+    background:#fff;
+}
+
+.rep-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
-.rep{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:25px;
-    box-shadow:var(--shadow);
+.rep-card{
+    border:1px solid #eee;
+    border-radius:15px;
+    padding:25px 18px;
     text-align:center;
-    transition:.3s;
-}
-
-.rep:hover{
-    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+    background:#fff;
 }
 
 .rep-icon{
-    width:70px;
-    height:70px;
-    margin:0 auto 14px;
+    width:65px;
+    height:65px;
+    margin:0 auto 13px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.rep-card h3{
+    color:var(--navy);
+    font-size:17px;
+}
+
+.rep-card p{
+    color:var(--muted);
+    font-size:12px;
+    margin-bottom:13px;
+}
+
+.rep-buttons{
+    display:flex;
+    justify-content:center;
+    gap:7px;
+}
+
+.rep-buttons a{
+    width:38px;
+    height:38px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     background:var(--navy);
-    color:var(--gold2);
-    font-size:24px;
-}
-
-.rep h3{
-    color:var(--navy);
-    font-size:17px;
-    font-weight:900;
-}
-
-.rep .branch-name{
-    color:var(--gold);
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:12px;
-}
-
-.rep-actions{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-}
-
-.rep-actions a{
-    width:38px;
-    height:38px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-    background:#f5f3ed;
-    color:var(--navy);
-}
-
-.rep-actions a:hover{
-    background:var(--navy);
-    color:var(--gold2);
+    color:#fff;
 }
 
 
@@ -788,256 +650,175 @@ textarea{
    CONTACT
 ========================= */
 
-.contact-box{
-    background:var(--navy);
-    border-radius:28px;
-    padding:45px;
-    color:#fff;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+.contact{
+    background:var(--light);
 }
 
-.contact-box h2{
-    font-size:31px;
-    font-weight:900;
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.contact-card{
+    background:#fff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:var(--shadow);
+    text-align:center;
+}
+
+.contact-card i{
+    font-size:28px;
+    color:var(--gold);
     margin-bottom:12px;
 }
 
-.contact-box p{
-    color:#c9d0d5;
-    font-size:14px;
+.contact-card h3{
+    color:var(--navy);
+    font-size:17px;
 }
 
-.contact-list{
-    display:grid;
-    gap:10px;
-    margin-top:20px;
-}
-
-.contact-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.contact-item i{
-    width:40px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-    background:rgba(200,161,91,.15);
-    color:var(--gold2);
-}
-
-.contact-item span{
+.contact-card p{
+    color:var(--muted);
     font-size:13px;
+    margin:4px 0 12px;
 }
 
-.contact-item a{
-    color:#fff;
-}
-
-.contact-item a:hover{
-    color:var(--gold2);
-}
-
-
-/* =========================
-   ACCOUNTS
-========================= */
-
-.accounts{
-    background:var(--cream);
-    border-radius:24px;
-    padding:30px;
-}
-
-.accounts h3{
-    color:var(--navy);
-    font-size:22px;
-    font-weight:900;
-    margin-bottom:15px;
-}
-
-.accounts-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:10px;
-}
-
-.account-btn{
-    border:1px solid var(--border);
-    background:#fff;
-    padding:13px;
-    border-radius:12px;
-    cursor:pointer;
-    font-weight:800;
-    color:var(--navy);
-    transition:.3s;
-}
-
-.account-btn:hover{
+.contact-card a{
+    display:inline-flex;
     background:var(--navy);
     color:#fff;
+    padding:7px 15px;
+    border-radius:8px;
+    font-size:12px;
 }
 
 
 /* =========================
-   MODAL
+   SOCIAL
 ========================= */
 
-.modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    z-index:2000;
-    display:none;
+.social{
+    padding-top:20px;
+    padding-bottom:20px;
+    background:#fff;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    display:flex;
     align-items:center;
     justify-content:center;
-    padding:20px;
+    font-size:19px;
+    transition:.25s;
 }
 
-.modal.show{
-    display:flex;
-}
-
-.modal-box{
-    width:min(520px,100%);
-    background:#fff;
-    border-radius:25px;
-    padding:30px;
-    position:relative;
-    max-height:90vh;
-    overflow:auto;
-}
-
-.modal-close{
-    position:absolute;
-    top:15px;
-    left:15px;
-    width:38px;
-    height:38px;
-    border:0;
-    background:#f1f1f1;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:18px;
-}
-
-.modal-title{
+.social-links a:hover{
+    background:var(--gold);
     color:var(--navy);
-    font-size:25px;
-    font-weight:900;
-    margin-bottom:20px;
+    transform:translateY(-3px);
 }
 
-.modal-links{
-    display:grid;
-    gap:10px;
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    padding:25px 15px;
+    font-size:12px;
 }
 
-.modal-links a{
-    padding:14px;
-    border-radius:12px;
-    background:#f6f4ef;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-weight:700;
-}
-
-.modal-links a i{
-    color:var(--gold);
+footer .gold{
+    color:var(--gold2);
 }
 
 
 /* =========================================================
-   CHATGPT STYLE AI
+   AI CONSULTANT
 ========================================================= */
 
 .ai-launcher{
-
     position:fixed;
-
     right:20px;
-
     bottom:20px;
-
     z-index:1600;
 
     border:0;
-
     background:var(--navy);
-
     color:#fff;
 
-    width:58px;
-
     height:58px;
+    padding:0 18px 0 10px;
 
-    border-radius:50%;
+    border-radius:30px;
 
     box-shadow:0 10px 35px rgba(0,0,0,.25);
 
     cursor:pointer;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
+    gap:10px;
 
-    font-size:22px;
+    font-size:13px;
+    font-weight:700;
 
     transition:.3s;
-
 }
 
 .ai-launcher:hover{
-
     background:#102c40;
-
     transform:translateY(-3px);
+}
 
+.ai-launcher i{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:17px;
 }
 
 .ai-launcher span{
-
-    position:absolute;
-
-    right:70px;
+    position:static;
 
     white-space:nowrap;
 
-    background:var(--navy);
-
+    background:transparent;
     color:#fff;
 
-    padding:7px 12px;
-
-    border-radius:10px;
-
-    font-size:12px;
-
-    opacity:0;
-
-    pointer-events:none;
-
-    transform:translateX(5px);
-
-    transition:.25s;
-
-}
-
-.ai-launcher:hover span{
+    padding:0;
 
     opacity:1;
+    pointer-events:auto;
 
-    transform:translateX(0);
+    transform:none;
 
+    font-size:13px;
+    font-weight:700;
 }
 
 
@@ -1046,130 +827,83 @@ textarea{
 ========================= */
 
 .ai-window{
-
     position:fixed;
-
     right:20px;
-
     bottom:90px;
 
     width:min(430px,calc(100% - 30px));
-
     height:min(650px,calc(100vh - 120px));
 
     background:#fff;
+    border-radius:20px;
 
-    z-index:1700;
+    box-shadow:0 20px 70px rgba(0,0,0,.3);
 
-    border-radius:22px;
-
-    box-shadow:0 25px 90px rgba(0,0,0,.28);
+    z-index:1599;
 
     overflow:hidden;
 
     display:none;
 
-    flex-direction:column;
-
-    border:1px solid #e5e5e5;
-
+    border:1px solid #e6e6e6;
 }
 
 .ai-window.show{
-
     display:flex;
-
+    flex-direction:column;
 }
 
 
-/* =========================
-   AI HEADER
-========================= */
+/* AI HEADER */
 
 .ai-header{
+    background:var(--navy);
+    color:#fff;
 
-    min-height:64px;
-
-    background:#fff;
-
-    color:var(--navy);
-
-    padding:12px 15px;
+    padding:15px;
 
     display:flex;
-
+    align-items:center;
     justify-content:space-between;
-
-    align-items:center;
-
-    border-bottom:1px solid #ececec;
-
-}
-
-.ai-header-title{
-
-    display:flex;
-
-    align-items:center;
-
     gap:10px;
-
 }
 
-.ai-header-icon{
-
-    width:38px;
-
-    height:38px;
-
+.ai-title{
     display:flex;
-
     align-items:center;
+    gap:10px;
+}
 
-    justify-content:center;
-
+.ai-title-icon{
+    width:42px;
+    height:42px;
     border-radius:50%;
 
-    background:var(--navy);
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--navy);
 
-    color:var(--gold2);
-
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.ai-header strong{
-
-    font-size:14px;
-
-}
-
-.ai-header small{
-
+.ai-title strong{
     display:block;
+    font-size:14px;
+}
 
-    color:#7b8389;
-
+.ai-title small{
+    display:block;
+    color:#bdc6ce;
     font-size:10px;
-
 }
 
 .ai-close{
-
     border:0;
-
-    background:#f3f3f3;
-
-    color:#333;
-
-    width:35px;
-
-    height:35px;
-
-    border-radius:50%;
-
+    background:none;
+    color:#fff;
+    font-size:18px;
     cursor:pointer;
-
-    font-size:16px;
-
 }
 
 
@@ -1178,138 +912,105 @@ textarea{
 ========================= */
 
 .ai-messages{
-
     flex:1;
-
-    overflow:auto;
-
-    padding:22px 16px;
-
-    background:#fff;
-
-    scroll-behavior:smooth;
-
+    overflow-y:auto;
+    padding:15px;
+    background:#f6f7f8;
 }
 
 .ai-message-row{
-
     display:flex;
-
-    width:100%;
-
-    margin-bottom:18px;
-
+    margin-bottom:13px;
 }
 
 .ai-message-row.user{
-
     justify-content:flex-start;
-
 }
 
 .ai-message-row.bot{
-
     justify-content:flex-end;
-
 }
 
 .ai-message{
+    max-width:82%;
+    padding:11px 13px;
+    border-radius:14px;
 
     font-size:13px;
-
-    line-height:1.9;
-
-    max-width:88%;
+    line-height:1.8;
 
     white-space:pre-wrap;
-
     word-break:break-word;
-
 }
 
-.ai-message.bot{
-
-    color:#1f2933;
-
+.ai-message-row.user .ai-message{
+    background:var(--navy);
+    color:#fff;
+    border-bottom-left-radius:4px;
 }
 
-.ai-message.user{
-
-    background:#f1f1f1;
-
-    color:#17232d;
-
-    padding:10px 14px;
-
-    border-radius:18px;
-
+.ai-message-row.bot .ai-message{
+    background:#fff;
+    color:var(--text);
+    border:1px solid #e6e6e6;
+    border-bottom-right-radius:4px;
 }
 
-.ai-image-preview-message{
-
+.ai-message-image{
     max-width:220px;
+    max-height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-top:7px;
+}
 
-    border-radius:15px;
+.ai-audio-btn{
+    border:0;
+    margin-top:8px;
+    background:var(--navy);
+    color:#fff;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+}
 
-    margin-bottom:7px;
-
-    border:1px solid #ddd;
-
+.ai-loading{
+    opacity:.65;
 }
 
 
 /* =========================
-   IMAGE PREVIEW
+   AI ATTACHMENT PREVIEW
 ========================= */
 
 .ai-attachment-preview{
-
     display:none;
-
     padding:8px 12px;
-
+    background:#fff;
     border-top:1px solid #eee;
-
-    background:#fafafa;
-
 }
 
 .ai-attachment-preview.show{
-
     display:flex;
-
     align-items:center;
-
-    gap:10px;
-
+    gap:8px;
 }
 
 .ai-attachment-preview img{
-
-    width:55px;
-
-    height:55px;
-
+    width:50px;
+    height:50px;
     object-fit:cover;
-
-    border-radius:10px;
-
+    border-radius:8px;
 }
 
-.ai-remove-image{
-
-    width:30px;
-
-    height:30px;
-
+.remove-image{
     border:0;
-
-    border-radius:50%;
-
     background:#eee;
-
+    width:30px;
+    height:30px;
+    border-radius:50%;
     cursor:pointer;
-
 }
 
 
@@ -1317,179 +1018,75 @@ textarea{
    AI INPUT
 ========================= */
 
-.ai-input{
-
-    padding:10px 12px 12px;
-
-    border-top:1px solid #e8e8e8;
-
+.ai-input-area{
     background:#fff;
-
+    border-top:1px solid #eee;
+    padding:10px;
 }
 
-.ai-input-box{
-
+.ai-input-row{
     display:flex;
-
     align-items:flex-end;
-
     gap:7px;
-
-    border:1px solid #d9d9d9;
-
-    border-radius:18px;
-
-    padding:7px;
-
-    background:#fff;
-
-    transition:.2s;
-
 }
 
-.ai-input-box:focus-within{
-
-    border-color:#aaa;
-
-    box-shadow:0 0 0 2px rgba(0,0,0,.03);
-
-}
-
-.ai-input textarea{
-
+.ai-input-row textarea{
     flex:1;
-
     resize:none;
-
-    height:40px;
-
+    min-height:45px;
     max-height:120px;
 
-    border:0;
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    padding:10px 12px;
 
     outline:none;
-
-    padding:8px 5px;
-
     font-size:13px;
+}
 
-    background:transparent;
-
+.ai-input-row textarea:focus{
+    border-color:var(--gold);
 }
 
 .ai-action{
+    flex-shrink:0;
 
-    flex:0 0 auto;
-
-    width:38px;
-
-    height:38px;
+    width:42px;
+    height:42px;
 
     border:0;
-
     border-radius:50%;
 
-    background:transparent;
-
-    color:#555;
+    background:#f0f2f3;
+    color:var(--navy);
 
     cursor:pointer;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:16px;
-
 }
 
-.ai-action:hover{
-
-    background:#f1f1f1;
-
-}
-
-.ai-action.recording{
-
-    background:#111;
-
-    color:#fff;
-
-    animation:pulseMic 1.1s infinite;
-
-}
-
-.ai-action.send{
-
+.ai-send{
     background:var(--navy);
-
     color:#fff;
-
 }
 
-.ai-action.send:hover{
-
-    background:#102c40;
-
-}
-
-@keyframes pulseMic{
-
-    0%{box-shadow:0 0 0 0 rgba(0,0,0,.3)}
-
-    70%{box-shadow:0 0 0 10px rgba(0,0,0,0)}
-
-    100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}
-
-}
-
-
-/* =========================
-   AUDIO MESSAGE
-========================= */
-
-.ai-audio-message{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    background:#f3f3f3;
-
-    padding:9px 12px;
-
-    border-radius:18px;
-
-}
-
-.ai-audio-message button{
-
-    width:34px;
-
-    height:34px;
-
-    border:0;
-
-    border-radius:50%;
-
-    background:var(--navy);
-
+.ai-mic.recording{
+    background:#b42318;
     color:#fff;
-
-    cursor:pointer;
-
 }
 
-.ai-audio-label{
+.ai-file-input{
+    display:none;
+}
 
-    font-size:11px;
-
-    color:#555;
-
+.ai-note{
+    text-align:center;
+    color:#999;
+    font-size:9px;
+    margin-top:5px;
 }
 
 
@@ -1498,123 +1095,33 @@ textarea{
 ========================= */
 
 .whatsapp{
-
     position:fixed;
-
     left:20px;
-
     bottom:20px;
 
-    width:55px;
-
-    height:55px;
+    width:58px;
+    height:58px;
 
     border-radius:50%;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
     background:#25d366;
-
     color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     font-size:28px;
 
-    z-index:1500;
+    z-index:1600;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
 
-    transition:.3s;
-
+    transition:.25s;
 }
 
 .whatsapp:hover{
-
-    transform:translateY(-3px) scale(1.04);
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-
-    background:#04101b;
-
-    color:#fff;
-
-    padding:45px 0 25px;
-
-}
-
-.footer-grid{
-
-    display:grid;
-
-    grid-template-columns:1.5fr 1fr 1fr;
-
-    gap:30px;
-
-}
-
-.footer h3{
-
-    color:var(--gold2);
-
-    margin-bottom:12px;
-
-    font-size:18px;
-
-}
-
-.footer p,
-.footer a{
-
-    color:#aeb8bf;
-
-    font-size:13px;
-
-}
-
-.footer a:hover{
-
-    color:var(--gold2);
-
-}
-
-.footer-links{
-
-    display:grid;
-
-    gap:6px;
-
-}
-
-.footer-bottom{
-
-    margin-top:35px;
-
-    padding-top:20px;
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-    color:#89949b;
-
-    font-size:11px;
-
+    transform:translateY(-3px) scale(1.03);
 }
 
 
@@ -1622,813 +1129,428 @@ textarea{
    RESPONSIVE
 ========================= */
 
-@media(max-width:1100px){
+@media(max-width:1050px){
 
-    .nav-links{
-
-        display:none;
-
-        position:absolute;
-
-        top:82px;
-
-        right:4%;
-
-        left:4%;
-
-        background:#fff;
-
-        padding:20px;
-
-        border-radius:0 0 18px 18px;
-
-        box-shadow:var(--shadow);
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-    }
-
-    .nav-links.mobile-open{
-
-        display:flex;
-
-    }
-
-    .nav-links a{
-
-        padding:8px 0;
-
-    }
-
-    .menu-btn{
-
-        display:block;
-
-    }
-
-    .products{
-
+    .product-grid{
         grid-template-columns:repeat(3,1fr);
-
     }
 
-    .branches{
-
+    .branch-grid{
         grid-template-columns:repeat(2,1fr);
-
     }
 
-    .reps{
-
+    .rep-grid{
         grid-template-columns:repeat(2,1fr);
-
     }
 
     .payment-grid{
-
         grid-template-columns:repeat(3,1fr);
+    }
+}
 
+
+@media(max-width:800px){
+
+    .navbar{
+        min-height:65px;
     }
 
-    .accounts-grid{
-
-        grid-template-columns:repeat(3,1fr);
-
+    .menu-btn{
+        display:block;
     }
 
+    .nav-links{
+        position:absolute;
+        top:65px;
+        right:15px;
+        left:15px;
+
+        background:var(--navy);
+
+        border:1px solid rgba(201,164,92,.2);
+        border-radius:12px;
+
+        padding:10px;
+
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-links a{
+        text-align:center;
+    }
+
+    .hero{
+        min-height:570px;
+    }
+
+    .two-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dining-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 
 @media(max-width:700px){
 
-    .nav{
-
-        min-height:70px;
-
-    }
-
-    .logo-text strong{
-
-        font-size:14px;
-
-    }
-
-    .logo-text small{
-
-        font-size:9px;
-
-    }
-
-    .logo-box{
-
-        width:42px;
-
-        height:42px;
-
-    }
-
-    .nav-social{
-
-        gap:4px;
-
-    }
-
-    .nav-social a{
-
-        width:31px;
-
-        height:31px;
-
-        font-size:12px;
-
-    }
-
-    .hero{
-
-        min-height:580px;
-
+    section{
+        padding:60px 15px;
     }
 
     .hero-content{
-
-        padding:70px 0;
-
+        padding:50px 10px;
     }
 
     .hero h1{
-
-        font-size:40px;
-
+        font-size:42px;
     }
 
     .hero p{
-
         font-size:14px;
-
     }
 
-    .section{
-
-        padding:65px 0;
-
-    }
-
-    .section-title h2{
-
-        font-size:27px;
-
-    }
-
-    .section-head{
-
-        margin-bottom:25px;
-
-    }
-
-    .products{
-
-        grid-template-columns:repeat(2,1fr);
-
+    .product-grid{
+        grid-template-columns:1fr 1fr;
         gap:12px;
-
     }
 
     .product-image{
-
-        height:220px;
-
+        height:180px;
     }
 
-    .feature-grid{
+    .payment-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
+    .branch-grid{
         grid-template-columns:1fr;
-
     }
 
-    .feature-card{
-
-        min-height:330px;
-
+    .rep-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .dining-grid{
-
         grid-template-columns:1fr;
-
     }
 
-    .payment-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .branches{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .reps{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .contact-box{
-
-        grid-template-columns:1fr;
-
-        padding:28px;
-
-    }
-
-    .accounts-grid{
-
-        grid-template-columns:1fr 1fr;
-
-    }
-
-    .footer-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .ai-window{
-
-        right:10px;
-
-        left:10px;
-
-        bottom:80px;
-
-        width:auto;
-
-        height:calc(100vh - 110px);
-
-        max-height:650px;
-
-        border-radius:20px;
-
-    }
+    /*
+       مهم:
+       لا نخفي نص مستشار نجوم الإبداع على الجوال
+    */
 
     .ai-launcher{
-
-        right:15px;
-
-        bottom:15px;
-
-        width:52px;
-
+        right:12px;
+        bottom:12px;
         height:52px;
-
+        padding:0 13px 0 8px;
+        gap:7px;
+        font-size:11px;
     }
 
-    .whatsapp{
-
-        left:15px;
-
-        bottom:15px;
-
-        width:52px;
-
-        height:52px;
-
-        font-size:25px;
-
+    .ai-launcher i{
+        width:35px;
+        height:35px;
+        font-size:15px;
     }
 
     .ai-launcher span{
-
-        display:none;
-
+        display:inline;
+        font-size:11px;
     }
 
+    .whatsapp{
+        left:12px;
+        bottom:12px;
+        width:52px;
+        height:52px;
+        font-size:25px;
+    }
+
+    .ai-window{
+        right:10px;
+        bottom:75px;
+
+        width:calc(100% - 20px);
+        height:calc(100vh - 100px);
+
+        border-radius:17px;
+    }
 }
 
 
-@media(max-width:430px){
-
-    .nav-social a{
-
-        width:28px;
-
-        height:28px;
-
-    }
+@media(max-width:400px){
 
     .logo{
-
-        gap:7px;
-
+        font-size:14px;
     }
 
-    .logo-text{
-
-        display:none;
-
+    .logo-box{
+        width:42px;
+        height:42px;
     }
 
     .hero h1{
-
-        font-size:34px;
-
+        font-size:35px;
     }
 
-    .products{
-
+    .product-grid{
         grid-template-columns:1fr;
-
-    }
-
-    .product-image{
-
-        height:280px;
-
     }
 
     .payment-grid{
-
         grid-template-columns:1fr 1fr;
-
     }
 
-    .hero-actions{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
+    .rep-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero-actions .btn{
-
-        width:100%;
-
+    .ai-launcher{
+        right:8px;
+        bottom:8px;
+        padding-right:9px;
+        gap:5px;
     }
 
-}
+    .ai-launcher span{
+        font-size:10px;
+    }
 
+    .ai-launcher i{
+        width:33px;
+        height:33px;
+    }
 
-/* =========================
-   NO SCROLL
-========================= */
-
-body.modal-open{
-
-    overflow:hidden;
-
+    .whatsapp{
+        left:8px;
+        bottom:8px;
+    }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- TOP BAR -->
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <div class="topbar">
-
     شحن لجميع مدن المملكة وخارجها
-
 </div>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
-<header class="header">
+<header>
 
-<div class="container nav">
+    <div class="navbar">
 
+        <a href="#home" class="logo">
 
-    <a href="#home" class="logo">
+            <div class="logo-box">
+                <i class="fa-solid fa-couch"></i>
+            </div>
 
-        <div class="logo-box">
-
-            <span>ن</span>
-
-        </div>
-
-        <div class="logo-text">
-
-            <strong>
+            <div>
                 نجوم الإبداع
-            </strong>
-
-            <small>
-                للمفروشات والكنبات
-            </small>
-
-        </div>
-
-    </a>
-
-
-    <nav class="nav-links" id="navLinks">
-
-        <a href="#sofas">
-            الكنبات
-        </a>
-
-        <a href="#tables">
-            الطاولات
-        </a>
-
-        <a href="#dining">
-            غرفة الطعام
-        </a>
-
-        <a href="#branches">
-            الفروع
-        </a>
-
-        <a href="#reps">
-            مناديب المبيعات
-        </a>
-
-        <a href="#contact">
-            تواصل معنا
-        </a>
-
-    </nav>
-
-
-    <div class="nav-social">
-
-        <a href="https://www.snapchat.com/add/ma484m"
-           target="_blank"
-           aria-label="Snapchat">
-
-            <i class="fa-brands fa-snapchat"></i>
+                <small>للمفروشات والكنبات</small>
+            </div>
 
         </a>
 
-        <a href="https://www.tiktok.com/@user505_a3"
-           target="_blank"
-           aria-label="TikTok">
 
-            <i class="fa-brands fa-tiktok"></i>
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-        </a>
 
-        <a href="https://www.instagram.com/jj_j505"
-           target="_blank"
-           aria-label="Instagram">
+        <nav class="nav-links" id="navLinks">
 
-            <i class="fa-brands fa-instagram"></i>
+            <a href="#sofas">الكنبات</a>
+            <a href="#tables">الطاولات</a>
+            <a href="#dining">غرفة الطعام</a>
+            <a href="#payment">خيارات الدفع</a>
+            <a href="#branches">الفروع</a>
+            <a href="#sales">مناديب المبيعات</a>
+            <a href="#contact">تواصل معنا</a>
 
-        </a>
-
-        <a href="https://wa.me/966551496121"
-           target="_blank"
-           aria-label="WhatsApp">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-        </a>
+        </nav>
 
     </div>
-
-
-    <button class="menu-btn"
-            id="menuBtn"
-            aria-label="فتح القائمة">
-
-        <i class="fa-solid fa-bars"></i>
-
-    </button>
-
-
-</div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero" id="home">
+<main id="home">
 
-<div class="container">
+<section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
+        <div class="small-title">
+            نجوم الإبداع للمفروشات والكنبات
+        </div>
 
-    <div class="hero-badge">
+        <h1>
+            مجالس وكنبات
+            <br>
+            <span>بذوق يليق بمنزلك</span>
+        </h1>
 
-        <i class="fa-solid fa-star"></i>
+        <p>
+            كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة،
+            بتصاميم تجمع بين الراحة والأناقة وجودة التفاصيل.
+        </p>
 
-        نجوم الإبداع للمفروشات والكنبات
+        <div class="hero-buttons">
 
-    </div>
+            <a href="#branches" class="btn btn-gold">
+                <i class="fa-solid fa-location-dot"></i>
+                فروعنا
+            </a>
 
+            <a href="https://wa.me/966551496121"
+               target="_blank"
+               class="btn btn-dark">
+                <i class="fa-brands fa-whatsapp"></i>
+                تواصل معنا
+            </a>
 
-    <h1>
+            <button class="btn btn-dark"
+                    onclick="openAI()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                مستشار نجوم الإبداع
+            </button>
 
-        مجالس وكنبات
-
-        <br>
-
-        <span>
-            بذوق يليق بمنزلك
-        </span>
-
-    </h1>
-
-
-    <p>
-
-        كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة،
-        بتصاميم تجمع بين الراحة والأناقة وجودة التفاصيل.
-
-    </p>
-
-
-    <div class="hero-actions">
-
-        <a href="#sofas"
-           class="btn btn-gold">
-
-            <i class="fa-solid fa-couch"></i>
-
-            اكتشف الكنبات
-
-        </a>
-
-
-        <a href="https://wa.me/966551496121"
-           target="_blank"
-           class="btn btn-outline">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            تواصل معنا
-
-        </a>
-
-
-        <button class="btn hero-ai-btn"
-                onclick="openAI()">
-
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-            اسأل مستشار نجوم الإبداع
-
-        </button>
+        </div>
 
     </div>
-
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- SOFAS -->
+<!-- =========================
+     SOFAS
+========================= -->
 
-<section class="section" id="sofas">
+<section class="products" id="sofas">
 
-<div class="container">
+    <div class="container">
 
+        <div class="section-head">
 
-<div class="section-head">
+            <div class="eyebrow">
+                مجموعتنا
+            </div>
 
-<div class="section-title">
-
-    <div class="mini">
-        تشكيلات نجوم الإبداع
-    </div>
-
-    <h2>
-        الكنبات والمجالس
-    </h2>
-
-    <p>
-        موديلات متنوعة جاهزة وتفصيل تناسب مختلف الأذواق والمساحات.
-    </p>
-
-</div>
-
-</div>
-
-
-<div class="products">
-
-
-    <div class="product">
-
-        <div class="product-image">
-
-            <img src="images/sofas/saudi.jpg"
-                 alt="كنبات سعودي">
-
-        </div>
-
-        <div class="product-info">
-
-            <h3>
-                سعودي
-            </h3>
+            <h2>
+                الكنبات والمجالس
+            </h2>
 
             <p>
-                مجالس بتفاصيل عربية فاخرة
+                تشكيلة من التصاميم التي تجمع بين الفخامة والراحة
+                وتناسب مختلف الأذواق.
             </p>
 
         </div>
 
-    </div>
 
+        <div class="product-grid">
 
-    <div class="product">
+            <div class="product-card">
 
-        <div class="product-image">
+                <div class="product-image">
+                    <img src="images/sofas/saudi.jpg"
+                         alt="كنبات ومجالس سعودية">
+                </div>
 
-            <img src="images/sofas/classic.jpg"
-                 alt="كنبات كلاسيك">
-
-        </div>
-
-        <div class="product-info">
-
-            <h3>
-                كلاسيك
-            </h3>
-
-            <p>
-                فخامة وأناقة في التفاصيل
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="product">
-
-        <div class="product-image">
-
-            <img src="images/sofas/modern.jpg"
-                 alt="كنبات مودرن">
-
-        </div>
-
-        <div class="product-info">
-
-            <h3>
-                مودرن
-            </h3>
-
-            <p>
-                خطوط عصرية وتصاميم أنيقة
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="product">
-
-        <div class="product-image">
-
-            <img src="images/sofas/turkish.jpg"
-                 alt="كنبات تركي">
-
-        </div>
-
-        <div class="product-info">
-
-            <h3>
-                تركي
-            </h3>
-
-            <p>
-                راحة وأناقة بطابع تركي
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="product">
-
-        <div class="product-image">
-
-            <img src="images/sofas/american.jpg"
-                 alt="كنبات أمريكي">
-
-        </div>
-
-        <div class="product-info">
-
-            <h3>
-                أمريكي
-            </h3>
-
-            <p>
-                مساحة وراحة استثنائية
-            </p>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TABLES -->
-
-<section class="section" id="tables">
-
-<div class="container">
-
-
-<div class="section-head">
-
-<div class="section-title">
-
-    <div class="mini">
-        تفاصيل تكمل المكان
-    </div>
-
-    <h2>
-        الطاولات
-    </h2>
-
-    <p>
-        تصاميم طاولات تضيف لمسة فاخرة ومتناسقة مع المجلس.
-    </p>
-
-</div>
-
-</div>
-
-
-<div class="feature-grid">
-
-
-    <div class="feature-card">
-
-        <img src="images/tables/service-main.jpg"
-             alt="طاولات نجوم الإبداع">
-
-        <div class="feature-overlay">
-
-            <h3>
-                طاولات المجالس
-            </h3>
-
-            <p>
-                تصاميم متنوعة تناسب المجالس والكنبات.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div>
-
-        <div class="feature-card small"
-             style="margin-bottom:20px;">
-
-            <img src="images/tables/service-side.jpg"
-                 alt="طاولة جانبية">
-
-            <div class="feature-overlay">
-
-                <h3>
-                    طاولات جانبية
-                </h3>
+                <div class="product-info">
+                    <h3>التصميم السعودي</h3>
+                    <p>مجالس وكنبات بتصاميم عربية فاخرة.</p>
+                </div>
 
             </div>
 
-        </div>
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/sofas/classic.jpg"
+                         alt="كنبات كلاسيكية">
+                </div>
+
+                <div class="product-info">
+                    <h3>الكلاسيك</h3>
+                    <p>تفاصيل كلاسيكية أنيقة وفاخرة.</p>
+                </div>
+
+            </div>
 
 
-        <div class="feature-card small">
+            <div class="product-card">
 
-            <img src="images/tables/service-main.jpg"
-                 alt="طاولات فاخرة">
+                <div class="product-image">
+                    <img src="images/sofas/modern.jpg"
+                         alt="كنبات مودرن">
+                </div>
 
-            <div class="feature-overlay">
+                <div class="product-info">
+                    <h3>المودرن</h3>
+                    <p>تصاميم عصرية تناسب المنازل الحديثة.</p>
+                </div>
 
-                <h3>
-                    تفاصيل فاخرة
-                </h3>
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/sofas/turkish.jpg"
+                         alt="كنبات تركية">
+                </div>
+
+                <div class="product-info">
+                    <h3>التركي</h3>
+                    <p>تصاميم تركية راقية بتفاصيل مميزة.</p>
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/sofas/american.jpg"
+                         alt="كنبات أمريكية">
+                </div>
+
+                <div class="product-info">
+                    <h3>الأمريكي</h3>
+                    <p>راحة واسعة وتصاميم عملية وفخمة.</p>
+                </div>
 
             </div>
 
@@ -2436,313 +1558,657 @@ body.modal-open{
 
     </div>
 
+</section>
 
-</div>
 
-</div>
+<!-- =========================
+     TABLES
+========================= -->
+
+<section class="tables" id="tables">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                التفاصيل تكمل الصورة
+            </div>
+
+            <h2>
+                الطاولات
+            </h2>
+
+            <p>
+                طاولات وخدمات تكمل جمال المجلس وتضيف لمسة فاخرة للمكان.
+            </p>
+
+        </div>
+
+
+        <div class="two-grid">
+
+            <div class="big-card">
+
+                <div class="big-card-image">
+                    <img src="images/tables/service-main.jpg"
+                         alt="طاولة خدمة">
+                </div>
+
+                <div class="big-card-info">
+                    <h3>طاولات خدمة</h3>
+                    <p>
+                        تصاميم متنوعة لتتناسب مع المجالس والكنبات.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="big-card">
+
+                <div class="big-card-image">
+                    <img src="images/tables/service-side.jpg"
+                         alt="طاولة جانبية">
+                </div>
+
+                <div class="big-card-info">
+                    <h3>طاولات جانبية</h3>
+                    <p>
+                        تفاصيل أنيقة وعملية تضيف جمالاً للمجلس.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- DINING -->
+<!-- =========================
+     DINING
+========================= -->
 
-<section class="section" id="dining">
+<section class="dining" id="dining">
 
-<div class="container">
+    <div class="container">
 
+        <div class="section-head">
 
-<div class="section-head">
+            <div class="eyebrow">
+                غرفة الطعام
+            </div>
 
-<div class="section-title">
-
-    <div class="mini">
-        غرفة الطعام
-    </div>
-
-    <h2>
-        أناقة متكاملة لمنزلك
-    </h2>
-
-    <p>
-        غرف طعام تجمع بين العملية والفخامة والتنسيق المتكامل.
-    </p>
-
-</div>
-
-</div>
-
-
-<div class="dining-grid">
-
-
-    <div class="dining-card">
-
-        <img src="images/dining/dining-table.jpg"
-             alt="طاولة غرفة الطعام">
-
-        <div class="dining-card-content">
-
-            <h3>
-                طاولات الطعام
-            </h3>
+            <h2>
+                أثاث غرفة الطعام
+            </h2>
 
             <p>
-                تصاميم متنوعة للمساحات المختلفة.
+                اختيارات متكاملة لطاولة الطعام والكراسي والبوفيه.
             </p>
 
         </div>
 
-    </div>
+
+        <div class="dining-grid">
+
+            <div class="dining-card">
+
+                <img src="images/dining/dining-table.jpg"
+                     alt="طاولة طعام">
+
+                <div>
+                    <h3>طاولات الطعام</h3>
+                </div>
+
+            </div>
 
 
-    <div class="dining-card">
+            <div class="dining-card">
 
-        <img src="images/dining/dining-chairs.jpg"
-             alt="كراسي غرفة الطعام">
+                <img src="images/dining/dining-chairs.jpg"
+                     alt="كراسي طعام">
 
-        <div class="dining-card-content">
+                <div>
+                    <h3>كراسي الطعام</h3>
+                </div>
 
-            <h3>
-                كراسي الطعام
-            </h3>
+            </div>
 
-            <p>
-                راحة وأناقة وتنسيق متكامل.
-            </p>
+
+            <div class="dining-card">
+
+                <img src="images/dining/buffet.jpg"
+                     alt="بوفيه">
+
+                <div>
+                    <h3>البوفيهات</h3>
+                </div>
+
+            </div>
 
         </div>
 
     </div>
-
-
-    <div class="dining-card">
-
-        <img src="images/dining/buffet.jpg"
-             alt="بوفيه غرفة الطعام">
-
-        <div class="dining-card-content">
-
-            <h3>
-                البوفيهات
-            </h3>
-
-            <p>
-                قطع تكمل جمال غرفة الطعام.
-            </p>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- PAYMENT OPTIONS -->
+<!-- =========================
+     PAYMENT
+========================= -->
 
-<section class="section payment-section">
+<section class="payment" id="payment">
 
-<div class="container">
+    <div class="container">
 
+        <div class="section-head">
 
-<div class="section-head">
+            <div class="eyebrow">
+                سهولة الدفع
+            </div>
 
-<div class="section-title">
+            <h2>
+                خيارات الدفع
+            </h2>
 
-    <div class="mini">
-        تسهيلات الدفع
-    </div>
-
-    <h2>
-        خيارات الدفع
-    </h2>
-
-    <p>
-        اختر طريقة الدفع المناسبة لك عند إتمام طلبك.
-    </p>
-
-</div>
-
-</div>
-
-
-<div class="payment-grid">
-
-
-    <div class="payment-card">
-
-        <div class="payment-icon">
-
-            <i class="fa-solid fa-money-bill-wave"></i>
+            <p>
+                نوفر لك أكثر من خيار للدفع بما يناسبك.
+            </p>
 
         </div>
 
-        <h3>
-            كاش
-        </h3>
 
-        <p>
-            الدفع نقدًا حسب تفاصيل الطلب.
-        </p>
+        <div class="payment-grid">
 
-    </div>
+            <div class="payment-card">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <h3>كاش</h3>
+            </div>
 
 
-    <div class="payment-card">
-
-        <div class="payment-icon">
-
-            <i class="fa-solid fa-credit-card"></i>
-
-        </div>
-
-        <h3>
-            الشبكة
-        </h3>
-
-        <p>
-            الدفع عن طريق أجهزة نقاط البيع.
-        </p>
-
-    </div>
+            <div class="payment-card">
+                <i class="fa-solid fa-credit-card"></i>
+                <h3>الشبكة</h3>
+            </div>
 
 
-    <div class="payment-card">
+            <div class="payment-card">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>تحويل بنكي</h3>
+            </div>
 
-        <div class="payment-icon">
 
-            <i class="fa-solid fa-building-columns"></i>
+            <div class="payment-card">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>تمارا</h3>
+            </div>
+
+
+            <div class="payment-card">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>تابي</h3>
+            </div>
 
         </div>
 
-        <h3>
-            تحويل بنكي
-        </h3>
-
-        <p>
-            التحويل إلى الحساب البنكي المعتمد.
-        </p>
-
     </div>
-
-
-    <div class="payment-card">
-
-        <div class="payment-icon">
-
-            <i class="fa-solid fa-mobile-screen-button"></i>
-
-        </div>
-
-        <h3>
-            تمارا
-        </h3>
-
-        <p>
-            إمكانية الدفع عبر تمارا حسب الأهلية.
-        </p>
-
-    </div>
-
-
-    <div class="payment-card">
-
-        <div class="payment-icon">
-
-            <i class="fa-solid fa-wallet"></i>
-
-        </div>
-
-        <h3>
-            تابي
-        </h3>
-
-        <p>
-            إمكانية الدفع عبر تابي حسب الأهلية.
-        </p>
-
-    </div>
-
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- BRANCHES -->
+<!-- =========================
+     BRANCHES
+========================= -->
 
-<section class="section" id="branches">
+<section class="branches" id="branches">
 
-<div class="container">
+    <div class="container">
 
+        <div class="section-head">
 
-<div class="section-head">
+            <div class="eyebrow">
+                أين تجدنا؟
+            </div>
 
-<div class="section-title">
-
-    <div class="mini">
-        فروعنا
-    </div>
-
-    <h2>
-        نجوم الإبداع بالقرب منك
-    </h2>
-
-    <p>
-        تواصل مع الفرع المناسب لك مباشرة.
-    </p>
-
-</div>
-
-</div>
-
-
-<div class="branches">
-
-
-    <div class="branch riyadh">
-
-        <div class="branch-content">
-
-            <h3>
-                الرياض
-            </h3>
+            <h2>
+                فروع نجوم الإبداع
+            </h2>
 
             <p>
-                حي نمار
-                <br>
-                0551496121
+                تواصل مباشرة مع الفرع الأقرب إليك.
             </p>
 
-            <div class="branch-links">
+        </div>
+
+
+        <div class="branch-grid">
+
+
+            <!-- الرياض -->
+
+            <div class="branch-card branch-riyadh">
+
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>الرياض</h3>
+
+                <p>
+                    حي نمار
+                </p>
+
+                <div class="branch-info">
+
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        0551496121
+                    </span>
+
+                </div>
+
+                <div class="branch-actions">
+
+                    <a href="tel:0551496121">
+                        <i class="fa-solid fa-phone"></i>
+                        اتصال
+                    </a>
+
+                    <a href="https://wa.me/966551496121"
+                       target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        واتساب
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
+                       target="_blank">
+                        <i class="fa-solid fa-map"></i>
+                        الموقع
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- الدمام -->
+
+            <div class="branch-card branch-dammam">
+
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>الدمام</h3>
+
+                <p>
+                    شارع الملك عبد العزيز
+                </p>
+
+                <div class="branch-info">
+
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        0561232087
+                    </span>
+
+                </div>
+
+                <div class="branch-actions">
+
+                    <a href="tel:0561232087">
+                        <i class="fa-solid fa-phone"></i>
+                        اتصال
+                    </a>
+
+                    <a href="https://wa.me/966561232087"
+                       target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        واتساب
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
+                       target="_blank">
+                        <i class="fa-solid fa-map"></i>
+                        الموقع
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- تبوك -->
+
+            <div class="branch-card branch-tabuk">
+
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>تبوك</h3>
+
+                <p>
+                    فرع نجوم الإبداع للمفروشات
+                </p>
+
+                <div class="branch-info">
+
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        0573480091
+                    </span>
+
+                </div>
+
+                <div class="branch-actions">
+
+                    <a href="tel:0573480091">
+                        <i class="fa-solid fa-phone"></i>
+                        اتصال
+                    </a>
+
+                    <a href="https://wa.me/966573480091"
+                       target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        واتساب
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
+                       target="_blank">
+                        <i class="fa-solid fa-map"></i>
+                        الموقع
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- الأحساء -->
+
+            <div class="branch-card branch-ahsa">
+
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>الأحساء</h3>
+
+                <p>
+                    مجالس النجوم للمفروشات
+                </p>
+
+                <div class="branch-info">
+
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        0539742588
+                    </span>
+
+                </div>
+
+                <div class="branch-actions">
+
+                    <a href="tel:0539742588">
+                        <i class="fa-solid fa-phone"></i>
+                        اتصال
+                    </a>
+
+                    <a href="https://wa.me/966539742588"
+                       target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        واتساب
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
+                       target="_blank">
+                        <i class="fa-solid fa-map"></i>
+                        الموقع
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SALES REPS
+========================= -->
+
+<section class="sales-reps" id="sales">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                خدمة العملاء
+            </div>
+
+            <h2>
+                مناديب المبيعات
+            </h2>
+
+            <p>
+                تواصل مباشرة مع أحد مناديب المبيعات للحصول على المساعدة.
+            </p>
+
+        </div>
+
+
+        <div class="rep-grid">
+
+
+            <div class="rep-card">
+
+                <div class="rep-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <h3>أيمن راجح</h3>
+
+                <p>الرياض</p>
+
+                <div class="rep-buttons">
+
+                    <a href="tel:0551496121"
+                       aria-label="اتصال">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+
+                    <a href="https://wa.me/966551496121"
+                       target="_blank"
+                       aria-label="واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="rep-card">
+
+                <div class="rep-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <h3>عبد الله الرماني</h3>
+
+                <p>الرياض</p>
+
+                <div class="rep-buttons">
+
+                    <a href="tel:0539589684"
+                       aria-label="اتصال">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+
+                    <a href="https://wa.me/966539589684"
+                       target="_blank"
+                       aria-label="واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="rep-card">
+
+                <div class="rep-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <h3>صفوان المجلي</h3>
+
+                <p>الرياض</p>
+
+                <div class="rep-buttons">
+
+                    <a href="tel:0535152249"
+                       aria-label="اتصال">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+
+                    <a href="https://wa.me/966535152249"
+                       target="_blank"
+                       aria-label="واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="rep-card">
+
+                <div class="rep-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <h3>محمد العقربي</h3>
+
+                <p>الرياض</p>
+
+                <div class="rep-buttons">
+
+                    <a href="tel:0531302436"
+                       aria-label="اتصال">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+
+                    <a href="https://wa.me/966531302436"
+                       target="_blank"
+                       aria-label="واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">
+                تواصل معنا
+            </div>
+
+            <h2>
+                نحن هنا لخدمتك
+            </h2>
+
+            <p>
+                اختر وسيلة التواصل المناسبة لك.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <h3>
+                    واتساب
+                </h3>
+
+                <p>
+                    للاستفسارات والطلبات
+                </p>
 
                 <a href="https://wa.me/966551496121"
-                   target="_blank"
-                   aria-label="واتساب الرياض">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
+                   target="_blank">
+                    تواصل عبر واتساب
                 </a>
 
-                <a href="tel:0551496121"
-                   aria-label="اتصال الرياض">
+            </div>
 
-                    <i class="fa-solid fa-phone"></i>
 
+            <div class="contact-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h3>
+                    الإدارة
+                </h3>
+
+                <p>
+                    0530493382
+                </p>
+
+                <a href="tel:0530493382">
+                    اتصال
                 </a>
 
-                <a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الرياض+نمار"
-                   target="_blank"
-                   aria-label="موقع الرياض">
+            </div>
 
-                    <i class="fa-solid fa-location-dot"></i>
 
+            <div class="contact-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h3>
+                    الشكاوى والمقترحات
+                </h3>
+
+                <p>
+                    0538677457
+                </p>
+
+                <a href="tel:0538677457">
+                    اتصال
                 </a>
 
             </div>
@@ -2750,628 +2216,223 @@ body.modal-open{
         </div>
 
     </div>
-
-
-    <div class="branch dammam">
-
-        <div class="branch-content">
-
-            <h3>
-                الدمام
-            </h3>
-
-            <p>
-                شارع الملك عبد العزيز
-                <br>
-                0561232087
-            </p>
-
-            <div class="branch-links">
-
-                <a href="https://wa.me/966561232087"
-                   target="_blank"
-                   aria-label="واتساب الدمام">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </a>
-
-                <a href="tel:0561232087"
-                   aria-label="اتصال الدمام">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                </a>
-
-                <a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+الدمام"
-                   target="_blank"
-                   aria-label="موقع الدمام">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="branch tabuk">
-
-        <div class="branch-content">
-
-            <h3>
-                تبوك
-            </h3>
-
-            <p>
-                تواصل مع الفرع
-                <br>
-                0573480091
-            </p>
-
-            <div class="branch-links">
-
-                <a href="https://wa.me/966573480091"
-                   target="_blank"
-                   aria-label="واتساب تبوك">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </a>
-
-                <a href="tel:0573480091"
-                   aria-label="اتصال تبوك">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                </a>
-
-                <a href="https://www.google.com/maps/search/?api=1&query=نجوم+الإبداع+للمفروشات+تبوك"
-                   target="_blank"
-                   aria-label="موقع تبوك">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="branch ahsa">
-
-        <div class="branch-content">
-
-            <h3>
-                الأحساء
-            </h3>
-
-            <p>
-                مجالس النجوم للمفروشات
-                <br>
-                0539742588
-            </p>
-
-            <div class="branch-links">
-
-                <a href="https://wa.me/966539742588"
-                   target="_blank"
-                   aria-label="واتساب الأحساء">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </a>
-
-                <a href="tel:0539742588"
-                   aria-label="اتصال الأحساء">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                </a>
-
-                <a href="https://www.google.com/maps/search/?api=1&query=مجالس+النجوم+للمفروشات+الأحساء"
-                   target="_blank"
-                   aria-label="موقع الأحساء">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- SALES REPS -->
+<!-- =========================
+     SOCIAL
+========================= -->
 
-<section class="section" id="reps">
+<section class="social">
 
-<div class="container">
+    <div class="container">
 
+        <div class="social-links">
 
-<div class="section-head">
+            <a href="https://www.snapchat.com/add/ma484m"
+               target="_blank"
+               aria-label="سناب شات">
+                <i class="fa-brands fa-snapchat"></i>
+            </a>
 
-<div class="section-title">
+            <a href="https://www.tiktok.com/@user505_a3"
+               target="_blank"
+               aria-label="تيك توك">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
 
-    <div class="mini">
-        فريق المبيعات
-    </div>
-
-    <h2>
-        مناديب المبيعات
-    </h2>
-
-    <p>
-        تواصل مباشرة مع مندوب المبيعات للحصول على الخدمة والاستفسار.
-    </p>
-
-</div>
-
-</div>
-
-
-<div class="reps">
-
-
-    <div class="rep">
-
-        <div class="rep-icon">
-
-            <i class="fa-solid fa-user-tie"></i>
-
-        </div>
-
-        <h3>
-            أيمن راجح
-        </h3>
-
-        <div class="branch-name">
-            الرياض
-        </div>
-
-        <div class="rep-actions">
-
-            <a href="tel:0551496121"
-               aria-label="اتصال">
-
-                <i class="fa-solid fa-phone"></i>
-
+            <a href="https://www.instagram.com/jj_j505"
+               target="_blank"
+               aria-label="انستقرام">
+                <i class="fa-brands fa-instagram"></i>
             </a>
 
             <a href="https://wa.me/966551496121"
                target="_blank"
                aria-label="واتساب">
-
                 <i class="fa-brands fa-whatsapp"></i>
-
             </a>
 
         </div>
 
     </div>
-
-
-    <div class="rep">
-
-        <div class="rep-icon">
-
-            <i class="fa-solid fa-user-tie"></i>
-
-        </div>
-
-        <h3>
-            عبد الله الرماني
-        </h3>
-
-        <div class="branch-name">
-            الرياض
-        </div>
-
-        <div class="rep-actions">
-
-            <a href="tel:0539589684"
-               aria-label="اتصال">
-
-                <i class="fa-solid fa-phone"></i>
-
-            </a>
-
-            <a href="https://wa.me/966539589684"
-               target="_blank"
-               aria-label="واتساب">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="rep">
-
-        <div class="rep-icon">
-
-            <i class="fa-solid fa-user-tie"></i>
-
-        </div>
-
-        <h3>
-            صفوان المجلي
-        </h3>
-
-        <div class="branch-name">
-            الرياض
-        </div>
-
-        <div class="rep-actions">
-
-            <a href="tel:0535152249"
-               aria-label="اتصال">
-
-                <i class="fa-solid fa-phone"></i>
-
-            </a>
-
-            <a href="https://wa.me/966535152249"
-               target="_blank"
-               aria-label="واتساب">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="rep">
-
-        <div class="rep-icon">
-
-            <i class="fa-solid fa-user-tie"></i>
-
-        </div>
-
-        <h3>
-            محمد العقربي
-        </h3>
-
-        <div class="branch-name">
-            الرياض
-        </div>
-
-        <div class="rep-actions">
-
-            <a href="tel:0531302436"
-               aria-label="اتصال">
-
-                <i class="fa-solid fa-phone"></i>
-
-            </a>
-
-            <a href="https://wa.me/966531302436"
-               target="_blank"
-               aria-label="واتساب">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-</div>
 
 </section>
 
 
-<!-- CONTACT -->
+</main>
 
-<section class="section" id="contact">
 
-<div class="container">
+<!-- =========================
+     FOOTER
+========================= -->
 
+<footer>
 
-<div class="contact-box">
-
-
-<div>
-
-    <div class="section-title">
-
-        <div class="mini">
-            تواصل معنا
-        </div>
-
-    </div>
-
-    <h2>
-        نحن هنا لخدمتك
-    </h2>
-
-    <p>
-        للاستفسارات والطلبات والملاحظات،
-        تواصل مع الإدارة أو خدمة العملاء مباشرة.
-    </p>
-
-
-    <div class="contact-list">
-
-
-        <div class="contact-item">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            <span>
-
-                واتساب:
-                <a href="https://wa.me/966551496121"
-                   target="_blank">
-
-                    0551496121
-
-                </a>
-
-            </span>
-
-        </div>
-
-
-        <div class="contact-item">
-
-            <i class="fa-solid fa-phone"></i>
-
-            <span>
-
-                الإدارة:
-                <a href="tel:0530493382">
-
-                    0530493382
-
-                </a>
-
-            </span>
-
-        </div>
-
-
-        <div class="contact-item">
-
-            <i class="fa-solid fa-comment-dots"></i>
-
-            <span>
-
-                الشكاوى والمقترحات:
-                <a href="tel:0538677457">
-
-                    0538677457
-
-                </a>
-
-            </span>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-
-<div class="accounts">
-
-    <h3>
-        حساباتنا
-    </h3>
-
-    <p>
-        تابعنا عبر منصات التواصل الاجتماعي.
-    </p>
-
-    <br>
-
-    <div class="accounts-grid">
-
-        <button class="account-btn"
-                onclick="openAccounts('الرياض')">
-            الرياض
-        </button>
-
-        <button class="account-btn"
-                onclick="openAccounts('الدمام')">
-            الدمام
-        </button>
-
-        <button class="account-btn"
-                onclick="openAccounts('تبوك')">
-            تبوك
-        </button>
-
-        <button class="account-btn"
-                onclick="openAccounts('الأحساء')">
-            الأحساء
-        </button>
-
-        <button class="account-btn"
-                onclick="openAccounts('الإدارة')">
-            الإدارة
-        </button>
-
-    </div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-<div class="container">
-
-
-<div class="footer-grid">
-
-
-<div>
-
-    <h3>
-        نجوم الإبداع
-    </h3>
-
-    <p>
-        للمفروشات والكنبات والمجالس.
-        كنبات جاهزة وتفصيل وطاولات ومفروشات فاخرة
-        بتصاميم تجمع بين الراحة والأناقة.
-    </p>
-
-</div>
-
-
-<div>
-
-    <h3>
-        روابط سريعة
-    </h3>
-
-    <div class="footer-links">
-
-        <a href="#sofas">
-            الكنبات
-        </a>
-
-        <a href="#tables">
-            الطاولات
-        </a>
-
-        <a href="#dining">
-            غرفة الطعام
-        </a>
-
-        <a href="#branches">
-            الفروع
-        </a>
-
-        <a href="#reps">
-            مناديب المبيعات
-        </a>
-
-    </div>
-
-</div>
-
-
-<div>
-
-    <h3>
-        تواصل معنا
-    </h3>
-
-    <div class="footer-links">
-
-        <a href="tel:0551496121">
-            0551496121
-        </a>
-
-        <a href="tel:0530493382">
-            الإدارة: 0530493382
-        </a>
-
-        <a href="tel:0538677457">
-            الشكاوى والمقترحات: 0538677457
-        </a>
-
-    </div>
-
-</div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-    <span>
+    <div>
         © 2026 جميع الحقوق محفوظة
-    </span>
+    </div>
 
-    <span>
+    <div class="gold">
         ©️ تكويد وتصميم المهندس دفاع عبد الله القياضي
-    </span>
-
-</div>
-
-
-</div>
+    </div>
 
 </footer>
 
 
-<!-- =========================
-     ACCOUNTS MODAL
-========================= -->
+<!-- =====================================================
+     AI CONSULTANT WINDOW
+===================================================== -->
 
-<div class="modal"
-     id="accountsModal"
-     onclick="closeModalOutside(event)">
+<div class="ai-window" id="aiWindow">
 
-<div class="modal-box">
 
-    <button class="modal-close"
-            onclick="closeAccounts()">
+    <!-- HEADER -->
 
-        <i class="fa-solid fa-xmark"></i>
+    <div class="ai-header">
 
-    </button>
+        <div class="ai-title">
 
-    <div class="modal-title"
-         id="modalTitle">
+            <div class="ai-title-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
 
-        حساباتنا
+            <div>
+                <strong>
+                    مستشار نجوم الإبداع
+                </strong>
+
+                <small>
+                    مساعدك لاختيار الكنبات والمجالس
+                </small>
+            </div>
+
+        </div>
+
+
+        <button class="ai-close"
+                onclick="toggleAI()"
+                aria-label="إغلاق">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
     </div>
 
-    <div class="modal-links"
-         id="modalLinks">
+
+    <!-- MESSAGES -->
+
+    <div class="ai-messages"
+         id="aiMessages">
+
+        <div class="ai-message-row bot">
+
+            <div class="ai-message">
+
+                أهلاً بك في مستشار نجوم الإبداع.
+                <br>
+                كيف أستطيع مساعدتك في اختيار المجلس أو الكنبة المناسبة لك؟
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMAGE PREVIEW -->
+
+    <div class="ai-attachment-preview"
+         id="aiAttachmentPreview">
+
+        <img id="aiAttachmentImage"
+             src=""
+             alt="الصورة المرفقة">
+
+        <span style="font-size:11px;">
+            صورة مرفقة
+        </span>
+
+        <button class="remove-image"
+                onclick="removeSelectedImage()"
+                aria-label="حذف الصورة">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- INPUT -->
+
+    <div class="ai-input-area">
+
+        <div class="ai-input-row">
+
+
+            <!-- IMAGE -->
+
+            <input type="file"
+                   id="aiImageInput"
+                   class="ai-file-input"
+                   accept="image/*"
+                   onchange="handleImage(event)">
+
+            <button class="ai-action"
+                    onclick="document.getElementById('aiImageInput').click()"
+                    aria-label="إضافة صورة">
+
+                <i class="fa-solid fa-image"></i>
+
+            </button>
+
+
+            <!-- MICROPHONE -->
+
+            <button class="ai-action ai-mic"
+                    id="aiMicButton"
+                    onclick="toggleRecording()"
+                    aria-label="تسجيل صوت">
+
+                <i class="fa-solid fa-microphone"></i>
+
+            </button>
+
+
+            <!-- TEXT -->
+
+            <textarea
+                id="aiInput"
+                placeholder="اكتب استفسارك هنا..."
+                onkeydown="handleAIKey(event)"></textarea>
+
+
+            <!-- SEND -->
+
+            <button class="ai-action ai-send"
+                    onclick="sendAI()"
+                    aria-label="إرسال">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="ai-note">
+            يمكنك الكتابة أو إرسال صوت أو إضافة صورة
+        </div>
 
     </div>
 
 </div>
 
-</div>
 
-
-<!-- =========================================================
-     AI FLOATING BUTTON
-========================================================= -->
+<!-- =====================================================
+     FLOATING AI BUTTON
+===================================================== -->
 
 <button class="ai-launcher"
         id="aiLauncher"
@@ -3387,169 +2448,9 @@ body.modal-open{
 </button>
 
 
-<!-- =========================================================
-     AI CHAT WINDOW
-========================================================= -->
-
-<div class="ai-window"
-     id="aiWindow">
-
-
-    <!-- HEADER -->
-
-    <div class="ai-header">
-
-        <div class="ai-header-title">
-
-            <div class="ai-header-icon">
-
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-            </div>
-
-            <div>
-
-                <strong>
-                    مستشار نجوم الإبداع
-                </strong>
-
-                <small>
-                    اسأل عن الكنبات والمجالس والمفروشات
-                </small>
-
-            </div>
-
-        </div>
-
-
-        <button class="ai-close"
-                onclick="toggleAI()"
-                aria-label="إغلاق المستشار">
-
-            <i class="fa-solid fa-xmark"></i>
-
-        </button>
-
-    </div>
-
-
-    <!-- MESSAGES -->
-
-    <div class="ai-messages"
-         id="aiMessages">
-
-
-        <div class="ai-message-row bot">
-
-            <div class="ai-message bot">
-
-                أهلاً بك في نجوم الإبداع للمفروشات والكنبات.
-                <br>
-                كيف يمكنني مساعدتك؟
-                <br><br>
-                يمكنك إرسال نص أو صورة أو رسالة صوتية.
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- IMAGE PREVIEW -->
-
-    <div class="ai-attachment-preview"
-         id="aiAttachmentPreview">
-
-        <img id="aiPreviewImage"
-             src=""
-             alt="الصورة المرفقة">
-
-        <div style="flex:1;font-size:11px;">
-
-            صورة مرفقة
-
-        </div>
-
-        <button class="ai-remove-image"
-                onclick="removeSelectedImage()"
-                aria-label="حذف الصورة">
-
-            <i class="fa-solid fa-xmark"></i>
-
-        </button>
-
-    </div>
-
-
-    <!-- INPUT -->
-
-    <div class="ai-input">
-
-        <div class="ai-input-box">
-
-
-            <!-- IMAGE -->
-
-            <button class="ai-action"
-                    onclick="document.getElementById('aiImageInput').click()"
-                    aria-label="إضافة صورة">
-
-                <i class="fa-regular fa-image"></i>
-
-            </button>
-
-
-            <!-- HIDDEN IMAGE INPUT -->
-
-            <input type="file"
-                   id="aiImageInput"
-                   accept="image/*"
-                   style="display:none;">
-
-
-            <!-- MICROPHONE -->
-
-            <button class="ai-action"
-                    id="aiMicButton"
-                    onclick="toggleRecording()"
-                    aria-label="تسجيل صوت">
-
-                <i class="fa-solid fa-microphone"></i>
-
-            </button>
-
-
-            <!-- TEXT -->
-
-            <textarea id="aiInput"
-                      placeholder="اكتب رسالتك..."
-                      rows="1"></textarea>
-
-
-            <!-- SEND -->
-
-            <button class="ai-action send"
-                    onclick="sendAI()"
-                    aria-label="إرسال">
-
-                <i class="fa-solid fa-arrow-up"></i>
-
-            </button>
-
-
-        </div>
-
-    </div>
-
-
-</div>
-
-
-<!-- =========================
-     WHATSAPP FLOAT
-========================= -->
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
 
 <a class="whatsapp"
    href="https://wa.me/966551496121"
@@ -3563,266 +2464,133 @@ body.modal-open{
 
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
 
-const menuBtn =
-    document.getElementById("menuBtn");
+/* =========================
+   MENU
+========================= */
 
-const navLinks =
-    document.getElementById("navLinks");
+function toggleMenu(){
 
+    const nav = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click",function(){
+    nav.classList.toggle("show");
 
-    navLinks.classList.toggle("mobile-open");
-
-    const icon =
-        menuBtn.querySelector("i");
-
-    if(navLinks.classList.contains("mobile-open")){
-
-        icon.className =
-            "fa-solid fa-xmark";
-
-    }else{
-
-        icon.className =
-            "fa-solid fa-bars";
-
-    }
-
-});
+}
 
 
-document.querySelectorAll(".nav-links a")
-.forEach(link => {
+/* =========================
+   CLOSE MENU WHEN CLICK LINK
+========================= */
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
 
     link.addEventListener("click",function(){
 
-        navLinks.classList.remove("mobile-open");
-
-        menuBtn.querySelector("i").className =
-            "fa-solid fa-bars";
+        document.getElementById("navLinks")
+            .classList.remove("show");
 
     });
 
 });
 
 
-/* =========================================================
-   ACCOUNTS
-========================================================= */
+/* =====================================================
+   AI
+===================================================== */
 
-const accountData = {
+const aiWindow =
+    document.getElementById("aiWindow");
 
-    "الرياض":{
-        whatsapp:"https://wa.me/966551496121",
-        phone:"tel:0551496121",
-        snapchat:"https://www.snapchat.com/add/ma484m",
-        instagram:"https://www.instagram.com/jj_j505",
-        tiktok:"https://www.tiktok.com/@user505_a3"
-    },
+const aiMessages =
+    document.getElementById("aiMessages");
 
-    "الدمام":{
-        whatsapp:"https://wa.me/966561232087",
-        phone:"tel:0561232087",
-        snapchat:"https://www.snapchat.com/add/ma484m",
-        instagram:"https://www.instagram.com/jj_j505",
-        tiktok:"https://www.tiktok.com/@user505_a3"
-    },
+const aiInput =
+    document.getElementById("aiInput");
 
-    "تبوك":{
-        whatsapp:"https://wa.me/966573480091",
-        phone:"tel:0573480091",
-        snapchat:"https://www.snapchat.com/add/ma484m",
-        instagram:"https://www.instagram.com/jj_j505",
-        tiktok:"https://www.tiktok.com/@user505_a3"
-    },
+const aiImageInput =
+    document.getElementById("aiImageInput");
 
-    "الأحساء":{
-        whatsapp:"https://wa.me/966539742588",
-        phone:"tel:0539742588",
-        snapchat:"https://www.snapchat.com/add/ma484m",
-        instagram:"https://www.instagram.com/jj_j505",
-        tiktok:"https://www.tiktok.com/@user505_a3"
-    },
+const aiAttachmentPreview =
+    document.getElementById("aiAttachmentPreview");
 
-    "الإدارة":{
-        whatsapp:"https://wa.me/966530493382",
-        phone:"tel:0530493382",
-        snapchat:"https://www.snapchat.com/add/ma484m",
-        instagram:"https://www.instagram.com/jj_j505",
-        tiktok:"https://www.tiktok.com/@user505_a3"
-    }
+const aiAttachmentImage =
+    document.getElementById("aiAttachmentImage");
 
-};
+const aiMicButton =
+    document.getElementById("aiMicButton");
 
-
-function openAccounts(branch){
-
-    const modal =
-        document.getElementById("accountsModal");
-
-    const title =
-        document.getElementById("modalTitle");
-
-    const links =
-        document.getElementById("modalLinks");
-
-    const data =
-        accountData[branch];
-
-    title.textContent =
-        "حسابات " + branch;
-
-    links.innerHTML = `
-
-        <a href="${data.whatsapp}" target="_blank">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            واتساب ${branch}
-
-        </a>
-
-        <a href="${data.phone}">
-
-            <i class="fa-solid fa-phone"></i>
-
-            اتصال ${branch}
-
-        </a>
-
-        <a href="${data.snapchat}" target="_blank">
-
-            <i class="fa-brands fa-snapchat"></i>
-
-            Snapchat
-
-        </a>
-
-        <a href="${data.instagram}" target="_blank">
-
-            <i class="fa-brands fa-instagram"></i>
-
-            Instagram
-
-        </a>
-
-        <a href="${data.tiktok}" target="_blank">
-
-            <i class="fa-brands fa-tiktok"></i>
-
-            TikTok
-
-        </a>
-
-    `;
-
-    modal.classList.add("show");
-
-    document.body.classList.add("modal-open");
-
-}
-
-
-function closeAccounts(){
-
-    document
-        .getElementById("accountsModal")
-        .classList.remove("show");
-
-    document.body.classList.remove("modal-open");
-
-}
-
-
-function closeModalOutside(event){
-
-    if(event.target.id === "accountsModal"){
-
-        closeAccounts();
-
-    }
-
-}
-
-
-/* =========================================================
-   AI VARIABLES
-========================================================= */
 
 let selectedImageBase64 = null;
-
 let selectedImageType = null;
 
 let mediaRecorder = null;
-
 let audioChunks = [];
-
 let isRecording = false;
 
 let currentAudio = null;
+let currentAudioButton = null;
 
 
-/* =========================================================
+/* =========================
    OPEN AI
-========================================================= */
+========================= */
 
 function openAI(){
 
-    const windowAI =
-        document.getElementById("aiWindow");
+    aiWindow.classList.add("show");
 
-    windowAI.classList.add("show");
+    setTimeout(function(){
 
-    setTimeout(() => {
+        aiInput.focus();
 
-        document
-            .getElementById("aiInput")
-            .focus();
-
-    },150);
+    },100);
 
 }
 
 
-/* =========================================================
+/* =========================
    TOGGLE AI
-========================================================= */
+========================= */
 
 function toggleAI(){
 
-    const windowAI =
-        document.getElementById("aiWindow");
+    aiWindow.classList.toggle("show");
 
-    windowAI.classList.toggle("show");
+    if(aiWindow.classList.contains("show")){
 
-    if(windowAI.classList.contains("show")){
+        setTimeout(function(){
 
-        setTimeout(() => {
+            aiInput.focus();
 
-            document
-                .getElementById("aiInput")
-                .focus();
-
-        },150);
+        },100);
 
     }
 
 }
 
 
-/* =========================================================
-   ADD TEXT MESSAGE
-========================================================= */
+/* =========================
+   KEYBOARD
+========================= */
 
-function addAIMessage(text,type){
+function handleAIKey(event){
 
-    const messages =
-        document.getElementById("aiMessages");
+    if(event.key === "Enter" && !event.shiftKey){
+
+        event.preventDefault();
+
+        sendAI();
+
+    }
+
+}
+
+
+/* =========================
+   ADD MESSAGE
+========================= */
+
+function addAIMessage(text,type="bot"){
 
     const row =
         document.createElement("div");
@@ -3830,35 +2598,32 @@ function addAIMessage(text,type){
     row.className =
         "ai-message-row " + type;
 
-    const div =
+    const message =
         document.createElement("div");
 
-    div.className =
-        "ai-message " + type;
+    message.className =
+        "ai-message";
 
-    div.textContent =
+    message.textContent =
         text;
 
-    row.appendChild(div);
+    row.appendChild(message);
 
-    messages.appendChild(row);
+    aiMessages.appendChild(row);
 
-    messages.scrollTop =
-        messages.scrollHeight;
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
 
     return row;
 
 }
 
 
-/* =========================================================
-   ADD IMAGE MESSAGE
-========================================================= */
+/* =========================
+   ADD USER IMAGE
+========================= */
 
 function addUserImageMessage(src){
-
-    const messages =
-        document.getElementById("aiMessages");
 
     const row =
         document.createElement("div");
@@ -3866,194 +2631,167 @@ function addUserImageMessage(src){
     row.className =
         "ai-message-row user";
 
-    const box =
+    const message =
         document.createElement("div");
 
-    box.className =
-        "ai-message user";
+    message.className =
+        "ai-message";
 
-    const img =
+    const image =
         document.createElement("img");
 
-    img.src =
-        src;
+    image.src = src;
 
-    img.className =
-        "ai-image-preview-message";
+    image.className =
+        "ai-message-image";
 
-    box.appendChild(img);
+    image.alt =
+        "الصورة المرسلة";
 
-    row.appendChild(box);
+    message.appendChild(image);
 
-    messages.appendChild(row);
+    row.appendChild(message);
 
-    messages.scrollTop =
-        messages.scrollHeight;
+    aiMessages.appendChild(row);
+
+    aiMessages.scrollTop =
+        aiMessages.scrollHeight;
 
 }
 
 
-/* =========================================================
-   IMAGE SELECT
-========================================================= */
+/* =========================
+   IMAGE
+========================= */
 
-document
-    .getElementById("aiImageInput")
-    .addEventListener("change",function(event){
+function handleImage(event){
 
-        const file =
-            event.target.files[0];
+    const file =
+        event.target.files[0];
 
-        if(!file){
+    if(!file) return;
 
-            return;
+    if(!file.type.startsWith("image/")){
 
-        }
+        alert("الملف المختار ليس صورة.");
 
-        if(!file.type.startsWith("image/")){
+        return;
 
-            alert("الملف المختار ليس صورة.");
+    }
 
-            return;
+    selectedImageType =
+        file.type;
 
-        }
+    const reader =
+        new FileReader();
 
-        const reader =
-            new FileReader();
+    reader.onload = function(e){
 
-        reader.onload = function(e){
+        selectedImageBase64 =
+            e.target.result;
 
-            selectedImageBase64 =
-                e.target.result;
+        aiAttachmentImage.src =
+            e.target.result;
 
-            selectedImageType =
-                file.type;
+        aiAttachmentPreview.classList.add("show");
 
-            document
-                .getElementById("aiPreviewImage")
-                .src =
-                selectedImageBase64;
+    };
 
-            document
-                .getElementById("aiAttachmentPreview")
-                .classList.add("show");
+    reader.readAsDataURL(file);
 
-        };
-
-        reader.readAsDataURL(file);
-
-    });
+}
 
 
-/* =========================================================
+/* =========================
    REMOVE IMAGE
-========================================================= */
+========================= */
 
 function removeSelectedImage(){
 
     selectedImageBase64 = null;
-
     selectedImageType = null;
 
-    document
-        .getElementById("aiImageInput")
-        .value = "";
+    aiAttachmentImage.src = "";
 
-    document
-        .getElementById("aiAttachmentPreview")
-        .classList.remove("show");
+    aiAttachmentPreview.classList.remove("show");
+
+    aiImageInput.value = "";
 
 }
 
 
-/* =========================================================
+/* =========================
    SEND AI
-========================================================= */
+========================= */
 
 async function sendAI(){
 
-    const input =
-        document.getElementById("aiInput");
+    const messageText =
+        aiInput.value.trim();
 
-    const message =
-        input.value.trim();
+    const imageToSend =
+        selectedImageBase64;
 
-    const hasImage =
-        !!selectedImageBase64;
+    const imageTypeToSend =
+        selectedImageType;
 
-    if(!message && !hasImage){
+
+    if(!messageText && !imageToSend){
 
         return;
 
     }
 
 
-    /* USER TEXT */
-
-    if(message){
+    if(messageText){
 
         addAIMessage(
-            message,
+            messageText,
             "user"
         );
 
     }
 
 
-    /* USER IMAGE */
-
-    if(hasImage){
+    if(imageToSend){
 
         addUserImageMessage(
-            selectedImageBase64
+            imageToSend
         );
 
     }
 
 
-    input.value = "";
+    aiInput.value = "";
 
-    input.style.height = "40px";
+    removeSelectedImage();
 
 
-    /* LOADING */
-
-    const loading =
+    const loadingRow =
         addAIMessage(
-            "جاري التفكير...",
+            "جاري تجهيز الرد...",
             "bot"
         );
 
-
-    const loadingText =
-        loading.querySelector(".ai-message");
-
-
-    const imageToSend =
-        selectedImageBase64;
-
-
-    removeSelectedImage();
+    loadingRow
+        .querySelector(".ai-message")
+        .classList.add("ai-loading");
 
 
     try{
 
         const bodyData = {
 
-            message: message || "حلل هذه الصورة."
+            message:
+                messageText,
+
+            image:
+                imageToSend,
+
+            image_type:
+                imageTypeToSend || "image/jpeg"
 
         };
-
-
-        if(imageToSend){
-
-            bodyData.image =
-                imageToSend;
-
-            bodyData.image_type =
-                selectedImageType || "image/jpeg";
-
-        }
 
 
         const response =
@@ -4062,10 +2800,7 @@ async function sendAI(){
                 method:"POST",
 
                 headers:{
-
-                    "Content-Type":
-                        "application/json"
-
+                    "Content-Type":"application/json"
                 },
 
                 body:JSON.stringify(bodyData)
@@ -4076,7 +2811,7 @@ async function sendAI(){
         if(!response.ok){
 
             throw new Error(
-                "API Error"
+                "HTTP " + response.status
             );
 
         }
@@ -4086,28 +2821,42 @@ async function sendAI(){
             await response.json();
 
 
-        loading.remove();
+        loadingRow.remove();
 
 
-        const reply =
+        const answer =
             data.reply ||
             data.message ||
-            "عذرًا، لم أتمكن من الحصول على رد الآن.";
+            data.response ||
+            "لم يصل رد من المستشار.";
 
 
         const botRow =
             addAIMessage(
-                reply,
+                answer,
                 "bot"
             );
 
 
         /*
-           إذا كان الـAPI يعيد رابطًا
-           للصوت في response:
-           data.audio
-           فسيظهر زر سماع تلقائيًا.
-        */
+         * إذا أعاد السيرفر رابط صوت
+         * يمكن تشغيله من زر السماعة
+         */
+
+        if(data.audio_url){
+
+            addAudioButton(
+                botRow,
+                data.audio_url
+            );
+
+        }
+
+
+        /*
+         * إذا أعاد السيرفر نصاً صوتياً
+         * أو رابطاً داخل audio
+         */
 
         if(data.audio){
 
@@ -4121,57 +2870,132 @@ async function sendAI(){
 
     }catch(error){
 
-        loadingText.textContent =
-            "عذرًا، المستشار غير متاح حاليًا. يمكنك التواصل معنا عبر واتساب.";
+        console.error(error);
+
+        loadingRow.remove();
+
+
+        addAIMessage(
+            "تعذر الاتصال بالمستشار حالياً. تأكد من إعداد /api/chat في الموقع ثم حاول مرة أخرى.",
+            "bot"
+        );
 
     }
 
 }
 
 
-/* =========================================================
-   ENTER TO SEND
-========================================================= */
+/* =====================================================
+   AUDIO RESPONSE
+===================================================== */
 
-document
-    .getElementById("aiInput")
-    .addEventListener("keydown",function(event){
+function stopCurrentAudio(){
 
-        if(event.key === "Enter" &&
-           !event.shiftKey){
+    if(currentAudio){
 
-            event.preventDefault();
+        currentAudio.pause();
 
-            sendAI();
+        currentAudio.currentTime = 0;
+
+    }
+
+    if(currentAudioButton){
+
+        currentAudioButton.innerHTML =
+            '<i class="fa-solid fa-volume-high"></i>';
+
+    }
+
+    currentAudio = null;
+    currentAudioButton = null;
+
+}
+
+
+/* =========================
+   AUDIO BUTTON
+========================= */
+
+function addAudioButton(messageRow,audioSource){
+
+    const button =
+        document.createElement("button");
+
+    button.className =
+        "ai-audio-btn";
+
+    button.innerHTML =
+        '<i class="fa-solid fa-volume-high"></i>';
+
+
+    button.onclick = function(){
+
+        /*
+         * إذا نفس الصوت يعمل
+         * أوقفه
+         */
+
+        if(currentAudio &&
+           currentAudioButton === button){
+
+            stopCurrentAudio();
+
+            return;
 
         }
 
-    });
+
+        stopCurrentAudio();
 
 
-/* =========================================================
-   AUTO TEXTAREA HEIGHT
-========================================================= */
+        const audio =
+            new Audio(audioSource);
 
-document
-    .getElementById("aiInput")
-    .addEventListener("input",function(){
+        currentAudio =
+            audio;
 
-        this.style.height =
-            "40px";
-
-        this.style.height =
-            Math.min(
-                this.scrollHeight,
-                120
-            ) + "px";
-
-    });
+        currentAudioButton =
+            button;
 
 
-/* =========================================================
-   AUDIO RECORDING
-========================================================= */
+        button.innerHTML =
+            '<i class="fa-solid fa-stop"></i>';
+
+
+        audio.play();
+
+
+        audio.onended =
+            function(){
+
+                stopCurrentAudio();
+
+            };
+
+
+        audio.onerror =
+            function(){
+
+                stopCurrentAudio();
+
+            };
+
+    };
+
+
+    const message =
+        messageRow.querySelector(
+            ".ai-message"
+        );
+
+    message.appendChild(button);
+
+}
+
+
+/* =====================================================
+   VOICE RECORDING
+===================================================== */
 
 async function toggleRecording(){
 
@@ -4187,9 +3011,10 @@ async function toggleRecording(){
     try{
 
         const stream =
-            await navigator.mediaDevices.getUserMedia({
-                audio:true
-            });
+            await navigator.mediaDevices
+                .getUserMedia({
+                    audio:true
+                });
 
 
         audioChunks = [];
@@ -4216,10 +3041,9 @@ async function toggleRecording(){
         mediaRecorder.onstop =
             async function(){
 
-                stream
-                    .getTracks()
-                    .forEach(track =>
-                        track.stop()
+                stream.getTracks()
+                    .forEach(
+                        track => track.stop()
                     );
 
 
@@ -4228,8 +3052,8 @@ async function toggleRecording(){
                         audioChunks,
                         {
                             type:
-                                mediaRecorder.mimeType ||
-                                "audio/webm"
+                            mediaRecorder.mimeType ||
+                            "audio/webm"
                         }
                     );
 
@@ -4246,25 +3070,20 @@ async function toggleRecording(){
         isRecording = true;
 
 
-        const mic =
-            document.getElementById(
-                "aiMicButton"
-            );
-
-
-        mic.classList.add(
+        aiMicButton.classList.add(
             "recording"
         );
 
-
-        mic.innerHTML =
+        aiMicButton.innerHTML =
             '<i class="fa-solid fa-stop"></i>';
 
 
     }catch(error){
 
+        console.error(error);
+
         alert(
-            "لا يمكن استخدام الميكروفون. يرجى السماح للموقع باستخدام الميكروفون."
+            "لم يتم السماح باستخدام الميكروفون."
         );
 
     }
@@ -4272,191 +3091,50 @@ async function toggleRecording(){
 }
 
 
-/* =========================================================
+/* =========================
    STOP RECORDING
-========================================================= */
+========================= */
 
 function stopRecording(){
 
-    if(!mediaRecorder ||
-       !isRecording){
+    if(!mediaRecorder) return;
 
-        return;
+    if(
+        mediaRecorder.state !==
+        "inactive"
+    ){
+
+        mediaRecorder.stop();
 
     }
 
-
-    mediaRecorder.stop();
-
     isRecording = false;
 
-
-    const mic =
-        document.getElementById(
-            "aiMicButton"
-        );
-
-
-    mic.classList.remove(
+    aiMicButton.classList.remove(
         "recording"
     );
 
-
-    mic.innerHTML =
+    aiMicButton.innerHTML =
         '<i class="fa-solid fa-microphone"></i>';
 
 }
 
 
-/* =========================================================
-   SEND AUDIO
-========================================================= */
+/* =====================================================
+   SEND AUDIO TO BACKEND
+===================================================== */
 
 async function sendAudioToAI(audioBlob){
 
-    const messages =
-        document.getElementById(
-            "aiMessages"
-        );
-
-
-    const row =
-        document.createElement(
-            "div"
-        );
-
-
-    row.className =
-        "ai-message-row user";
-
-
-    const audioBox =
-        document.createElement(
-            "div"
-        );
-
-
-    audioBox.className =
-        "ai-audio-message";
-
-
-    const audioUrl =
-        URL.createObjectURL(
-            audioBlob
-        );
-
-
-    const playButton =
-        document.createElement(
-            "button"
-        );
-
-
-    playButton.innerHTML =
-        '<i class="fa-solid fa-play"></i>';
-
-
-    const label =
-        document.createElement(
-            "span"
-        );
-
-
-    label.className =
-        "ai-audio-label";
-
-
-    label.textContent =
-        "رسالة صوتية";
-
-
-    const audio =
-        new Audio(
-            audioUrl
-        );
-
-
-    let playing = false;
-
-
-    playButton.onclick =
-        function(){
-
-            if(playing){
-
-                audio.pause();
-
-                audio.currentTime = 0;
-
-                playing = false;
-
-                playButton.innerHTML =
-                    '<i class="fa-solid fa-play"></i>';
-
-                return;
-
-            }
-
-
-            stopCurrentAudio();
-
-
-            audio.play();
-
-            currentAudio =
-                audio;
-
-            playing = true;
-
-            playButton.innerHTML =
-                '<i class="fa-solid fa-stop"></i>';
-
-
-            audio.onended =
-                function(){
-
-                    playing = false;
-
-                    playButton.innerHTML =
-                        '<i class="fa-solid fa-play"></i>';
-
-                    if(currentAudio === audio){
-
-                        currentAudio = null;
-
-                    }
-
-                };
-
-        };
-
-
-    audioBox.appendChild(
-        playButton
+    addAIMessage(
+        "جاري معالجة التسجيل الصوتي...",
+        "user"
     );
 
-    audioBox.appendChild(
-        label
-    );
-
-    row.appendChild(
-        audioBox
-    );
-
-    messages.appendChild(
-        row
-    );
-
-
-    messages.scrollTop =
-        messages.scrollHeight;
-
-
-    /* SEND TO API */
 
     const loading =
         addAIMessage(
-            "جاري معالجة الرسالة الصوتية...",
+            "جاري تحويل الصوت ومعالجة الطلب...",
             "bot"
         );
 
@@ -4487,7 +3165,7 @@ async function sendAudioToAI(audioBlob){
         if(!response.ok){
 
             throw new Error(
-                "Speech API Error"
+                "HTTP " + response.status
             );
 
         }
@@ -4500,29 +3178,34 @@ async function sendAudioToAI(audioBlob){
         loading.remove();
 
 
-        const reply =
+        const answer =
             data.reply ||
             data.message ||
-            data.text ||
-            "تم استلام الرسالة الصوتية.";
+            data.response ||
+            "تم استلام التسجيل ولكن لم يصل رد من المستشار.";
 
 
-        const botRow =
+        const row =
             addAIMessage(
-                reply,
+                answer,
                 "bot"
             );
 
 
-        /*
-           إذا أعاد الـAPI صوت الرد:
-           data.audio
-        */
+        if(data.audio_url){
+
+            addAudioButton(
+                row,
+                data.audio_url
+            );
+
+        }
+
 
         if(data.audio){
 
             addAudioButton(
-                botRow,
+                row,
                 data.audio
             );
 
@@ -4531,187 +3214,24 @@ async function sendAudioToAI(audioBlob){
 
     }catch(error){
 
-        loading.querySelector(
-            ".ai-message"
-        ).textContent =
-            "تعذر معالجة الرسالة الصوتية حاليًا.";
+        console.error(error);
+
+        loading.remove();
+
+
+        addAIMessage(
+            "تعذر معالجة التسجيل الصوتي حالياً. تأكد من وجود /api/speech في الموقع.",
+            "bot"
+        );
 
     }
 
 }
 
 
-/* =========================================================
-   STOP CURRENT AUDIO
-========================================================= */
-
-function stopCurrentAudio(){
-
-    if(currentAudio){
-
-        currentAudio.pause();
-
-        currentAudio.currentTime = 0;
-
-        currentAudio = null;
-
-    }
-
-}
-
-
-/* =========================================================
-   ADD AUDIO RESPONSE BUTTON
-========================================================= */
-
-function addAudioButton(
-    messageRow,
-    audioSource
-){
-
-    const message =
-        messageRow.querySelector(
-            ".ai-message"
-        );
-
-
-    if(!message){
-
-        return;
-
-    }
-
-
-    const button =
-        document.createElement(
-            "button"
-        );
-
-
-    button.type =
-        "button";
-
-
-    button.style.cssText = `
-
-        margin-top:10px;
-        width:38px;
-        height:38px;
-        border:0;
-        border-radius:50%;
-        background:#071522;
-        color:#fff;
-        cursor:pointer;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-
-    `;
-
-
-    const icon =
-        document.createElement(
-            "i"
-        );
-
-
-    icon.className =
-        "fa-solid fa-volume-high";
-
-
-    button.appendChild(
-        icon
-    );
-
-
-    const audio =
-        new Audio(
-            audioSource
-        );
-
-
-    let playing = false;
-
-
-    button.onclick =
-        function(){
-
-            /*
-               إذا كان الصوت الحالي هو نفسه
-               وكان يعمل، يتم إيقافه.
-            */
-
-            if(
-                currentAudio === audio &&
-                playing
-            ){
-
-                audio.pause();
-
-                audio.currentTime = 0;
-
-                playing = false;
-
-                currentAudio = null;
-
-                icon.className =
-                    "fa-solid fa-volume-high";
-
-                return;
-
-            }
-
-
-            /*
-               إيقاف أي صوت آخر أولاً
-            */
-
-            stopCurrentAudio();
-
-
-            audio.play();
-
-
-            currentAudio =
-                audio;
-
-            playing = true;
-
-
-            icon.className =
-                "fa-solid fa-stop";
-
-
-            audio.onended =
-                function(){
-
-                    playing = false;
-
-                    currentAudio = null;
-
-                    icon.className =
-                        "fa-solid fa-volume-high";
-
-                };
-
-        };
-
-
-    message.appendChild(
-        document.createElement("br")
-    );
-
-
-    message.appendChild(
-        button
-    );
-
-}
-
-
-/* =========================================================
-   ESC CLOSE
-========================================================= */
+/* =========================
+   ESC CLOSE AI
+========================= */
 
 document.addEventListener(
     "keydown",
@@ -4719,11 +3239,9 @@ document.addEventListener(
 
         if(event.key === "Escape"){
 
-            closeAccounts();
-
-            document
-                .getElementById("aiWindow")
-                .classList.remove("show");
+            aiWindow.classList.remove(
+                "show"
+            );
 
         }
 
@@ -4734,5 +3252,4 @@ document.addEventListener(
 
 
 </body>
-
 </html>
