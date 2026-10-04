@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0"
+>
+
+<title>طاولات الطعام والكراسي والبوفيهات | نجوم الإبداع</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body data-product-type="dining">
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">
+ن
+</div>
+
+<span>نجوم الإبداع</span>
+
+</a>
+
+<button
+    class="menu-btn"
+    onclick="toggleMenu()"
+>
+☰
+</button>
+
+<nav class="nav" id="mainNav">
+
+<a href="index.html">الرئيسية</a>
+
+<a href="sofas.html">الكنبات والمجالس</a>
+
+<a href="tables.html">الطاولات</a>
+
+<a href="dining.html">طاولات الطعام</a>
+
+<a href="admin.html">لوحة التحكم</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>
+طاولات الطعام والكراسي والبوفيهات
+</h1>
+
+<p>
+تشكيلة متكاملة لغرفة الطعام
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+طاولات الطعام والكراسي والبوفيهات
+</h2>
+
+<p>
+المنتجات يتم التحكم بها من لوحة الإدارة
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+    id="productSearch"
+    type="search"
+    placeholder="ابحث عن منتج..."
+>
+
+</div>
+
+
+<div class="filters">
+
+<button
+    class="filter-btn active"
+    data-filter="all"
+>
+الكل
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="new"
+>
+جديد
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="offers"
+>
+العروض
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="featured"
+>
+مميز
+</button>
+
+</div>
+
+
+<div
+    id="productsGrid"
+    class="products-grid"
+>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+نجوم الإبداع للمفروشات والكنبات
+
+</footer>
+
+
+<a
+    class="whatsapp"
+    href="https://wa.me/966551496121"
+    target="_blank"
+>
+وات
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+        .getElementById("mainNav")
+        .classList.toggle("open");
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="products.js"></script>
+
+</body>
+
+</html>
