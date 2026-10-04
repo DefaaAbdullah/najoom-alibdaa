@@ -1,1 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0"
+>
+
+<title>
+نجوم الإبداع للمفروشات والكنبات
+</title>
+
+<meta
+    name="description"
+    content="نجوم الإبداع للمفروشات والكنبات - كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة"
+/>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.home-links{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.home-link{
+    padding:30px;
+    background:#0b1f30;
+    border:1px solid rgba(228,197,126,.15);
+    border-radius:20px;
+    text-align:center;
+    transition:.2s;
+}
+
+.home-link:hover{
+    transform:translateY(-5px);
+    border-color:#e4c57e;
+}
+
+.home-link h3{
+    color:#e4c57e;
+}
+
+@media(max-width:800px){
+    .home-links{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">ن</div>
+
+<span>نجوم الإبداع</span>
+
+</a>
+
+
+<button
+    class="menu-btn"
+    onclick="toggleMenu()"
+>
+☰
+</button>
+
+
+<nav
+    class="nav"
+    id="mainNav"
+>
+
+<a href="index.html">الرئيسية</a>
+
+<a href="sofas.html">الكنبات والمجالس</a>
+
+<a href="tables.html">الطاولات</a>
+
+<a href="dining.html">طاولات الطعام</a>
+
+<a href="#branches">الفروع</a>
+
+<a href="admin.html">لوحة التحكم</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>
+مجالس وكنبات
+<br>
+بذوق يليق بمنزلك
+</h1>
+
+<p>
+كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة
+</p>
+
+
+<div
+    style="
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+        margin-top:25px;
+    "
+>
+
+<a
+    class="btn"
+    href="sofas.html"
+>
+شاهد الكنبات والمجالس
+</a>
+
+<a
+    class="btn btn-outline"
+    href="tables.html"
+>
+شاهد الطاولات
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+منتجاتنا
+</h2>
+
+<p>
+اختر القسم الذي تريد تصفحه
+</p>
+
+</div>
+
+
+<div class="home-links">
+
+<a
+    href="sofas.html"
+    class="home-link"
+>
+
+<h3>
+الكنبات والمجالس
+</h3>
+
+<p>
+كنبات ومجالس جاهزة وتفصيل
+</p>
+
+</a>
+
+
+<a
+    href="tables.html"
+    class="home-link"
+>
+
+<h3>
+الطاولات
+</h3>
+
+<p>
+طاولات بتصاميم متنوعة
+</p>
+
+</a>
+
+
+<a
+    href="dining.html"
+    class="home-link"
+>
+
+<h3>
+طاولات الطعام
+</h3>
+
+<p>
+طاولات الطعام والكراسي والبوفيهات
+</p>
+
+</a>
+
+
+<a
+    href="#branches"
+    class="home-link"
+>
+
+<h3>
+فروعنا
+</h3>
+
+<p>
+تصفح صور الفروع
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section
+    id="branches"
+    class="section"
+>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+فروع نجوم الإبداع
+</h2>
+
+<p>
+تعرف على فروعنا ومعارضنا
+</p>
+
+</div>
+
+
+<div class="branches">
+
+<a
+    href="tabuk.html"
+    class="branch-card"
+>
+
+<h3>
+تبوك
+</h3>
+
+</a>
+
+
+<a
+    href="ahsa.html"
+    class="branch-card"
+>
+
+<h3>
+الحساء
+</h3>
+
+</a>
+
+
+<a
+    href="riyadh.html"
+    class="branch-card"
+>
+
+<h3>
+الرياض
+</h3>
+
+</a>
+
+
+<a
+    href="dammam.html"
+    class="branch-card"
+>
+
+<h3>
+الدمام
+</h3>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+<strong>
+نجوم الإبداع للمفروشات والكنبات
+</strong>
+
+<br><br>
+
+كنبات ومجالس جاهزة وتفصيل وطاولات ومفروشات فاخرة
+
+</div>
+
+</footer>
+
+
+<a
+    class="whatsapp"
+    href="https://wa.me/966551496121"
+    target="_blank"
+>
+وات
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+        .getElementById("mainNav")
+        .classList.toggle("open");
+
+}
+
+</script>
+
+</body>
+
+</html>
