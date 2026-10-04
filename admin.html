@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#071522">
+  <title>لوحة تحكم نجوم الإبداع</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    :root{
+      --navy:#071522;
+      --navy2:#0d2435;
+      --gold:#c8a15b;
+      --gold2:#e4c57e;
+      --cream:#f7f5ef;
+      --white:#fff;
+      --text:#17232d;
+      --muted:#74808a;
+      --border:#e7e5df;
+      --danger:#b42318;
+      --success:#16803c;
+      --shadow:0 12px 35px rgba(7,21,34,.10);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Cairo",sans-serif;
+      background:#f5f6f7;
+      color:var(--text);
+    }
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+
+    .login-screen{
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(200,161,91,.16),transparent 28%),
+        linear-gradient(135deg,#071522,#0d2435);
+    }
+
+    .login-card{
+      width:min(430px,100%);
+      background:#fff;
+      border-radius:28px;
+      padding:30px;
+      box-shadow:0 25px 70px rgba(0,0,0,.25);
+    }
+
+    .brand{
+      text-align:center;
+      margin-bottom:25px;
+    }
+    .brand-logo{
+      width:70px;height:70px;
+      margin:auto;
+      display:grid;
+      place-items:center;
+      border-radius:20px;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:var(--navy);
+      font-size:30px;
+      font-weight:800;
+      box-shadow:0 10px 25px rgba(200,161,91,.25);
+    }
+    .brand h1{
+      margin:15px 0 4px;
+      font-size:23px;
+    }
+    .brand p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .field{margin-bottom:15px}
+    .field label{
+      display:block;
+      font-weight:700;
+      margin-bottom:7px;
+      font-size:13px;
+    }
+    .field input,
+    .field textarea,
+    .field select{
+      width:100%;
+      border:1px solid var(--border);
+      border-radius:13px;
+      padding:12px 13px;
+      outline:none;
+      background:#fff;
+      transition:.2s;
+    }
+    .field textarea{min-height:110px;resize:vertical}
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(200,161,91,.12);
+    }
+
+    .btn{
+      border:0;
+      border-radius:13px;
+      padding:11px 16px;
+      font-weight:700;
+      transition:.2s;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-gold{background:var(--gold);color:var(--navy)}
+    .btn-light{background:#f1f3f4;color:var(--text)}
+    .btn-danger{background:#fff0ee;color:var(--danger)}
+    .btn-success{background:#eaf8ef;color:var(--success)}
+    .btn-block{width:100%}
+
+    .error{
+      display:none;
+      background:#fff0ee;
+      color:var(--danger);
+      padding:10px 12px;
+      border-radius:12px;
+      margin-bottom:14px;
+      font-size:13px;
+    }
+
+    .app{display:none;min-height:100svh}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:100;
+      min-height:70px;
+      padding:10px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+      background:var(--navy);
+      color:#fff;
+      box-shadow:0 5px 20px rgba(0,0,0,.12);
+    }
+    .top-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .mini-logo{
+      width:44px;height:44px;
+      display:grid;place-items:center;
+      border-radius:13px;
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
+      color:var(--navy);
+      font-weight:800;
+    }
+    .top-title strong{display:block;font-size:16px}
+    .top-title small{display:block;color:#cbd3d9;font-size:11px}
+
+    .top-actions{display:flex;gap:8px}
+    .top-actions .btn{background:rgba(255,255,255,.09);color:#fff}
+
+    .layout{
+      max-width:1450px;
+      margin:auto;
+      padding:22px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+      margin-bottom:20px;
+    }
+    .stat{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .stat small{color:var(--muted)}
+    .stat strong{
+      display:block;
+      margin-top:5px;
+      font-size:27px;
+    }
+
+    .toolbar{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:15px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
+      margin-bottom:18px;
+    }
+    .search{
+      flex:1 1 280px;
+      position:relative;
+    }
+    .search input{
+      width:100%;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      border-radius:13px;
+      outline:none;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .product{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .product-image{
+      aspect-ratio:1.15;
+      background:#eef1f2;
+      position:relative;
+      overflow:hidden;
+    }
+    .product-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .no-image{
+      height:100%;
+      display:grid;
+      place-items:center;
+      color:#9aa3a9;
+      font-size:13px;
+    }
+    .status{
+      position:absolute;
+      top:10px;
+      right:10px;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#eaf8ef;
+      color:var(--success);
+      font-size:11px;
+      font-weight:800;
+    }
+    .status.off{background:#f1f3f4;color:#68747d}
+
+    .product-body{padding:15px}
+    .product-body h3{
+      margin:0 0 5px;
+      font-size:17px;
+    }
+    .product-body p{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.8;
+      margin:0 0 12px;
+      min-height:43px;
+    }
+    .product-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:5px;
+      margin-bottom:12px;
+    }
+    .tag{
+      padding:4px 8px;
+      border-radius:8px;
+      background:#f4f1e9;
+      color:#69552f;
+      font-size:10px;
+      font-weight:700;
+    }
+    .product-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:7px;
+    }
+
+    .empty{
+      background:#fff;
+      border:1px dashed #cfd4d7;
+      border-radius:var(--radius);
+      padding:50px 20px;
+      text-align:center;
+      color:var(--muted);
+      grid-column:1/-1;
+    }
+
+    .modal{
+      position:fixed;
+      inset:0;
+      z-index:1000;
+      background:rgba(0,0,0,.55);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:15px;
+      backdrop-filter:blur(4px);
+    }
+    .modal.show{display:flex}
+
+    .modal-card{
+      width:min(760px,100%);
+      max-height:min(92svh,900px);
+      overflow:auto;
+      background:#fff;
+      border-radius:24px;
+      box-shadow:0 25px 80px rgba(0,0,0,.28);
+    }
+    .modal-head{
+      position:sticky;
+      top:0;
+      z-index:2;
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      padding:17px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .modal-head h2{margin:0;font-size:19px}
+    .close{
+      width:38px;height:38px;
+      border:0;
+      border-radius:11px;
+      background:#f1f3f4;
+      font-size:20px;
+    }
+    .modal-body{padding:20px}
+
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    .full{grid-column:1/-1}
+
+    .upload-box{
+      border:2px dashed #d5d9dc;
+      border-radius:15px;
+      padding:16px;
+      text-align:center;
+      background:#fafafa;
+    }
+    .upload-box input{margin-top:10px;width:100%}
+
+    .preview-list{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:8px;
+      margin-top:12px;
+    }
+    .preview{
+      aspect-ratio:1;
+      border-radius:10px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#eee;
+    }
+    .preview img{width:100%;height:100%;object-fit:cover}
+
+    .modal-foot{
+      padding:15px 20px;
+      border-top:1px solid var(--border);
+      display:flex;
+      justify-content:flex-start;
+      gap:8px;
+      position:sticky;
+      bottom:0;
+      background:#fff;
+    }
+
+    .loading{
+      position:fixed;
+      inset:0;
+      z-index:2000;
+      background:rgba(255,255,255,.82);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:10px;
+      backdrop-filter:blur(3px);
+    }
+    .loading.show{display:flex}
+    .spinner{
+      width:40px;height:40px;
+      border:4px solid #ddd;
+      border-top-color:var(--gold);
+      border-radius:50%;
+      animation:spin .8s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .toast{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      z-index:3000;
+      max-width:min(400px,calc(100% - 36px));
+      background:var(--navy);
+      color:#fff;
+      padding:12px 15px;
+      border-radius:13px;
+      box-shadow:0 15px 40px rgba(0,0,0,.2);
+      display:none;
+      font-size:13px;
+    }
+    .toast.show{display:block}
+
+    @media(max-width:1100px){
+      .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(max-width:700px){
+      .topbar{padding:9px 12px}
+      .top-title small{display:none}
+      .layout{padding:12px}
+      .stats{gap:9px}
+      .stat{padding:13px}
+      .stat strong{font-size:22px}
+      .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .product-body{padding:11px}
+      .product-body h3{font-size:14px}
+      .product-body p{font-size:11px}
+      .product-actions{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .full{grid-column:auto}
+      .modal{padding:0}
+      .modal-card{
+        width:100%;
+        height:100%;
+        max-height:none;
+        border-radius:0;
+      }
+      .modal-body{padding:15px}
+      .preview-list{grid-template-columns:repeat(4,1fr)}
+    }
+
+    @media(max-width:430px){
+      .top-actions .btn span{display:none}
+      .products{grid-template-columns:1fr}
+      .product-image{aspect-ratio:1.45}
+      .stats{grid-template-columns:1fr 1fr}
+      .toolbar{padding:10px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- تسجيل الدخول -->
+  <section class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="brand">
+        <div class="brand-logo">ن</div>
+        <h1>لوحة تحكم نجوم الإبداع</h1>
+        <p>إدارة موديلات الطاولات والصور</p>
+      </div>
+
+      <div class="error" id="loginError"></div>
+
+      <div class="field">
+        <label>البريد الإلكتروني</label>
+        <input id="email" type="email" autocomplete="email" placeholder="أدخل بريد الإدارة">
+      </div>
+
+      <div class="field">
+        <label>كلمة المرور</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="أدخل كلمة المرور">
+      </div>
+
+      <button class="btn btn-primary btn-block" id="loginBtn" onclick="login()">
+        تسجيل الدخول
+      </button>
+    </div>
+  </section>
+
+  <!-- التطبيق -->
+  <main class="app" id="app">
+    <header class="topbar">
+      <div class="top-title">
+        <div class="mini-logo">ن</div>
+        <div>
+          <strong>نجوم الإبداع</strong>
+          <small>لوحة إدارة الطاولات</small>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button class="btn" onclick="openAddModal()">＋ <span>إضافة موديل</span></button>
+        <button class="btn" onclick="logout()">خروج</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section class="stats">
+        <div class="stat">
+          <small>إجمالي الموديلات</small>
+          <strong id="totalCount">0</strong>
+        </div>
+        <div class="stat">
+          <small>المنشورة</small>
+          <strong id="publishedCount">0</strong>
+        </div>
+        <div class="stat">
+          <small>المخفية</small>
+          <strong id="hiddenCount">0</strong>
+        </div>
+        <div class="stat">
+          <small>آخر تحديث</small>
+          <strong id="lastUpdate">—</strong>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="ابحث باسم الموديل أو التصنيف..." oninput="renderProducts()">
+        </div>
+
+        <select id="filterStatus" class="btn-light" onchange="renderProducts()" style="padding:11px 13px;border:1px solid var(--border);border-radius:13px;">
+          <option value="all">كل الحالات</option>
+          <option value="published">منشور</option>
+          <option value="hidden">مخفي</option>
+        </select>
+
+        <button class="btn btn-gold" onclick="openAddModal()">+ إضافة موديل</button>
+      </section>
+
+      <section class="products" id="products"></section>
+    </div>
+  </main>
+
+  <!-- نافذة الإضافة والتعديل -->
+  <div class="modal" id="productModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modalTitle">إضافة موديل جديد</h2>
+        <button class="close" onclick="closeModal()">×</button>
+      </div>
+
+      <form id="productForm" onsubmit="saveProduct(event)">
+        <div class="modal-body">
+          <div class="grid2">
+
+            <div class="field">
+              <label>اسم الموديل *</label>
+              <input id="name" required placeholder="مثال: طاولة موديل 501">
+            </div>
+
+            <div class="field">
+              <label>التصنيف</label>
+              <input id="category" placeholder="مثال: طاولات طعام">
+            </div>
+
+            <div class="field full">
+              <label>الوصف</label>
+              <textarea id="description" placeholder="اكتب وصفًا مختصرًا للموديل"></textarea>
+            </div>
+
+            <div class="field">
+              <label>المقاسات</label>
+              <input id="dimensions" placeholder="مثال: 200 × 100 سم">
+            </div>
+
+            <div class="field">
+              <label>الخامة</label>
+              <input id="material" placeholder="مثال: خشب طبيعي">
+            </div>
+
+            <div class="field">
+              <label>اللون</label>
+              <input id="color" placeholder="مثال: بني فاتح">
+            </div>
+
+            <div class="field">
+              <label>ترتيب الظهور</label>
+              <input id="sortOrder" type="number" value="0" min="0">
+            </div>
+
+            <div class="field">
+              <label>حالة الموديل</label>
+              <select id="published">
+                <option value="true">منشور</option>
+                <option value="false">مخفي</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>رقم واتساب (اختياري)</label>
+              <input id="whatsapp" placeholder="مثال: 966551496121">
+            </div>
+
+            <div class="field full">
+              <label>الصورة الرئيسية</label>
+              <div class="upload-box">
+                اختر صورة رئيسية من الجوال أو الكمبيوتر
+                <input id="mainImage" type="file" accept="image/*">
+                <div class="preview-list" id="mainPreview"></div>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label>صور إضافية</label>
+              <div class="upload-box">
+                يمكنك اختيار عدة صور
+                <input id="extraImages" type="file" accept="image/*" multiple>
+                <div class="preview-list" id="extraPreview"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-foot">
+          <button type="button" class="btn btn-light" onclick="closeModal()">إلغاء</button>
+          <button type="submit" class="btn btn-primary" id="saveBtn">حفظ الموديل</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <strong id="loadingText">جاري التنفيذ...</strong>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+  /* =========================================================
+     إعداد Supabase
+     ========================================================= */
+
+  const SUPABASE_URL = "https://kpgfdhxwcormlqfkpoye.supabase.co";
+  const SUPABASE_ANON_KEY =
+    "sb_publishable_VYD0M_I_yrW-DlQUYhtvGQ_lUQcHwXG";
+
+  const TABLE_NAME = "tables";
+  const STORAGE_BUCKET = "table-images";
+
+  const { createClient } = window.supabase;
+  const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  let products = [];
+  let editingId = null;
+
+  /* =========================================================
+     أدوات عامة
+     ========================================================= */
+
+  function $(id){
+    return document.getElementById(id);
+  }
+
+  function escapeHTML(value){
+    return String(value ?? "")
+      .replace(/&/g,"&amp;")
+      .replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;")
+      .replace(/'/g,"&#039;");
+  }
+
+  function showLoading(text="جاري التنفيذ..."){
+    $("loadingText").textContent = text;
+    $("loading").classList.add("show");
+  }
+
+  function hideLoading(){
+    $("loading").classList.remove("show");
+  }
+
+  function toast(message){
+    const el = $("toast");
+    el.textContent = message;
+    el.classList.add("show");
+    clearTimeout(window.toastTimer);
+    window.toastTimer = setTimeout(() => el.classList.remove("show"), 3500);
+  }
+
+  function showError(message){
+    const el = $("loginError");
+    el.textContent = message;
+    el.style.display = "block";
+  }
+
+  /* =========================================================
+     تسجيل الدخول
+     ========================================================= */
+
+  async function login(){
+    const email = $("email").value.trim();
+    const password = $("password").value;
+
+    $("loginError").style.display = "none";
+
+    if(!email || !password){
+      showError("اكتب البريد الإلكتروني وكلمة المرور.");
+      return;
+    }
+
+    showLoading("جاري تسجيل الدخول...");
+
+    const { error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    hideLoading();
+
+    if(error){
+      showError(error.message || "تعذر تسجيل الدخول.");
+      return;
+    }
+
+    await initApp();
+  }
+
+  async function logout(){
+    await supabaseClient.auth.signOut();
+    $("app").style.display = "none";
+    $("loginScreen").style.display = "flex";
+  }
+
+  async function checkSession(){
+    const { data } = await supabaseClient.auth.getSession();
+
+    if(data.session){
+      await initApp();
+    }else{
+      $("loginScreen").style.display = "flex";
+      $("app").style.display = "none";
+    }
+  }
+
+  /* =========================================================
+     تشغيل اللوحة
+     ========================================================= */
+
+  async function initApp(){
+    $("loginScreen").style.display = "none";
+    $("app").style.display = "block";
+    await loadProducts();
+  }
+
+  /* =========================================================
+     جلب المنتجات
+     ========================================================= */
+
+  async function loadProducts(){
+    showLoading("جاري تحميل الموديلات...");
+
+    const { data, error } = await supabaseClient
+      .from(TABLE_NAME)
+      .select("*")
+      .order("sort_order", { ascending:true })
+      .order("created_at", { ascending:false });
+
+    hideLoading();
+
+    if(error){
+      console.error(error);
+      toast("تعذر تحميل الموديلات. تأكد من إنشاء جدول tables في Supabase.");
+      products = [];
+      renderProducts();
+      return;
+    }
+
+    products = data || [];
+    updateStats();
+    renderProducts();
+  }
+
+  function updateStats(){
+    const published = products.filter(x => x.published === true).length;
+    const hidden = products.filter(x => x.published !== true).length;
+
+    $("totalCount").textContent = products.length;
+    $("publishedCount").textContent = published;
+    $("hiddenCount").textContent = hidden;
+
+    $("lastUpdate").textContent = new Date().toLocaleDateString("ar-SA",{
+      day:"numeric",
+      month:"numeric"
+    });
+  }
+
+  /* =========================================================
+     عرض المنتجات
+     ========================================================= */
+
+  function renderProducts(){
+    const search = $("searchInput").value.trim().toLowerCase();
+    const status = $("filterStatus").value;
+
+    let list = products.filter(product => {
+      const text = [
+        product.name,
+        product.category,
+        product.description,
+        product.material,
+        product.color
+      ].join(" ").toLowerCase();
+
+      const matchSearch = !search || text.includes(search);
+
+      const matchStatus =
+        status === "all" ||
+        (status === "published" && product.published === true) ||
+        (status === "hidden" && product.published !== true);
+
+      return matchSearch && matchStatus;
+    });
+
+    const container = $("products");
+
+    if(!list.length){
+      container.innerHTML = `
+        <div class="empty">
+          لا توجد موديلات مطابقة.
+          <br><br>
+          <button class="btn btn-gold" onclick="openAddModal()">إضافة أول موديل</button>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = list.map(product => {
+      const image = product.main_image_url || product.image_url || "";
+      const published = product.published === true;
+
+      return `
+        <article class="product">
+          <div class="product-image">
+            ${image
+              ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(product.name)}" loading="lazy">`
+              : `<div class="no-image">لا توجد صورة</div>`
+            }
+            <span class="status ${published ? "" : "off"}">
+              ${published ? "منشور" : "مخفي"}
+            </span>
+          </div>
+
+          <div class="product-body">
+            <h3>${escapeHTML(product.name || "بدون اسم")}</h3>
+
+            <p>${escapeHTML(product.description || "لا يوجد وصف.")}</p>
+
+            <div class="product-meta">
+              ${product.category ? `<span class="tag">${escapeHTML(product.category)}</span>` : ""}
+              ${product.dimensions ? `<span class="tag">${escapeHTML(product.dimensions)}</span>` : ""}
+              ${product.color ? `<span class="tag">${escapeHTML(product.color)}</span>` : ""}
+            </div>
+
+            <div class="product-actions">
+              <button class="btn btn-light" onclick="openEditModal('${product.id}')">تعديل</button>
+              <button class="btn ${published ? "btn-danger" : "btn-success"}"
+                      onclick="togglePublished('${product.id}', ${published})">
+                ${published ? "إخفاء" : "نشر"}
+              </button>
+              <button class="btn btn-danger" onclick="deleteProduct('${product.id}')">حذف</button>
+              <button class="btn btn-light" onclick="moveProduct('${product.id}', -1)">↑ ترتيب</button>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  /* =========================================================
+     نافذة الإضافة والتعديل
+     ========================================================= */
+
+  function resetForm(){
+    $("productForm").reset();
+    $("sortOrder").value = 0;
+    $("published").value = "true";
+    $("mainPreview").innerHTML = "";
+    $("extraPreview").innerHTML = "";
+  }
+
+  function openAddModal(){
+    editingId = null;
+    resetForm();
+    $("modalTitle").textContent = "إضافة موديل جديد";
+    $("saveBtn").textContent = "حفظ الموديل";
+    $("productModal").classList.add("show");
+  }
+
+  function openEditModal(id){
+    const product = products.find(x => String(x.id) === String(id));
+    if(!product) return;
+
+    editingId = id;
+
+    $("modalTitle").textContent = "تعديل الموديل";
+    $("saveBtn").textContent = "حفظ التعديلات";
+
+    $("name").value = product.name || "";
+    $("category").value = product.category || "";
+    $("description").value = product.description || "";
+    $("dimensions").value = product.dimensions || "";
+    $("material").value = product.material || "";
+    $("color").value = product.color || "";
+    $("sortOrder").value = product.sort_order ?? 0;
+    $("published").value = product.published ? "true" : "false";
+    $("whatsapp").value = product.whatsapp || "";
+
+    $("mainPreview").innerHTML = product.main_image_url
+      ? `<div class="preview"><img src="${escapeHTML(product.main_image_url)}"></div>`
+      : "";
+
+    const extra = Array.isArray(product.extra_image_urls)
+      ? product.extra_image_urls
+      : [];
+
+    $("extraPreview").innerHTML = extra.map(url =>
+      `<div class="preview"><img src="${escapeHTML(url)}"></div>`
+    ).join("");
+
+    $("productModal").classList.add("show");
+  }
+
+  function closeModal(){
+    $("productModal").classList.remove("show");
+  }
+
+  /* =========================================================
+     معاينة الصور
+     ========================================================= */
+
+  $("mainImage").addEventListener("change", function(){
+    const file = this.files[0];
+    if(!file){
+      $("mainPreview").innerHTML = "";
+      return;
+    }
+
+    const url = URL.createObjectURL(file);
+    $("mainPreview").innerHTML =
+      `<div class="preview"><img src="${url}"></div>`;
+  });
+
+  $("extraImages").addEventListener("change", function(){
+    const files = [...this.files];
+
+    $("extraPreview").innerHTML = files.map(file => {
+      const url = URL.createObjectURL(file);
+      return `<div class="preview"><img src="${url}"></div>`;
+    }).join("");
+  });
+
+  /* =========================================================
+     رفع الصور إلى Supabase Storage
+     ========================================================= */
+
+  async function uploadImage(file){
+    if(!file) return null;
+
+    const extension =
+      file.name.includes(".")
+        ? file.name.split(".").pop().toLowerCase()
+        : "jpg";
+
+    const filename =
+      `${Date.now()}-${crypto.randomUUID()}.${extension}`;
+
+    const path = `products/${filename}`;
+
+    const { error } = await supabaseClient.storage
+      .from(STORAGE_BUCKET)
+      .upload(path, file, {
+        cacheControl:"3600",
+        upsert:false
+      });
+
+    if(error) throw error;
+
+    const { data } = supabaseClient.storage
+      .from(STORAGE_BUCKET)
+      .getPublicUrl(path);
+
+    return data.publicUrl;
+  }
+
+  /* =========================================================
+     حفظ الموديل
+     ========================================================= */
+
+  async function saveProduct(event){
+    event.preventDefault();
+
+    const name = $("name").value.trim();
+
+    if(!name){
+      toast("اكتب اسم الموديل.");
+      return;
+    }
+
+    showLoading(editingId ? "جاري حفظ التعديلات..." : "جاري إضافة الموديل...");
+
+    try{
+      let mainImageUrl = null;
+      let extraImageUrls = [];
+
+      const oldProduct = editingId
+        ? products.find(x => String(x.id) === String(editingId))
+        : null;
+
+      if(oldProduct){
+        mainImageUrl = oldProduct.main_image_url || oldProduct.image_url || null;
+        extraImageUrls = Array.isArray(oldProduct.extra_image_urls)
+          ? [...oldProduct.extra_image_urls]
+          : [];
+      }
+
+      const mainFile = $("mainImage").files[0];
+
+      if(mainFile){
+        mainImageUrl = await uploadImage(mainFile);
+      }
+
+      const extraFiles = [...$("extraImages").files];
+
+      for(const file of extraFiles){
+        const url = await uploadImage(file);
+        if(url) extraImageUrls.push(url);
+      }
+
+      const payload = {
+        name,
+        category: $("category").value.trim(),
+        description: $("description").value.trim(),
+        dimensions: $("dimensions").value.trim(),
+        material: $("material").value.trim(),
+        color: $("color").value.trim(),
+        main_image_url: mainImageUrl,
+        extra_image_urls: extraImageUrls,
+        published: $("published").value === "true",
+        sort_order: Number($("sortOrder").value || 0),
+        whatsapp: $("whatsapp").value.trim()
+      };
+
+      let result;
+
+      if(editingId){
+        result = await supabaseClient
+          .from(TABLE_NAME)
+          .update(payload)
+          .eq("id", editingId);
+      }else{
+        result = await supabaseClient
+          .from(TABLE_NAME)
+          .insert(payload);
+      }
+
+      if(result.error) throw result.error;
+
+      hideLoading();
+      closeModal();
+      toast(editingId ? "تم حفظ التعديلات." : "تمت إضافة الموديل بنجاح.");
+      await loadProducts();
+
+    }catch(error){
+      console.error(error);
+      hideLoading();
+      toast("حدث خطأ: " + (error.message || "تعذر حفظ البيانات."));
+    }
+  }
+
+  /* =========================================================
+     نشر / إخفاء
+     ========================================================= */
+
+  async function togglePublished(id, current){
+    const action = current ? "إخفاء" : "نشر";
+
+    if(!confirm(`هل تريد ${action} هذا الموديل؟`)) return;
+
+    showLoading(`جاري ${action} الموديل...`);
+
+    const { error } = await supabaseClient
+      .from(TABLE_NAME)
+      .update({published:!current})
+      .eq("id",id);
+
+    hideLoading();
+
+    if(error){
+      console.error(error);
+      toast("تعذر تغيير حالة الموديل.");
+      return;
+    }
+
+    toast(`تم ${action} الموديل.`);
+    await loadProducts();
+  }
+
+  /* =========================================================
+     حذف
+     ========================================================= */
+
+  async function deleteProduct(id){
+    const product = products.find(x => String(x.id) === String(id));
+    if(!product) return;
+
+    const ok = confirm(
+      `هل أنت متأكد من حذف "${product.name}"؟\n\nسيتم حذف بيانات الموديل من قاعدة البيانات.`
+    );
+
+    if(!ok) return;
+
+    showLoading("جاري حذف الموديل...");
+
+    const { error } = await supabaseClient
+      .from(TABLE_NAME)
+      .delete()
+      .eq("id",id);
+
+    hideLoading();
+
+    if(error){
+      console.error(error);
+      toast("تعذر حذف الموديل.");
+      return;
+    }
+
+    toast("تم حذف الموديل.");
+    await loadProducts();
+  }
+
+  /* =========================================================
+     ترتيب بسيط
+     ========================================================= */
+
+  async function moveProduct(id, direction){
+    const index = products.findIndex(x => String(x.id) === String(id));
+    if(index < 0) return;
+
+    const newIndex = index + direction;
+
+    if(newIndex < 0 || newIndex >= products.length) return;
+
+    const a = products[index];
+    const b = products[newIndex];
+
+    const aOrder = a.sort_order ?? index;
+    const bOrder = b.sort_order ?? newIndex;
+
+    showLoading("جاري تحديث الترتيب...");
+
+    const r1 = await supabaseClient
+      .from(TABLE_NAME)
+      .update({sort_order:bOrder})
+      .eq("id",a.id);
+
+    const r2 = await supabaseClient
+      .from(TABLE_NAME)
+      .update({sort_order:aOrder})
+      .eq("id",b.id);
+
+    hideLoading();
+
+    if(r1.error || r2.error){
+      toast("تعذر تحديث الترتيب.");
+      return;
+    }
+
+    await loadProducts();
+  }
+
+  /* =========================================================
+     تشغيل
+     ========================================================= */
+
+  supabaseClient.auth.onAuthStateChange((event, session) => {
+    if(session){
+      $("loginScreen").style.display = "none";
+      $("app").style.display = "block";
+    }
+  });
+
+  checkSession();
+
+  $("password").addEventListener("keydown", e => {
+    if(e.key === "Enter") login();
+  });
+
+  $("productModal").addEventListener("click", e => {
+    if(e.target === $("productModal")) closeModal();
+  });
+</script>
+
+</body>
+</html>
