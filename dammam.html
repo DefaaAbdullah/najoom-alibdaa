@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0"
+>
+
+<title>فرع الدمام | نجوم الإبداع للمفروشات</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body data-branch="dammam">
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">ن</div>
+
+<span>نجوم الإبداع</span>
+
+</a>
+
+<button
+    class="menu-btn"
+    onclick="toggleMenu()"
+>
+☰
+</button>
+
+<nav class="nav" id="mainNav">
+
+<a href="index.html">الرئيسية</a>
+<a href="sofas.html">الكنبات</a>
+<a href="tables.html">الطاولات</a>
+<a href="dining.html">طاولات الطعام</a>
+<a href="dammam.html">الدمام</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>فرع الدمام</h1>
+
+<p>
+صور وموديلات فرع نجوم الإبداع في الدمام
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>معرض فرع الدمام</h2>
+
+<p>
+يتم تحديث الصور من لوحة التحكم
+</p>
+
+</div>
+
+<div
+    id="branchGallery"
+    class="branch-gallery"
+></div>
+
+</div>
+
+</section>
+
+
+<footer>
+نجوم الإبداع للمفروشات والكنبات
+</footer>
+
+
+<a
+    class="whatsapp"
+    href="https://wa.me/966551496121"
+    target="_blank"
+>
+وات
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+        .getElementById("mainNav")
+        .classList.toggle("open");
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="branch.js"></script>
+
+</body>
+
+</html>
