@@ -1891,9 +1891,120 @@ textarea{
 body.modal-open{
     overflow:hidden;
 }
+/* =========================================
+RESPONSIVE
+========================================= */
 
+html,
+body {
+max-width: 100%;
+overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+max-width: 100%;
+}
+
+.container,
+.header,
+.nav,
+.hero,
+.section,
+.footer,
+.contact-box,
+.ai-window,
+.modal-box {
+min-width: 0;
+max-width: 100%;
+}
+
+.hero-content,
+.section-head,
+.contact-box,
+.footer-grid,
+.feature-grid,
+.products,
+.dining-grid,
+.payment-grid,
+.branches,
+.reps,
+.accounts-grid {
+min-width: 0;
+}
+
+.product,
+.feature-card,
+.dining-card,
+.payment-card,
+.branch,
+.rep,
+.ai-message-row,
+.ai-bubble-wrap,
+.ai-input-box {
+min-width: 0;
+}
+
+.ai-window {
+width: min(430px, calc(100vw - 30px));
+}
+
+@media (max-width: 700px) {
+.container {
+width: 92%;
+max-width: 100%;
+}
+
+.nav {
+    width: 100%;
+    gap: 8px;
+}
+.nav-links {
+    max-width: 92%;
+}
+.hero-content {
+    width: 92%;
+    max-width: 100%;
+}
+.ai-window {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-width: calc(100vw - 20px);
+}
+
+}
+
+@media (max-width: 360px) {
+.container {
+width: 94%;
+}
+
+.nav {
+    gap: 5px;
+}
+.nav-social {
+    gap: 3px;
+}
+.hero h1 {
+    font-size: clamp(28px, 9vw, 34px);
+}
+.ai-window {
+    right: 6px;
+    left: 6px;
+    max-width: calc(100vw - 12px);
+}
+
+}
 </style>
-      </head>
+</head>
 
 <body>
 
