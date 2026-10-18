@@ -1,154 +1,208 @@
-const SUPABASE_URL = "https://kpgfdhxwcormlqfkpoye.supabase.co";
+const SUPABASE_URL =
+    "https://kpgfdhxwcormlqfkpoye.supabase.co";
 
 const SUPABASE_KEY =
-"sb_publishable_VYD0M_I_yrW-DlQUYhtvGQ_lUQcHwXG";
+    "sb_publishable_VYD0M_I_yrW-DlQUYhtvGQ_lUQcHwXG";
 
 const db = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
 
-/* =========================
+/* =====================================
+   إعدادات المنتجات
+===================================== */
+
+const PAGE_SIZE = 16;
+
+let currentPage = 0;
+let totalProducts = 0;
+let isLoading = false;
+let hasMore = false;
+let activeFilter = "all";
+let searchValue = "";
+let requestNumber = 0;
+
+window.allProducts = [];
+window.visibleProducts = [];
+
+/* =====================================
+   أدوات الواجهة
+===================================== */
+
+function getGrid() {
+    return document.querySelector("#productsGrid");
+}
+
+function getPagination() {
+    const grid = getGrid();
+
+    if (!grid) return null;
+
+    let area = document.querySelector("#productsPagination");
+
+    if (!area) {
+        area = document.createElement("div");
+        area.id = "productsPagination";
+
+        area.style.cssText = `
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:12px;
+            margin:30px auto;
+            width:100%;
+        `;
+
+        grid.insertAdjacentElement("afterend", area);
+    }
+
+    return area;
+}
+
+function showMessage(message) {
+    const grid = getGrid();
+
+    if (!grid) return;
+
+    grid.replaceChildren();
+
+    const box = document.createElement("div");
+    box.className = "empty";
+    box.textContent = message;
+
+    grid.appendChild(box);
+}
+
+/* =====================================
+   حماية النصوص
+===================================== */
+
+function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+    })[char]);
+}
+
+/* =====================================
    نوع المنتج
-========================= */
+===================================== */
 
-function getProductType(product){
-
-    if(product.product_type){
+function getProductType(product) {
+    if (product.product_type) {
         return product.product_type;
     }
 
-    /*
-      دعم المنتجات القديمة التي لم يكن لديها product_type
-    */
+    const category = String(
+        product.category || ""
+    ).toLowerCase();
 
-    const c = String(product.category || "").toLowerCase();
-
-    if(/طعام|dining/.test(c)){
+    if (/طعام|dining/.test(category)) {
         return "dining_table";
     }
 
-    if(/كرسي|chairs|chair/.test(c)){
+    if (/كرسي|chairs|chair/.test(category)) {
         return "chair";
     }
 
-    if(/بوفيه|buffet/.test(c)){
+    if (/بوفيه|buffet/.test(category)) {
         return "buffet";
     }
 
-    if(/طاول|table/.test(c)){
+    if (/طاول|table/.test(category)) {
         return "table";
     }
 
     return "sofa";
 }
 
+/* =====================================
+   خصائص المنتج
+===================================== */
 
-/* =========================
-   العرض
-========================= */
-
-function isOffer(product){
-
-    return (
-        product.offer_type === "special" ||
-        product.offer_type === "discount"
-    );
+function isOffer(product) {
+    return [
+        "special",
+        "discount"
+    ].includes(product.offer_type);
 }
 
-
-/* =========================
-   جديد
-========================= */
-
-function isNew(product){
-
+function isNew(product) {
     return product.is_new === true;
 }
 
-
-/* =========================
-   مميز
-========================= */
-
-function isFeatured(product){
-
+function isFeatured(product) {
     return product.is_featured === true;
 }
 
-
-/* =========================
+/* =====================================
    صور المنتج
-========================= */
+===================================== */
 
-function getImages(product){
-
+function getImages(product) {
     const images = [];
 
-    if(product.main_image_url){
+    if (product.main_image_url) {
         images.push(product.main_image_url);
     }
 
-    if(Array.isArray(product.extra_image_urls)){
+    if (Array.isArray(product.extra_image_urls)) {
         images.push(...product.extra_image_urls);
     }
 
-    return [...new Set(images)];
+    return [...new Set(images.filter(Boolean))];
 }
 
+/* =====================================
+   واتساب
+===================================== */
 
-/* =========================
-   WhatsApp
-========================= */
-
-function whatsappNumber(product){
-
-    return (
-        product.whatsapp ||
-        "966551496121"
-    );
+function whatsappNumber(product) {
+    return product.whatsapp || "966551496121";
 }
 
+/* =====================================
+   بطاقة المنتج
+===================================== */
 
-/* =========================
-   إنشاء البطاقة
-========================= */
-
-function productCard(product){
-
+function productCard(product) {
     const images = getImages(product);
 
-    const mainImage =
-        images[0] ||
-        "https://placehold.co/800x600/071522/e4c57e?text=نجوم+الإبداع";
+    const mainImage = images[0] ||
+        "https://placehold.co/800x600/071522/e4c57e?text=Najoom";
 
-    const offerBadge =
-        isOffer(product)
+    const name = product.name || "موديل";
+
+    const description = product.description ||
+        "موديل فاخر من نجوم الإبداع للمفروشات والكنبات";
+
+    const offerBadge = isOffer(product)
         ? `<span class="badge special">${
             product.offer_type === "discount"
-            ? "خصم"
-            : "عرض خاص"
+                ? "خصم"
+                : "عرض خاص"
         }</span>`
         : "";
 
-    const newBadge =
-        isNew(product)
+    const newBadge = isNew(product)
         ? `<span class="badge">جديد</span>`
         : "";
 
-    const featuredBadge =
-        isFeatured(product)
+    const featuredBadge = isFeatured(product)
         ? `<span class="badge">مميز</span>`
         : "";
 
-    const wa =
-        String(whatsappNumber(product))
-        .replace(/\D/g,"");
+    const wa = String(
+        whatsappNumber(product)
+    ).replace(/\D/g, "");
 
-    const message =
-        encodeURIComponent(
-            `السلام عليكم، أريد الاستفسار عن ${product.name}`
-        );
+    const message = encodeURIComponent(
+        `السلام عليكم، أريد الاستفسار عن ${name}`
+    );
 
     return `
         <article class="product-card">
@@ -156,9 +210,10 @@ function productCard(product){
             <div class="product-image">
 
                 <img
-                    src="${mainImage}"
-                    alt="${product.name || "منتج نجوم الإبداع"}"
+                    src="${escapeHTML(mainImage)}"
+                    alt="${escapeHTML(name)}"
                     loading="lazy"
+                    decoding="async"
                 >
 
                 <div class="badges">
@@ -171,17 +226,18 @@ function productCard(product){
 
             <div class="product-body">
 
-                <h3>${product.name || "موديل"}</h3>
+                <h3>${escapeHTML(name)}</h3>
 
-                <p>
-                    ${product.description || "موديل فاخر من نجوم الإبداع للمفروشات والكنبات"}
-                </p>
+                <p>${escapeHTML(description)}</p>
 
                 <div class="product-actions">
 
                     <button
+                        type="button"
                         class="btn btn-outline"
-                        onclick='openProductViewer(${JSON.stringify(product)})'
+                        data-view-product="${escapeHTML(
+                            String(product.id ?? "")
+                        )}"
                     >
                         عرض الصور
                     </button>
@@ -189,6 +245,7 @@ function productCard(product){
                     <a
                         class="btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://wa.me/${wa}?text=${message}"
                     >
                         واتساب
@@ -202,35 +259,29 @@ function productCard(product){
     `;
 }
 
+/* =====================================
+   عارض الصور
+===================================== */
 
-/* =========================
-   Viewer
-========================= */
-
-function openProductViewer(product){
-
+function openProductViewer(product) {
     const images = getImages(product);
 
-    if(!images.length){
-        return;
-    }
+    if (!images.length) return;
 
     let current = 0;
 
     const overlay = document.createElement("div");
-
     overlay.className = "lightbox active";
 
     overlay.innerHTML = `
         <button
             class="lightbox-close"
-            onclick="this.parentElement.remove()"
-        >
-            ×
-        </button>
+            aria-label="إغلاق"
+        >×</button>
 
         <button
             id="prevImage"
+            aria-label="الصورة السابقة"
             style="
                 position:absolute;
                 right:20px;
@@ -244,18 +295,13 @@ function openProductViewer(product){
                 height:45px;
                 font-size:25px;
             "
-        >
-            ‹
-        </button>
+        >‹</button>
 
-        <img
-            id="viewerImage"
-            src="${images[0]}"
-            alt="${product.name || ""}"
-        >
+        <img id="viewerImage" alt="">
 
         <button
             id="nextImage"
+            aria-label="الصورة التالية"
             style="
                 position:absolute;
                 left:20px;
@@ -269,302 +315,370 @@ function openProductViewer(product){
                 height:45px;
                 font-size:25px;
             "
-        >
-            ›
-        </button>
+        >›</button>
     `;
 
     document.body.appendChild(overlay);
 
-    const image =
-        overlay.querySelector("#viewerImage");
+    const image = overlay.querySelector("#viewerImage");
 
-    overlay.querySelector("#prevImage").onclick =
-    () => {
-
-        current =
-            (current - 1 + images.length)
-            % images.length;
-
+    function showImage() {
         image.src = images[current];
+        image.alt = product.name || "صور المنتج";
+    }
+
+    overlay.querySelector(".lightbox-close").onclick =
+        () => overlay.remove();
+
+    overlay.querySelector("#prevImage").onclick = () => {
+        current = (current - 1 + images.length) % images.length;
+        showImage();
     };
 
-    overlay.querySelector("#nextImage").onclick =
-    () => {
-
-        current =
-            (current + 1)
-            % images.length;
-
-        image.src = images[current];
+    overlay.querySelector("#nextImage").onclick = () => {
+        current = (current + 1) % images.length;
+        showImage();
     };
 
-    overlay.addEventListener("click", e => {
-
-        if(e.target === overlay){
+    overlay.addEventListener("click", event => {
+        if (event.target === overlay) {
             overlay.remove();
         }
-
     });
+
+    showImage();
 }
 
+/* =====================================
+   بناء استعلام قاعدة البيانات
+===================================== */
 
-/* =========================
-   تحميل المنتجات
-========================= */
+function buildQuery() {
+    const type = document.body.dataset.productType;
 
-async function loadProducts(){
-
-    const grid =
-        document.querySelector("#productsGrid");
-
-    if(!grid){
-        return;
-    }
-
-    grid.innerHTML =
-        `<div class="empty">جاري تحميل المنتجات...</div>`;
-
-    const { data, error } =
-        await db
+    let query = db
         .from("tables")
-        .select("*")
-        .eq("published", true)
-        .order("sort_order", {
-            ascending:true
-        })
-        .order("created_at", {
-            ascending:false
-        });
-
-    if(error){
-
-        console.error(error);
-
-        grid.innerHTML = `
-            <div class="empty">
-                حدث خطأ أثناء تحميل المنتجات
-            </div>
-        `;
-
-        return;
-    }
-
-    window.allProducts = data || [];
-
-    renderProducts(window.allProducts);
-}
-
-
-/* =========================
-   عرض المنتجات
-========================= */
-
-function renderProducts(products){
-
-    const grid =
-        document.querySelector("#productsGrid");
-
-    if(!grid){
-        return;
-    }
-
-    if(!products.length){
-
-        grid.innerHTML =
-            `<div class="empty">لا توجد منتجات حالياً</div>`;
-
-        return;
-    }
-
-    grid.innerHTML =
-        products
-        .map(productCard)
-        .join("");
-}
-
-
-/* =========================
-   تفعيل الصفحة
-========================= */
-
-document.addEventListener("DOMContentLoaded", async () => {
-
-    const type =
-        document.body.dataset.productType;
-
-    const search =
-        document.querySelector("#productSearch");
-
-    const filters =
-        document.querySelectorAll("[data-filter]");
-
-    await loadProducts();
+        .select("*", { count: "exact" })
+        .eq("published", true);
 
     /*
-      فلترة النوع حسب الصفحة
+       تصنيف المنتجات القديمة والجديدة
+       باستخدام product_type و category.
     */
 
-    if(type){
+    if (type === "dining") {
+        query = query.or(
+            "product_type.in.(dining_table,chair,buffet)," +
+            "and(product_type.is.null,category.ilike.%طعام%)," +
+            "and(product_type.is.null,category.ilike.%dining%)," +
+            "and(product_type.is.null,category.ilike.%كرسي%)," +
+            "and(product_type.is.null,category.ilike.%chair%)," +
+            "and(product_type.is.null,category.ilike.%بوفيه%)," +
+            "and(product_type.is.null,category.ilike.%buffet%)"
+        );
 
-        let filtered;
+    } else if (type === "table") {
+        query = query.or(
+            "product_type.eq.table," +
+            "and(product_type.is.null,category.ilike.%طاول%,category.not.ilike.%طعام%,category.not.ilike.%dining%)," +
+            "and(product_type.is.null,category.ilike.%table%,category.not.ilike.%dining%)"
+        );
 
-        if(type === "sofa"){
-
-            filtered =
-                window.allProducts.filter(
-                    p => getProductType(p) === "sofa"
-                );
-
-        }
-
-        else if(type === "table"){
-
-            filtered =
-                window.allProducts.filter(
-                    p => getProductType(p) === "table"
-                );
-
-        }
-
-        else if(type === "dining"){
-
-            filtered =
-                window.allProducts.filter(
-                    p =>
-                    [
-                        "dining_table",
-                        "chair",
-                        "buffet"
-                    ].includes(getProductType(p))
-                );
-
-        }
-
-        else{
-
-            filtered = window.allProducts;
-        }
-
-        window.currentProducts = filtered;
-
-        renderProducts(filtered);
+    } else if (type === "sofa") {
+        query = query.or(
+            "product_type.eq.sofa," +
+            "and(product_type.is.null,category.not.ilike.%طعام%,category.not.ilike.%dining%,category.not.ilike.%كرسي%,category.not.ilike.%chair%,category.not.ilike.%بوفيه%,category.not.ilike.%buffet%,category.not.ilike.%طاول%,category.not.ilike.%table%)"
+        );
     }
-
-    else{
-
-        window.currentProducts =
-            window.allProducts;
-    }
-
 
     /*
-      البحث
+       البحث في قاعدة البيانات
     */
 
-    if(search){
+    const term = searchValue
+        .trim()
+        .replace(/[^\p{L}\p{N}\s_-]/gu, "")
+        .slice(0, 100);
 
-        search.addEventListener("input", () => {
+    if (term) {
+        const pattern = `%${term}%`;
 
-            const value =
-                search.value
-                .trim()
-                .toLowerCase();
+        query = query.or(
+            `name.ilike.${pattern},` +
+            `description.ilike.${pattern},` +
+            `category.ilike.${pattern}`
+        );
+    }
 
-            let source =
-                window.currentProducts ||
-                window.allProducts ||
-                [];
+    /*
+       فلاتر المنتجات
+    */
 
-            if(!value){
+    if (activeFilter === "offers") {
+        query = query.in("offer_type", [
+            "special",
+            "discount"
+        ]);
+    }
 
-                renderProducts(source);
+    if (activeFilter === "new") {
+        query = query.eq("is_new", true);
+    }
 
-                return;
+    if (activeFilter === "featured") {
+        query = query.eq("is_featured", true);
+    }
+
+    return query
+        .order("sort_order", { ascending: true })
+        .order("created_at", { ascending: false });
+}
+
+/* =====================================
+   زر عرض المزيد
+===================================== */
+
+function renderLoadMore() {
+    const area = getPagination();
+
+    if (!area) return;
+
+    area.replaceChildren();
+
+    const summary = document.createElement("div");
+
+    summary.style.cssText = `
+        color:#64748b;
+        font-size:14px;
+        text-align:center;
+    `;
+
+    summary.textContent =
+        `تم عرض ${window.visibleProducts.length} من ${totalProducts} منتج`;
+
+    area.appendChild(summary);
+
+    if (!hasMore) return;
+
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.textContent = isLoading
+        ? "جاري تحميل المنتجات..."
+        : "عرض المزيد";
+
+    button.style.cssText = `
+        min-width:180px;
+        padding:13px 28px;
+        border:1px solid #c8a15b;
+        border-radius:10px;
+        background:#071522;
+        color:#e4c57e;
+        font-size:16px;
+        font-weight:600;
+        cursor:pointer;
+    `;
+
+    button.disabled = isLoading;
+
+    button.addEventListener("click", () => {
+        loadProducts(true);
+    });
+
+    area.appendChild(button);
+}
+
+/* =====================================
+   تحميل 16 منتجًا في كل طلب
+===================================== */
+
+async function loadProducts(append = false) {
+    const grid = getGrid();
+
+    if (!grid || isLoading) return;
+
+    if (!append) {
+        currentPage = 0;
+        totalProducts = 0;
+        hasMore = false;
+
+        window.visibleProducts = [];
+    }
+
+    isLoading = true;
+
+    const thisRequest = ++requestNumber;
+
+    if (!append) {
+        showMessage("جاري تحميل المنتجات...");
+    }
+
+    renderLoadMore();
+
+    try {
+        const from = currentPage * PAGE_SIZE;
+        const to = from + PAGE_SIZE - 1;
+
+        const { data, error, count } = await buildQuery()
+            .range(from, to);
+
+        if (thisRequest !== requestNumber) return;
+
+        if (error) throw error;
+
+        const products = data || [];
+
+        totalProducts = count ?? 0;
+
+        /*
+           حفظ المنتجات لكل دفعة
+           حتى يعمل عارض الصور بصورة صحيحة.
+        */
+
+        if (append) {
+            window.visibleProducts.push(...products);
+        } else {
+            window.visibleProducts = [...products];
+        }
+
+        if (append) {
+            products.forEach(product => {
+                grid.insertAdjacentHTML(
+                    "beforeend",
+                    productCard(product)
+                );
+            });
+        } else {
+            grid.innerHTML = products
+                .map(productCard)
+                .join("");
+        }
+
+        currentPage++;
+
+        hasMore =
+            currentPage * PAGE_SIZE < totalProducts;
+
+        if (!window.visibleProducts.length) {
+            showMessage("لا توجد منتجات مطابقة.");
+        }
+
+        renderLoadMore();
+
+    } catch (error) {
+        console.error("خطأ تحميل المنتجات:", error);
+
+        if (thisRequest === requestNumber) {
+            if (!append) {
+                showMessage(
+                    "تعذر تحميل المنتجات. تحقق من الاتصال وحاول مرة أخرى."
+                );
             }
 
-            const result =
-                source.filter(p => {
+            const area = getPagination();
 
-                    return (
-                        String(p.name || "")
-                        .toLowerCase()
-                        .includes(value)
-                        ||
-                        String(p.description || "")
-                        .toLowerCase()
-                        .includes(value)
-                        ||
-                        String(p.category || "")
-                        .toLowerCase()
-                        .includes(value)
-                    );
+            if (area) {
+                area.replaceChildren();
 
+                const retry = document.createElement("button");
+                retry.type = "button";
+                retry.className = "btn";
+                retry.textContent = "إعادة المحاولة";
+
+                retry.addEventListener("click", () => {
+                    loadProducts(append);
                 });
 
-            renderProducts(result);
+                area.appendChild(retry);
+            }
+        }
 
+    } finally {
+        if (thisRequest === requestNumber) {
+            isLoading = false;
+            renderLoadMore();
+        }
+    }
+}
+
+/* =====================================
+   تشغيل الصفحة والبحث والفلاتر
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = getGrid();
+
+    const search = document.querySelector(
+        "#productSearch"
+    );
+
+    const filters = document.querySelectorAll(
+        ".filters [data-filter]"
+    );
+
+    if (!grid) return;
+
+    /*
+       عارض الصور: يبحث في كل المنتجات المحملة
+    */
+
+    grid.addEventListener("click", event => {
+        const button = event.target.closest(
+            "[data-view-product]"
+        );
+
+        if (!button) return;
+
+        const id = button.dataset.viewProduct;
+
+        const product = window.visibleProducts.find(
+            item => String(item.id ?? "") === id
+        );
+
+        if (product) {
+            openProductViewer(product);
+        }
+    });
+
+    /*
+       بدء التحميل الأول
+    */
+
+    loadProducts(false);
+
+    /*
+       البحث مع تأخير بسيط لتخفيف الطلبات
+    */
+
+    if (search) {
+        let debounce;
+
+        search.addEventListener("input", () => {
+            clearTimeout(debounce);
+
+            debounce = setTimeout(() => {
+                searchValue = search.value;
+                loadProducts(false);
+            }, 300);
         });
     }
 
-
     /*
-      الفلاتر
+       الفلاتر
     */
 
     filters.forEach(button => {
-
         button.addEventListener("click", () => {
-
-            filters.forEach(b =>
-                b.classList.remove("active")
-            );
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
 
             button.classList.add("active");
 
-            const filter =
-                button.dataset.filter;
+            activeFilter =
+                button.dataset.filter || "all";
 
-            let products =
-                window.currentProducts ||
-                [];
-
-            if(filter === "all"){
-
-                renderProducts(products);
-                return;
-
-            }
-
-            if(filter === "offers"){
-
-                renderProducts(
-                    products.filter(isOffer)
-                );
-
-                return;
-            }
-
-            if(filter === "new"){
-
-                renderProducts(
-                    products.filter(isNew)
-                );
-
-                return;
-            }
-
-            if(filter === "featured"){
-
-                renderProducts(
-                    products.filter(isFeatured)
-                );
-
-                return;
-            }
-
+            loadProducts(false);
         });
-
     });
-
 });
